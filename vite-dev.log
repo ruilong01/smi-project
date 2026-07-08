@@ -1,0 +1,24 @@
+
+> maritime-research-map-demo@0.1.0 dev
+> vite --host 127.0.0.1 --port 5173
+
+
+  VITE v6.4.3  ready in 327 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+9:45:38 am [vite] (client) hmr update /src/components/WorldMap.jsx
+9:46:41 am [vite] (client) hmr update /src/components/WorldMap.jsx
+10:28:52 am [vite] (client) hmr update /src/components/WorldMap.jsx, /src/pages/CountryDetail.jsx, /src/components/CountryProfilePanel.jsx, /src/components/CountryPopup.jsx
+10:29:06 am [vite] (client) hmr update /src/components/WorldMap.jsx, /src/pages/CountryDetail.jsx, /src/components/CountryProfilePanel.jsx, /src/components/CountryPopup.jsx
+10:29:11 am [vite] (client) hmr update /src/App.jsx, /src/components/WorldMap.jsx, /src/pages/CountryDetail.jsx
+10:30:59 am [vite] (client) hmr update /src/App.jsx, /src/components/WorldMap.jsx, /src/pages/CountryDetail.jsx
+10:31:11 am [vite] (client) hmr update /src/components/WorldMap.jsx
+10:31:19 am [vite] (client) hmr update /src/components/WorldMap.jsx
+10:31:36 am [vite] (client) hmr update /src/components/WorldMap.jsx
+10:31:41 am [vite] (client) hmr update /src/components/CountryPopup.jsx
+10:31:48 am [vite] (client) hmr update /src/components/CountryProfilePanel.jsx
+10:31:59 am [vite] (client) hmr update /src/App.jsx
+10:32:12 am [vite] (client) hmr update /src/index.css
+10:32:31 am [vite] (client) hmr update /src/index.css
+10:32:50 am [vite] (client) hmr update /src/pages/CountryDetail.jsx
+10:32:56 am [vite] (client) hmr update /src/index.css
