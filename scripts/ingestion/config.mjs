@@ -1,0 +1,101 @@
+export const INGESTION_USER_AGENT =
+  "GlobalMaritimeResearchIntelligenceMap/0.2 (local prototype; contact: research-demo@example.invalid)";
+
+export const TEST_REFRESH_INTERVAL_MS = 5 * 60 * 1000;
+
+export const MARITIME_QUERIES = [
+  "maritime autonomous vessel navigation",
+  "smart port digital twin",
+  "green shipping alternative marine fuel",
+  "maritime cybersecurity port",
+  "vessel electrification maritime",
+];
+
+export const COUNTRY_ATLAS_NAMES = {
+  AU: "Australia",
+  BE: "Belgium",
+  BR: "Brazil",
+  CA: "Canada",
+  CN: "China",
+  DE: "Germany",
+  DK: "Denmark",
+  ES: "Spain",
+  FI: "Finland",
+  FR: "France",
+  GB: "United Kingdom",
+  GR: "Greece",
+  ID: "Indonesia",
+  IN: "India",
+  IT: "Italy",
+  JP: "Japan",
+  KR: "South Korea",
+  MY: "Malaysia",
+  NL: "Netherlands",
+  NO: "Norway",
+  PH: "Philippines",
+  SE: "Sweden",
+  SG: "Singapore",
+  US: "United States of America",
+  ZA: "South Africa",
+};
+
+export const COUNTRY_COORDINATES = {
+  AU: [133.7751, -25.2744],
+  BE: [4.4699, 50.5039],
+  BR: [-51.9253, -14.235],
+  CA: [-106.3468, 56.1304],
+  CN: [104.1954, 35.8617],
+  DE: [10.4515, 51.1657],
+  DK: [9.5018, 56.2639],
+  ES: [-3.7492, 40.4637],
+  FI: [25.7482, 61.9241],
+  FR: [2.2137, 46.2276],
+  GB: [-3.436, 55.3781],
+  GR: [21.8243, 39.0742],
+  ID: [113.9213, -0.7893],
+  IN: [78.9629, 20.5937],
+  IT: [12.5674, 41.8719],
+  JP: [138.2529, 36.2048],
+  KR: [127.7669, 35.9078],
+  MY: [101.9758, 4.2105],
+  NL: [5.2913, 52.1326],
+  NO: [8.4689, 60.472],
+  PH: [121.774, 12.8797],
+  SE: [18.6435, 60.1282],
+  SG: [103.8198, 1.3521],
+  US: [-98.5795, 39.8283],
+  ZA: [22.9375, -30.5595],
+};
+
+export const COUNTRY_NAMES = {
+  AU: "Australia",
+  BE: "Belgium",
+  BR: "Brazil",
+  CA: "Canada",
+  CN: "China",
+  DE: "Germany",
+  DK: "Denmark",
+  ES: "Spain",
+  FI: "Finland",
+  FR: "France",
+  GB: "United Kingdom",
+  GR: "Greece",
+  ID: "Indonesia",
+  IN: "India",
+  IT: "Italy",
+  JP: "Japan",
+  KR: "South Korea",
+  MY: "Malaysia",
+  NL: "Netherlands",
+  NO: "Norway",
+  PH: "Philippines",
+  SE: "Sweden",
+  SG: "Singapore",
+  US: "United States",
+  ZA: "South Africa",
+};
+
+export const MPA_SOURCES = [
+  "https://www.mpa.gov.sg/maritime-singapore/innovation-and-r-d",
+  "https://www.mpa.gov.sg/maritime-singapore/innovation-and-r-d/programmes-and-projects",
+];
