@@ -21,8 +21,8 @@ export default function CountryPopup({
 
   const popupStyle = position
     ? {
-        left: `${position.x}%`,
-        top: `${position.y}%`,
+        "--popup-left": `${position.x}%`,
+        "--popup-top": `${position.y}%`,
       }
     : undefined;
 
@@ -37,10 +37,10 @@ export default function CountryPopup({
 
   return (
     <motion.article
-      animate={{ opacity: 1, scale: 1 }}
+      animate={{ opacity: 1, scale: 1, x: "-50%", y: "-50%" }}
       className="country-popup"
-      exit={{ opacity: 0, scale: 0.98 }}
-      initial={{ opacity: 0, scale: 0.98 }}
+      exit={{ opacity: 0, scale: 0.98, x: "-50%", y: "-50%" }}
+      initial={{ opacity: 0, scale: 0.98, x: "-50%", y: "-50%" }}
       onMouseEnter={onInteractionStart}
       onMouseLeave={onInteractionEnd}
       onPointerDown={(event) => event.stopPropagation()}
@@ -99,6 +99,15 @@ export default function CountryPopup({
         View Full Profile
         <ArrowRight size={17} />
       </button>
+
+      <Link
+        className="popup-details-button secondary"
+        onClick={onInteractionEnd}
+        to={`/country/${country.slug}`}
+      >
+        Open Real Data Page
+        <ArrowRight size={17} />
+      </Link>
     </motion.article>
   );
 }

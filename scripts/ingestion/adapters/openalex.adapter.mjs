@@ -1,5 +1,5 @@
 import { MARITIME_QUERIES } from "../config.mjs";
-import { fetchJson } from "../http.mjs";
+import { fetchJson, delayMs } from "../http.mjs";
 import {
   classifyText,
   detectTechnologies,
@@ -30,21 +30,54 @@ function getInstitutions(work) {
 
 export async function fetchOpenAlexRecords() {
   const records = [];
+  const errors = [];
+  const EMAIL = "research-demo@example.invalid";
+  const REQUEST_DELAY_MS = 1000; // 1 second delay between requests like Python script
 
   for (const query of MARITIME_QUERIES) {
-    const url = new URL("https://api.openalex.org/works");
-    url.searchParams.set("search", query);
-    url.searchParams.set("per-page", "8");
-    url.searchParams.set("filter", "from_publication_date:2023-01-01");
-    url.searchParams.set("mailto", "research-demo@example.invalid");
+    try {
+      const url = new URL("https://api.openalex.org/works");
+      url.searchParams.set("search", query);
+      url.searchParams.set("per-page", "8");
+      url.searchParams.set("filter", "from_publication_date:2023-01-01");
+      url.searchParams.set("mailto", EMAIL);
 
-    const payload = await fetchJson(url);
-    records.push(
-      ...payload.results.map((record) => ({
-        query,
-        record,
-      }))
-    );
+      console.log(`Fetching OpenAlex for query: "${query}"`);
+
+      const payload = await fetchJson(url.toString(), {
+        fetchOptions: {
+          email: EMAIL,
+          retries: 4,
+          timeout: 30000,
+          requestDelay: REQUEST_DELAY_MS,
+        },
+      });
+
+      if (payload?.results) {
+        records.push(
+          ...payload.results.map((record) => ({
+            query,
+            record,
+          }))
+        );
+        console.log(`  ✓ Got ${payload.results.length} results`);
+      }
+
+      // Delay between requests to be respectful to the API
+      if (query !== MARITIME_QUERIES[MARITIME_QUERIES.length - 1]) {
+        await delayMs(REQUEST_DELAY_MS);
+      }
+    } catch (error) {
+      console.warn(`  ✗ Failed to fetch OpenAlex for "${query}": ${error.message}`);
+      errors.push(`${query}: ${error.message}`);
+      // Continue with other queries even if one fails
+    }
+  }
+
+  // Partial failures are tolerated, but if every query failed the source
+  // must report a failed run so /sources/status stays honest.
+  if (records.length === 0 && errors.length > 0) {
+    throw new Error(`All OpenAlex queries failed. ${errors[0]}`);
   }
 
   return records;

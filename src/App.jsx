@@ -1,13 +1,16 @@
-import { useMemo, useState } from "react";
+import { lazy, Suspense, useMemo, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import FilterBar from "./components/FilterBar.jsx";
 import CountryProfilePanel from "./components/CountryProfilePanel.jsx";
 import WorldMap from "./components/WorldMap.jsx";
-import CountryDetail from "./pages/CountryDetail.jsx";
-import ProjectDetail from "./pages/ProjectDetail.jsx";
-import SourceStatus from "./pages/SourceStatus.jsx";
-import TopicDetail from "./pages/TopicDetail.jsx";
+
+// Route-level code splitting (Goal 5): detail pages load on demand so the
+// dashboard's initial bundle stays small. The map dashboard remains eager.
+const CountryDetail = lazy(() => import("./pages/CountryDetail.jsx"));
+const ProjectDetail = lazy(() => import("./pages/ProjectDetail.jsx"));
+const SourceStatus = lazy(() => import("./pages/SourceStatus.jsx"));
+const TopicDetail = lazy(() => import("./pages/TopicDetail.jsx"));
 import { filters } from "./data/maritimeResearchData.js";
 import {
   countryMatchesTopicFilter,
@@ -215,13 +218,21 @@ function MapDashboard() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<MapDashboard />} path="/" />
-      <Route element={<CountryDetail />} path="/country/:slug" />
-      <Route element={<ProjectDetail />} path="/projects/:projectSlug" />
-      <Route element={<SourceStatus />} path="/sources/status" />
-      <Route element={<TopicDetail />} path="/topic/:slug" />
-      <Route element={<MapDashboard />} path="*" />
-    </Routes>
+    <Suspense
+      fallback={
+        <div className="detail-shell" style={{ display: "grid", placeItems: "center" }}>
+          <p style={{ color: "rgba(196, 228, 255, 0.8)" }}>Loading…</p>
+        </div>
+      }
+    >
+      <Routes>
+        <Route element={<MapDashboard />} path="/" />
+        <Route element={<CountryDetail />} path="/country/:slug" />
+        <Route element={<ProjectDetail />} path="/projects/:projectSlug" />
+        <Route element={<SourceStatus />} path="/sources/status" />
+        <Route element={<TopicDetail />} path="/topic/:slug" />
+        <Route element={<MapDashboard />} path="*" />
+      </Routes>
+    </Suspense>
   );
 }

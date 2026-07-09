@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "sync:data": "node scripts/ingestion/runExtraction.mjs",
-    "sync:watch": "node scripts/ingestion/runExtraction.mjs --watch"
+    "sync:watch": "node scripts/ingestion/runExtraction.mjs --watch",
+    "serve:api": "node server/server.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
@@ -20,6 +21,7 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.30.4",
     "topojson-client": "^3.1.0",
+    "topojson-simplify": "^3.0.3",
     "vite": "^6.0.7",
     "world-atlas": "^2.0.2"
   },

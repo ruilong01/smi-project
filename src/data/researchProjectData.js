@@ -1,5 +1,23 @@
 import liveResearchData from "./generated/liveResearchData.json";
 
+/**
+ * DATA SOURCE SEAM (Goal 6).
+ *
+ * Today the dataset is a build-time import of the generated JSON. In
+ * Phase 2 the frontend will fetch the same shape from the backend API
+ * (GET /api/... served by server/server.mjs). When that happens, ONLY
+ * this seam changes: replace the static import above with fetched data
+ * and every derived export below keeps working unchanged.
+ *
+ * All modules must access the dataset through loadResearchData() or the
+ * derived exports below — never import the JSON file directly elsewhere.
+ */
+const researchDataset = liveResearchData;
+
+export function loadResearchData() {
+  return researchDataset;
+}
+
 export const entityTypes = [
   "PROJECT",
   "ORGANISATION",
@@ -63,14 +81,14 @@ export const technologyExplanations = {
     "Port infrastructure includes terminals, berths, shore power, bunkering systems, data platforms and operational facilities that enable maritime services.",
 };
 
-export const liveResearchMeta = liveResearchData.meta;
-export const researchProjects = liveResearchData.projects;
-export const publicResearchProjects = liveResearchData.publicProjects;
-export const liveResearchCountries = liveResearchData.countries;
-export const liveResearchInstitutions = liveResearchData.institutions;
-export const liveResearchRelationships = liveResearchData.relationships;
-export const liveResearchSources = liveResearchData.sources;
-export const extractionRuns = liveResearchData.extractionRuns;
+export const liveResearchMeta = loadResearchData().meta;
+export const researchProjects = loadResearchData().projects;
+export const publicResearchProjects = loadResearchData().publicProjects;
+export const liveResearchCountries = loadResearchData().countries;
+export const liveResearchInstitutions = loadResearchData().institutions;
+export const liveResearchRelationships = loadResearchData().relationships;
+export const liveResearchSources = loadResearchData().sources;
+export const extractionRuns = loadResearchData().extractionRuns;
 
 export const isLiveResearchDataAvailable =
   !liveResearchMeta.unavailable && publicResearchProjects.length > 0;

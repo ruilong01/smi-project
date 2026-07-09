@@ -112,6 +112,9 @@ export default function CountryProfilePanel({ country, onClose }) {
             </h3>
             <p>{country.dataStatus}</p>
             <p>Data updated until: {country.dataUpdatedUntil}</p>
+            <Link className="profile-data-link" to={`/country/${country.slug}`}>
+              Open real data page
+            </Link>
           </section>
         </motion.aside>
       ) : null}

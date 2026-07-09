@@ -34,8 +34,8 @@ export default function ProjectPopup({
   const sources = getSourcesForProject(project);
   const popupStyle = position
     ? {
-        left: `${position.x}%`,
-        top: `${position.y}%`,
+        "--popup-left": `${position.x}%`,
+        "--popup-top": `${position.y}%`,
       }
     : undefined;
 
@@ -46,10 +46,10 @@ export default function ProjectPopup({
 
   return (
     <motion.article
-      animate={{ opacity: 1, scale: 1 }}
+      animate={{ opacity: 1, scale: 1, x: "-50%", y: "-50%" }}
       className={`project-popup marker-popup marker-${project.displayTier}`}
-      exit={{ opacity: 0, scale: 0.98 }}
-      initial={{ opacity: 0, scale: 0.98 }}
+      exit={{ opacity: 0, scale: 0.98, x: "-50%", y: "-50%" }}
+      initial={{ opacity: 0, scale: 0.98, x: "-50%", y: "-50%" }}
       onMouseEnter={onInteractionStart}
       onMouseLeave={onInteractionEnd}
       onPointerDown={(event) => event.stopPropagation()}

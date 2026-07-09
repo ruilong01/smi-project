@@ -38,6 +38,24 @@ function DetailList({ items, emptyText = "No extracted records yet." }) {
   );
 }
 
+function CountryProjectList({ projects }) {
+  if (!projects?.length) {
+    return <p className="source-empty">No extracted project records yet.</p>;
+  }
+
+  return (
+    <div className="project-index-list compact">
+      {projects.map((project) => (
+        <Link key={project.id} to={`/projects/${project.slug}`}>
+          <strong>{project.title}</strong>
+          <span>{project.leadOrganisation}</span>
+          <small>{project.displayScore}/100 evidence score</small>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
 function CountryRelationshipList({ relationships }) {
   if (!relationships?.length) {
     return <p className="source-empty">No relationship records are attached.</p>;
@@ -184,7 +202,7 @@ export default function CountryDetail() {
             <FlaskConical size={20} />
             Displayed Projects
           </h2>
-          <DetailList items={countryProjects.map((project) => project.title)} />
+          <CountryProjectList projects={countryProjects} />
         </article>
 
         <article className="detail-card wide ai-detail">

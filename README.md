@@ -12,8 +12,10 @@ The current version is a frontend MVP built with React and Vite. It renders a da
 - Evidence-based project detail pages
 - Explainable country-institution-project relationships
 - Source status page at `/sources/status`
+- Manual Refresh button with live extraction progress bar on `/sources/status`
 - Local generated data file consumed by the frontend
 - Local extraction scripts for refreshed public maritime R&D records
+- Open-source source adapters for OpenAlex, Crossref, ROR, MPA, UKRI and NSF
 - Test refresh mode with 5-minute intervals
 
 ## Tech Stack
@@ -46,6 +48,12 @@ Run the development server:
 npm run dev
 ```
 
+Run the local API server for project search and manual refresh controls:
+
+```bash
+npm run serve:api
+```
+
 Run tests:
 
 ```bash
@@ -72,7 +80,28 @@ For local testing, run the extractor every 5 minutes:
 npm run sync:watch
 ```
 
-The generated dataset includes projects, countries, institutions, sources, extraction runs and explainable relationship records.
+The generated dataset includes projects, countries, institutions, sources, extraction runs and explainable relationship records. Current configured source families:
+
+- OpenAlex public API
+- Crossref public API
+- Research Organization Registry public API
+- Maritime and Port Authority of Singapore official webpages
+- UKRI Gateway to Research public API
+- U.S. National Science Foundation Award Search public API
+
+Future open-data candidates are tracked in:
+
+```text
+docs/open-data-source-roadmap.md
+```
+
+The Source Status page can also trigger a manual online extraction for demos:
+
+```text
+http://localhost:5173/sources/status
+```
+
+Keep both `npm run serve:api` and `npm run dev` running, then click **Refresh Data**. The page calls `POST /api/extraction/run` and polls `GET /api/extraction/status` to update the progress bar and latest extraction logs.
 
 ## Project Structure
 

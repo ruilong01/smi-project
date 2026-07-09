@@ -1,6 +1,8 @@
 node_modules/
 dist/
 work/
+tmp_crossref_probe/
+crossref_output/
 .env
 .env.local
 .DS_Store
