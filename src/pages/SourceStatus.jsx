@@ -117,7 +117,8 @@ export default function SourceStatus() {
                   </div>
                 </dl>
               </article>
-            ))}
+              );
+            })}
           </div>
         </article>
 
