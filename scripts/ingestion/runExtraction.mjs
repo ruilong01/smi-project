@@ -180,48 +180,42 @@ async function runExtractionOnce() {
     async () => fetchMpaOfficialRecords(nowIso)
   );
 
+  // Accumulate with history instead of rebuilding from scratch each run:
+  // feed the previous run's already-built projects/institutions/sources/
+  // relationships back into buildDataset alongside this run's fresh
+  // records. buildDataset dedupes by id (fresher wins) and recomputes all
+  // derived fields (scores, country aggregates) from the full set, so this
+  // is safe to do unconditionally, including when a run finds 0 new records.
+  const previous = await readPreviousDataset();
+  const previousAsAdapterOutput = previous
+    ? {
+        projects: previous.projects ?? [],
+        institutions: previous.institutions ?? [],
+        sources: previous.sources ?? [],
+        relationships: previous.relationships ?? [],
+      }
+    : null;
+
   const adapterOutputs = [
+    ...(previousAsAdapterOutput ? [previousAsAdapterOutput] : []),
     ...openAlex.records,
     ...crossref.records,
     ...ror.records,
     ...mpa.records,
   ];
 
-  let dataset = buildDataset({
+  const dataset = buildDataset({
     adapterOutputs,
-    extractionRuns: [openAlex.run, crossref.run, ror.run, mpa.run],
+    extractionRuns: [
+      openAlex.run,
+      crossref.run,
+      ror.run,
+      mpa.run,
+      ...(previous?.extractionRuns ?? []),
+    ].slice(0, 40),
     nowIso,
     sourceStatus: [openAlex.status, crossref.status, ror.status, mpa.status],
   });
-
-  // Guard: a run that produced zero projects (e.g. every source blocked)
-  // must not wipe previously extracted data. Keep the last good dataset
-  // and only refresh the run logs and source status so failures stay
-  // visible on /sources/status.
-  if (dataset.publicProjects.length === 0) {
-    const previous = await readPreviousDataset();
-
-    if (previous && previous.publicProjects?.length > 0) {
-      console.warn(
-        "⚠️  Extraction returned 0 projects. Preserving previous dataset " +
-          `(${previous.publicProjects.length} projects from ${previous.meta?.lastSuccessfulSync ?? "unknown"}).`
-      );
-      dataset = {
-        ...previous,
-        meta: {
-          ...previous.meta,
-          generatedAt: dataset.meta.generatedAt,
-          sourceStatus: dataset.meta.sourceStatus,
-          statusMessage:
-            "Showing data from the last successful synchronisation. The most recent extraction attempt returned no records.",
-        },
-        extractionRuns: [
-          ...dataset.extractionRuns,
-          ...(previous.extractionRuns ?? []),
-        ].slice(0, 20),
-      };
-    }
-  }
 
   await fs.mkdir(path.dirname(outputPath), { recursive: true });
   await fs.writeFile(outputPath, `${JSON.stringify(dataset, null, 2)}\n`);
