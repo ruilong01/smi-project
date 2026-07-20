@@ -10,6 +10,15 @@ import {
 import { enrichInstitutionFromRor } from "./adapters/ror.adapter.mjs";
 import { fetchMpaOfficialRecords } from "./adapters/mpa.adapter.mjs";
 import { buildDataset } from "./buildDataset.mjs";
+import { resolveSourcePagesForProject } from "./enrichment/resolveSourcePages.mjs";
+import { extractWebpage } from "./enrichment/extractWebpage.mjs";
+import { chunkPage } from "./enrichment/chunkText.mjs";
+
+// Safety cap on NEW website visits per run — politeness towards source
+// sites and bounded run time. Projects already carrying sourcePages from a
+// previous run are skipped entirely (see webEnrichProjects below), so this
+// only limits how many *newly discovered* projects get a site visit per run.
+const MAX_NEW_SOURCE_PAGE_FETCHES_PER_RUN = 15;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outputPath = path.resolve(
@@ -93,12 +102,98 @@ async function runSource(sourceId, sourceName, extractionMethod, fn) {
   }
 }
 
+/**
+ * Steps 2-4 of the AI Evidence Selection pipeline: source resolution,
+ * website extraction, chunking (see CLAUDE.md goal tracker item 9). Plain
+ * code only — no AI here. For each project that OpenAlex discovered:
+ *   - if a previous run already extracted its source page(s), those are
+ *     carried forward unchanged (no repeat fetch of the same site, and any
+ *     later-added aiAnalysis/selectedEvidence survives this project being
+ *     "rediscovered" by a fresh OpenAlex query this run);
+ *   - otherwise, up to a capped number of NEW site visits happen this run.
+ * Mutates each project's `sourcePages`/`dataQuality` in place.
+ */
+async function webEnrichProjects(projects, previousProjectsById) {
+  let newlyFetched = 0;
+  let skippedCap = 0;
+  let carriedForward = 0;
+  let failed = 0;
+
+  for (const { project } of projects) {
+    const previousProject = previousProjectsById.get(project.id);
+
+    if (previousProject?.sourcePages?.length) {
+      project.sourcePages = previousProject.sourcePages;
+      project.selectedEvidence = previousProject.selectedEvidence ?? [];
+      project.aiAnalysis = previousProject.aiAnalysis ?? null;
+      project.dataQuality = previousProject.dataQuality ?? project.dataQuality;
+      carriedForward += 1;
+      continue;
+    }
+
+    const candidates = resolveSourcePagesForProject(project);
+    const candidate = candidates[0];
+    if (!candidate) {
+      continue;
+    }
+
+    if (newlyFetched >= MAX_NEW_SOURCE_PAGE_FETCHES_PER_RUN) {
+      skippedCap += 1;
+      continue;
+    }
+
+    try {
+      newlyFetched += 1;
+      console.log(`  🌐 Visiting source page: ${candidate.url}`);
+      const page = await extractWebpage(candidate.url);
+      const chunks = chunkPage(page);
+
+      project.sourcePages = [
+        {
+          sourceId: `sourcepage-${project.id}`,
+          sourceType: candidate.sourceType,
+          sourceName: page.pageTitle ?? candidate.url,
+          sourceUrl: candidate.url,
+          pageTitle: page.pageTitle ?? "",
+          publishedDate: page.publishedDate ?? "",
+          fetchedAt: new Date().toISOString(),
+          rawTextStored: false,
+          cleanedTextSummary: chunks[0]?.text ?? "",
+          chunks,
+          images: page.images ?? [],
+        },
+      ];
+      project.dataQuality = {
+        ...project.dataQuality,
+        hasOriginalSource: true,
+        hasOfficialSource: candidate.sourceType === "government",
+        imageCandidateCount: page.images?.length ?? 0,
+        needsManualReview: chunks.length === 0,
+      };
+    } catch (error) {
+      failed += 1;
+      console.warn(`  ✗ Failed to extract ${candidate.url}: ${error.message}`);
+      // Leave sourcePages empty; dataQuality.needsManualReview already
+      // defaults to true. One bad page must not stop the run.
+    }
+  }
+
+  console.log(
+    `  📄 Web enrichment: ${newlyFetched} fetched, ${carriedForward} carried forward, ` +
+      `${failed} failed, ${skippedCap} skipped (per-run cap)`
+  );
+}
+
 async function runExtractionOnce() {
   console.log("\n" + "=".repeat(60));
   console.log("🌍 Starting Maritime R&D Data Extraction");
   console.log("=".repeat(60));
-  
+
   const nowIso = new Date().toISOString();
+  const previous = await readPreviousDataset();
+  const previousProjectsById = new Map(
+    (previous?.projects ?? []).map((project) => [project.id, project])
+  );
 
   const openAlex = await runSource(
     "openalex",
@@ -110,11 +205,25 @@ async function runExtractionOnce() {
         .map((record) => normalizeOpenAlexRecord(record, nowIso))
         .filter(Boolean);
 
+      // The 24 search queries deliberately overlap thematically, so the
+      // same OpenAlex work often matches more than one query — dedupe by
+      // project id here (first occurrence wins) before anything downstream
+      // (Crossref/ROR lookups, web enrichment) processes it more than once
+      // as separate objects sharing one id.
+      const seenIds = new Set();
+      const deduped = normalized.filter((record) => {
+        if (seenIds.has(record.project.id)) return false;
+        seenIds.add(record.project.id);
+        return true;
+      });
+
       // Safety cap, not a target — real yield is bounded by how many
       // results pass isStrongMaritimeMatch + require a resolvable country.
-      return normalized.slice(0, 200);
+      return deduped.slice(0, 200);
     }
   );
+
+  await webEnrichProjects(openAlex.records, previousProjectsById);
 
   const crossref = await runSource(
     "crossref",
@@ -186,7 +295,6 @@ async function runExtractionOnce() {
   // records. buildDataset dedupes by id (fresher wins) and recomputes all
   // derived fields (scores, country aggregates) from the full set, so this
   // is safe to do unconditionally, including when a run finds 0 new records.
-  const previous = await readPreviousDataset();
   const previousAsAdapterOutput = previous
     ? {
         projects: previous.projects ?? [],

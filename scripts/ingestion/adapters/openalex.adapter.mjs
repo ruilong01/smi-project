@@ -8,6 +8,7 @@ import {
   isStrongMaritimeMatch,
   slugify,
 } from "../normalization.mjs";
+import { emptyAiFields } from "../enrichment/schemaDefaults.mjs";
 
 function getPublicationDate(work) {
   return (
@@ -110,6 +111,19 @@ export function normalizeOpenAlexRecord(rawRecord, nowIso) {
   const sourceId = `source-openalex-${slugify(work.id)}`;
   const projectId = `project-openalex-${slugify(work.id)}`;
 
+  // Discovery-layer metadata only (titles, DOI, concepts, candidate URLs).
+  // Real evidence comes from visiting these URLs in the enrichment step,
+  // not from this abstract/concept text.
+  const openAlexMeta = {
+    workId: work.id,
+    doi: work.doi ?? null,
+    url: work.id,
+    primaryLocationUrl: work.primary_location?.landing_page_url ?? null,
+    openAccessUrl: work.open_access?.oa_url ?? work.best_oa_location?.pdf_url ?? null,
+    concepts: (work.concepts ?? []).map((concept) => concept.display_name),
+    abstract: work.abstract ?? "",
+  };
+
   return {
     rawId: work.id,
     project: {
@@ -192,6 +206,8 @@ export function normalizeOpenAlexRecord(rawRecord, nowIso) {
       ],
       extractionMethod: "OpenAlex API",
       doi,
+      openAlex: openAlexMeta,
+      ...emptyAiFields(),
     },
     institutions: institutions.map((institution) => ({
       id: institution.id,

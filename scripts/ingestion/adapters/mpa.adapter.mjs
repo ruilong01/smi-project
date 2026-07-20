@@ -1,26 +1,14 @@
 import { MPA_SOURCES } from "../config.mjs";
-import { fetchText, delayMs } from "../http.mjs";
+import { delayMs } from "../http.mjs";
 import {
   classifyText,
   detectTechnologies,
   firstSentence,
-  hashContent,
   slugify,
 } from "../normalization.mjs";
-
-function stripHtml(html) {
-  return html
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function getTitle(html, fallback) {
-  const match = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
-  return match ? stripHtml(match[1]) : fallback;
-}
+import { emptyAiFields } from "../enrichment/schemaDefaults.mjs";
+import { extractWebpage } from "../enrichment/extractWebpage.mjs";
+import { chunkPage } from "../enrichment/chunkText.mjs";
 
 export async function fetchMpaOfficialRecords(nowIso) {
   const records = [];
@@ -30,18 +18,15 @@ export async function fetchMpaOfficialRecords(nowIso) {
   for (const url of MPA_SOURCES) {
     try {
       console.log(`  Fetching MPA source: ${url}`);
-      
-      const html = await fetchText(url, {
-        fetchOptions: {
-          email: "research-demo@example.invalid",
-          retries: 4,
-          timeout: 30000,
-          requestDelay: REQUEST_DELAY_MS,
-        },
-      });
 
-      const text = stripHtml(html);
-      const title = getTitle(html, "MPA Maritime Singapore Innovation and R&D");
+      // Shared step-3 extractor also used for OpenAlex-discovered pages —
+      // MPA already visits its own official page directly, so this reuses
+      // that one fetch for both the project summary fields below AND the
+      // sourcePages/chunks evidence pool, instead of fetching it twice.
+      const page = await extractWebpage(url, { requestDelayMs: REQUEST_DELAY_MS });
+      const chunks = chunkPage(page);
+      const text = page.sections.map((section) => section.text).join(" ");
+      const title = page.pageTitle || "MPA Maritime Singapore Innovation and R&D";
       const sourceId = `source-mpa-${slugify(url)}`;
       const projectId = `project-mpa-${slugify(title)}`;
       const categories = classifyText(`${title} ${text}`);
@@ -126,6 +111,31 @@ export async function fetchMpaOfficialRecords(nowIso) {
             "primary_source_available",
           ],
           extractionMethod: "MPA controlled HTML extractor",
+          openAlex: null,
+          ...emptyAiFields(),
+          sourcePages: [
+            {
+              sourceId: `sourcepage-${projectId}`,
+              sourceType: "government",
+              sourceName: title,
+              sourceUrl: url,
+              pageTitle: page.pageTitle ?? "",
+              publishedDate: page.publishedDate ?? "",
+              fetchedAt: nowIso,
+              rawTextStored: false,
+              cleanedTextSummary: chunks[0]?.text ?? "",
+              chunks,
+              images: page.images ?? [],
+            },
+          ],
+          dataQuality: {
+            hasOriginalSource: true,
+            hasOfficialSource: true,
+            evidenceCount: 0,
+            imageCandidateCount: page.images?.length ?? 0,
+            needsManualReview: chunks.length === 0,
+            lastAnalysedAt: null,
+          },
         },
         institution: {
           id: "institution-mpa-singapore",
@@ -150,7 +160,7 @@ export async function fetchMpaOfficialRecords(nowIso) {
           primaryOrSecondary: "primary",
           publicationDate: "",
           retrievedAt: nowIso,
-          contentHash: hashContent(html),
+          contentHash: page.contentHash,
           licence: "Official website; image reuse not assumed",
           extractionMethod: "MPA controlled HTML extractor",
           supportedProjectFields: [

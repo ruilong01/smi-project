@@ -336,6 +336,54 @@ export default function ProjectDetail() {
           </div>
         </article>
 
+        <article className="detail-card wide">
+          <h2>Extracted Source Pages</h2>
+          <p>
+            Original webpages visited with plain code (no AI) and split into
+            short snippets. AI evidence selection and research insight are
+            not implemented yet (goal tracker item 9) — this is the raw
+            extraction pipeline output.
+          </p>
+          {project.sourcePages?.length ? (
+            <div className="source-page-grid">
+              {project.sourcePages.map((page) => (
+                <article className="source-page-card" key={page.sourceId}>
+                  <p className="eyebrow">{page.sourceType}</p>
+                  <h3>{page.pageTitle || page.sourceName}</h3>
+                  <dl className="relationship-meta">
+                    <div>
+                      <dt>Fetched</dt>
+                      <dd>{compactDate(page.fetchedAt)}</dd>
+                    </div>
+                    <div>
+                      <dt>Chunks</dt>
+                      <dd>{page.chunks?.length ?? 0}</dd>
+                    </div>
+                    <div>
+                      <dt>Images found</dt>
+                      <dd>{page.images?.length ?? 0}</dd>
+                    </div>
+                  </dl>
+                  {isValidExternalUrl(page.sourceUrl) ? (
+                    <a
+                      className="source-link"
+                      href={page.sourceUrl}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Open original page
+                    </a>
+                  ) : null}
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p className="source-empty">
+              No original source page has been extracted for this project yet.
+            </p>
+          )}
+        </article>
+
         <article className="detail-card wide project-index-card">
           <h2>Displayed Projects</h2>
           <div className="project-index-list">
