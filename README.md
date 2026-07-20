@@ -89,3 +89,6 @@ scripts/
 ## Notes
 
 This MVP does not include a backend, database, login, admin system, upload flow or production security layer yet. Those can be added in a later version when the data model and user workflows are stable.
+
+---
+*Last updated: 2026-07-20 — auto-push enabled*
