@@ -124,7 +124,7 @@ async function runExtractionOnce() {
       const doiRecords = openAlex.records
         .map((record) => record.project.doi)
         .filter(Boolean)
-        .slice(0, 5);
+        .slice(0, 60);
       
       if (doiRecords.length === 0) {
         console.log("  (No DOIs from OpenAlex to verify with Crossref)");
@@ -154,7 +154,7 @@ async function runExtractionOnce() {
       const institutions = openAlex.records
         .flatMap((record) => record.institutions)
         .filter((institution) => institution.rorId)
-        .slice(0, 8);
+        .slice(0, 60);
 
       if (institutions.length === 0) {
         console.log("  (No institutions from OpenAlex to enrich with ROR)");
