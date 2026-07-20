@@ -12,7 +12,9 @@
     "sync:watch": "node scripts/ingestion/runExtraction.mjs --watch",
     "serve:api": "node server/server.mjs",
     "enrich:sample": "node scripts/ingestion/enrichSample.mjs",
-    "verify:enrichment": "node scripts/ingestion/verifyEnrichment.mjs"
+    "verify:enrichment": "node scripts/ingestion/verifyEnrichment.mjs",
+    "ingest:media-seed": "node scripts/ingestion/ingestMediaSeed.mjs",
+    "queue:process": "node scripts/ingestion/processAutomationQueue.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

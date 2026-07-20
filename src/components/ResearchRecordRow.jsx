@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { ImageOff } from "lucide-react";
 import { Link } from "react-router-dom";
 import InstitutionLink from "./InstitutionLink.jsx";
 import TopicTag from "./TopicTag.jsx";
@@ -7,6 +9,56 @@ function compactDate(value) {
     return "Not recorded";
   }
   return String(value).slice(0, 10);
+}
+
+// Per-record image/source preview card. Shows the first image candidate
+// (sourcePages[0].images[0]) as a linked thumbnail when one exists; falls
+// back to "Image candidate not available yet" with the source link kept
+// visible when it doesn't. If the image URL 404s or otherwise fails to
+// load, swaps to the same source-card fallback rather than showing a
+// broken image icon.
+function RecordImagePreview({ project }) {
+  const [imageFailed, setImageFailed] = useState(false);
+  const sourcePage = project.sourcePages?.[0];
+  const image = sourcePage?.images?.[0];
+  const sourceUrl = sourcePage?.sourceUrl;
+
+  if (image?.imageUrl && !imageFailed) {
+    return (
+      <a
+        className="research-record-image-card"
+        href={sourceUrl || image.sourceUrl}
+        rel="noreferrer"
+        target="_blank"
+        title={image.caption || image.altText || "View source"}
+      >
+        <img
+          alt={image.altText || image.caption || ""}
+          className="research-record-image-thumb"
+          loading="lazy"
+          onError={() => setImageFailed(true)}
+          src={image.imageUrl}
+        />
+      </a>
+    );
+  }
+
+  return (
+    <span className="research-record-image-placeholder">
+      <ImageOff aria-hidden="true" size={13} />
+      <span>
+        Image candidate not available yet
+        {sourceUrl ? (
+          <>
+            {" "}
+            <a href={sourceUrl} rel="noreferrer" target="_blank">
+              Source
+            </a>
+          </>
+        ) : null}
+      </span>
+    </span>
+  );
 }
 
 /**
@@ -33,6 +85,7 @@ export function ResearchRecordRow({ project, showInstitution = true, extraLabel 
           <span>{extraLabel ?? project.extractionMethod}</span>
         </div>
       </div>
+      <RecordImagePreview project={project} />
       {project.researchCategories?.[0] ? (
         <TopicTag
           category={project.researchCategories[0]}

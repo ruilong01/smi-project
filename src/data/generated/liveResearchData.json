@@ -1,8 +1,8 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "generatedAt": "2026-07-20T07:01:13.504Z",
-    "lastSuccessfulSync": "2026-07-20T07:01:13.504Z",
+    "generatedAt": "2026-07-20T09:14:17.794Z",
+    "lastSuccessfulSync": "2026-07-20T09:14:17.794Z",
     "unavailable": false,
     "statusMessage": "Traceable maritime R&D data extracted from configured sources.",
     "testingRefreshIntervalMs": 300000,
@@ -55,6 +55,45 @@
         "parseErrors": [],
         "rateLimitStatus": "not-rate-limited",
         "nextScheduledRun": "2026-07-20T07:09:06.046Z"
+      },
+      {
+        "sourceId": "media-seed",
+        "sourceName": "Media-Enabled Seed Dataset",
+        "extractionType": "manual seed import (media-enriched)",
+        "lastAttemptedSync": "2026-07-20T09:08:13.177Z",
+        "lastSuccessfulSync": "2026-07-20T09:08:13.177Z",
+        "recordsFetched": 25,
+        "recordsCreated": 3,
+        "recordsUpdated": 0,
+        "recordsRejected": 22,
+        "parseErrors": [],
+        "rateLimitStatus": "not-applicable",
+        "nextScheduledRun": ""
+      },
+      {
+        "sourceId": "automation-queue",
+        "sourceName": "Global Research Automation Queue",
+        "extractionType": "OpenAlex API + Crossref DOI verification (queue-driven)",
+        "lastAttemptedSync": "2026-07-20T09:14:17.794Z",
+        "lastSuccessfulSync": "2026-07-20T09:14:59.348Z",
+        "recordsFetched": 0,
+        "recordsCreated": 0,
+        "recordsUpdated": 0,
+        "recordsRejected": 0,
+        "parseErrors": [
+          "global-search-0001: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Green+Shipping%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+          "global-search-0002: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Alternative+Fuels%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+          "global-search-0003: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Smart+Ports%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+          "global-search-0004: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Maritime+AI%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+          "global-search-0005: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Autonomous+Vessels%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+          "global-search-0006: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Maritime+Cybersecurity%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+          "global-search-0007: 429 Too Many Requests for https://api.openalex.org/works?search=Singapore+maritime+%22Green+Shipping%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+          "global-search-0008: 429 Too Many Requests for https://api.openalex.org/works?search=Singapore+maritime+%22Alternative+Fuels%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+          "global-search-0009: 429 Too Many Requests for https://api.openalex.org/works?search=Singapore+maritime+%22Smart+Ports%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+          "global-search-0010: 429 Too Many Requests for https://api.openalex.org/works?search=Singapore+maritime+%22Maritime+AI%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid"
+        ],
+        "rateLimitStatus": "not-rate-limited",
+        "nextScheduledRun": ""
       }
     ]
   },
@@ -21208,6 +21247,502 @@
         "recency": 100,
         "dataCompleteness": 90,
         "locationConfidence": 72
+      },
+      "locationDisplayLevel": "city"
+    },
+    {
+      "id": "project-mediaseed-cordis-101138620",
+      "slug": "green-ammonia-and-biomethanol-fuel-maritime-vessels-is",
+      "title": "Green Ammonia and Biomethanol fuel MAritime Vessels",
+      "alternateTitles": [
+        "GAMMA"
+      ],
+      "summary": "GAMMA aims to retrofit an Ultramax bulk carrier and demonstrate safe integration of biomethanol, ammonia and fuel-cell related systems for emission reduction in commercial vessels.",
+      "technicalDescription": "The project goal is retrofitting an Ultramax bulk carrier for international routes and testing biomethanol/NH3 fuel systems.",
+      "projectType": "MEDIA_SEED_RECORD",
+      "entityType": "PROJECT",
+      "status": "Active project",
+      "projectStatus": "Active project",
+      "startDate": "",
+      "endDate": "",
+      "categories": [
+        "Alternative energy and fuels"
+      ],
+      "researchCategories": [
+        "Alternative energy and fuels"
+      ],
+      "technologies": [
+        "Navigation systems",
+        "Alternative fuels"
+      ],
+      "keyTechnologies": [
+        "Navigation systems",
+        "Alternative fuels"
+      ],
+      "fundingAmount": null,
+      "fundingCurrency": "",
+      "leadInstitutionId": "institution-mediaseed-verkis-hf",
+      "leadOrganisation": "VERKIS HF",
+      "partnerOrganisations": [],
+      "countryCode": "IS",
+      "country": "Iceland",
+      "city": "",
+      "latitude": 64.9631,
+      "longitude": -19.0208,
+      "locationPrecision": "institution-country",
+      "locationConfidence": 70,
+      "sourceConfidence": 80,
+      "firstSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "lastUpdatedAt": "2026-07-20T09:08:13.177Z",
+      "plainLanguageSummary": "Strong project-level record with vessel retrofit, demonstration, alternative fuels and fuel value-chain testing.",
+      "problemAddressed": "",
+      "proposedSolution": "",
+      "expectedImpact": "",
+      "milestones": [
+        {
+          "date": "2026-07-20T08:49:39.413038+00:00",
+          "label": "Media-enriched seed record imported",
+          "status": "verified",
+          "sourceIds": [
+            "source-mediaseed-cordis-101138620"
+          ]
+        }
+      ],
+      "researchOutputs": [],
+      "images": [
+        {
+          "url": "",
+          "sourcePageUrl": "",
+          "creator": "Internal technical placeholder",
+          "licence": "Original placeholder generated for this frontend demo",
+          "attributionRequired": false,
+          "caption": "No verified project image is available.",
+          "imageType": "placeholder",
+          "isOfficialProjectImage": false
+        }
+      ],
+      "sourceIds": [
+        "source-mediaseed-cordis-101138620"
+      ],
+      "fieldSources": {
+        "title": [
+          "source-mediaseed-cordis-101138620"
+        ],
+        "leadOrganisation": [
+          "source-mediaseed-cordis-101138620"
+        ],
+        "researchCategories": [
+          "source-mediaseed-cordis-101138620"
+        ],
+        "country": [
+          "source-mediaseed-cordis-101138620"
+        ]
+      },
+      "displayReasons": [
+        "matches_research_category",
+        "primary_source_available",
+        "city_level_location",
+        "updated_within_36_months",
+        "active_research_project"
+      ],
+      "extractionMethod": "Media-enriched seed import (CORDIS project pages)",
+      "openAlex": null,
+      "sourcePages": [
+        {
+          "sourceId": "sourcepage-project-mediaseed-cordis-101138620",
+          "sourceType": "media-seed",
+          "sourceName": "CORDIS",
+          "sourceUrl": "https://cordis.europa.eu/project/id/101138620",
+          "pageTitle": "Green Ammonia and Biomethanol fuel MAritime Vessels",
+          "publishedDate": "2026-07-20T08:49:39.413038+00:00",
+          "fetchedAt": "2026-07-20T08:49:39.413038+00:00",
+          "rawTextStored": false,
+          "cleanedTextSummary": "GAMMA aims to retrofit an Ultramax bulk carrier and demonstrate safe integration of biomethanol, ammonia and fuel-cell related systems for emission reduction in commercial vessels.",
+          "chunks": [
+            {
+              "chunkId": "chunk-mediaseed-cordis-101138620-0",
+              "text": "The project goal is retrofitting an Ultramax bulk carrier for international routes and testing biomethanol/NH3 fuel systems.",
+              "heading": "",
+              "sourceUrl": "https://cordis.europa.eu/project/id/101138620",
+              "pageTitle": "Green Ammonia and Biomethanol fuel MAritime Vessels"
+            }
+          ],
+          "images": [
+            {
+              "imageUrl": "https://mc-4cf22472-b2a7-42f7-8f97-1a7c-cdn-endpoint.azureedge.net/en/-/media/Feature/Media/ContentMedia/Case-Studies/gamma-project-600.jpg?hash=DFFD9824A27AFD805C22DDAF0379B480&rev=f785cb978619461188145f438e571c4f",
+              "altText": "GAMMA project image",
+              "caption": "GAMMA project visual from RINA project page",
+              "sourceUrl": "https://www.rina.org/en/media/projects/gamma-project",
+              "canEmbed": false,
+              "rightsNote": "Use as linked preview with source attribution unless reuse rights are confirmed."
+            }
+          ]
+        }
+      ],
+      "selectedEvidence": [],
+      "aiAnalysis": null,
+      "dataQuality": {
+        "hasOriginalSource": true,
+        "hasOfficialSource": true,
+        "evidenceCount": 1,
+        "imageCandidateCount": 1,
+        "needsManualReview": false,
+        "lastAnalysedAt": null
+      },
+      "displayScore": 81,
+      "displayTier": "highlighted",
+      "isPubliclyDisplayable": true,
+      "displayReasonsText": [
+        "Directly matches a maritime research category",
+        "Includes at least one primary source",
+        "Displayed at city level because exact site is uncertain",
+        "Updated within the last 36 months",
+        "Identified as an active research project"
+      ],
+      "scoringSignals": {
+        "sourceAuthority": 80,
+        "maritimeRelevance": 78,
+        "evidenceStrength": 68,
+        "recency": 100,
+        "dataCompleteness": 90,
+        "locationConfidence": 70
+      },
+      "locationDisplayLevel": "city"
+    },
+    {
+      "id": "project-mediaseed-cordis-101138478",
+      "slug": "dynamic-navigation-and-port-call-optimisation-in-real-time-no",
+      "title": "Dynamic navigation and port call optimisation in real time",
+      "alternateTitles": [
+        "DYNAPORT"
+      ],
+      "summary": "DYNAPORT develops optimisation and coordination tools for ports and ships to reduce fuel consumption and improve port efficiency by at least 10%.",
+      "technicalDescription": "The project aims to reduce fuel consumption and enhance port efficiency by at least 10%.",
+      "projectType": "MEDIA_SEED_RECORD",
+      "entityType": "PROJECT",
+      "status": "Active project",
+      "projectStatus": "Active project",
+      "startDate": "",
+      "endDate": "",
+      "categories": [
+        "Autonomous navigation",
+        "Intelligent port services",
+        "Vessel efficiency"
+      ],
+      "researchCategories": [
+        "Autonomous navigation",
+        "Intelligent port services",
+        "Vessel efficiency"
+      ],
+      "technologies": [
+        "Navigation systems",
+        "Alternative fuels",
+        "Port infrastructure"
+      ],
+      "keyTechnologies": [
+        "Navigation systems",
+        "Alternative fuels",
+        "Port infrastructure"
+      ],
+      "fundingAmount": null,
+      "fundingCurrency": "",
+      "leadInstitutionId": "institution-mediaseed-sintef-ocean-as",
+      "leadOrganisation": "SINTEF OCEAN AS",
+      "partnerOrganisations": [],
+      "countryCode": "NO",
+      "country": "Norway",
+      "city": "",
+      "latitude": 60.472,
+      "longitude": 8.4689,
+      "locationPrecision": "institution-country",
+      "locationConfidence": 70,
+      "sourceConfidence": 80,
+      "firstSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "lastUpdatedAt": "2026-07-20T09:08:13.177Z",
+      "plainLanguageSummary": "Directly aligned with smart ports, emissions reduction and operational optimisation.",
+      "problemAddressed": "",
+      "proposedSolution": "",
+      "expectedImpact": "",
+      "milestones": [
+        {
+          "date": "2026-07-20T08:49:39.413038+00:00",
+          "label": "Media-enriched seed record imported",
+          "status": "verified",
+          "sourceIds": [
+            "source-mediaseed-cordis-101138478"
+          ]
+        }
+      ],
+      "researchOutputs": [],
+      "images": [
+        {
+          "url": "",
+          "sourcePageUrl": "",
+          "creator": "Internal technical placeholder",
+          "licence": "Original placeholder generated for this frontend demo",
+          "attributionRequired": false,
+          "caption": "No verified project image is available.",
+          "imageType": "placeholder",
+          "isOfficialProjectImage": false
+        }
+      ],
+      "sourceIds": [
+        "source-mediaseed-cordis-101138478"
+      ],
+      "fieldSources": {
+        "title": [
+          "source-mediaseed-cordis-101138478"
+        ],
+        "leadOrganisation": [
+          "source-mediaseed-cordis-101138478"
+        ],
+        "researchCategories": [
+          "source-mediaseed-cordis-101138478"
+        ],
+        "country": [
+          "source-mediaseed-cordis-101138478"
+        ]
+      },
+      "displayReasons": [
+        "matches_research_category",
+        "primary_source_available",
+        "city_level_location",
+        "updated_within_36_months",
+        "active_research_project"
+      ],
+      "extractionMethod": "Media-enriched seed import (CORDIS project pages)",
+      "openAlex": null,
+      "sourcePages": [
+        {
+          "sourceId": "sourcepage-project-mediaseed-cordis-101138478",
+          "sourceType": "media-seed",
+          "sourceName": "CORDIS",
+          "sourceUrl": "https://cordis.europa.eu/project/id/101138478",
+          "pageTitle": "Dynamic navigation and port call optimisation in real time",
+          "publishedDate": "2026-07-20T08:49:39.413038+00:00",
+          "fetchedAt": "2026-07-20T08:49:39.413038+00:00",
+          "rawTextStored": false,
+          "cleanedTextSummary": "DYNAPORT develops optimisation and coordination tools for ports and ships to reduce fuel consumption and improve port efficiency by at least 10%.",
+          "chunks": [
+            {
+              "chunkId": "chunk-mediaseed-cordis-101138478-0",
+              "text": "The project aims to reduce fuel consumption and enhance port efficiency by at least 10%.",
+              "heading": "",
+              "sourceUrl": "https://cordis.europa.eu/project/id/101138478",
+              "pageTitle": "Dynamic navigation and port call optimisation in real time"
+            }
+          ],
+          "images": [
+            {
+              "imageUrl": "https://dynaport.eu/wp-content/uploads/2025/02/Photo-SvenHansche.Shutterstock-1.jpg",
+              "altText": "Ship at sea from DYNAPORT project website",
+              "caption": "Container vessel image used on DYNAPORT project website",
+              "sourceUrl": "https://dynaport.eu/",
+              "canEmbed": false,
+              "rightsNote": "Likely licensed/stock image. Use as linked preview only unless rights are confirmed."
+            },
+            {
+              "imageUrl": "https://dynaport.eu/wp-content/uploads/2025/02/home-page-partners-1.png",
+              "altText": "DYNAPORT partner map",
+              "caption": "DYNAPORT partner map visual",
+              "sourceUrl": "https://dynaport.eu/",
+              "canEmbed": false,
+              "rightsNote": "Use as linked preview with project source attribution."
+            },
+            {
+              "imageUrl": "https://dynaport.eu/wp-content/uploads/2025/02/DYNAPORT-logo-no-tagline-white-no-background.png",
+              "altText": "DYNAPORT logo",
+              "caption": "DYNAPORT logo",
+              "sourceUrl": "https://dynaport.eu/",
+              "canEmbed": false,
+              "rightsNote": "Logo; use cautiously with attribution."
+            }
+          ]
+        }
+      ],
+      "selectedEvidence": [],
+      "aiAnalysis": null,
+      "dataQuality": {
+        "hasOriginalSource": true,
+        "hasOfficialSource": true,
+        "evidenceCount": 1,
+        "imageCandidateCount": 3,
+        "needsManualReview": false,
+        "lastAnalysedAt": null
+      },
+      "displayScore": 85,
+      "displayTier": "highlighted",
+      "isPubliclyDisplayable": true,
+      "displayReasonsText": [
+        "Directly matches a maritime research category",
+        "Includes at least one primary source",
+        "Displayed at city level because exact site is uncertain",
+        "Updated within the last 36 months",
+        "Identified as an active research project"
+      ],
+      "scoringSignals": {
+        "sourceAuthority": 80,
+        "maritimeRelevance": 94,
+        "evidenceStrength": 68,
+        "recency": 100,
+        "dataCompleteness": 90,
+        "locationConfidence": 70
+      },
+      "locationDisplayLevel": "city"
+    },
+    {
+      "id": "project-mediaseed-cordis-101138411",
+      "slug": "safe-and-efficient-use-of-sustainable-fuels-in-maritime-transport-applications-gr",
+      "title": "Safe and Efficient Use of Sustainable Fuels in Maritime Transport Applications",
+      "alternateTitles": [
+        "SAFeCRAFT"
+      ],
+      "summary": "SAFeCRAFT demonstrates sustainable alternative fuel technologies, including hydrogen, ammonia and LOHC-based options, for waterborne transport applications.",
+      "technicalDescription": "The project demonstrates four SAF-enabling technologies while utilising H2 on a demonstration vessel.",
+      "projectType": "MEDIA_SEED_RECORD",
+      "entityType": "PROJECT",
+      "status": "Active project",
+      "projectStatus": "Active project",
+      "startDate": "",
+      "endDate": "",
+      "categories": [
+        "Alternative energy and fuels"
+      ],
+      "researchCategories": [
+        "Alternative energy and fuels"
+      ],
+      "technologies": [
+        "Alternative fuels",
+        "Port infrastructure"
+      ],
+      "keyTechnologies": [
+        "Alternative fuels",
+        "Port infrastructure"
+      ],
+      "fundingAmount": null,
+      "fundingCurrency": "",
+      "leadInstitutionId": "institution-mediaseed-hydrus",
+      "leadOrganisation": "HYDRUS",
+      "partnerOrganisations": [],
+      "countryCode": "GR",
+      "country": "Greece",
+      "city": "",
+      "latitude": 39.0742,
+      "longitude": 21.8243,
+      "locationPrecision": "institution-country",
+      "locationConfidence": 70,
+      "sourceConfidence": 80,
+      "firstSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "lastUpdatedAt": "2026-07-20T09:08:13.177Z",
+      "plainLanguageSummary": "Very strong practical R&D record with demo vessel, safety assessment, energy efficiency and techno-economic feasibility.",
+      "problemAddressed": "",
+      "proposedSolution": "",
+      "expectedImpact": "",
+      "milestones": [
+        {
+          "date": "2026-07-20T08:49:39.413038+00:00",
+          "label": "Media-enriched seed record imported",
+          "status": "verified",
+          "sourceIds": [
+            "source-mediaseed-cordis-101138411"
+          ]
+        }
+      ],
+      "researchOutputs": [],
+      "images": [
+        {
+          "url": "",
+          "sourcePageUrl": "",
+          "creator": "Internal technical placeholder",
+          "licence": "Original placeholder generated for this frontend demo",
+          "attributionRequired": false,
+          "caption": "No verified project image is available.",
+          "imageType": "placeholder",
+          "isOfficialProjectImage": false
+        }
+      ],
+      "sourceIds": [
+        "source-mediaseed-cordis-101138411"
+      ],
+      "fieldSources": {
+        "title": [
+          "source-mediaseed-cordis-101138411"
+        ],
+        "leadOrganisation": [
+          "source-mediaseed-cordis-101138411"
+        ],
+        "researchCategories": [
+          "source-mediaseed-cordis-101138411"
+        ],
+        "country": [
+          "source-mediaseed-cordis-101138411"
+        ]
+      },
+      "displayReasons": [
+        "matches_research_category",
+        "primary_source_available",
+        "city_level_location",
+        "updated_within_36_months",
+        "active_research_project"
+      ],
+      "extractionMethod": "Media-enriched seed import (CORDIS project pages)",
+      "openAlex": null,
+      "sourcePages": [
+        {
+          "sourceId": "sourcepage-project-mediaseed-cordis-101138411",
+          "sourceType": "media-seed",
+          "sourceName": "CORDIS",
+          "sourceUrl": "https://cordis.europa.eu/project/id/101138411",
+          "pageTitle": "Safe and Efficient Use of Sustainable Fuels in Maritime Transport Applications",
+          "publishedDate": "2026-07-20T08:49:39.413038+00:00",
+          "fetchedAt": "2026-07-20T08:49:39.413038+00:00",
+          "rawTextStored": false,
+          "cleanedTextSummary": "SAFeCRAFT demonstrates sustainable alternative fuel technologies, including hydrogen, ammonia and LOHC-based options, for waterborne transport applications.",
+          "chunks": [
+            {
+              "chunkId": "chunk-mediaseed-cordis-101138411-0",
+              "text": "The project demonstrates four SAF-enabling technologies while utilising H2 on a demonstration vessel.",
+              "heading": "",
+              "sourceUrl": "https://cordis.europa.eu/project/id/101138411",
+              "pageTitle": "Safe and Efficient Use of Sustainable Fuels in Maritime Transport Applications"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "selectedEvidence": [],
+      "aiAnalysis": null,
+      "dataQuality": {
+        "hasOriginalSource": true,
+        "hasOfficialSource": true,
+        "evidenceCount": 1,
+        "imageCandidateCount": 0,
+        "needsManualReview": false,
+        "lastAnalysedAt": null
+      },
+      "displayScore": 81,
+      "displayTier": "highlighted",
+      "isPubliclyDisplayable": true,
+      "displayReasonsText": [
+        "Directly matches a maritime research category",
+        "Includes at least one primary source",
+        "Displayed at city level because exact site is uncertain",
+        "Updated within the last 36 months",
+        "Identified as an active research project"
+      ],
+      "scoringSignals": {
+        "sourceAuthority": 80,
+        "maritimeRelevance": 78,
+        "evidenceStrength": 68,
+        "recency": 100,
+        "dataCompleteness": 90,
+        "locationConfidence": 70
       },
       "locationDisplayLevel": "city"
     }
@@ -42364,6 +42899,502 @@
         "locationConfidence": 72
       },
       "locationDisplayLevel": "city"
+    },
+    {
+      "id": "project-mediaseed-cordis-101138620",
+      "slug": "green-ammonia-and-biomethanol-fuel-maritime-vessels-is",
+      "title": "Green Ammonia and Biomethanol fuel MAritime Vessels",
+      "alternateTitles": [
+        "GAMMA"
+      ],
+      "summary": "GAMMA aims to retrofit an Ultramax bulk carrier and demonstrate safe integration of biomethanol, ammonia and fuel-cell related systems for emission reduction in commercial vessels.",
+      "technicalDescription": "The project goal is retrofitting an Ultramax bulk carrier for international routes and testing biomethanol/NH3 fuel systems.",
+      "projectType": "MEDIA_SEED_RECORD",
+      "entityType": "PROJECT",
+      "status": "Active project",
+      "projectStatus": "Active project",
+      "startDate": "",
+      "endDate": "",
+      "categories": [
+        "Alternative energy and fuels"
+      ],
+      "researchCategories": [
+        "Alternative energy and fuels"
+      ],
+      "technologies": [
+        "Navigation systems",
+        "Alternative fuels"
+      ],
+      "keyTechnologies": [
+        "Navigation systems",
+        "Alternative fuels"
+      ],
+      "fundingAmount": null,
+      "fundingCurrency": "",
+      "leadInstitutionId": "institution-mediaseed-verkis-hf",
+      "leadOrganisation": "VERKIS HF",
+      "partnerOrganisations": [],
+      "countryCode": "IS",
+      "country": "Iceland",
+      "city": "",
+      "latitude": 64.9631,
+      "longitude": -19.0208,
+      "locationPrecision": "institution-country",
+      "locationConfidence": 70,
+      "sourceConfidence": 80,
+      "firstSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "lastUpdatedAt": "2026-07-20T09:08:13.177Z",
+      "plainLanguageSummary": "Strong project-level record with vessel retrofit, demonstration, alternative fuels and fuel value-chain testing.",
+      "problemAddressed": "",
+      "proposedSolution": "",
+      "expectedImpact": "",
+      "milestones": [
+        {
+          "date": "2026-07-20T08:49:39.413038+00:00",
+          "label": "Media-enriched seed record imported",
+          "status": "verified",
+          "sourceIds": [
+            "source-mediaseed-cordis-101138620"
+          ]
+        }
+      ],
+      "researchOutputs": [],
+      "images": [
+        {
+          "url": "",
+          "sourcePageUrl": "",
+          "creator": "Internal technical placeholder",
+          "licence": "Original placeholder generated for this frontend demo",
+          "attributionRequired": false,
+          "caption": "No verified project image is available.",
+          "imageType": "placeholder",
+          "isOfficialProjectImage": false
+        }
+      ],
+      "sourceIds": [
+        "source-mediaseed-cordis-101138620"
+      ],
+      "fieldSources": {
+        "title": [
+          "source-mediaseed-cordis-101138620"
+        ],
+        "leadOrganisation": [
+          "source-mediaseed-cordis-101138620"
+        ],
+        "researchCategories": [
+          "source-mediaseed-cordis-101138620"
+        ],
+        "country": [
+          "source-mediaseed-cordis-101138620"
+        ]
+      },
+      "displayReasons": [
+        "matches_research_category",
+        "primary_source_available",
+        "city_level_location",
+        "updated_within_36_months",
+        "active_research_project"
+      ],
+      "extractionMethod": "Media-enriched seed import (CORDIS project pages)",
+      "openAlex": null,
+      "sourcePages": [
+        {
+          "sourceId": "sourcepage-project-mediaseed-cordis-101138620",
+          "sourceType": "media-seed",
+          "sourceName": "CORDIS",
+          "sourceUrl": "https://cordis.europa.eu/project/id/101138620",
+          "pageTitle": "Green Ammonia and Biomethanol fuel MAritime Vessels",
+          "publishedDate": "2026-07-20T08:49:39.413038+00:00",
+          "fetchedAt": "2026-07-20T08:49:39.413038+00:00",
+          "rawTextStored": false,
+          "cleanedTextSummary": "GAMMA aims to retrofit an Ultramax bulk carrier and demonstrate safe integration of biomethanol, ammonia and fuel-cell related systems for emission reduction in commercial vessels.",
+          "chunks": [
+            {
+              "chunkId": "chunk-mediaseed-cordis-101138620-0",
+              "text": "The project goal is retrofitting an Ultramax bulk carrier for international routes and testing biomethanol/NH3 fuel systems.",
+              "heading": "",
+              "sourceUrl": "https://cordis.europa.eu/project/id/101138620",
+              "pageTitle": "Green Ammonia and Biomethanol fuel MAritime Vessels"
+            }
+          ],
+          "images": [
+            {
+              "imageUrl": "https://mc-4cf22472-b2a7-42f7-8f97-1a7c-cdn-endpoint.azureedge.net/en/-/media/Feature/Media/ContentMedia/Case-Studies/gamma-project-600.jpg?hash=DFFD9824A27AFD805C22DDAF0379B480&rev=f785cb978619461188145f438e571c4f",
+              "altText": "GAMMA project image",
+              "caption": "GAMMA project visual from RINA project page",
+              "sourceUrl": "https://www.rina.org/en/media/projects/gamma-project",
+              "canEmbed": false,
+              "rightsNote": "Use as linked preview with source attribution unless reuse rights are confirmed."
+            }
+          ]
+        }
+      ],
+      "selectedEvidence": [],
+      "aiAnalysis": null,
+      "dataQuality": {
+        "hasOriginalSource": true,
+        "hasOfficialSource": true,
+        "evidenceCount": 1,
+        "imageCandidateCount": 1,
+        "needsManualReview": false,
+        "lastAnalysedAt": null
+      },
+      "displayScore": 81,
+      "displayTier": "highlighted",
+      "isPubliclyDisplayable": true,
+      "displayReasonsText": [
+        "Directly matches a maritime research category",
+        "Includes at least one primary source",
+        "Displayed at city level because exact site is uncertain",
+        "Updated within the last 36 months",
+        "Identified as an active research project"
+      ],
+      "scoringSignals": {
+        "sourceAuthority": 80,
+        "maritimeRelevance": 78,
+        "evidenceStrength": 68,
+        "recency": 100,
+        "dataCompleteness": 90,
+        "locationConfidence": 70
+      },
+      "locationDisplayLevel": "city"
+    },
+    {
+      "id": "project-mediaseed-cordis-101138478",
+      "slug": "dynamic-navigation-and-port-call-optimisation-in-real-time-no",
+      "title": "Dynamic navigation and port call optimisation in real time",
+      "alternateTitles": [
+        "DYNAPORT"
+      ],
+      "summary": "DYNAPORT develops optimisation and coordination tools for ports and ships to reduce fuel consumption and improve port efficiency by at least 10%.",
+      "technicalDescription": "The project aims to reduce fuel consumption and enhance port efficiency by at least 10%.",
+      "projectType": "MEDIA_SEED_RECORD",
+      "entityType": "PROJECT",
+      "status": "Active project",
+      "projectStatus": "Active project",
+      "startDate": "",
+      "endDate": "",
+      "categories": [
+        "Autonomous navigation",
+        "Intelligent port services",
+        "Vessel efficiency"
+      ],
+      "researchCategories": [
+        "Autonomous navigation",
+        "Intelligent port services",
+        "Vessel efficiency"
+      ],
+      "technologies": [
+        "Navigation systems",
+        "Alternative fuels",
+        "Port infrastructure"
+      ],
+      "keyTechnologies": [
+        "Navigation systems",
+        "Alternative fuels",
+        "Port infrastructure"
+      ],
+      "fundingAmount": null,
+      "fundingCurrency": "",
+      "leadInstitutionId": "institution-mediaseed-sintef-ocean-as",
+      "leadOrganisation": "SINTEF OCEAN AS",
+      "partnerOrganisations": [],
+      "countryCode": "NO",
+      "country": "Norway",
+      "city": "",
+      "latitude": 60.472,
+      "longitude": 8.4689,
+      "locationPrecision": "institution-country",
+      "locationConfidence": 70,
+      "sourceConfidence": 80,
+      "firstSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "lastUpdatedAt": "2026-07-20T09:08:13.177Z",
+      "plainLanguageSummary": "Directly aligned with smart ports, emissions reduction and operational optimisation.",
+      "problemAddressed": "",
+      "proposedSolution": "",
+      "expectedImpact": "",
+      "milestones": [
+        {
+          "date": "2026-07-20T08:49:39.413038+00:00",
+          "label": "Media-enriched seed record imported",
+          "status": "verified",
+          "sourceIds": [
+            "source-mediaseed-cordis-101138478"
+          ]
+        }
+      ],
+      "researchOutputs": [],
+      "images": [
+        {
+          "url": "",
+          "sourcePageUrl": "",
+          "creator": "Internal technical placeholder",
+          "licence": "Original placeholder generated for this frontend demo",
+          "attributionRequired": false,
+          "caption": "No verified project image is available.",
+          "imageType": "placeholder",
+          "isOfficialProjectImage": false
+        }
+      ],
+      "sourceIds": [
+        "source-mediaseed-cordis-101138478"
+      ],
+      "fieldSources": {
+        "title": [
+          "source-mediaseed-cordis-101138478"
+        ],
+        "leadOrganisation": [
+          "source-mediaseed-cordis-101138478"
+        ],
+        "researchCategories": [
+          "source-mediaseed-cordis-101138478"
+        ],
+        "country": [
+          "source-mediaseed-cordis-101138478"
+        ]
+      },
+      "displayReasons": [
+        "matches_research_category",
+        "primary_source_available",
+        "city_level_location",
+        "updated_within_36_months",
+        "active_research_project"
+      ],
+      "extractionMethod": "Media-enriched seed import (CORDIS project pages)",
+      "openAlex": null,
+      "sourcePages": [
+        {
+          "sourceId": "sourcepage-project-mediaseed-cordis-101138478",
+          "sourceType": "media-seed",
+          "sourceName": "CORDIS",
+          "sourceUrl": "https://cordis.europa.eu/project/id/101138478",
+          "pageTitle": "Dynamic navigation and port call optimisation in real time",
+          "publishedDate": "2026-07-20T08:49:39.413038+00:00",
+          "fetchedAt": "2026-07-20T08:49:39.413038+00:00",
+          "rawTextStored": false,
+          "cleanedTextSummary": "DYNAPORT develops optimisation and coordination tools for ports and ships to reduce fuel consumption and improve port efficiency by at least 10%.",
+          "chunks": [
+            {
+              "chunkId": "chunk-mediaseed-cordis-101138478-0",
+              "text": "The project aims to reduce fuel consumption and enhance port efficiency by at least 10%.",
+              "heading": "",
+              "sourceUrl": "https://cordis.europa.eu/project/id/101138478",
+              "pageTitle": "Dynamic navigation and port call optimisation in real time"
+            }
+          ],
+          "images": [
+            {
+              "imageUrl": "https://dynaport.eu/wp-content/uploads/2025/02/Photo-SvenHansche.Shutterstock-1.jpg",
+              "altText": "Ship at sea from DYNAPORT project website",
+              "caption": "Container vessel image used on DYNAPORT project website",
+              "sourceUrl": "https://dynaport.eu/",
+              "canEmbed": false,
+              "rightsNote": "Likely licensed/stock image. Use as linked preview only unless rights are confirmed."
+            },
+            {
+              "imageUrl": "https://dynaport.eu/wp-content/uploads/2025/02/home-page-partners-1.png",
+              "altText": "DYNAPORT partner map",
+              "caption": "DYNAPORT partner map visual",
+              "sourceUrl": "https://dynaport.eu/",
+              "canEmbed": false,
+              "rightsNote": "Use as linked preview with project source attribution."
+            },
+            {
+              "imageUrl": "https://dynaport.eu/wp-content/uploads/2025/02/DYNAPORT-logo-no-tagline-white-no-background.png",
+              "altText": "DYNAPORT logo",
+              "caption": "DYNAPORT logo",
+              "sourceUrl": "https://dynaport.eu/",
+              "canEmbed": false,
+              "rightsNote": "Logo; use cautiously with attribution."
+            }
+          ]
+        }
+      ],
+      "selectedEvidence": [],
+      "aiAnalysis": null,
+      "dataQuality": {
+        "hasOriginalSource": true,
+        "hasOfficialSource": true,
+        "evidenceCount": 1,
+        "imageCandidateCount": 3,
+        "needsManualReview": false,
+        "lastAnalysedAt": null
+      },
+      "displayScore": 85,
+      "displayTier": "highlighted",
+      "isPubliclyDisplayable": true,
+      "displayReasonsText": [
+        "Directly matches a maritime research category",
+        "Includes at least one primary source",
+        "Displayed at city level because exact site is uncertain",
+        "Updated within the last 36 months",
+        "Identified as an active research project"
+      ],
+      "scoringSignals": {
+        "sourceAuthority": 80,
+        "maritimeRelevance": 94,
+        "evidenceStrength": 68,
+        "recency": 100,
+        "dataCompleteness": 90,
+        "locationConfidence": 70
+      },
+      "locationDisplayLevel": "city"
+    },
+    {
+      "id": "project-mediaseed-cordis-101138411",
+      "slug": "safe-and-efficient-use-of-sustainable-fuels-in-maritime-transport-applications-gr",
+      "title": "Safe and Efficient Use of Sustainable Fuels in Maritime Transport Applications",
+      "alternateTitles": [
+        "SAFeCRAFT"
+      ],
+      "summary": "SAFeCRAFT demonstrates sustainable alternative fuel technologies, including hydrogen, ammonia and LOHC-based options, for waterborne transport applications.",
+      "technicalDescription": "The project demonstrates four SAF-enabling technologies while utilising H2 on a demonstration vessel.",
+      "projectType": "MEDIA_SEED_RECORD",
+      "entityType": "PROJECT",
+      "status": "Active project",
+      "projectStatus": "Active project",
+      "startDate": "",
+      "endDate": "",
+      "categories": [
+        "Alternative energy and fuels"
+      ],
+      "researchCategories": [
+        "Alternative energy and fuels"
+      ],
+      "technologies": [
+        "Alternative fuels",
+        "Port infrastructure"
+      ],
+      "keyTechnologies": [
+        "Alternative fuels",
+        "Port infrastructure"
+      ],
+      "fundingAmount": null,
+      "fundingCurrency": "",
+      "leadInstitutionId": "institution-mediaseed-hydrus",
+      "leadOrganisation": "HYDRUS",
+      "partnerOrganisations": [],
+      "countryCode": "GR",
+      "country": "Greece",
+      "city": "",
+      "latitude": 39.0742,
+      "longitude": 21.8243,
+      "locationPrecision": "institution-country",
+      "locationConfidence": 70,
+      "sourceConfidence": 80,
+      "firstSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastSeenAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "lastUpdatedAt": "2026-07-20T09:08:13.177Z",
+      "plainLanguageSummary": "Very strong practical R&D record with demo vessel, safety assessment, energy efficiency and techno-economic feasibility.",
+      "problemAddressed": "",
+      "proposedSolution": "",
+      "expectedImpact": "",
+      "milestones": [
+        {
+          "date": "2026-07-20T08:49:39.413038+00:00",
+          "label": "Media-enriched seed record imported",
+          "status": "verified",
+          "sourceIds": [
+            "source-mediaseed-cordis-101138411"
+          ]
+        }
+      ],
+      "researchOutputs": [],
+      "images": [
+        {
+          "url": "",
+          "sourcePageUrl": "",
+          "creator": "Internal technical placeholder",
+          "licence": "Original placeholder generated for this frontend demo",
+          "attributionRequired": false,
+          "caption": "No verified project image is available.",
+          "imageType": "placeholder",
+          "isOfficialProjectImage": false
+        }
+      ],
+      "sourceIds": [
+        "source-mediaseed-cordis-101138411"
+      ],
+      "fieldSources": {
+        "title": [
+          "source-mediaseed-cordis-101138411"
+        ],
+        "leadOrganisation": [
+          "source-mediaseed-cordis-101138411"
+        ],
+        "researchCategories": [
+          "source-mediaseed-cordis-101138411"
+        ],
+        "country": [
+          "source-mediaseed-cordis-101138411"
+        ]
+      },
+      "displayReasons": [
+        "matches_research_category",
+        "primary_source_available",
+        "city_level_location",
+        "updated_within_36_months",
+        "active_research_project"
+      ],
+      "extractionMethod": "Media-enriched seed import (CORDIS project pages)",
+      "openAlex": null,
+      "sourcePages": [
+        {
+          "sourceId": "sourcepage-project-mediaseed-cordis-101138411",
+          "sourceType": "media-seed",
+          "sourceName": "CORDIS",
+          "sourceUrl": "https://cordis.europa.eu/project/id/101138411",
+          "pageTitle": "Safe and Efficient Use of Sustainable Fuels in Maritime Transport Applications",
+          "publishedDate": "2026-07-20T08:49:39.413038+00:00",
+          "fetchedAt": "2026-07-20T08:49:39.413038+00:00",
+          "rawTextStored": false,
+          "cleanedTextSummary": "SAFeCRAFT demonstrates sustainable alternative fuel technologies, including hydrogen, ammonia and LOHC-based options, for waterborne transport applications.",
+          "chunks": [
+            {
+              "chunkId": "chunk-mediaseed-cordis-101138411-0",
+              "text": "The project demonstrates four SAF-enabling technologies while utilising H2 on a demonstration vessel.",
+              "heading": "",
+              "sourceUrl": "https://cordis.europa.eu/project/id/101138411",
+              "pageTitle": "Safe and Efficient Use of Sustainable Fuels in Maritime Transport Applications"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "selectedEvidence": [],
+      "aiAnalysis": null,
+      "dataQuality": {
+        "hasOriginalSource": true,
+        "hasOfficialSource": true,
+        "evidenceCount": 1,
+        "imageCandidateCount": 0,
+        "needsManualReview": false,
+        "lastAnalysedAt": null
+      },
+      "displayScore": 81,
+      "displayTier": "highlighted",
+      "isPubliclyDisplayable": true,
+      "displayReasonsText": [
+        "Directly matches a maritime research category",
+        "Includes at least one primary source",
+        "Displayed at city level because exact site is uncertain",
+        "Updated within the last 36 months",
+        "Identified as an active research project"
+      ],
+      "scoringSignals": {
+        "sourceAuthority": 80,
+        "maritimeRelevance": 78,
+        "evidenceStrength": 68,
+        "recency": 100,
+        "dataCompleteness": 90,
+        "locationConfidence": 70
+      },
+      "locationDisplayLevel": "city"
     }
   ],
   "institutions": [
@@ -45703,6 +46734,51 @@
       "sourceIds": [
         "source-manual-https-example-org-autonomous-ferry-trial"
       ]
+    },
+    {
+      "id": "institution-mediaseed-verkis-hf",
+      "rorId": "",
+      "canonicalName": "VERKIS HF",
+      "aliases": [],
+      "institutionType": "unspecified",
+      "countryCode": "IS",
+      "city": "",
+      "latitude": null,
+      "longitude": null,
+      "website": "",
+      "sourceIds": [
+        "source-mediaseed-cordis-101138620"
+      ]
+    },
+    {
+      "id": "institution-mediaseed-sintef-ocean-as",
+      "rorId": "",
+      "canonicalName": "SINTEF OCEAN AS",
+      "aliases": [],
+      "institutionType": "unspecified",
+      "countryCode": "NO",
+      "city": "",
+      "latitude": null,
+      "longitude": null,
+      "website": "",
+      "sourceIds": [
+        "source-mediaseed-cordis-101138478"
+      ]
+    },
+    {
+      "id": "institution-mediaseed-hydrus",
+      "rorId": "",
+      "canonicalName": "HYDRUS",
+      "aliases": [],
+      "institutionType": "unspecified",
+      "countryCode": "GR",
+      "city": "",
+      "latitude": null,
+      "longitude": null,
+      "website": "",
+      "sourceIds": [
+        "source-mediaseed-cordis-101138411"
+      ]
     }
   ],
   "countries": [
@@ -45717,7 +46793,7 @@
         8.4689,
         60.472
       ],
-      "researchIntensity": 24,
+      "researchIntensity": 28,
       "themes": [
         "Autonomous navigation",
         "Digital twins",
@@ -45729,7 +46805,8 @@
       "institutions": [
         "Norwegian University of Science and Technology",
         "University of Oslo",
-        "University of South-Eastern Norway"
+        "University of South-Eastern Norway",
+        "SINTEF OCEAN AS"
       ],
       "exampleProjects": [
         "Digital Twin of Autonomous Surface Vessels for Safe Maritime Navigation Enabled Through Predictive Modeling and Reinforcement Learning",
@@ -45737,9 +46814,10 @@
         "Essentials of hydrogen storage and power systems for green shipping",
         "Predicting maritime accident risk using Automated Machine Learning",
         "Port 4.0: a conceptual model for smart port digitalization",
-        "Advanced Bayesian study on inland navigational risk of remotely controlled autonomous ship"
+        "Advanced Bayesian study on inland navigational risk of remotely controlled autonomous ship",
+        "Dynamic navigation and port call optimisation in real time"
       ],
-      "summary": "Norway has 6 verified maritime R&D record(s) in the extracted dataset.",
+      "summary": "Norway has 7 verified maritime R&D record(s) in the extracted dataset.",
       "aiInsight": "Relationship explanations are assembled from source-backed relationship records, not unsupported AI inference.",
       "dataStatus": "Traceable extracted data",
       "dataUpdatedUntil": "2026-07-20",
@@ -45749,16 +46827,17 @@
         "source-openalex-https-openalex-org-w4406062590",
         "source-openalex-https-openalex-org-w4394990370",
         "source-openalex-https-openalex-org-w4390557008",
-        "source-openalex-https-openalex-org-w4396764542"
+        "source-openalex-https-openalex-org-w4396764542",
+        "source-mediaseed-cordis-101138478"
       ],
       "activity": {
-        "verifiedProjects": 6,
-        "leadProjects": 6,
+        "verifiedProjects": 7,
+        "leadProjects": 7,
         "partnerProjects": 0,
-        "institutions": 3,
+        "institutions": 4,
         "publications": 6,
-        "activityScore": 8.1,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "activityScore": 9.4,
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -45976,6 +47055,42 @@
             "role": "Lead institution country",
             "text": "Norway is related because the lead institution is based there."
           }
+        },
+        {
+          "id": "rel-country-NO-project-mediaseed-cordis-101138478-location",
+          "sourceEntityType": "COUNTRY",
+          "sourceEntityId": "NO",
+          "targetEntityType": "PROJECT",
+          "targetEntityId": "project-mediaseed-cordis-101138478",
+          "relationType": "PROJECT_LOCATION",
+          "evidenceSourceIds": [
+            "source-mediaseed-cordis-101138478"
+          ],
+          "confidence": 70,
+          "firstObservedAt": "2026-07-20T09:08:13.177Z",
+          "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+          "explanationData": {
+            "role": "Project location",
+            "text": "Norway is related because extracted source records locate this maritime R&D record there."
+          }
+        },
+        {
+          "id": "rel-country-NO-project-mediaseed-cordis-101138478-lead-institution",
+          "sourceEntityType": "COUNTRY",
+          "sourceEntityId": "NO",
+          "targetEntityType": "PROJECT",
+          "targetEntityId": "project-mediaseed-cordis-101138478",
+          "relationType": "LEAD_INSTITUTION_COUNTRY",
+          "evidenceSourceIds": [
+            "source-mediaseed-cordis-101138478"
+          ],
+          "confidence": 78,
+          "firstObservedAt": "2026-07-20T09:08:13.177Z",
+          "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+          "explanationData": {
+            "role": "Lead institution country",
+            "text": "Norway is related because the lead institution is based there."
+          }
         }
       ]
     },
@@ -46026,7 +47141,7 @@
         "institutions": 4,
         "publications": 4,
         "activityScore": 6,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -46283,7 +47398,7 @@
         "institutions": 16,
         "publications": 28,
         "activityScore": 33.8,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -47344,7 +48459,7 @@
         "institutions": 4,
         "publications": 4,
         "activityScore": 6.2,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -47541,7 +48656,7 @@
         "institutions": 3,
         "publications": 2,
         "activityScore": 7.7,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -47845,7 +48960,7 @@
         "institutions": 9,
         "publications": 19,
         "activityScore": 22.7,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -48570,7 +49685,7 @@
         "institutions": 1,
         "publications": 1,
         "activityScore": 1.7,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -48646,7 +49761,7 @@
         "institutions": 1,
         "publications": 1,
         "activityScore": 1.5,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -48723,7 +49838,7 @@
         "institutions": 1,
         "publications": 1,
         "activityScore": 1.7,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -48807,7 +49922,7 @@
         "institutions": 3,
         "publications": 3,
         "activityScore": 4.5,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -48959,7 +50074,7 @@
         "institutions": 2,
         "publications": 2,
         "activityScore": 3,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -49047,35 +50162,39 @@
         21.8243,
         39.0742
       ],
-      "researchIntensity": 9,
+      "researchIntensity": 13,
       "themes": [
         "Maritime cybersecurity",
-        "Vessel efficiency"
+        "Vessel efficiency",
+        "Alternative energy and fuels"
       ],
       "institutions": [
         "Democritus University of Thrace",
-        "University of the Aegean"
+        "University of the Aegean",
+        "HYDRUS"
       ],
       "exampleProjects": [
         "Comprehensive Analysis of Maritime Cybersecurity Landscape Based on the NIST CSF v2.0",
-        "Cold Ironing and the Study of RES Utilization for Maritime Electrification on Lesvos Island Port"
+        "Cold Ironing and the Study of RES Utilization for Maritime Electrification on Lesvos Island Port",
+        "Safe and Efficient Use of Sustainable Fuels in Maritime Transport Applications"
       ],
-      "summary": "Greece has 2 verified maritime R&D record(s) in the extracted dataset.",
+      "summary": "Greece has 3 verified maritime R&D record(s) in the extracted dataset.",
       "aiInsight": "Relationship explanations are assembled from source-backed relationship records, not unsupported AI inference.",
       "dataStatus": "Traceable extracted data",
       "dataUpdatedUntil": "2026-07-20",
       "sources": [
         "source-openalex-https-openalex-org-w4399283331",
-        "source-openalex-https-openalex-org-w4394972284"
+        "source-openalex-https-openalex-org-w4394972284",
+        "source-mediaseed-cordis-101138411"
       ],
       "activity": {
-        "verifiedProjects": 2,
-        "leadProjects": 2,
+        "verifiedProjects": 3,
+        "leadProjects": 3,
         "partnerProjects": 0,
-        "institutions": 2,
+        "institutions": 3,
         "publications": 2,
-        "activityScore": 3,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "activityScore": 4.5,
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -49149,6 +50268,42 @@
             "role": "Lead institution country",
             "text": "Greece is related because the lead institution is based there."
           }
+        },
+        {
+          "id": "rel-country-GR-project-mediaseed-cordis-101138411-location",
+          "sourceEntityType": "COUNTRY",
+          "sourceEntityId": "GR",
+          "targetEntityType": "PROJECT",
+          "targetEntityId": "project-mediaseed-cordis-101138411",
+          "relationType": "PROJECT_LOCATION",
+          "evidenceSourceIds": [
+            "source-mediaseed-cordis-101138411"
+          ],
+          "confidence": 70,
+          "firstObservedAt": "2026-07-20T09:08:13.177Z",
+          "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+          "explanationData": {
+            "role": "Project location",
+            "text": "Greece is related because extracted source records locate this maritime R&D record there."
+          }
+        },
+        {
+          "id": "rel-country-GR-project-mediaseed-cordis-101138411-lead-institution",
+          "sourceEntityType": "COUNTRY",
+          "sourceEntityId": "GR",
+          "targetEntityType": "PROJECT",
+          "targetEntityId": "project-mediaseed-cordis-101138411",
+          "relationType": "LEAD_INSTITUTION_COUNTRY",
+          "evidenceSourceIds": [
+            "source-mediaseed-cordis-101138411"
+          ],
+          "confidence": 78,
+          "firstObservedAt": "2026-07-20T09:08:13.177Z",
+          "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+          "explanationData": {
+            "role": "Lead institution country",
+            "text": "Greece is related because the lead institution is based there."
+          }
         }
       ]
     },
@@ -49187,7 +50342,7 @@
         "institutions": 1,
         "publications": 1,
         "activityScore": 1.5,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -49267,7 +50422,7 @@
         "institutions": 2,
         "publications": 2,
         "activityScore": 3,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -49379,7 +50534,7 @@
         "institutions": 1,
         "publications": 1,
         "activityScore": 1.5,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -49459,7 +50614,7 @@
         "institutions": 2,
         "publications": 2,
         "activityScore": 3,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -49579,7 +50734,7 @@
         "institutions": 3,
         "publications": 3,
         "activityScore": 4.5,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -49748,7 +50903,7 @@
         "institutions": 6,
         "publications": 7,
         "activityScore": 9.8,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -50055,7 +51210,7 @@
         "institutions": 5,
         "publications": 5,
         "activityScore": 7.3,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -50278,7 +51433,7 @@
         "institutions": 2,
         "publications": 2,
         "activityScore": 2.8,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -50391,7 +51546,7 @@
         "institutions": 1,
         "publications": 1,
         "activityScore": 1.7,
-        "lastUpdated": "2026-07-20T07:01:13.504Z"
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
       },
       "whyRelated": [
         {
@@ -50428,6 +51583,82 @@
           "explanationData": {
             "role": "Lead institution country",
             "text": "Denmark is related because the lead institution is based there."
+          }
+        }
+      ]
+    },
+    {
+      "id": "is",
+      "code": "IS",
+      "slug": "iceland",
+      "name": "Iceland",
+      "region": "",
+      "atlasName": "Iceland",
+      "coordinates": [
+        -19.0208,
+        64.9631
+      ],
+      "researchIntensity": 4,
+      "themes": [
+        "Alternative energy and fuels"
+      ],
+      "institutions": [
+        "VERKIS HF"
+      ],
+      "exampleProjects": [
+        "Green Ammonia and Biomethanol fuel MAritime Vessels"
+      ],
+      "summary": "Iceland has 1 verified maritime R&D record(s) in the extracted dataset.",
+      "aiInsight": "Relationship explanations are assembled from source-backed relationship records, not unsupported AI inference.",
+      "dataStatus": "Traceable extracted data",
+      "dataUpdatedUntil": "2026-07-20",
+      "sources": [
+        "source-mediaseed-cordis-101138620"
+      ],
+      "activity": {
+        "verifiedProjects": 1,
+        "leadProjects": 1,
+        "partnerProjects": 0,
+        "institutions": 1,
+        "publications": 0,
+        "activityScore": 1.5,
+        "lastUpdated": "2026-07-20T09:14:17.794Z"
+      },
+      "whyRelated": [
+        {
+          "id": "rel-country-IS-project-mediaseed-cordis-101138620-location",
+          "sourceEntityType": "COUNTRY",
+          "sourceEntityId": "IS",
+          "targetEntityType": "PROJECT",
+          "targetEntityId": "project-mediaseed-cordis-101138620",
+          "relationType": "PROJECT_LOCATION",
+          "evidenceSourceIds": [
+            "source-mediaseed-cordis-101138620"
+          ],
+          "confidence": 70,
+          "firstObservedAt": "2026-07-20T09:08:13.177Z",
+          "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+          "explanationData": {
+            "role": "Project location",
+            "text": "Iceland is related because extracted source records locate this maritime R&D record there."
+          }
+        },
+        {
+          "id": "rel-country-IS-project-mediaseed-cordis-101138620-lead-institution",
+          "sourceEntityType": "COUNTRY",
+          "sourceEntityId": "IS",
+          "targetEntityType": "PROJECT",
+          "targetEntityId": "project-mediaseed-cordis-101138620",
+          "relationType": "LEAD_INSTITUTION_COUNTRY",
+          "evidenceSourceIds": [
+            "source-mediaseed-cordis-101138620"
+          ],
+          "confidence": 78,
+          "firstObservedAt": "2026-07-20T09:08:13.177Z",
+          "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+          "explanationData": {
+            "role": "Lead institution country",
+            "text": "Iceland is related because the lead institution is based there."
           }
         }
       ]
@@ -54461,6 +55692,69 @@
       "contentHash": "ac5afc7f1310f5696ede185b2e17de0fa52250881035eaf8f9d0655f0814ab63",
       "licence": "Manually verified; rights not assumed",
       "extractionMethod": "Manual curation (human-verified)",
+      "supportedProjectFields": [
+        "title",
+        "leadOrganisation",
+        "researchCategories",
+        "country"
+      ],
+      "reliabilityScore": 85
+    },
+    {
+      "id": "source-mediaseed-cordis-101138620",
+      "publisher": "CORDIS",
+      "title": "Green Ammonia and Biomethanol fuel MAritime Vessels",
+      "url": "https://cordis.europa.eu/project/id/101138620",
+      "sourceType": "media-seed",
+      "authorityLevel": "A",
+      "primaryOrSecondary": "primary",
+      "publicationDate": "2026-07-20T08:49:39.413038+00:00",
+      "retrievedAt": "2026-07-20T09:08:13.177Z",
+      "contentHash": "c19607fab90c1d5fbb19d21c9520ffddbbd6f3ab8b89e4ee209818a601714c1a",
+      "licence": "Source metadata only; image rights not verified",
+      "extractionMethod": "Media-enriched seed import",
+      "supportedProjectFields": [
+        "title",
+        "leadOrganisation",
+        "researchCategories",
+        "country"
+      ],
+      "reliabilityScore": 85
+    },
+    {
+      "id": "source-mediaseed-cordis-101138478",
+      "publisher": "CORDIS",
+      "title": "Dynamic navigation and port call optimisation in real time",
+      "url": "https://cordis.europa.eu/project/id/101138478",
+      "sourceType": "media-seed",
+      "authorityLevel": "A",
+      "primaryOrSecondary": "primary",
+      "publicationDate": "2026-07-20T08:49:39.413038+00:00",
+      "retrievedAt": "2026-07-20T09:08:13.177Z",
+      "contentHash": "529e09503dda34eff84a6555f9c0fed5b649447b2070cb2bf93d29ef57537f11",
+      "licence": "Source metadata only; image rights not verified",
+      "extractionMethod": "Media-enriched seed import",
+      "supportedProjectFields": [
+        "title",
+        "leadOrganisation",
+        "researchCategories",
+        "country"
+      ],
+      "reliabilityScore": 85
+    },
+    {
+      "id": "source-mediaseed-cordis-101138411",
+      "publisher": "CORDIS",
+      "title": "Safe and Efficient Use of Sustainable Fuels in Maritime Transport Applications",
+      "url": "https://cordis.europa.eu/project/id/101138411",
+      "sourceType": "media-seed",
+      "authorityLevel": "A",
+      "primaryOrSecondary": "primary",
+      "publicationDate": "2026-07-20T08:49:39.413038+00:00",
+      "retrievedAt": "2026-07-20T09:08:13.177Z",
+      "contentHash": "111b01d8e5de68d72e96dd8e90f3a255ab5699ca52086bf1c614a9507c30e8c8",
+      "licence": "Source metadata only; image rights not verified",
+      "extractionMethod": "Media-enriched seed import",
       "supportedProjectFields": [
         "title",
         "leadOrganisation",
@@ -64388,9 +65682,212 @@
         "role": "Lead institution country",
         "text": "Singapore is related because the lead institution is based there."
       }
+    },
+    {
+      "id": "rel-institution-institution-mediaseed-verkis-hf-project-mediaseed-cordis-101138620",
+      "sourceEntityType": "INSTITUTION",
+      "sourceEntityId": "institution-mediaseed-verkis-hf",
+      "targetEntityType": "PROJECT",
+      "targetEntityId": "project-mediaseed-cordis-101138620",
+      "relationType": "LEAD_INSTITUTION_COUNTRY",
+      "evidenceSourceIds": [
+        "source-mediaseed-cordis-101138620"
+      ],
+      "confidence": 78,
+      "firstObservedAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "explanationData": {
+        "role": "Lead institution",
+        "text": "VERKIS HF is related because this record's source page names it as the coordinator for Green Ammonia and Biomethanol fuel MAritime Vessels."
+      }
+    },
+    {
+      "id": "rel-institution-institution-mediaseed-sintef-ocean-as-project-mediaseed-cordis-101138478",
+      "sourceEntityType": "INSTITUTION",
+      "sourceEntityId": "institution-mediaseed-sintef-ocean-as",
+      "targetEntityType": "PROJECT",
+      "targetEntityId": "project-mediaseed-cordis-101138478",
+      "relationType": "LEAD_INSTITUTION_COUNTRY",
+      "evidenceSourceIds": [
+        "source-mediaseed-cordis-101138478"
+      ],
+      "confidence": 78,
+      "firstObservedAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "explanationData": {
+        "role": "Lead institution",
+        "text": "SINTEF OCEAN AS is related because this record's source page names it as the coordinator for Dynamic navigation and port call optimisation in real time."
+      }
+    },
+    {
+      "id": "rel-institution-institution-mediaseed-hydrus-project-mediaseed-cordis-101138411",
+      "sourceEntityType": "INSTITUTION",
+      "sourceEntityId": "institution-mediaseed-hydrus",
+      "targetEntityType": "PROJECT",
+      "targetEntityId": "project-mediaseed-cordis-101138411",
+      "relationType": "LEAD_INSTITUTION_COUNTRY",
+      "evidenceSourceIds": [
+        "source-mediaseed-cordis-101138411"
+      ],
+      "confidence": 78,
+      "firstObservedAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "explanationData": {
+        "role": "Lead institution",
+        "text": "HYDRUS is related because this record's source page names it as the coordinator for Safe and Efficient Use of Sustainable Fuels in Maritime Transport Applications."
+      }
+    },
+    {
+      "id": "rel-country-IS-project-mediaseed-cordis-101138620-location",
+      "sourceEntityType": "COUNTRY",
+      "sourceEntityId": "IS",
+      "targetEntityType": "PROJECT",
+      "targetEntityId": "project-mediaseed-cordis-101138620",
+      "relationType": "PROJECT_LOCATION",
+      "evidenceSourceIds": [
+        "source-mediaseed-cordis-101138620"
+      ],
+      "confidence": 70,
+      "firstObservedAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "explanationData": {
+        "role": "Project location",
+        "text": "Iceland is related because extracted source records locate this maritime R&D record there."
+      }
+    },
+    {
+      "id": "rel-country-IS-project-mediaseed-cordis-101138620-lead-institution",
+      "sourceEntityType": "COUNTRY",
+      "sourceEntityId": "IS",
+      "targetEntityType": "PROJECT",
+      "targetEntityId": "project-mediaseed-cordis-101138620",
+      "relationType": "LEAD_INSTITUTION_COUNTRY",
+      "evidenceSourceIds": [
+        "source-mediaseed-cordis-101138620"
+      ],
+      "confidence": 78,
+      "firstObservedAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "explanationData": {
+        "role": "Lead institution country",
+        "text": "Iceland is related because the lead institution is based there."
+      }
+    },
+    {
+      "id": "rel-country-NO-project-mediaseed-cordis-101138478-location",
+      "sourceEntityType": "COUNTRY",
+      "sourceEntityId": "NO",
+      "targetEntityType": "PROJECT",
+      "targetEntityId": "project-mediaseed-cordis-101138478",
+      "relationType": "PROJECT_LOCATION",
+      "evidenceSourceIds": [
+        "source-mediaseed-cordis-101138478"
+      ],
+      "confidence": 70,
+      "firstObservedAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "explanationData": {
+        "role": "Project location",
+        "text": "Norway is related because extracted source records locate this maritime R&D record there."
+      }
+    },
+    {
+      "id": "rel-country-NO-project-mediaseed-cordis-101138478-lead-institution",
+      "sourceEntityType": "COUNTRY",
+      "sourceEntityId": "NO",
+      "targetEntityType": "PROJECT",
+      "targetEntityId": "project-mediaseed-cordis-101138478",
+      "relationType": "LEAD_INSTITUTION_COUNTRY",
+      "evidenceSourceIds": [
+        "source-mediaseed-cordis-101138478"
+      ],
+      "confidence": 78,
+      "firstObservedAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "explanationData": {
+        "role": "Lead institution country",
+        "text": "Norway is related because the lead institution is based there."
+      }
+    },
+    {
+      "id": "rel-country-GR-project-mediaseed-cordis-101138411-location",
+      "sourceEntityType": "COUNTRY",
+      "sourceEntityId": "GR",
+      "targetEntityType": "PROJECT",
+      "targetEntityId": "project-mediaseed-cordis-101138411",
+      "relationType": "PROJECT_LOCATION",
+      "evidenceSourceIds": [
+        "source-mediaseed-cordis-101138411"
+      ],
+      "confidence": 70,
+      "firstObservedAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "explanationData": {
+        "role": "Project location",
+        "text": "Greece is related because extracted source records locate this maritime R&D record there."
+      }
+    },
+    {
+      "id": "rel-country-GR-project-mediaseed-cordis-101138411-lead-institution",
+      "sourceEntityType": "COUNTRY",
+      "sourceEntityId": "GR",
+      "targetEntityType": "PROJECT",
+      "targetEntityId": "project-mediaseed-cordis-101138411",
+      "relationType": "LEAD_INSTITUTION_COUNTRY",
+      "evidenceSourceIds": [
+        "source-mediaseed-cordis-101138411"
+      ],
+      "confidence": 78,
+      "firstObservedAt": "2026-07-20T09:08:13.177Z",
+      "lastVerifiedAt": "2026-07-20T08:49:39.413038+00:00",
+      "explanationData": {
+        "role": "Lead institution country",
+        "text": "Greece is related because the lead institution is based there."
+      }
     }
   ],
   "extractionRuns": [
+    {
+      "id": "run-automation-queue-1784538899348",
+      "sourceId": "automation-queue",
+      "sourceName": "Global Research Automation Queue",
+      "extractionMethod": "OpenAlex API + Crossref DOI verification (queue-driven)",
+      "startedAt": "2026-07-20T09:14:17.794Z",
+      "completedAt": "2026-07-20T09:14:59.348Z",
+      "status": "failed",
+      "recordsFetched": 0,
+      "recordsCreated": 0,
+      "recordsUpdated": 0,
+      "recordsRejected": 0,
+      "parseErrors": [
+        "global-search-0001: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Green+Shipping%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+        "global-search-0002: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Alternative+Fuels%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+        "global-search-0003: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Smart+Ports%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+        "global-search-0004: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Maritime+AI%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+        "global-search-0005: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Autonomous+Vessels%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+        "global-search-0006: 429 Too Many Requests for https://api.openalex.org/works?search=China+maritime+%22Maritime+Cybersecurity%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+        "global-search-0007: 429 Too Many Requests for https://api.openalex.org/works?search=Singapore+maritime+%22Green+Shipping%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+        "global-search-0008: 429 Too Many Requests for https://api.openalex.org/works?search=Singapore+maritime+%22Alternative+Fuels%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+        "global-search-0009: 429 Too Many Requests for https://api.openalex.org/works?search=Singapore+maritime+%22Smart+Ports%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid",
+        "global-search-0010: 429 Too Many Requests for https://api.openalex.org/works?search=Singapore+maritime+%22Maritime+AI%22+research+project+OR+Horizon+OR+university+OR+port&per-page=25&filter=from_publication_date%3A2015-01-01&mailto=research-demo%40example.invalid"
+      ],
+      "rateLimitStatus": "not-rate-limited"
+    },
+    {
+      "id": "run-media-seed-1784538493202",
+      "sourceId": "media-seed",
+      "sourceName": "Media-Enabled Seed Dataset",
+      "extractionMethod": "manual seed import (media-enriched)",
+      "startedAt": "2026-07-20T09:08:13.177Z",
+      "completedAt": "2026-07-20T09:08:13.177Z",
+      "status": "success",
+      "recordsFetched": 25,
+      "recordsCreated": 3,
+      "recordsUpdated": 0,
+      "recordsRejected": 22,
+      "parseErrors": [],
+      "rateLimitStatus": "not-applicable"
+    },
     {
       "id": "run-openalex-1784531046046",
       "sourceId": "openalex",
@@ -64962,36 +66459,6 @@
       "status": "success",
       "recordsFetched": 60,
       "recordsCreated": 60,
-      "recordsUpdated": 0,
-      "recordsRejected": 0,
-      "parseErrors": [],
-      "rateLimitStatus": "not-rate-limited"
-    },
-    {
-      "id": "run-mpa-1784516861101",
-      "sourceId": "mpa",
-      "sourceName": "Maritime and Port Authority of Singapore",
-      "extractionMethod": "controlled official webpage extractor",
-      "startedAt": "2026-07-20T03:07:38.908Z",
-      "completedAt": "2026-07-20T03:07:41.101Z",
-      "status": "success",
-      "recordsFetched": 2,
-      "recordsCreated": 2,
-      "recordsUpdated": 0,
-      "recordsRejected": 0,
-      "parseErrors": [],
-      "rateLimitStatus": "not-rate-limited"
-    },
-    {
-      "id": "run-openalex-1784516598293",
-      "sourceId": "openalex",
-      "sourceName": "OpenAlex",
-      "extractionMethod": "structured API",
-      "startedAt": "2026-07-20T03:02:04.215Z",
-      "completedAt": "2026-07-20T03:03:18.293Z",
-      "status": "success",
-      "recordsFetched": 200,
-      "recordsCreated": 200,
       "recordsUpdated": 0,
       "recordsRejected": 0,
       "parseErrors": [],

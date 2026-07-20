@@ -30,19 +30,44 @@ function formatDate(isoDate) {
  */
 export default function HoverPreviewCard({
   country,
+  coveragePendingName,
   onMouseEnter,
   onMouseLeave,
   onViewFullProfile,
   position,
   project,
 }) {
-  if (!country && !project) {
+  if (!country && !project && !coveragePendingName) {
     return null;
   }
 
   const style = position
     ? { left: `${position.x}px`, top: `${position.y}px` }
     : undefined;
+
+  if (coveragePendingName) {
+    return (
+      <motion.article
+        animate={{ opacity: 1, scale: 1 }}
+        className="hover-preview-card hover-preview-card-coverage"
+        exit={{ opacity: 0, scale: 0.97 }}
+        initial={{ opacity: 0, scale: 0.97 }}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onPointerDown={(event) => event.stopPropagation()}
+        style={style}
+        transition={{ duration: 0.15, ease: "easeOut" }}
+      >
+        <p className="hover-card-eyebrow">Coverage pending</p>
+        <h3>{coveragePendingName}</h3>
+        <p className="hover-card-review">
+          No extracted maritime R&amp;D records yet for this country. This
+          does not mean no research activity - it means the current dataset
+          has not yet verified records here.
+        </p>
+      </motion.article>
+    );
+  }
 
   if (country) {
     const topThemes = (country.themes ?? []).slice(0, 3);

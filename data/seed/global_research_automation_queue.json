@@ -1,0 +1,2415 @@
+{
+  "created_at": "2026-07-20T08:49:39.413038+00:00",
+  "purpose": "Queue for Claude/scripts to expand the global maritime R&D dataset slowly and verifiably.",
+  "rules": {
+    "raw_range": "2015-present",
+    "default_display": "2020-present",
+    "latest_highlight": "2024-present",
+    "no_data_label": "coverage_pending",
+    "do_not_fake_records": true,
+    "do_not_bulk_scrape_publishers": true,
+    "image_policy": "image candidates from official source pages; store URL not file by default"
+  },
+  "tasks": [
+    {
+      "task_id": "global-search-0001",
+      "country": "China",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "China maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0002",
+      "country": "China",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "China maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0003",
+      "country": "China",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "China maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0004",
+      "country": "China",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "China maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0005",
+      "country": "China",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "China maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0006",
+      "country": "China",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "China maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0007",
+      "country": "Singapore",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Singapore maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0008",
+      "country": "Singapore",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Singapore maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0009",
+      "country": "Singapore",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Singapore maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0010",
+      "country": "Singapore",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Singapore maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0011",
+      "country": "Singapore",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Singapore maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0012",
+      "country": "Singapore",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Singapore maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0013",
+      "country": "Japan",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Japan maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0014",
+      "country": "Japan",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Japan maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0015",
+      "country": "Japan",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Japan maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0016",
+      "country": "Japan",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Japan maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0017",
+      "country": "Japan",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Japan maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0018",
+      "country": "Japan",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Japan maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0019",
+      "country": "South Korea",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "South Korea maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0020",
+      "country": "South Korea",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "South Korea maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0021",
+      "country": "South Korea",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "South Korea maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0022",
+      "country": "South Korea",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "South Korea maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0023",
+      "country": "South Korea",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "South Korea maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0024",
+      "country": "South Korea",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "South Korea maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0025",
+      "country": "Norway",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Norway maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0026",
+      "country": "Norway",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Norway maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0027",
+      "country": "Norway",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Norway maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0028",
+      "country": "Norway",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Norway maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0029",
+      "country": "Norway",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Norway maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0030",
+      "country": "Norway",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Norway maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0031",
+      "country": "Netherlands",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Netherlands maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0032",
+      "country": "Netherlands",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Netherlands maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0033",
+      "country": "Netherlands",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Netherlands maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0034",
+      "country": "Netherlands",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Netherlands maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0035",
+      "country": "Netherlands",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Netherlands maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0036",
+      "country": "Netherlands",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Netherlands maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0037",
+      "country": "Germany",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Germany maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0038",
+      "country": "Germany",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Germany maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0039",
+      "country": "Germany",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Germany maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0040",
+      "country": "Germany",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Germany maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0041",
+      "country": "Germany",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Germany maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0042",
+      "country": "Germany",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Germany maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0043",
+      "country": "Denmark",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Denmark maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0044",
+      "country": "Denmark",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Denmark maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0045",
+      "country": "Denmark",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Denmark maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0046",
+      "country": "Denmark",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Denmark maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0047",
+      "country": "Denmark",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Denmark maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0048",
+      "country": "Denmark",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Denmark maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0049",
+      "country": "United Kingdom",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United Kingdom maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0050",
+      "country": "United Kingdom",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United Kingdom maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0051",
+      "country": "United Kingdom",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United Kingdom maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0052",
+      "country": "United Kingdom",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United Kingdom maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0053",
+      "country": "United Kingdom",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United Kingdom maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0054",
+      "country": "United Kingdom",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United Kingdom maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0055",
+      "country": "United States",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United States maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0056",
+      "country": "United States",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United States maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0057",
+      "country": "United States",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United States maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0058",
+      "country": "United States",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United States maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0059",
+      "country": "United States",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United States maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0060",
+      "country": "United States",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 1,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "United States maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0061",
+      "country": "Canada",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Canada maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0062",
+      "country": "Canada",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Canada maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0063",
+      "country": "Canada",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Canada maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0064",
+      "country": "Canada",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Canada maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0065",
+      "country": "Canada",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Canada maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0066",
+      "country": "Canada",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Canada maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0067",
+      "country": "Australia",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Australia maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0068",
+      "country": "Australia",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Australia maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0069",
+      "country": "Australia",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Australia maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0070",
+      "country": "Australia",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Australia maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0071",
+      "country": "Australia",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Australia maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0072",
+      "country": "Australia",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Australia maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0073",
+      "country": "India",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "India maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0074",
+      "country": "India",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "India maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0075",
+      "country": "India",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "India maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0076",
+      "country": "India",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "India maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0077",
+      "country": "India",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "India maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0078",
+      "country": "India",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "India maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0079",
+      "country": "France",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "France maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0080",
+      "country": "France",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "France maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0081",
+      "country": "France",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "France maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0082",
+      "country": "France",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "France maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0083",
+      "country": "France",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "France maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0084",
+      "country": "France",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "France maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0085",
+      "country": "Greece",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Greece maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0086",
+      "country": "Greece",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Greece maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0087",
+      "country": "Greece",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Greece maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0088",
+      "country": "Greece",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Greece maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0089",
+      "country": "Greece",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Greece maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0090",
+      "country": "Greece",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Greece maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0091",
+      "country": "Finland",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Finland maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0092",
+      "country": "Finland",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Finland maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0093",
+      "country": "Finland",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Finland maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0094",
+      "country": "Finland",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Finland maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0095",
+      "country": "Finland",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Finland maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0096",
+      "country": "Finland",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Finland maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0097",
+      "country": "Sweden",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Sweden maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0098",
+      "country": "Sweden",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Sweden maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0099",
+      "country": "Sweden",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Sweden maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0100",
+      "country": "Sweden",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Sweden maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0101",
+      "country": "Sweden",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Sweden maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0102",
+      "country": "Sweden",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Sweden maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0103",
+      "country": "Spain",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Spain maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0104",
+      "country": "Spain",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Spain maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0105",
+      "country": "Spain",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Spain maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0106",
+      "country": "Spain",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Spain maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0107",
+      "country": "Spain",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Spain maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0108",
+      "country": "Spain",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Spain maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0109",
+      "country": "Italy",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Italy maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0110",
+      "country": "Italy",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Italy maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0111",
+      "country": "Italy",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Italy maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0112",
+      "country": "Italy",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Italy maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0113",
+      "country": "Italy",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Italy maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0114",
+      "country": "Italy",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Italy maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0115",
+      "country": "Brazil",
+      "region": "East Asia",
+      "topic": "Green Shipping",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Brazil maritime \"Green Shipping\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0116",
+      "country": "Brazil",
+      "region": "East Asia",
+      "topic": "Alternative Fuels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Brazil maritime \"Alternative Fuels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0117",
+      "country": "Brazil",
+      "region": "East Asia",
+      "topic": "Smart Ports",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Brazil maritime \"Smart Ports\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0118",
+      "country": "Brazil",
+      "region": "East Asia",
+      "topic": "Maritime AI",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Brazil maritime \"Maritime AI\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0119",
+      "country": "Brazil",
+      "region": "East Asia",
+      "topic": "Autonomous Vessels",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Brazil maritime \"Autonomous Vessels\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    },
+    {
+      "task_id": "global-search-0120",
+      "country": "Brazil",
+      "region": "East Asia",
+      "topic": "Maritime Cybersecurity",
+      "date_range_raw": "2015-present",
+      "date_range_default": "2020-present",
+      "priority": 2,
+      "recommended_sources": [
+        "OpenAlex",
+        "Crossref",
+        "DataCite",
+        "CORDIS/OpenAIRE if Europe",
+        "official project/institution pages for selected records only"
+      ],
+      "search_terms": "Brazil maritime \"Maritime Cybersecurity\" research project OR Horizon OR university OR port",
+      "target_min_records": 20,
+      "target_image_policy": "Find image candidates only from official project/institution/source pages. Store URL/caption/source/rightsNote; do not download by default.",
+      "status": "queued"
+    }
+  ]
+}

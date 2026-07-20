@@ -24,6 +24,7 @@ import {
   getIntensityLabel,
   getIntensityLevel,
   getIntensityOpacity,
+  TERRAIN_GRADIENT_DEFS,
 } from "../utils/intensity.js";
 
 const width = 960;
@@ -31,8 +32,12 @@ const height = 620;
 const defaultRotation = [-18, -16, 0];
 const baseScale = 286;
 const defaultZoom = 1;
-const minZoom = 0.75;
-const maxZoom = 2.5;
+const minZoom = 0.7;
+// Deep zoom (Phase 1): high enough that a large country (China, US,
+// Australia, Russia...) can fill the viewport. No province/admin-1 data
+// exists to show at this depth (see intensity.js coverage notes) - this
+// only affects how close the country-level shape itself can get.
+const maxZoom = 7;
 const landFeatures = feature(worldMap, worldMap.objects.countries).features;
 
 // Dual level-of-detail (Goal 2): the 50m atlas is KEPT as the quality
@@ -109,6 +114,16 @@ const cullingMargin = 0.05;
 const hoverShowDelay = 750;
 const hoverCloseGrace = 220;
 const focusAnimationDuration = 700;
+const restoreAnimationDuration = 800;
+// Focus zoom stays modest (1.25-1.6x) so the country's context on the
+// globe is still legible, not a disorienting close-up.
+const focusZoomMultiplier = 1.35;
+// Absolute floor for the focused zoom target, so a country click always
+// zooms in meaningfully even if the user's current view is zoomed far out.
+const focusMinZoom = 2.4;
+// Shifts the focused country left, off the area the right-hand profile
+// panel covers (see .country-profile-panel in index.css).
+const focusTranslateShift = width * 0.07;
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
@@ -243,6 +258,12 @@ export default function WorldMap({
   const pathRef = useRef(geoPath(projectionRef.current).digits(1));
   const rotationRef = useRef(defaultRotation);
   const zoomRef = useRef(defaultZoom);
+  const translateOffsetRef = useRef(0);
+  // Country-focus mode machine ("global" | "focused" | "restoring") plus the
+  // map view captured at the moment focus mode was entered, so "Go Back to
+  // Map" can restore rotation/zoom exactly rather than jumping to default.
+  const mapModeRef = useRef("global");
+  const previousViewRef = useRef(null);
   const dragRef = useRef(null);
   const dragDistanceRef = useRef(0);
   const pointerTargetRef = useRef(null);
@@ -266,7 +287,7 @@ export default function WorldMap({
   const hoverShowTimerRef = useRef(null);
   const hoverCloseTimerRef = useRef(null);
   const isCardHoveredRef = useRef(false);
-  const focusAnimRef = useRef(null);
+  const viewAnimRef = useRef(null);
   const [hoverPreview, setHoverPreview] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   const [isAutoRotationEnabled, setIsAutoRotationEnabled] = useState(true);
@@ -338,12 +359,16 @@ export default function WorldMap({
   }, [popupCountry, isProfileOpen]);
 
   useEffect(() => {
-    if (!selectedCountry) {
-      markGlobeDirty();
+    if (selectedCountry) {
+      startFocusAnimation(selectedCountry.coordinates);
       return;
     }
 
-    startFocusAnimation(selectedCountry.coordinates);
+    if (mapModeRef.current === "focused" || mapModeRef.current === "restoring") {
+      startRestoreAnimation();
+    } else {
+      markGlobeDirty();
+    }
   }, [selectedCountry]);
 
   useEffect(() => {
@@ -358,8 +383,10 @@ export default function WorldMap({
       event.stopPropagation();
       pauseAutoRotation();
 
-      const zoomDelta = clamp(-event.deltaY * 0.0015, -0.14, 0.14);
-      zoomRef.current = clamp(zoomRef.current + zoomDelta, minZoom, maxZoom);
+      // Multiplicative step so zoom feels proportional across the much
+      // wider min/max range (0.7x-7x) rather than crawling near the top.
+      const zoomFactor = 1 + clamp(-event.deltaY * 0.0022, -0.16, 0.16);
+      zoomRef.current = clamp(zoomRef.current * zoomFactor, minZoom, maxZoom);
       markGlobeDirty();
       resumeAutoRotationAfterDelay();
     }
@@ -391,22 +418,27 @@ export default function WorldMap({
 
   useEffect(() => {
     function tick(now) {
-      // Focus Country Animation (Problem 2) takes priority over auto-rotation
-      // in the SAME loop, so there is never a second requestAnimationFrame
-      // loop and the two can never fight each other.
-      if (focusAnimRef.current) {
-        const anim = focusAnimRef.current;
+      // Focus/restore view animation takes priority over auto-rotation in
+      // the SAME loop, so there is never a second requestAnimationFrame loop
+      // and the two can never fight each other.
+      if (viewAnimRef.current) {
+        const anim = viewAnimRef.current;
         const t = Math.min(1, (now - anim.start) / anim.duration);
         const eased = easeOutCubic(t);
         rotationRef.current = [
-          anim.from[0] + (anim.to[0] - anim.from[0]) * eased,
-          anim.from[1] + (anim.to[1] - anim.from[1]) * eased,
-          anim.from[2] + (anim.to[2] - anim.from[2]) * eased,
+          anim.fromRotation[0] + (anim.toRotation[0] - anim.fromRotation[0]) * eased,
+          anim.fromRotation[1] + (anim.toRotation[1] - anim.fromRotation[1]) * eased,
+          anim.fromRotation[2] + (anim.toRotation[2] - anim.fromRotation[2]) * eased,
         ];
+        zoomRef.current = anim.fromZoom + (anim.toZoom - anim.fromZoom) * eased;
+        translateOffsetRef.current =
+          anim.fromOffset + (anim.toOffset - anim.fromOffset) * eased;
         needsRenderRef.current = true;
 
         if (t >= 1) {
-          focusAnimRef.current = null;
+          const onComplete = anim.onComplete;
+          viewAnimRef.current = null;
+          onComplete?.();
         }
 
         renderGlobe();
@@ -569,7 +601,7 @@ export default function WorldMap({
   function isGlobeMoving() {
     return (
       isDraggingRef.current ||
-      Boolean(focusAnimRef.current) ||
+      Boolean(viewAnimRef.current) ||
       (!isPausedRef.current &&
         isAutoRotationEnabledRef.current &&
         !popupCountryRef.current &&
@@ -583,6 +615,7 @@ export default function WorldMap({
     const projection = projectionRef.current
       .rotate(rotationRef.current)
       .scale(baseScale * zoomRef.current)
+      .translate([width / 2 - translateOffsetRef.current, height / 2])
       .precision(moving ? interactivePrecision : staticPrecision);
     const mapPath = pathRef.current;
     lastRenderWasInteractiveRef.current = moving;
@@ -693,6 +726,26 @@ export default function WorldMap({
     }
   }
 
+  // Shared by focus and restore: interpolates rotation, zoom and the
+  // panel-aware translate offset together in the one rAF loop above.
+  // Overwriting viewAnimRef is the cancellation mechanism - there is no
+  // separate cancelAnimationFrame call because both animations share the
+  // same tick(), so the next frame simply picks up the new target.
+  function animateView({ toRotation, toZoom, toOffset, duration, onComplete }) {
+    viewAnimRef.current = {
+      fromRotation: rotationRef.current.slice(),
+      toRotation,
+      fromZoom: zoomRef.current,
+      toZoom,
+      fromOffset: translateOffsetRef.current,
+      toOffset,
+      start: performance.now(),
+      duration,
+      onComplete,
+    };
+    markGlobeDirty();
+  }
+
   function startFocusAnimation(coordinates) {
     if (
       !coordinates ||
@@ -705,13 +758,32 @@ export default function WorldMap({
     const currentRotation = rotationRef.current;
     // Shortest-path longitude so the globe never spins the "long way round".
     const targetLambda = normalizeLongitude(-coordinates[0], currentRotation[0]);
-    const target = [targetLambda, -coordinates[1], currentRotation[2] ?? 0];
+    const targetRotation = [targetLambda, -coordinates[1], currentRotation[2] ?? 0];
 
-    const existing = focusAnimRef.current;
+    // Only capture the "before country focus" view the first time we enter
+    // focus mode from the normal map - switching between countries (or
+    // re-focusing mid-restore) must not clobber that saved view.
+    if (mapModeRef.current === "global") {
+      previousViewRef.current = {
+        rotation: currentRotation.slice(),
+        zoom: zoomRef.current,
+      };
+    }
+    mapModeRef.current = "focused";
+
+    const baselineZoom = previousViewRef.current?.zoom ?? zoomRef.current;
+    const targetZoom = clamp(
+      Math.max(baselineZoom * focusZoomMultiplier, focusMinZoom),
+      minZoom,
+      maxZoom
+    );
+
+    const existing = viewAnimRef.current;
     if (
       existing &&
-      Math.abs(existing.to[0] - target[0]) < 0.01 &&
-      Math.abs(existing.to[1] - target[1]) < 0.01
+      Math.abs(existing.toRotation[0] - targetRotation[0]) < 0.01 &&
+      Math.abs(existing.toRotation[1] - targetRotation[1]) < 0.01 &&
+      Math.abs(existing.toZoom - targetZoom) < 0.001
     ) {
       // Already animating (or just finished) to this exact target - avoid
       // restarting the animation from scratch on a duplicate trigger.
@@ -719,13 +791,33 @@ export default function WorldMap({
     }
 
     pauseAutoRotation();
-    focusAnimRef.current = {
-      from: currentRotation.slice(),
-      to: target,
-      start: performance.now(),
+    animateView({
+      toRotation: targetRotation,
+      toZoom: targetZoom,
+      toOffset: focusTranslateShift,
       duration: focusAnimationDuration,
-    };
-    markGlobeDirty();
+    });
+  }
+
+  // "Go Back to Map": animates rotation/zoom/offset back to the view saved
+  // when focus mode was entered (falling back to the default global view if
+  // none was saved), then clears focus state and resumes auto-rotation.
+  function startRestoreAnimation() {
+    const previous = previousViewRef.current;
+
+    mapModeRef.current = "restoring";
+    pauseAutoRotation();
+    animateView({
+      toRotation: previous ? previous.rotation : defaultRotation,
+      toZoom: previous ? previous.zoom : defaultZoom,
+      toOffset: 0,
+      duration: restoreAnimationDuration,
+      onComplete: () => {
+        mapModeRef.current = "global";
+        previousViewRef.current = null;
+        resumeAutoRotationAfterDelay();
+      },
+    });
   }
 
   function computeHoverCardPosition(event) {
@@ -915,17 +1007,21 @@ export default function WorldMap({
   }
 
   function resetView() {
+    viewAnimRef.current = null;
+    mapModeRef.current = "global";
+    previousViewRef.current = null;
     rotationRef.current = defaultRotation;
     zoomRef.current = defaultZoom;
+    translateOffsetRef.current = 0;
     closeHoverPreviewImmediately();
     markGlobeDirty();
     onClearSelection();
     resumeAutoRotationAfterDelay();
   }
 
-  function changeZoom(delta) {
+  function changeZoom(factor) {
     pauseAutoRotation();
-    zoomRef.current = clamp(zoomRef.current + delta, minZoom, maxZoom);
+    zoomRef.current = clamp(zoomRef.current * factor, minZoom, maxZoom);
     markGlobeDirty();
     resumeAutoRotationAfterDelay();
   }
@@ -976,14 +1072,13 @@ export default function WorldMap({
       ref={shellRef}
     >
       <div className="map-scanline" aria-hidden="true" />
-      <div className="map-orbit orbit-one" aria-hidden="true" />
-      <div className="map-orbit orbit-two" aria-hidden="true" />
+      <div className="map-starfield" aria-hidden="true" />
 
       <div className="map-controls" aria-label="Map controls">
         <button
           aria-label="Zoom in"
           className="icon-button"
-          onClick={() => changeZoom(0.1)}
+          onClick={() => changeZoom(1.25)}
           title="Zoom in"
           type="button"
         >
@@ -992,7 +1087,7 @@ export default function WorldMap({
         <button
           aria-label="Zoom out"
           className="icon-button"
-          onClick={() => changeZoom(-0.1)}
+          onClick={() => changeZoom(0.8)}
           title="Zoom out"
           type="button"
         >
@@ -1034,10 +1129,29 @@ export default function WorldMap({
         viewBox={`0 0 ${width} ${height}`}
       >
         <defs>
-          <radialGradient id="globeOcean" cx="45%" cy="38%" r="68%">
-            <stop offset="0%" stopColor="#0b3447" />
-            <stop offset="52%" stopColor="#041A27" />
-            <stop offset="100%" stopColor="#01080d" />
+          <radialGradient id="globeOcean" cx="42%" cy="34%" r="72%">
+            <stop offset="0%" stopColor="#0E3E52" />
+            <stop offset="38%" stopColor="#0A2C3C" />
+            <stop offset="70%" stopColor="#061E2F" />
+            <stop offset="100%" stopColor="#020B12" />
+          </radialGradient>
+          {/* Terrain-feel land fills (Phase 2-lite): a raking-light gradient
+              per intensity bucket, shared across every country in that
+              bucket. Referenced by fill="url(#...)" - no per-country or
+              per-frame cost over a flat colour fill. */}
+          {TERRAIN_GRADIENT_DEFS.map(({ id, light, base }) => (
+            <linearGradient id={id} key={id} x1="15%" y1="10%" x2="85%" y2="95%">
+              <stop offset="0%" stopColor={light} />
+              <stop offset="100%" stopColor={base} />
+            </linearGradient>
+          ))}
+          {/* Limb-darkening vignette: cheap static overlay (one rect, one
+              gradient, no per-frame recompute) that reads as sphere/terrain
+              relief rather than a flat disc. */}
+          <radialGradient id="globeVignette" cx="42%" cy="34%" r="72%">
+            <stop offset="0%" stopColor="#000000" stopOpacity="0" />
+            <stop offset="78%" stopColor="#000000" stopOpacity="0" />
+            <stop offset="100%" stopColor="#000000" stopOpacity="0.22" />
           </radialGradient>
           <clipPath id="globeClip">
             <path d={initialSpherePath} ref={clipSphereRef} />
@@ -1063,19 +1177,24 @@ export default function WorldMap({
               (!hasFilter || countryMatchesTopicFilter(country, activeFilter));
             const isSelected = selectedCountry?.id === country?.id;
             const isClickable = Boolean(country);
+            // initialPath is only ever evaluated at defaultRotation, purely
+            // to paint something before the first live rAF frame. A feature
+            // on the far side of the globe at that fixed default (e.g.
+            // Japan/Australia are ~90-120deg from the Africa/Europe-centred
+            // default) legitimately has no path THERE - but the <path>
+            // element must still be created and ref-registered, or the live
+            // per-frame renderer below has no node to ever update once the
+            // user rotates that country into view. Do not `return null`
+            // here: that would permanently drop the country from the globe.
             const pathData = initialPath(geo);
             const featureKey = getFeatureKey(geo, index);
-
-            if (!pathData) {
-              return null;
-            }
 
             return (
               <path
                 aria-label={
                   country
                     ? `${country.name}, ${getIntensityLabel(country.researchIntensity)} research intensity, ${country.researchIntensity}/100`
-                    : undefined
+                    : `${geo.properties.name}, coverage pending - no extracted records yet`
                 }
                 className={getCountryClass(
                   country,
@@ -1098,13 +1217,15 @@ export default function WorldMap({
                       }
                     : undefined
                 }
-                onPointerEnter={
-                  country
-                    ? (event) =>
-                        scheduleHoverPreview(event, { kind: "country", country })
-                    : undefined
+                onPointerEnter={(event) =>
+                  scheduleHoverPreview(
+                    event,
+                    country
+                      ? { kind: "country", country }
+                      : { kind: "coverage", name: geo.properties.name }
+                  )
                 }
-                onPointerLeave={country ? requestCloseHoverPreview : undefined}
+                onPointerLeave={requestCloseHoverPreview}
                 ref={(node) => {
                   if (node) {
                     geographyRefs.current.set(featureKey, node);
@@ -1127,6 +1248,14 @@ export default function WorldMap({
               />
             );
           })}
+
+          <rect
+            aria-hidden="true"
+            className="globe-vignette"
+            fill="url(#globeVignette)"
+            height={height}
+            width={width}
+          />
 
           <g className="country-marker-layer">
             {countries.map((country) => {
@@ -1289,11 +1418,16 @@ export default function WorldMap({
       <AnimatePresence>
         {hoverPreview ? (
           <HoverPreviewCard
+            coveragePendingName={
+              hoverPreview.kind === "coverage" ? hoverPreview.name : null
+            }
             country={hoverPreview.kind === "country" ? hoverPreview.country : null}
             key={`${hoverPreview.kind}-${
               hoverPreview.kind === "country"
                 ? hoverPreview.country.id
-                : hoverPreview.project.id
+                : hoverPreview.kind === "project"
+                  ? hoverPreview.project.id
+                  : hoverPreview.name
             }`}
             onMouseEnter={handleHoverCardEnter}
             onMouseLeave={handleHoverCardLeave}
@@ -1321,6 +1455,7 @@ export default function WorldMap({
       <div className="map-legend" aria-label="Research intensity legend">
         <span>Research intensity</span>
         <div className="legend-scale">
+          <i className="legend-coverage-pending" />
           <i className="legend-very-low" />
           <i className="legend-low" />
           <i className="legend-low-medium" />
@@ -1330,6 +1465,7 @@ export default function WorldMap({
           <i className="legend-very-high" />
         </div>
         <div className="legend-labels">
+          <small>Coverage pending</small>
           <small>Very Low</small>
           <small>Low</small>
           <small>Low-Med</small>
@@ -1341,12 +1477,23 @@ export default function WorldMap({
         <p className="legend-note">
           Research intensity is calculated from verified project-location,
           institution-country, partner, funder and publication-affiliation
-          relationships. Neutral land means no verified activity in the extracted
-          dataset.
+          relationships in the current dataset.
+        </p>
+        <p className="legend-note legend-note-emphasis">
+          <strong>Coverage pending</strong> does not mean no research
+          activity. It means the current dataset has not yet verified
+          extracted records for that country.
         </p>
       </div>
 
-      <div className="map-data-note">{dataStatusLabel}</div>
+      <div className="map-data-note">
+        <p>{dataStatusLabel}</p>
+        <p className="map-data-note-caption">
+          {countries.length} countries with verified records, {projects.length}{" "}
+          extracted records. Map reflects extracted records in the current
+          dataset, not a complete global ranking.
+        </p>
+      </div>
     </section>
   );
 }
