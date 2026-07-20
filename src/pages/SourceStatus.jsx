@@ -73,10 +73,31 @@ export default function SourceStatus() {
             Configured Source Health
           </h2>
           <div className="source-monitor-grid">
-            {liveResearchMeta.sourceStatus.map((source) => (
+            {liveResearchMeta.sourceStatus.map((source) => {
+              const meta = getSourceAdapterMeta(source.sourceId);
+              const Icon = meta ? SOURCE_ICONS[meta.icon] : null;
+
+              return (
               <article className="source-monitor-card" key={source.sourceId}>
-                <p className="eyebrow">{source.extractionType}</p>
-                <h3>{source.sourceName}</h3>
+                <div className="source-monitor-heading">
+                  {Icon ? <Icon size={20} aria-hidden="true" /> : null}
+                  <div>
+                    <p className="eyebrow">{source.extractionType}</p>
+                    <h3>{source.sourceName}</h3>
+                  </div>
+                </div>
+                {meta ? (
+                  <p className="source-monitor-description">
+                    {meta.description}{" "}
+                    <a
+                      href={meta.homepage}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Visit source <ExternalLink size={13} aria-hidden="true" />
+                    </a>
+                  </p>
+                ) : null}
                 <dl className="relationship-meta">
                   <div>
                     <dt>Status</dt>
