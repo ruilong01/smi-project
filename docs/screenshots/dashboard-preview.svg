@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="35%" r="85%">
+      <stop offset="0%" stop-color="#0d2b36"/>
+      <stop offset="55%" stop-color="#081b24"/>
+      <stop offset="100%" stop-color="#050f15"/>
+    </radialGradient>
+    <radialGradient id="globe" cx="42%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#123a44"/>
+      <stop offset="70%" stop-color="#0a262e"/>
+      <stop offset="100%" stop-color="#061820"/>
+    </radialGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2fe0c9"/>
+      <stop offset="100%" stop-color="#1a8f8a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- header -->
+  <text x="56" y="76" font-family="Segoe UI, Arial, sans-serif" font-size="15" letter-spacing="3" fill="#39d6c4" font-weight="700">MARITIME RESEARCH INTELLIGENCE</text>
+  <text x="56" y="116" font-family="Segoe UI, Arial, sans-serif" font-size="34" fill="#eaf6f6" font-weight="700">Global Maritime Research Intelligence Map</text>
+
+  <!-- filter chips -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#cfe9e8">
+    <rect x="56" y="140" width="86" height="36" rx="18" fill="#123a3c" stroke="#2fe0c9" stroke-width="1.5"/>
+    <text x="80" y="163">All</text>
+    <rect x="152" y="140" width="150" height="36" rx="18" fill="#0e2730" stroke="#1f4b4e"/>
+    <text x="172" y="163">Green Shipping</text>
+    <rect x="312" y="140" width="130" height="36" rx="18" fill="#0e2730" stroke="#1f4b4e"/>
+    <text x="332" y="163">Smart Ports</text>
+    <rect x="452" y="140" width="168" height="36" rx="18" fill="#0e2730" stroke="#1f4b4e"/>
+    <text x="472" y="163">Autonomous Vessels</text>
+    <rect x="630" y="140" width="130" height="36" rx="18" fill="#0e2730" stroke="#1f4b4e"/>
+    <text x="650" y="163">Maritime AI</text>
+  </g>
+
+  <!-- globe -->
+  <circle cx="330" cy="410" r="230" fill="url(#globe)" stroke="#1f4b4e" stroke-width="1"/>
+  <g stroke="#163b40" stroke-width="1" fill="none" opacity="0.7">
+    <ellipse cx="330" cy="410" rx="230" ry="70"/>
+    <ellipse cx="330" cy="410" rx="230" ry="140"/>
+    <ellipse cx="330" cy="410" rx="70" ry="230"/>
+    <ellipse cx="330" cy="410" rx="140" ry="230"/>
+  </g>
+  <!-- stylised landmasses -->
+  <path d="M240 300 Q270 280 310 290 Q340 300 330 330 Q360 340 350 370 Q320 390 290 375 Q260 380 250 350 Q225 335 240 300 Z" fill="url(#land)" opacity="0.9"/>
+  <path d="M400 420 Q450 400 500 430 Q520 460 480 490 Q440 510 410 480 Q380 460 400 420 Z" fill="url(#land)" opacity="0.85"/>
+  <path d="M260 460 Q290 450 300 480 Q290 510 260 500 Q240 480 260 460 Z" fill="url(#land)" opacity="0.8"/>
+
+  <!-- hub markers -->
+  <g>
+    <circle cx="300" cy="320" r="7" fill="#1a8f8a" stroke="#eaffee" stroke-width="1.5"/>
+    <circle cx="330" cy="305" r="7" fill="#1a8f8a" stroke="#eaffee" stroke-width="1.5"/>
+    <circle cx="470" cy="450" r="9" fill="#f2b94d" stroke="#fff7e6" stroke-width="1.5"/>
+    <circle cx="278" cy="478" r="6" fill="#1a8f8a" stroke="#eaffee" stroke-width="1.5"/>
+    <circle cx="360" cy="360" r="6" fill="#1a8f8a" stroke="#eaffee" stroke-width="1.5"/>
+  </g>
+
+  <!-- side legend / summary panel -->
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="640" y="220" width="504" height="150" rx="14" fill="#0b232b" stroke="#1f4b4e"/>
+    <text x="666" y="252" font-size="13" letter-spacing="2" fill="#8fb9b8" font-weight="700">VISIBLE HUBS</text>
+    <text x="666" y="284" font-size="22" fill="#eaf6f6" font-weight="700">7 maritime clusters</text>
+    <rect x="666" y="300" width="452" height="1" fill="#1f4b4e"/>
+    <text x="666" y="326" font-size="15" fill="#cfe9e8">Singapore — Supply-chain + Intelligent port services</text>
+    <text x="666" y="352" font-size="15" fill="#8fb9b8">China — Autonomous navigation + Alt. fuels</text>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="640" y="388" width="504" height="180" rx="14" fill="#0b232b" stroke="#1f4b4e"/>
+    <text x="666" y="420" font-size="13" letter-spacing="2" fill="#8fb9b8" font-weight="700">RESEARCH INTENSITY</text>
+    <g>
+      <rect x="666" y="440" width="52" height="10" rx="5" fill="#0d3a3c"/>
+      <rect x="726" y="440" width="52" height="10" rx="5" fill="#12514f"/>
+      <rect x="786" y="440" width="52" height="10" rx="5" fill="#1a8f8a"/>
+      <rect x="846" y="440" width="52" height="10" rx="5" fill="#2fbfae"/>
+      <rect x="906" y="440" width="52" height="10" rx="5" fill="#2fe0c9"/>
+      <rect x="966" y="440" width="52" height="10" rx="5" fill="#f2b94d"/>
+    </g>
+    <text x="666" y="470" font-size="12" fill="#8fb9b8">Very Low</text>
+    <text x="966" y="470" font-size="12" fill="#f2b94d">Very High</text>
+    <text x="666" y="504" font-size="14" fill="#cfe9e8">Calculated from verified project, institution</text>
+    <text x="666" y="526" font-size="14" fill="#cfe9e8">and publication-affiliation relationships.</text>
+    <text x="666" y="556" font-size="13" fill="#5c8a89">Last synchronised · 4 sources tracked</text>
+  </g>
+
+  <text x="56" y="610" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#3f6b6a">Prototype demo data — source verification pending</text>
+</svg>
