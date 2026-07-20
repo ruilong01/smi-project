@@ -110,7 +110,9 @@ async function runExtractionOnce() {
         .map((record) => normalizeOpenAlexRecord(record, nowIso))
         .filter(Boolean);
 
-      return normalized.slice(0, 10);
+      // Safety cap, not a target — real yield is bounded by how many
+      // results pass isStrongMaritimeMatch + require a resolvable country.
+      return normalized.slice(0, 200);
     }
   );
 
