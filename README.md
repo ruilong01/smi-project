@@ -1,94 +1,130 @@
-# SMI Project
+# SMI Project — Global Maritime Research Intelligence Map
 
-An interactive maritime R&D intelligence map prototype for discovering, explaining and verifying global maritime research activity.
+An internal maritime R&D intelligence platform for SMI staff to explore
+global maritime research on an interactive globe — projects by country,
+institution, topic and stage — with AI analysis added only after
+extraction (planned, not yet built).
 
-The current version is a frontend MVP built with React and Vite. It renders a dark ocean-style rotatable globe, clickable research countries and project markers, evidence-backed project pages, topic views, and a local source-status page.
+## Current state
+
+- **Frontend**: React 18 + Vite 6 dashboard is functional — rotatable
+  globe, country/project popups, topic pages, source-status page.
+- **Data**: static generated JSON (`src/data/generated/liveResearchData.json`),
+  built by Node ingestion scripts. Currently a small prototype dataset;
+  target is 500 real records (see goal tracker in `CLAUDE.md`).
+- **Backend**: a lightweight Node HTTP API (`server/server.mjs`) exists
+  and exposes `/api/health`, `/api/projects`, `/api/countries`,
+  `/api/topics`, `/api/search`, etc., reading the same generated JSON.
+  The frontend does not consume it yet — it still imports the data file
+  directly at build time.
+- **AI analysis layer**: not built yet (Phase 3).
+- **Deployment**: no Lightsail deployment config yet (Phase 4).
+
+See `CLAUDE.md` for the full architecture rules and goal tracker.
 
 ## Features
 
-- Interactive rotatable maritime research globe
-- Country and project marker popups
-- Research-intensity country coloring
-- Evidence-based project detail pages
-- Explainable country-institution-project relationships
+- Interactive rotatable maritime research globe (50m atlas, back-face
+  culling, dual-LOD path caching for performance)
+- Country and project marker popups, country profile panel
+- Research-intensity country coloring (blue/cyan/teal; red = selection)
+- Evidence-based project detail pages with source links
+- Topic pages: green shipping, smart ports, autonomous vessels,
+  maritime AI, alternative fuels, maritime cybersecurity
 - Source status page at `/sources/status`
-- Local generated data file consumed by the frontend
-- Local extraction scripts for refreshed public maritime R&D records
-- Test refresh mode with 5-minute intervals
+- Route-level code splitting for detail pages
 
-## Tech Stack
+## Tech stack
 
-- React
-- Vite
-- D3 Geo
-- TopoJSON
-- Framer Motion
-- Lucide React
+- React 18, React Router
+- Vite 6
+- d3-geo, topojson-client/simplify, world-atlas (50m)
+- Framer Motion, Lucide React
 - Vitest
+- Node (zero-dependency) HTTP server for the backend API
 
-## Getting Started
+## Getting started
 
 Install dependencies:
 
 ```bash
-npm install
+npm.cmd install
 ```
 
-Generate or refresh local research data:
+Run the dev server:
 
 ```bash
-npm run sync:data
-```
-
-Run the development server:
-
-```bash
-npm run dev
+npm.cmd run dev
 ```
 
 Run tests:
 
 ```bash
-npm test
+npm.cmd test -- --run
 ```
 
-Build for production:
+Production build:
 
 ```bash
-npm run build
+npm.cmd run build
 ```
 
-## Data Refresh
+## Data ingestion
 
-The app is still frontend-only. The extraction scripts write generated data to:
+Ingestion scripts (`scripts/ingestion/`, Node `.mjs`) pull from public
+APIs/RSS only — no AI fetching of webpages. Every real record includes a
+source URL and fetched timestamp; one failed source never stops the rest
+of the pipeline.
 
-```text
-src/data/generated/liveResearchData.json
-```
-
-For local testing, run the extractor every 5 minutes:
+Run once:
 
 ```bash
-npm run sync:watch
+npm.cmd run sync:data
 ```
 
-The generated dataset includes projects, countries, institutions, sources, extraction runs and explainable relationship records.
+Run on a watch interval:
 
-## Project Structure
+```bash
+npm.cmd run sync:watch
+```
+
+Output goes to `src/data/generated/liveResearchData.json`, consumed by
+the frontend at build time.
+
+## Backend API (bootstrap, Phase 2)
+
+```bash
+npm.cmd run serve:api
+```
+
+Reads the same generated dataset, refreshing automatically when its
+mtime changes (no restart needed after a re-sync). Configure via
+`API_PORT` / `API_HOST` environment variables — no secrets in code.
+
+## Project structure
 
 ```text
 src/
-  components/
-  data/
-  pages/
-  utils/
+  components/       UI components (globe, popups, cards, panels)
+  pages/            Route-level pages (country, project, topic, sources)
+  data/             Static + generated research data, topic/source config
+  utils/            Intensity scoring, URL helpers
 scripts/
-  ingestion/
+  ingestion/        Extraction adapters (OpenAlex, Crossref, ROR, MPA) + pipeline
+server/
+  server.mjs        Backend API bootstrap over the generated dataset
 ```
+
+## Routes
+
+`/`, `/country/:slug`, `/projects/:projectSlug`, `/sources/status`,
+`/topic/green-shipping`, `/topic/smart-ports`, `/topic/autonomous-vessels`,
+`/topic/maritime-ai`, `/topic/alternative-fuels`,
+`/topic/maritime-cybersecurity`
 
 ## Notes
 
-This MVP does not include a backend, database, login, admin system, upload flow or production security layer yet. Those can be added in a later version when the data model and user workflows are stable.
-
----
-*Last updated: 2026-07-20 — auto-push enabled*
+Mock/prototype data stays labelled "Prototype demo data - source
+verification pending" until replaced by real ingested records. No
+database, login, admin system or production security layer yet — those
+land after the data model and API are stable.
