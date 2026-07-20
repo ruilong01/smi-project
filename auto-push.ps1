@@ -4,7 +4,7 @@
 # ============================================================
 
 $ProjectPath = "C:\Users\65831\Documents\Codex\2026-07-02\you-are-helping-me-build-a"
-$Branch      = "master"
+$Branch      = "main"
 $CommitMsg   = "auto: sync changes"
 $PollSeconds = 10  # check every 10 seconds (read-only, very cheap)
 
