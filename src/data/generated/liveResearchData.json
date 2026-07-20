@@ -543,30 +543,15 @@
         ],
         "abstract": ""
       },
-      "sourcePages": [
-        {
-          "sourceId": "sourcepage-project-openalex-https-openalex-org-w4401477504",
-          "sourceType": "publisher",
-          "sourceName": "Redirecting",
-          "sourceUrl": "https://doi.org/10.1016/j.horiz.2024.100117",
-          "pageTitle": "Redirecting",
-          "publishedDate": "",
-          "fetchedAt": "2026-07-20T03:03:31.723Z",
-          "rawTextStored": false,
-          "cleanedTextSummary": "",
-          "chunks": [],
-          "images": []
-        }
-      ],
+      "sourcePages": [],
       "selectedEvidence": [],
       "aiAnalysis": null,
       "dataQuality": {
-        "hasOriginalSource": true,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
       },
       "displayScore": 81,
       "displayTier": "highlighted",
@@ -585,7 +570,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": ""
     },
     {
       "id": "project-openalex-https-openalex-org-w4315486684",
@@ -1048,30 +1034,15 @@
         ],
         "abstract": ""
       },
-      "sourcePages": [
-        {
-          "sourceId": "sourcepage-project-openalex-https-openalex-org-w4388714463",
-          "sourceType": "publisher",
-          "sourceName": "Redirecting",
-          "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2023.10.207",
-          "pageTitle": "Redirecting",
-          "publishedDate": "",
-          "fetchedAt": "2026-07-20T03:07:05.560Z",
-          "rawTextStored": false,
-          "cleanedTextSummary": "",
-          "chunks": [],
-          "images": []
-        }
-      ],
+      "sourcePages": [],
       "selectedEvidence": [],
       "aiAnalysis": null,
       "dataQuality": {
-        "hasOriginalSource": true,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
       },
       "displayScore": 81,
       "displayTier": "highlighted",
@@ -1090,7 +1061,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": ""
     },
     {
       "id": "project-openalex-https-openalex-org-w4376597726",
@@ -2565,30 +2537,15 @@
         ],
         "abstract": ""
       },
-      "sourcePages": [
-        {
-          "sourceId": "sourcepage-project-openalex-https-openalex-org-w4389216379",
-          "sourceType": "publisher",
-          "sourceName": "Redirecting",
-          "sourceUrl": "https://doi.org/10.1016/j.engappai.2023.107625",
-          "pageTitle": "Redirecting",
-          "publishedDate": "",
-          "fetchedAt": "2026-07-20T03:12:24.916Z",
-          "rawTextStored": false,
-          "cleanedTextSummary": "",
-          "chunks": [],
-          "images": []
-        }
-      ],
+      "sourcePages": [],
       "selectedEvidence": [],
       "aiAnalysis": null,
       "dataQuality": {
-        "hasOriginalSource": true,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
       },
       "displayScore": 81,
       "displayTier": "highlighted",
@@ -2607,7 +2564,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": ""
     },
     {
       "id": "project-openalex-https-openalex-org-w4391097217",
@@ -3070,11 +3028,10 @@
       "aiAnalysis": null,
       "dataQuality": {
         "hasOriginalSource": false,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
       },
       "displayScore": 81,
       "displayTier": "highlighted",
@@ -3093,7 +3050,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": ""
     },
     {
       "id": "project-openalex-https-openalex-org-w4401409977",
@@ -4270,27 +4228,138 @@
       "sourcePages": [
         {
           "sourceId": "sourcepage-project-openalex-https-openalex-org-w4313584439",
-          "sourceType": "other",
-          "sourceName": "https://www.frontiersin.org/articles/10.3389/fmars.2022.1082453/pdf",
-          "sourceUrl": "https://www.frontiersin.org/articles/10.3389/fmars.2022.1082453/pdf",
-          "pageTitle": "",
+          "sourceType": "publisher",
+          "sourceName": "East China University of Political Science and Law",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective",
           "publishedDate": "",
-          "fetchedAt": "2026-07-20T03:15:53.919Z",
+          "fetchedAt": "2026-07-20T05:25:29.559Z",
           "rawTextStored": false,
-          "cleanedTextSummary": "",
-          "chunks": [],
-          "images": []
+          "cleanedTextSummary": "Volume 9 - 2022 | https://doi.org/10.3389/fmars.2022.1082453",
+          "chunks": [
+            {
+              "chunkId": "chunk-enriched-project-openalex-https-openalex-org-w4313584439-0",
+              "text": "Volume 9 - 2022 | https://doi.org/10.3389/fmars.2022.1082453",
+              "heading": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+            },
+            {
+              "chunkId": "chunk-enriched-project-openalex-https-openalex-org-w4313584439-1",
+              "text": "1. Associate professor, School of International Law, East China University of Political Science and Law, Shanghai, China",
+              "heading": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+            },
+            {
+              "chunkId": "chunk-enriched-project-openalex-https-openalex-org-w4313584439-2",
+              "text": "2. Master of Laws (LL.M.) candidate, School of International Law, East China University of Political Science and Law, Shanghai, China",
+              "heading": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+            },
+            {
+              "chunkId": "chunk-enriched-project-openalex-https-openalex-org-w4313584439-3",
+              "text": "3. Professor, Navigation College, Jimei University, Xiamen, China",
+              "heading": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+            },
+            {
+              "chunkId": "chunk-enriched-project-openalex-https-openalex-org-w4313584439-4",
+              "text": "The introduction of several alternative marine fuels is considered an important strategy for maritime decarbonization. These alternative marine fuels include liquefied natural gas (LNG), liquefied biogas (LBG), hydrogen, ammonia, methanol, ethanol, hydrotreated vegetable oil (HVO), etc.",
+              "heading": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+            }
+          ],
+          "images": [
+            {
+              "imageUrl": "https://www.frontiersin.org/files/Articles/1082453/xml-images/fmars-09-1082453-g001.webp",
+              "altText": "Figure 1",
+              "caption": "Technologies and fuels on a pathway to maritime decarbonization. Source:",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "canEmbed": false,
+              "rightsNote": "Rights not verified; not embedded automatically."
+            },
+            {
+              "imageUrl": "https://www.frontiersin.org/files/Articles/1082453/xml-images/fmars-09-1082453-g002.webp",
+              "altText": "Figure 2",
+              "caption": "Special marine environmental risks posed by alternative-fuel-powered ships. Source: Authors’ Compilation.",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "canEmbed": false,
+              "rightsNote": "Rights not verified; not embedded automatically."
+            },
+            {
+              "imageUrl": "https://static2.frontiersin.org/static-resources/images/crossmark_color.webp",
+              "altText": "Crossmark icon",
+              "caption": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "canEmbed": false,
+              "rightsNote": "Rights not verified; not embedded automatically."
+            }
+          ]
         }
       ],
-      "selectedEvidence": [],
+      "selectedEvidence": [
+        {
+          "evidenceId": "evidence-project-openalex-https-openalex-org-w4313584439-0",
+          "snippet": "Volume 9 - 2022 | https://doi.org/10.3389/fmars.2022.1082453",
+          "evidenceType": "other",
+          "importanceScore": 0.5,
+          "whyImportant": "Short extracted snippet kept as supporting context for this project.",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "sourceName": "East China University of Political Science and Law",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+        },
+        {
+          "evidenceId": "evidence-project-openalex-https-openalex-org-w4313584439-1",
+          "snippet": "1. Associate professor, School of International Law, East China University of Political Science and Law, Shanghai, China",
+          "evidenceType": "location",
+          "importanceScore": 0.5,
+          "whyImportant": "Identifies a specific location relevant to where this work took place.",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "sourceName": "East China University of Political Science and Law",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+        },
+        {
+          "evidenceId": "evidence-project-openalex-https-openalex-org-w4313584439-2",
+          "snippet": "2. Master of Laws (LL.M.) candidate, School of International Law, East China University of Political Science and Law, Shanghai, China",
+          "evidenceType": "location",
+          "importanceScore": 0.5,
+          "whyImportant": "Identifies a specific location relevant to where this work took place.",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "sourceName": "East China University of Political Science and Law",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+        },
+        {
+          "evidenceId": "evidence-project-openalex-https-openalex-org-w4313584439-3",
+          "snippet": "3. Professor, Navigation College, Jimei University, Xiamen, China",
+          "evidenceType": "location",
+          "importanceScore": 0.5,
+          "whyImportant": "Identifies a specific location relevant to where this work took place.",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "sourceName": "East China University of Political Science and Law",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+        },
+        {
+          "evidenceId": "evidence-project-openalex-https-openalex-org-w4313584439-4",
+          "snippet": "The introduction of several alternative marine fuels is considered an important strategy for maritime decarbonization. These alternative marine fuels include liquefied natural gas (LNG), liquefied biogas (LBG), hydrogen, ammonia, methanol, ethanol, hydrotreated vegetable oil (HVO), etc.",
+          "evidenceType": "impact",
+          "importanceScore": 0.5,
+          "whyImportant": "Describes an expected impact or benefit of this work.",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "sourceName": "East China University of Political Science and Law",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+        }
+      ],
       "aiAnalysis": null,
       "dataQuality": {
         "hasOriginalSource": true,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasDetailedDescription": true,
+        "hasEvidenceSnippets": true,
+        "hasImageCandidates": true,
+        "needsManualReview": false
       },
       "displayScore": 81,
       "displayTier": "highlighted",
@@ -4309,7 +4378,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": "Volume 9 - 2022 | https://doi.org/10.3389/fmars.2022.1082453"
     },
     {
       "id": "project-openalex-https-openalex-org-w4320339933",
@@ -7108,11 +7178,10 @@
       "aiAnalysis": null,
       "dataQuality": {
         "hasOriginalSource": false,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
       },
       "displayScore": 83,
       "displayTier": "highlighted",
@@ -7131,7 +7200,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": ""
     },
     {
       "id": "project-openalex-https-openalex-org-w4386424181",
@@ -21627,30 +21697,15 @@
         ],
         "abstract": ""
       },
-      "sourcePages": [
-        {
-          "sourceId": "sourcepage-project-openalex-https-openalex-org-w4401477504",
-          "sourceType": "publisher",
-          "sourceName": "Redirecting",
-          "sourceUrl": "https://doi.org/10.1016/j.horiz.2024.100117",
-          "pageTitle": "Redirecting",
-          "publishedDate": "",
-          "fetchedAt": "2026-07-20T03:03:31.723Z",
-          "rawTextStored": false,
-          "cleanedTextSummary": "",
-          "chunks": [],
-          "images": []
-        }
-      ],
+      "sourcePages": [],
       "selectedEvidence": [],
       "aiAnalysis": null,
       "dataQuality": {
-        "hasOriginalSource": true,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
       },
       "displayScore": 81,
       "displayTier": "highlighted",
@@ -21669,7 +21724,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": ""
     },
     {
       "id": "project-openalex-https-openalex-org-w4315486684",
@@ -22132,30 +22188,15 @@
         ],
         "abstract": ""
       },
-      "sourcePages": [
-        {
-          "sourceId": "sourcepage-project-openalex-https-openalex-org-w4388714463",
-          "sourceType": "publisher",
-          "sourceName": "Redirecting",
-          "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2023.10.207",
-          "pageTitle": "Redirecting",
-          "publishedDate": "",
-          "fetchedAt": "2026-07-20T03:07:05.560Z",
-          "rawTextStored": false,
-          "cleanedTextSummary": "",
-          "chunks": [],
-          "images": []
-        }
-      ],
+      "sourcePages": [],
       "selectedEvidence": [],
       "aiAnalysis": null,
       "dataQuality": {
-        "hasOriginalSource": true,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
       },
       "displayScore": 81,
       "displayTier": "highlighted",
@@ -22174,7 +22215,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": ""
     },
     {
       "id": "project-openalex-https-openalex-org-w4376597726",
@@ -23649,30 +23691,15 @@
         ],
         "abstract": ""
       },
-      "sourcePages": [
-        {
-          "sourceId": "sourcepage-project-openalex-https-openalex-org-w4389216379",
-          "sourceType": "publisher",
-          "sourceName": "Redirecting",
-          "sourceUrl": "https://doi.org/10.1016/j.engappai.2023.107625",
-          "pageTitle": "Redirecting",
-          "publishedDate": "",
-          "fetchedAt": "2026-07-20T03:12:24.916Z",
-          "rawTextStored": false,
-          "cleanedTextSummary": "",
-          "chunks": [],
-          "images": []
-        }
-      ],
+      "sourcePages": [],
       "selectedEvidence": [],
       "aiAnalysis": null,
       "dataQuality": {
-        "hasOriginalSource": true,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
       },
       "displayScore": 81,
       "displayTier": "highlighted",
@@ -23691,7 +23718,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": ""
     },
     {
       "id": "project-openalex-https-openalex-org-w4391097217",
@@ -24154,11 +24182,10 @@
       "aiAnalysis": null,
       "dataQuality": {
         "hasOriginalSource": false,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
       },
       "displayScore": 81,
       "displayTier": "highlighted",
@@ -24177,7 +24204,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": ""
     },
     {
       "id": "project-openalex-https-openalex-org-w4401409977",
@@ -25354,27 +25382,138 @@
       "sourcePages": [
         {
           "sourceId": "sourcepage-project-openalex-https-openalex-org-w4313584439",
-          "sourceType": "other",
-          "sourceName": "https://www.frontiersin.org/articles/10.3389/fmars.2022.1082453/pdf",
-          "sourceUrl": "https://www.frontiersin.org/articles/10.3389/fmars.2022.1082453/pdf",
-          "pageTitle": "",
+          "sourceType": "publisher",
+          "sourceName": "East China University of Political Science and Law",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective",
           "publishedDate": "",
-          "fetchedAt": "2026-07-20T03:15:53.919Z",
+          "fetchedAt": "2026-07-20T05:25:29.559Z",
           "rawTextStored": false,
-          "cleanedTextSummary": "",
-          "chunks": [],
-          "images": []
+          "cleanedTextSummary": "Volume 9 - 2022 | https://doi.org/10.3389/fmars.2022.1082453",
+          "chunks": [
+            {
+              "chunkId": "chunk-enriched-project-openalex-https-openalex-org-w4313584439-0",
+              "text": "Volume 9 - 2022 | https://doi.org/10.3389/fmars.2022.1082453",
+              "heading": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+            },
+            {
+              "chunkId": "chunk-enriched-project-openalex-https-openalex-org-w4313584439-1",
+              "text": "1. Associate professor, School of International Law, East China University of Political Science and Law, Shanghai, China",
+              "heading": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+            },
+            {
+              "chunkId": "chunk-enriched-project-openalex-https-openalex-org-w4313584439-2",
+              "text": "2. Master of Laws (LL.M.) candidate, School of International Law, East China University of Political Science and Law, Shanghai, China",
+              "heading": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+            },
+            {
+              "chunkId": "chunk-enriched-project-openalex-https-openalex-org-w4313584439-3",
+              "text": "3. Professor, Navigation College, Jimei University, Xiamen, China",
+              "heading": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+            },
+            {
+              "chunkId": "chunk-enriched-project-openalex-https-openalex-org-w4313584439-4",
+              "text": "The introduction of several alternative marine fuels is considered an important strategy for maritime decarbonization. These alternative marine fuels include liquefied natural gas (LNG), liquefied biogas (LBG), hydrogen, ammonia, methanol, ethanol, hydrotreated vegetable oil (HVO), etc.",
+              "heading": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+            }
+          ],
+          "images": [
+            {
+              "imageUrl": "https://www.frontiersin.org/files/Articles/1082453/xml-images/fmars-09-1082453-g001.webp",
+              "altText": "Figure 1",
+              "caption": "Technologies and fuels on a pathway to maritime decarbonization. Source:",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "canEmbed": false,
+              "rightsNote": "Rights not verified; not embedded automatically."
+            },
+            {
+              "imageUrl": "https://www.frontiersin.org/files/Articles/1082453/xml-images/fmars-09-1082453-g002.webp",
+              "altText": "Figure 2",
+              "caption": "Special marine environmental risks posed by alternative-fuel-powered ships. Source: Authors’ Compilation.",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "canEmbed": false,
+              "rightsNote": "Rights not verified; not embedded automatically."
+            },
+            {
+              "imageUrl": "https://static2.frontiersin.org/static-resources/images/crossmark_color.webp",
+              "altText": "Crossmark icon",
+              "caption": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "canEmbed": false,
+              "rightsNote": "Rights not verified; not embedded automatically."
+            }
+          ]
         }
       ],
-      "selectedEvidence": [],
+      "selectedEvidence": [
+        {
+          "evidenceId": "evidence-project-openalex-https-openalex-org-w4313584439-0",
+          "snippet": "Volume 9 - 2022 | https://doi.org/10.3389/fmars.2022.1082453",
+          "evidenceType": "other",
+          "importanceScore": 0.5,
+          "whyImportant": "Short extracted snippet kept as supporting context for this project.",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "sourceName": "East China University of Political Science and Law",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+        },
+        {
+          "evidenceId": "evidence-project-openalex-https-openalex-org-w4313584439-1",
+          "snippet": "1. Associate professor, School of International Law, East China University of Political Science and Law, Shanghai, China",
+          "evidenceType": "location",
+          "importanceScore": 0.5,
+          "whyImportant": "Identifies a specific location relevant to where this work took place.",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "sourceName": "East China University of Political Science and Law",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+        },
+        {
+          "evidenceId": "evidence-project-openalex-https-openalex-org-w4313584439-2",
+          "snippet": "2. Master of Laws (LL.M.) candidate, School of International Law, East China University of Political Science and Law, Shanghai, China",
+          "evidenceType": "location",
+          "importanceScore": 0.5,
+          "whyImportant": "Identifies a specific location relevant to where this work took place.",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "sourceName": "East China University of Political Science and Law",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+        },
+        {
+          "evidenceId": "evidence-project-openalex-https-openalex-org-w4313584439-3",
+          "snippet": "3. Professor, Navigation College, Jimei University, Xiamen, China",
+          "evidenceType": "location",
+          "importanceScore": 0.5,
+          "whyImportant": "Identifies a specific location relevant to where this work took place.",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "sourceName": "East China University of Political Science and Law",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+        },
+        {
+          "evidenceId": "evidence-project-openalex-https-openalex-org-w4313584439-4",
+          "snippet": "The introduction of several alternative marine fuels is considered an important strategy for maritime decarbonization. These alternative marine fuels include liquefied natural gas (LNG), liquefied biogas (LBG), hydrogen, ammonia, methanol, ethanol, hydrotreated vegetable oil (HVO), etc.",
+          "evidenceType": "impact",
+          "importanceScore": 0.5,
+          "whyImportant": "Describes an expected impact or benefit of this work.",
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "sourceName": "East China University of Political Science and Law",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective"
+        }
+      ],
       "aiAnalysis": null,
       "dataQuality": {
         "hasOriginalSource": true,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasDetailedDescription": true,
+        "hasEvidenceSnippets": true,
+        "hasImageCandidates": true,
+        "needsManualReview": false
       },
       "displayScore": 81,
       "displayTier": "highlighted",
@@ -25393,7 +25532,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": "Volume 9 - 2022 | https://doi.org/10.3389/fmars.2022.1082453"
     },
     {
       "id": "project-openalex-https-openalex-org-w4320339933",
@@ -28192,11 +28332,10 @@
       "aiAnalysis": null,
       "dataQuality": {
         "hasOriginalSource": false,
-        "hasOfficialSource": false,
-        "evidenceCount": 0,
-        "imageCandidateCount": 0,
-        "needsManualReview": true,
-        "lastAnalysedAt": null
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
       },
       "displayScore": 83,
       "displayTier": "highlighted",
@@ -28215,7 +28354,8 @@
         "dataCompleteness": 90,
         "locationConfidence": 72
       },
-      "locationDisplayLevel": "city"
+      "locationDisplayLevel": "city",
+      "detailedDescription": ""
     },
     {
       "id": "project-openalex-https-openalex-org-w4386424181",

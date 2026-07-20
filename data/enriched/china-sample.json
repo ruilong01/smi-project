@@ -1,0 +1,455 @@
+{
+  "meta": {
+    "startedAt": "2026-07-20T05:24:28.491Z",
+    "openAlexLiveCallAttempted": true,
+    "openAlexLiveCallSucceeded": false,
+    "crossrefLiveCallAttempted": true,
+    "crossrefLiveCallSucceeded": true,
+    "recordsDiscovered": 10,
+    "sourcePagesAttempted": 15,
+    "sourcePagesFetchedSuccessfully": 1,
+    "sourcePagesFailed": 13,
+    "evidenceSnippetsExtracted": 5,
+    "imageCandidatesExtracted": 3,
+    "completedAt": "2026-07-20T05:26:17.181Z"
+  },
+  "records": [
+    {
+      "id": "project-openalex-https-openalex-org-w4401477504",
+      "title": "Autonomous navigation and control for a sustainable vessel: A wind-assisted strategy",
+      "country": "China",
+      "institutions": [
+        "Dalian Maritime University",
+        "Southern University of Science and Technology"
+      ],
+      "topics": [
+        "autonomous vessel"
+      ],
+      "year": "2024",
+      "doi": "https://doi.org/10.1016/j.horiz.2024.100117",
+      "openAlexUrl": "https://openalex.org/W4401477504",
+      "sourceUrl": "https://doi.org/10.1016/j.horiz.2024.100117",
+      "sourceName": "Dalian Maritime University",
+      "lastFetchedAt": "2026-07-20T05:24:32.027Z",
+      "sourcePages": [
+        {
+          "sourceUrl": "https://doi.org/10.1016/j.horiz.2024.100117",
+          "pageTitle": "",
+          "sourceType": "publisher",
+          "fetchedAt": "2026-07-20T05:24:32.027Z",
+          "statusCode": 0,
+          "cleanedTextSummary": "",
+          "evidenceSnippets": [],
+          "images": []
+        }
+      ],
+      "dataQuality": {
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
+      }
+    },
+    {
+      "id": "project-openalex-https-openalex-org-w4388714463",
+      "title": "Towards a marine green power system architecture: Integrating hydrogen and ammonia as zero-carbon fuels for sustainable shipping",
+      "country": "China",
+      "institutions": [
+        "Dalian Maritime University"
+      ],
+      "topics": [
+        "green shipping",
+        "alternative fuels"
+      ],
+      "year": "2023",
+      "doi": "https://doi.org/10.1016/j.ijhydene.2023.10.207",
+      "openAlexUrl": "https://openalex.org/W4388714463",
+      "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2023.10.207",
+      "sourceName": "Dalian Maritime University",
+      "lastFetchedAt": "2026-07-20T05:24:39.528Z",
+      "sourcePages": [
+        {
+          "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2023.10.207",
+          "pageTitle": "",
+          "sourceType": "publisher",
+          "fetchedAt": "2026-07-20T05:24:39.528Z",
+          "statusCode": 0,
+          "cleanedTextSummary": "",
+          "evidenceSnippets": [],
+          "images": []
+        }
+      ],
+      "dataQuality": {
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
+      }
+    },
+    {
+      "id": "project-openalex-https-openalex-org-w4389216379",
+      "title": "Spatio-temporal multi-graph transformer network for joint prediction of multiple vessel trajectories",
+      "country": "China",
+      "institutions": [
+        "Wuhan University of Technology",
+        "National University of Singapore"
+      ],
+      "topics": [
+        "maritime AI"
+      ],
+      "year": "2023",
+      "doi": "https://doi.org/10.1016/j.engappai.2023.107625",
+      "openAlexUrl": "https://openalex.org/W4389216379",
+      "sourceUrl": "https://doi.org/10.1016/j.engappai.2023.107625",
+      "sourceName": "Wuhan University of Technology",
+      "lastFetchedAt": "2026-07-20T05:24:46.987Z",
+      "sourcePages": [
+        {
+          "sourceUrl": "https://doi.org/10.1016/j.engappai.2023.107625",
+          "pageTitle": "",
+          "sourceType": "publisher",
+          "fetchedAt": "2026-07-20T05:24:46.987Z",
+          "statusCode": 0,
+          "cleanedTextSummary": "",
+          "evidenceSnippets": [],
+          "images": []
+        }
+      ],
+      "dataQuality": {
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
+      }
+    },
+    {
+      "id": "project-openalex-https-openalex-org-w4386983426",
+      "title": "TTMRN: A topological-geometric two-layer maritime route network modeling for ship intelligent navigation",
+      "country": "China",
+      "institutions": [
+        "Wuhan University of Technology",
+        "Ministry of Transport",
+        "China Ocean Shipping (China)",
+        "Sanya University",
+        "Delft University of Technology"
+      ],
+      "topics": [
+        "autonomous vessel"
+      ],
+      "year": "2023",
+      "doi": "https://doi.org/10.1016/j.oceaneng.2023.115884",
+      "openAlexUrl": "https://openalex.org/W4386983426",
+      "sourceUrl": "https://www.sciencedirect.com/science/article/pii/S0029801823022680",
+      "sourceName": "Wuhan University of Technology",
+      "lastFetchedAt": "2026-07-20T05:24:56.609Z",
+      "sourcePages": [
+        {
+          "sourceUrl": "https://www.sciencedirect.com/science/article/pii/S0029801823022680",
+          "pageTitle": "",
+          "sourceType": "publisher",
+          "fetchedAt": "2026-07-20T05:24:56.609Z",
+          "statusCode": 0,
+          "cleanedTextSummary": "",
+          "evidenceSnippets": [],
+          "images": []
+        }
+      ],
+      "dataQuality": {
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
+      }
+    },
+    {
+      "id": "project-openalex-https-openalex-org-w4401409977",
+      "title": "Vessel Trajectory Prediction for Enhanced Maritime Navigation Safety: A Novel Hybrid Methodology",
+      "country": "China",
+      "institutions": [
+        "Jimei University",
+        "Shenzhen Technology University"
+      ],
+      "topics": [
+        "autonomous vessel"
+      ],
+      "year": "2024",
+      "doi": "https://doi.org/10.3390/jmse12081351",
+      "openAlexUrl": "https://openalex.org/W4401409977",
+      "sourceUrl": "https://www.mdpi.com/2077-1312/12/8/1351/pdf?version=1723175190",
+      "sourceName": "Jimei University",
+      "lastFetchedAt": "2026-07-20T05:25:12.559Z",
+      "sourcePages": [
+        {
+          "sourceUrl": "https://www.mdpi.com/2077-1312/12/8/1351/pdf?version=1723175190",
+          "pageTitle": "",
+          "sourceType": "publisher",
+          "fetchedAt": "2026-07-20T05:25:12.559Z",
+          "statusCode": 0,
+          "cleanedTextSummary": "",
+          "evidenceSnippets": [],
+          "images": []
+        }
+      ],
+      "dataQuality": {
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
+      }
+    },
+    {
+      "id": "project-openalex-https-openalex-org-w4313584439",
+      "title": "The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective",
+      "country": "China",
+      "institutions": [
+        "East China University of Political Science and Law",
+        "Jimei University"
+      ],
+      "topics": [
+        "green shipping",
+        "alternative fuels"
+      ],
+      "year": "2023",
+      "doi": "https://doi.org/10.3389/fmars.2022.1082453",
+      "openAlexUrl": "https://openalex.org/W4313584439",
+      "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+      "sourceName": "East China University of Political Science and Law",
+      "lastFetchedAt": "2026-07-20T05:25:29.559Z",
+      "sourcePages": [
+        {
+          "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+          "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective",
+          "sourceType": "publisher",
+          "fetchedAt": "2026-07-20T05:25:29.559Z",
+          "statusCode": 200,
+          "cleanedTextSummary": "Volume 9 - 2022 | https://doi.org/10.3389/fmars.2022.1082453",
+          "evidenceSnippets": [
+            {
+              "text": "Volume 9 - 2022 | https://doi.org/10.3389/fmars.2022.1082453",
+              "evidenceType": "other",
+              "whyImportant": "Short extracted snippet kept as supporting context for this project.",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453"
+            },
+            {
+              "text": "1. Associate professor, School of International Law, East China University of Political Science and Law, Shanghai, China",
+              "evidenceType": "location",
+              "whyImportant": "Identifies a specific location relevant to where this work took place.",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453"
+            },
+            {
+              "text": "2. Master of Laws (LL.M.) candidate, School of International Law, East China University of Political Science and Law, Shanghai, China",
+              "evidenceType": "location",
+              "whyImportant": "Identifies a specific location relevant to where this work took place.",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453"
+            },
+            {
+              "text": "3. Professor, Navigation College, Jimei University, Xiamen, China",
+              "evidenceType": "location",
+              "whyImportant": "Identifies a specific location relevant to where this work took place.",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453"
+            },
+            {
+              "text": "The introduction of several alternative marine fuels is considered an important strategy for maritime decarbonization. These alternative marine fuels include liquefied natural gas (LNG), liquefied biogas (LBG), hydrogen, ammonia, methanol, ethanol, hydrotreated vegetable oil (HVO), etc.",
+              "evidenceType": "impact",
+              "whyImportant": "Describes an expected impact or benefit of this work.",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453"
+            }
+          ],
+          "images": [
+            {
+              "imageUrl": "https://www.frontiersin.org/files/Articles/1082453/xml-images/fmars-09-1082453-g001.webp",
+              "altText": "Figure 1",
+              "caption": "Technologies and fuels on a pathway to maritime decarbonization. Source:",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "canEmbed": false,
+              "rightsNote": "Rights not verified; not embedded automatically."
+            },
+            {
+              "imageUrl": "https://www.frontiersin.org/files/Articles/1082453/xml-images/fmars-09-1082453-g002.webp",
+              "altText": "Figure 2",
+              "caption": "Special marine environmental risks posed by alternative-fuel-powered ships. Source: Authors’ Compilation.",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "canEmbed": false,
+              "rightsNote": "Rights not verified; not embedded automatically."
+            },
+            {
+              "imageUrl": "https://static2.frontiersin.org/static-resources/images/crossmark_color.webp",
+              "altText": "Crossmark icon",
+              "caption": "",
+              "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+              "canEmbed": false,
+              "rightsNote": "Rights not verified; not embedded automatically."
+            }
+          ]
+        }
+      ],
+      "dataQuality": {
+        "hasOriginalSource": true,
+        "hasDetailedDescription": true,
+        "hasEvidenceSnippets": true,
+        "hasImageCandidates": true,
+        "needsManualReview": false
+      }
+    },
+    {
+      "id": "project-openalex-https-openalex-org-w4391286450",
+      "title": "Harnessing the power of Machine learning for AIS Data-Driven maritime Research: A comprehensive review",
+      "country": "China",
+      "institutions": [
+        "Shanghai University",
+        "Chalmers University of Technology",
+        "Tsinghua University",
+        "Shanghai Maritime University"
+      ],
+      "topics": [
+        "maritime AI"
+      ],
+      "year": "2024",
+      "doi": "https://doi.org/10.1016/j.tre.2024.103426",
+      "openAlexUrl": "https://openalex.org/W4391286450",
+      "sourceUrl": "https://doi.org/10.1016/j.tre.2024.103426",
+      "sourceName": "Shanghai University",
+      "lastFetchedAt": "2026-07-20T05:25:32.878Z",
+      "sourcePages": [
+        {
+          "sourceUrl": "https://doi.org/10.1016/j.tre.2024.103426",
+          "pageTitle": "",
+          "sourceType": "publisher",
+          "fetchedAt": "2026-07-20T05:25:32.878Z",
+          "statusCode": 0,
+          "cleanedTextSummary": "",
+          "evidenceSnippets": [],
+          "images": []
+        }
+      ],
+      "dataQuality": {
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
+      }
+    },
+    {
+      "id": "project-openalex-https-openalex-org-w4392358104",
+      "title": "Application of Artificial Intelligence in Maritime Transportation",
+      "country": "China",
+      "institutions": [
+        "Shanghai Maritime University",
+        "Zhejiang Lab",
+        "Zhejiang University",
+        "Wuhan University of Technology"
+      ],
+      "topics": [
+        "maritime AI",
+        "smart port"
+      ],
+      "year": "2024",
+      "doi": "https://doi.org/10.3390/jmse12030439",
+      "openAlexUrl": "https://openalex.org/W4392358104",
+      "sourceUrl": "https://www.mdpi.com/2077-1312/12/3/439/pdf?version=1709268287",
+      "sourceName": "Shanghai Maritime University",
+      "lastFetchedAt": "2026-07-20T05:25:40.590Z",
+      "sourcePages": [
+        {
+          "sourceUrl": "https://www.mdpi.com/2077-1312/12/3/439/pdf?version=1709268287",
+          "pageTitle": "",
+          "sourceType": "publisher",
+          "fetchedAt": "2026-07-20T05:25:40.590Z",
+          "statusCode": 0,
+          "cleanedTextSummary": "",
+          "evidenceSnippets": [],
+          "images": []
+        }
+      ],
+      "dataQuality": {
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
+      }
+    },
+    {
+      "id": "project-openalex-https-openalex-org-w4394565999",
+      "title": "The Application of Artificial Intelligence Technology in Shipping: A Bibliometric Review",
+      "country": "China",
+      "institutions": [
+        "Shanghai Maritime University",
+        "Beijing University of Chemical Technology",
+        "Zhejiang Normal University"
+      ],
+      "topics": [
+        "maritime AI"
+      ],
+      "year": "2024",
+      "doi": "https://doi.org/10.3390/jmse12040624",
+      "openAlexUrl": "https://openalex.org/W4394565999",
+      "sourceUrl": "https://www.mdpi.com/2077-1312/12/4/624/pdf?version=1712469850",
+      "sourceName": "Shanghai Maritime University",
+      "lastFetchedAt": "2026-07-20T05:25:57.346Z",
+      "sourcePages": [
+        {
+          "sourceUrl": "https://www.mdpi.com/2077-1312/12/4/624/pdf?version=1712469850",
+          "pageTitle": "",
+          "sourceType": "publisher",
+          "fetchedAt": "2026-07-20T05:25:57.346Z",
+          "statusCode": 0,
+          "cleanedTextSummary": "",
+          "evidenceSnippets": [],
+          "images": []
+        }
+      ],
+      "dataQuality": {
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
+      }
+    },
+    {
+      "id": "project-openalex-https-openalex-org-w4403094404",
+      "title": "STMGF-Net: A Spatiotemporal Multi-Graph Fusion Network for Vessel Trajectory Forecasting in Intelligent Maritime Navigation",
+      "country": "China",
+      "institutions": [
+        "Dalian Maritime University",
+        "University of Alabama",
+        "University of Electronic Science and Technology of China"
+      ],
+      "topics": [
+        "autonomous vessel"
+      ],
+      "year": "2024",
+      "doi": "https://doi.org/10.1109/tits.2024.3465234",
+      "openAlexUrl": "https://openalex.org/W4403094404",
+      "sourceUrl": "https://doi.org/10.1109/tits.2024.3465234",
+      "sourceName": "Dalian Maritime University",
+      "lastFetchedAt": "2026-07-20T05:26:14.356Z",
+      "sourcePages": [
+        {
+          "sourceUrl": "https://doi.org/10.1109/tits.2024.3465234",
+          "pageTitle": "STMGF-Net: A Spatiotemporal Multi-Graph Fusion Network for Vessel Trajectory Forecasting in Intelligent Maritime Navigation",
+          "sourceType": "publisher",
+          "fetchedAt": "2026-07-20T05:26:14.356Z",
+          "statusCode": 200,
+          "cleanedTextSummary": "",
+          "evidenceSnippets": [],
+          "images": []
+        }
+      ],
+      "dataQuality": {
+        "hasOriginalSource": false,
+        "hasDetailedDescription": false,
+        "hasEvidenceSnippets": false,
+        "hasImageCandidates": false,
+        "needsManualReview": true
+      }
+    }
+  ]
+}

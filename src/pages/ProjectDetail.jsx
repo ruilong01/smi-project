@@ -6,6 +6,7 @@ import {
   ImageOff,
   MapPin,
   ShieldCheck,
+  Sparkles,
 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import OrganisationCard from "../components/OrganisationCard.jsx";
@@ -255,6 +256,102 @@ export default function ProjectDetail() {
               </section>
             ) : null}
           </div>
+        </article>
+
+        <article className="detail-card wide enrichment-card">
+          <h2>
+            <Sparkles size={20} />
+            Detailed Source Enrichment
+          </h2>
+          {project.selectedEvidence?.length || project.detailedDescription ? (
+            <>
+              {project.detailedDescription ? (
+                <section className="enrichment-block">
+                  <h3>Detailed Research Description</h3>
+                  <p>{project.detailedDescription}</p>
+                </section>
+              ) : null}
+
+              {project.selectedEvidence?.length ? (
+                <section className="enrichment-block">
+                  <h3>Selected Evidence</h3>
+                  <ul className="evidence-snippet-list">
+                    {project.selectedEvidence.map((evidence) => (
+                      <li className="evidence-snippet-card" key={evidence.evidenceId}>
+                        <p className="eyebrow">{evidence.evidenceType}</p>
+                        <p className="evidence-snippet-text">&ldquo;{evidence.snippet}&rdquo;</p>
+                        <p className="evidence-snippet-why">{evidence.whyImportant}</p>
+                        {isValidExternalUrl(evidence.sourceUrl) ? (
+                          <a href={evidence.sourceUrl} rel="noreferrer" target="_blank">
+                            {evidence.sourceName || "View source"}
+                          </a>
+                        ) : null}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
+
+              {project.sourcePages?.some((page) => page.images?.length) ? (
+                <section className="enrichment-block">
+                  <h3>Image Candidates</h3>
+                  <p className="source-empty">
+                    Rights not verified — shown as source preview only, not an
+                    official project image.
+                  </p>
+                  <div className="image-candidate-grid">
+                    {project.sourcePages
+                      .flatMap((page) => page.images ?? [])
+                      .slice(0, 6)
+                      .map((image) => (
+                        <a
+                          className="image-candidate-card"
+                          href={image.sourceUrl}
+                          key={image.imageUrl}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          <img alt={image.altText || "Image candidate"} src={image.imageUrl} />
+                          <span>{image.caption || image.altText || "Untitled figure"}</span>
+                        </a>
+                      ))}
+                  </div>
+                </section>
+              ) : null}
+
+              <section className="enrichment-block data-quality-row">
+                <h3>Data Quality</h3>
+                <dl className="relationship-meta">
+                  <div>
+                    <dt>Original source</dt>
+                    <dd>{project.dataQuality?.hasOriginalSource ? "Yes" : "No"}</dd>
+                  </div>
+                  <div>
+                    <dt>Detailed description</dt>
+                    <dd>{project.dataQuality?.hasDetailedDescription ? "Yes" : "No"}</dd>
+                  </div>
+                  <div>
+                    <dt>Evidence snippets</dt>
+                    <dd>{project.dataQuality?.hasEvidenceSnippets ? "Yes" : "No"}</dd>
+                  </div>
+                  <div>
+                    <dt>Image candidates</dt>
+                    <dd>{project.dataQuality?.hasImageCandidates ? "Yes" : "No"}</dd>
+                  </div>
+                  <div>
+                    <dt>Needs manual review</dt>
+                    <dd>{project.dataQuality?.needsManualReview ? "Yes" : "No"}</dd>
+                  </div>
+                  <div>
+                    <dt>Last fetched</dt>
+                    <dd>{compactDate(project.sourcePages?.[0]?.fetchedAt)}</dd>
+                  </div>
+                </dl>
+              </section>
+            </>
+          ) : (
+            <p className="source-empty">Detailed source enrichment not available yet.</p>
+          )}
         </article>
 
         <article className="detail-card wide">

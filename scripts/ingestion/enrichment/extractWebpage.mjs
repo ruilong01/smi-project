@@ -72,20 +72,23 @@ function extractPublishedDate($) {
 }
 
 /**
- * Fetches and parses one webpage. Returns null (rather than throwing) on
- * fetch/parse failure so one bad source page never stops the pipeline —
- * the caller is expected to log and continue.
+ * Parses already-fetched HTML into the structured shape the rest of the
+ * pipeline consumes. Split out from extractWebpage() so both the plain
+ * fetch() path and the Playwright-rendered path (extractWebpageBrowser.mjs
+ * — used only for pages that need JS execution) share one extraction
+ * implementation instead of duplicating it.
  */
-export async function extractWebpage(url, { requestDelayMs = 2000 } = {}) {
-  const html = await fetchText(url, {
-    fetchOptions: {
-      email: "research-demo@example.invalid",
-      retries: 3,
-      timeout: 20000,
-      requestDelay: requestDelayMs,
-    },
-  });
+// Bot-block/anti-scraping interstitials (Akamai, Cloudflare, ScienceDirect's
+// own gate, etc.) return a normal 200 HTML page with a short, generic body
+// — e.g. ScienceDirect's block page is titled just "ScienceDirect" with
+// body text "Please contact our support team...", which passes the
+// paragraph-length filter and reads exactly like a real (very short)
+// evidence snippet. Checked against title AND body text, since the title
+// alone is often just the bare site name, not descriptive of the block.
+const BOT_BLOCK_PATTERNS =
+  /access denied|403 forbidden|attention required|just a moment|are you a robot|are you human|captcha|cloudflare|robot check|unusual traffic|please contact our support team|verify you are a human|enable javascript and cookies/i;
 
+export function parseHtml(html, url) {
   assertLooksLikeHtml(html, url);
 
   const $ = cheerio.load(html);
@@ -119,6 +122,11 @@ export async function extractWebpage(url, { requestDelayMs = 2000 } = {}) {
       sections.push({ heading: currentHeading, text });
     }
   });
+
+  const bodyPreview = sections.map((section) => section.text).join(" ").slice(0, 1000);
+  if (BOT_BLOCK_PATTERNS.test(`${pageTitle ?? ""} ${bodyPreview}`)) {
+    throw new Error(`Blocked by anti-bot/error page ("${pageTitle}"): ${url}`);
+  }
 
   const links = [];
   const seenLinks = new Set();
@@ -158,4 +166,23 @@ export async function extractWebpage(url, { requestDelayMs = 2000 } = {}) {
     images,
     contentHash: hashContent(html),
   };
+}
+
+/**
+ * Fetches and parses one webpage with a plain HTTP GET (no JS execution).
+ * Returns null (rather than throwing) on fetch/parse failure so one bad
+ * source page never stops the pipeline — the caller is expected to log
+ * and continue.
+ */
+export async function extractWebpage(url, { requestDelayMs = 2000 } = {}) {
+  const html = await fetchText(url, {
+    fetchOptions: {
+      email: "research-demo@example.invalid",
+      retries: 3,
+      timeout: 20000,
+      requestDelay: requestDelayMs,
+    },
+  });
+
+  return parseHtml(html, url);
 }
