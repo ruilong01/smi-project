@@ -22,6 +22,12 @@ import { extractWebpage } from "./enrichment/extractWebpage.mjs";
 import { extractWebpageWithBrowser, closeBrowser } from "./enrichment/extractWebpageBrowser.mjs";
 import { chunkPage } from "./enrichment/chunkText.mjs";
 import { buildEvidenceSnippets } from "./enrichment/classifyEvidence.mjs";
+import { waitForHostSlot } from "./enrichment/hostThrottle.mjs";
+
+// Minimum gap between requests to the SAME host (e.g. multiple
+// sciencedirect.com candidates in a row), independent of retry backoff —
+// spaced-out requests read less like automated bulk scraping.
+const HOST_MIN_GAP_MS = 6000;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const liveDataPath = path.resolve(__dirname, "../../src/data/generated/liveResearchData.json");
@@ -202,17 +208,21 @@ async function main() {
       let page = null;
       let viaBrowser = false;
 
+      await waitForHostSlot(target.url, HOST_MIN_GAP_MS);
+
       try {
         console.log(`  Fetching: ${target.url}`);
         page = await extractWebpage(target.url);
         if (chunkPage(page).length === 0) {
           console.log("    -> 0 chunks from plain fetch, trying Playwright...");
+          await waitForHostSlot(target.url, HOST_MIN_GAP_MS);
           page = await extractWebpageWithBrowser(target.url);
           viaBrowser = true;
         }
       } catch (plainError) {
         try {
           console.log(`    -> plain fetch failed (${plainError.message}), trying Playwright...`);
+          await waitForHostSlot(target.url, HOST_MIN_GAP_MS);
           page = await extractWebpageWithBrowser(target.url);
           viaBrowser = true;
         } catch (browserError) {

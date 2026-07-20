@@ -1,6 +1,6 @@
 {
   "meta": {
-    "startedAt": "2026-07-20T05:24:28.491Z",
+    "startedAt": "2026-07-20T05:43:52.653Z",
     "openAlexLiveCallAttempted": true,
     "openAlexLiveCallSucceeded": false,
     "crossrefLiveCallAttempted": true,
@@ -11,7 +11,7 @@
     "sourcePagesFailed": 13,
     "evidenceSnippetsExtracted": 5,
     "imageCandidatesExtracted": 3,
-    "completedAt": "2026-07-20T05:26:17.181Z"
+    "completedAt": "2026-07-20T05:46:41.821Z"
   },
   "records": [
     {
@@ -30,13 +30,13 @@
       "openAlexUrl": "https://openalex.org/W4401477504",
       "sourceUrl": "https://doi.org/10.1016/j.horiz.2024.100117",
       "sourceName": "Dalian Maritime University",
-      "lastFetchedAt": "2026-07-20T05:24:32.027Z",
+      "lastFetchedAt": "2026-07-20T05:43:56.033Z",
       "sourcePages": [
         {
           "sourceUrl": "https://doi.org/10.1016/j.horiz.2024.100117",
           "pageTitle": "",
           "sourceType": "publisher",
-          "fetchedAt": "2026-07-20T05:24:32.027Z",
+          "fetchedAt": "2026-07-20T05:43:56.033Z",
           "statusCode": 0,
           "cleanedTextSummary": "",
           "evidenceSnippets": [],
@@ -67,13 +67,13 @@
       "openAlexUrl": "https://openalex.org/W4388714463",
       "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2023.10.207",
       "sourceName": "Dalian Maritime University",
-      "lastFetchedAt": "2026-07-20T05:24:39.528Z",
+      "lastFetchedAt": "2026-07-20T05:44:11.496Z",
       "sourcePages": [
         {
           "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2023.10.207",
           "pageTitle": "",
           "sourceType": "publisher",
-          "fetchedAt": "2026-07-20T05:24:39.528Z",
+          "fetchedAt": "2026-07-20T05:44:11.496Z",
           "statusCode": 0,
           "cleanedTextSummary": "",
           "evidenceSnippets": [],
@@ -104,13 +104,13 @@
       "openAlexUrl": "https://openalex.org/W4389216379",
       "sourceUrl": "https://doi.org/10.1016/j.engappai.2023.107625",
       "sourceName": "Wuhan University of Technology",
-      "lastFetchedAt": "2026-07-20T05:24:46.987Z",
+      "lastFetchedAt": "2026-07-20T05:44:29.482Z",
       "sourcePages": [
         {
           "sourceUrl": "https://doi.org/10.1016/j.engappai.2023.107625",
           "pageTitle": "",
           "sourceType": "publisher",
-          "fetchedAt": "2026-07-20T05:24:46.987Z",
+          "fetchedAt": "2026-07-20T05:44:29.482Z",
           "statusCode": 0,
           "cleanedTextSummary": "",
           "evidenceSnippets": [],
@@ -144,13 +144,13 @@
       "openAlexUrl": "https://openalex.org/W4386983426",
       "sourceUrl": "https://www.sciencedirect.com/science/article/pii/S0029801823022680",
       "sourceName": "Wuhan University of Technology",
-      "lastFetchedAt": "2026-07-20T05:24:56.609Z",
+      "lastFetchedAt": "2026-07-20T05:44:47.622Z",
       "sourcePages": [
         {
           "sourceUrl": "https://www.sciencedirect.com/science/article/pii/S0029801823022680",
           "pageTitle": "",
           "sourceType": "publisher",
-          "fetchedAt": "2026-07-20T05:24:56.609Z",
+          "fetchedAt": "2026-07-20T05:44:47.622Z",
           "statusCode": 0,
           "cleanedTextSummary": "",
           "evidenceSnippets": [],
@@ -181,13 +181,13 @@
       "openAlexUrl": "https://openalex.org/W4401409977",
       "sourceUrl": "https://www.mdpi.com/2077-1312/12/8/1351/pdf?version=1723175190",
       "sourceName": "Jimei University",
-      "lastFetchedAt": "2026-07-20T05:25:12.559Z",
+      "lastFetchedAt": "2026-07-20T05:45:11.582Z",
       "sourcePages": [
         {
           "sourceUrl": "https://www.mdpi.com/2077-1312/12/8/1351/pdf?version=1723175190",
           "pageTitle": "",
           "sourceType": "publisher",
-          "fetchedAt": "2026-07-20T05:25:12.559Z",
+          "fetchedAt": "2026-07-20T05:45:11.582Z",
           "statusCode": 0,
           "cleanedTextSummary": "",
           "evidenceSnippets": [],
@@ -219,13 +219,13 @@
       "openAlexUrl": "https://openalex.org/W4313584439",
       "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
       "sourceName": "East China University of Political Science and Law",
-      "lastFetchedAt": "2026-07-20T05:25:29.559Z",
+      "lastFetchedAt": "2026-07-20T05:45:28.197Z",
       "sourcePages": [
         {
           "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
           "pageTitle": "Frontiers | The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective",
           "sourceType": "publisher",
-          "fetchedAt": "2026-07-20T05:25:29.559Z",
+          "fetchedAt": "2026-07-20T05:45:28.197Z",
           "statusCode": 200,
           "cleanedTextSummary": "Volume 9 - 2022 | https://doi.org/10.3389/fmars.2022.1082453",
           "evidenceSnippets": [
@@ -314,13 +314,13 @@
       "openAlexUrl": "https://openalex.org/W4391286450",
       "sourceUrl": "https://doi.org/10.1016/j.tre.2024.103426",
       "sourceName": "Shanghai University",
-      "lastFetchedAt": "2026-07-20T05:25:32.878Z",
+      "lastFetchedAt": "2026-07-20T05:45:36.659Z",
       "sourcePages": [
         {
           "sourceUrl": "https://doi.org/10.1016/j.tre.2024.103426",
           "pageTitle": "",
           "sourceType": "publisher",
-          "fetchedAt": "2026-07-20T05:25:32.878Z",
+          "fetchedAt": "2026-07-20T05:45:36.659Z",
           "statusCode": 0,
           "cleanedTextSummary": "",
           "evidenceSnippets": [],
@@ -354,13 +354,13 @@
       "openAlexUrl": "https://openalex.org/W4392358104",
       "sourceUrl": "https://www.mdpi.com/2077-1312/12/3/439/pdf?version=1709268287",
       "sourceName": "Shanghai Maritime University",
-      "lastFetchedAt": "2026-07-20T05:25:40.590Z",
+      "lastFetchedAt": "2026-07-20T05:45:55.848Z",
       "sourcePages": [
         {
           "sourceUrl": "https://www.mdpi.com/2077-1312/12/3/439/pdf?version=1709268287",
           "pageTitle": "",
           "sourceType": "publisher",
-          "fetchedAt": "2026-07-20T05:25:40.590Z",
+          "fetchedAt": "2026-07-20T05:45:55.848Z",
           "statusCode": 0,
           "cleanedTextSummary": "",
           "evidenceSnippets": [],
@@ -392,13 +392,13 @@
       "openAlexUrl": "https://openalex.org/W4394565999",
       "sourceUrl": "https://www.mdpi.com/2077-1312/12/4/624/pdf?version=1712469850",
       "sourceName": "Shanghai Maritime University",
-      "lastFetchedAt": "2026-07-20T05:25:57.346Z",
+      "lastFetchedAt": "2026-07-20T05:46:12.816Z",
       "sourcePages": [
         {
           "sourceUrl": "https://www.mdpi.com/2077-1312/12/4/624/pdf?version=1712469850",
           "pageTitle": "",
           "sourceType": "publisher",
-          "fetchedAt": "2026-07-20T05:25:57.346Z",
+          "fetchedAt": "2026-07-20T05:46:12.816Z",
           "statusCode": 0,
           "cleanedTextSummary": "",
           "evidenceSnippets": [],
@@ -430,13 +430,13 @@
       "openAlexUrl": "https://openalex.org/W4403094404",
       "sourceUrl": "https://doi.org/10.1109/tits.2024.3465234",
       "sourceName": "Dalian Maritime University",
-      "lastFetchedAt": "2026-07-20T05:26:14.356Z",
+      "lastFetchedAt": "2026-07-20T05:46:29.598Z",
       "sourcePages": [
         {
           "sourceUrl": "https://doi.org/10.1109/tits.2024.3465234",
-          "pageTitle": "STMGF-Net: A Spatiotemporal Multi-Graph Fusion Network for Vessel Trajectory Forecasting in Intelligent Maritime Navigation",
+          "pageTitle": "",
           "sourceType": "publisher",
-          "fetchedAt": "2026-07-20T05:26:14.356Z",
+          "fetchedAt": "2026-07-20T05:46:29.598Z",
           "statusCode": 200,
           "cleanedTextSummary": "",
           "evidenceSnippets": [],

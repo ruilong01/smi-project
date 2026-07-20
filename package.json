@@ -11,7 +11,8 @@
     "sync:data": "node scripts/ingestion/runExtraction.mjs",
     "sync:watch": "node scripts/ingestion/runExtraction.mjs --watch",
     "serve:api": "node server/server.mjs",
-    "enrich:sample": "node scripts/ingestion/enrichSample.mjs"
+    "enrich:sample": "node scripts/ingestion/enrichSample.mjs",
+    "verify:enrichment": "node scripts/ingestion/verifyEnrichment.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
