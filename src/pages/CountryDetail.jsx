@@ -4,6 +4,7 @@ import {
   Building2,
   Database,
   FlaskConical,
+  Info,
   ShieldCheck,
   Ship,
 } from "lucide-react";
@@ -24,20 +25,6 @@ import {
   getIntensityColor,
   getIntensityLabel,
 } from "../utils/intensity.js";
-
-function DetailList({ items, emptyText = "No extracted records yet." }) {
-  if (!items?.length) {
-    return <p className="source-empty">{emptyText}</p>;
-  }
-
-  return (
-    <ul className="detail-list">
-      {items.map((item) => (
-        <li key={item}>{item}</li>
-      ))}
-    </ul>
-  );
-}
 
 function CountryRelationshipList({ relationships }) {
   if (!relationships?.length) {
@@ -98,6 +85,14 @@ export default function CountryDetail() {
 
   const countryProjects = getProjectsForCountry(country.name);
   const sources = getSourcesByIds(country.sources ?? []);
+  const institutionRecordCounts = new Map();
+  countryProjects.forEach((project) => {
+    if (!project.leadOrganisation) return;
+    institutionRecordCounts.set(
+      project.leadOrganisation,
+      (institutionRecordCounts.get(project.leadOrganisation) ?? 0) + 1
+    );
+  });
 
   return (
     <main className="detail-shell">
@@ -130,7 +125,14 @@ export default function CountryDetail() {
           <span>Research intensity</span>
           <strong>{country.researchIntensity}</strong>
           <em>{getIntensityLabel(country.researchIntensity)}</em>
-          <small>Calculated from verified project, institution and publication relationships.</small>
+          <small className="intensity-explainer">
+            <Info size={13} />
+            Relative score (0-100) from verified project, institution,
+            partner and publication relationships for this country, scaled
+            against the most active country in the current dataset. Not an
+            official ranking and not a measure of research quality — it
+            only reflects observed activity in the extracted data.
+          </small>
         </article>
 
         <article className="detail-card">
@@ -184,15 +186,70 @@ export default function CountryDetail() {
             <Building2 size={20} />
             Institutions
           </h2>
-          <DetailList items={country.institutions} />
+          {country.institutions?.length ? (
+            <ul className="detail-list">
+              {country.institutions.map((name) => (
+                <li key={name}>
+                  {name}
+                  {institutionRecordCounts.get(name) ? (
+                    <span className="profile-list-count">
+                      {" "}
+                      ({institutionRecordCounts.get(name)} record
+                      {institutionRecordCounts.get(name) === 1 ? "" : "s"})
+                    </span>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="source-empty">No extracted records yet.</p>
+          )}
         </article>
 
-        <article className="detail-card">
+        <article className="detail-card wide" id="research-records">
           <h2>
             <FlaskConical size={20} />
-            Displayed Projects
+            Research Records ({countryProjects.length})
           </h2>
-          <DetailList items={countryProjects.map((project) => project.title)} />
+          {countryProjects.length ? (
+            <ul className="research-record-list">
+              {countryProjects.map((project) => {
+                const topicSlug = getTopicSlug(
+                  getTopicNameForCategory(project.researchCategories?.[0])
+                );
+                return (
+                  <li className="research-record-row" key={project.id}>
+                    <div className="research-record-main">
+                      <Link
+                        className="research-record-title"
+                        to={`/projects/${project.slug}`}
+                      >
+                        {project.title}
+                      </Link>
+                      <div className="research-record-meta">
+                        <span>{project.leadOrganisation}</span>
+                        <span>
+                          {(project.startDate || project.lastVerifiedAt || "").slice(0, 10) ||
+                            "Not recorded"}
+                        </span>
+                        <span>{project.extractionMethod}</span>
+                      </div>
+                    </div>
+                    {topicSlug ? (
+                      <Link
+                        className="tag topic-link research-record-topic"
+                        to={`/topic/${topicSlug}`}
+                      >
+                        {project.researchCategories[0]}
+                      </Link>
+                    ) : null}
+                  </li>
+                );
+              })}
+            </ul>
+          ) : (
+            <p className="source-empty">No extracted records yet.</p>
+          )}
         </article>
 
         <article className="detail-card wide ai-detail">

@@ -154,6 +154,31 @@ function getProjectCoordinates(project) {
   return [project.longitude, project.latitude];
 }
 
+// Most extracted projects have no real geolocation and fall back to their
+// country's own centroid (see buildDataset.mjs enrichProject). Rendering a
+// separate marker at that same point stacks it directly on top of the
+// country marker — since markers paint in DOM order, the topmost project
+// marker then silently eats every hover/click meant for the country
+// underneath. Only render a distinct project marker when its coordinates
+// actually differ from its country's, so country-level interaction stays
+// reachable; projects without a distinct location remain fully accessible
+// via the country profile's research records list and their own URL.
+const DISTINCT_LOCATION_EPSILON = 0.01;
+
+function hasDistinctProjectLocation(project, country) {
+  const coordinates = getProjectCoordinates(project);
+  if (!coordinates || !country?.coordinates) {
+    return false;
+  }
+
+  const [lng, lat] = coordinates;
+  const [countryLng, countryLat] = country.coordinates;
+  return (
+    Math.abs(lng - countryLng) > DISTINCT_LOCATION_EPSILON ||
+    Math.abs(lat - countryLat) > DISTINCT_LOCATION_EPSILON
+  );
+}
+
 function getFeatureKey(geo, index) {
   return `${geo.id ?? geo.properties.name}-${index}`;
 }
@@ -257,6 +282,10 @@ export default function WorldMap({
 
   const countriesByAtlasName = useMemo(() => {
     return new Map(countries.map((country) => [country.atlasName, country]));
+  }, [countries]);
+
+  const countriesByCode = useMemo(() => {
+    return new Map(countries.map((country) => [country.code, country]));
   }, [countries]);
 
   useEffect(() => {
@@ -1226,7 +1255,14 @@ export default function WorldMap({
           </g>
 
           <g className="project-marker-layer">
-            {projects.map((project) => {
+            {projects
+              .filter((project) =>
+                hasDistinctProjectLocation(
+                  project,
+                  countriesByCode.get(project.countryCode)
+                )
+              )
+              .map((project) => {
               const isThemeMatch = projectMatchesTopicFilter(project, activeFilter);
               const isSelected = popupProject?.id === project.id;
               const coordinates = getProjectCoordinates(project);

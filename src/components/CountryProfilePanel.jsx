@@ -1,12 +1,26 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { BrainCircuit, Building2, Database, FlaskConical, MapPin, Ship, X } from "lucide-react";
+import {
+  BrainCircuit,
+  Building2,
+  Database,
+  FlaskConical,
+  Info,
+  MapPin,
+  Ship,
+  X,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { getTopicSlug } from "../data/topicData.js";
-import { getTopicNameForCategory } from "../data/researchProjectData.js";
+import {
+  getProjectsForCountry,
+  getTopicNameForCategory,
+} from "../data/researchProjectData.js";
 import {
   getIntensityColor,
   getIntensityLabel,
 } from "../utils/intensity.js";
+
+const RESEARCH_RECORDS_PREVIEW_COUNT = 6;
 
 function CompactList({ items }) {
   return (
@@ -18,7 +32,66 @@ function CompactList({ items }) {
   );
 }
 
+function InstitutionList({ institutions, recordCounts }) {
+  return (
+    <ul className="profile-list">
+      {institutions.map((name) => (
+        <li key={name}>
+          {name}
+          {recordCounts.get(name) ? (
+            <span className="profile-list-count">
+              {recordCounts.get(name)} record
+              {recordCounts.get(name) === 1 ? "" : "s"}
+            </span>
+          ) : null}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function compactDate(value) {
+  if (!value) {
+    return "Not recorded";
+  }
+  return String(value).slice(0, 10);
+}
+
+function ResearchRecordRow({ project }) {
+  const topicSlug = getTopicSlug(getTopicNameForCategory(project.researchCategories?.[0]));
+
+  return (
+    <li className="research-record-row">
+      <div className="research-record-main">
+        <Link className="research-record-title" to={`/projects/${project.slug}`}>
+          {project.title}
+        </Link>
+        <div className="research-record-meta">
+          <span>{project.leadOrganisation}</span>
+          <span>{compactDate(project.startDate || project.lastVerifiedAt)}</span>
+          <span>{project.extractionMethod}</span>
+        </div>
+      </div>
+      {topicSlug ? (
+        <Link className="tag topic-link research-record-topic" to={`/topic/${topicSlug}`}>
+          {project.researchCategories[0]}
+        </Link>
+      ) : null}
+    </li>
+  );
+}
+
 export default function CountryProfilePanel({ country, onClose }) {
+  const countryProjects = country ? getProjectsForCountry(country.name) : [];
+  const institutionRecordCounts = new Map();
+  countryProjects.forEach((project) => {
+    if (!project.leadOrganisation) return;
+    institutionRecordCounts.set(
+      project.leadOrganisation,
+      (institutionRecordCounts.get(project.leadOrganisation) ?? 0) + 1
+    );
+  });
+
   return (
     <AnimatePresence>
       {country ? (
@@ -62,7 +135,26 @@ export default function CountryProfilePanel({ country, onClose }) {
             <div className="profile-intensity-track">
               <i style={{ width: `${country.researchIntensity}%` }} />
             </div>
+            <p className="profile-intensity-explainer">
+              <Info size={13} />
+              Relative score (0-100) from verified project, institution,
+              partner and publication relationships for this country, scaled
+              against the most active country in the current dataset. Not an
+              official ranking and not a measure of research quality — it
+              only reflects observed activity in the extracted data.
+            </p>
           </section>
+
+          <div className="profile-stats-row">
+            <span>
+              <strong>{country.activity?.verifiedProjects ?? countryProjects.length}</strong>{" "}
+              verified records
+            </span>
+            <span>
+              <strong>{country.activity?.institutions ?? country.institutions?.length ?? 0}</strong>{" "}
+              active hubs
+            </span>
+          </div>
 
           <section className="profile-section">
             <h3>
@@ -94,15 +186,34 @@ export default function CountryProfilePanel({ country, onClose }) {
               <Building2 size={17} />
               Institutions
             </summary>
-            <CompactList items={country.institutions} />
+            <InstitutionList
+              institutions={country.institutions}
+              recordCounts={institutionRecordCounts}
+            />
           </details>
 
-          <details className="profile-section">
+          <details className="profile-section" open>
             <summary>
               <FlaskConical size={17} />
-              Example Projects
+              Research Records ({countryProjects.length})
             </summary>
-            <CompactList items={country.exampleProjects} />
+            {countryProjects.length ? (
+              <ul className="research-record-list">
+                {countryProjects
+                  .slice(0, RESEARCH_RECORDS_PREVIEW_COUNT)
+                  .map((project) => (
+                    <ResearchRecordRow key={project.id} project={project} />
+                  ))}
+              </ul>
+            ) : (
+              <p className="source-empty">No extracted records yet.</p>
+            )}
+            <Link
+              className="profile-view-all-link"
+              to={`/country/${country.slug}#research-records`}
+            >
+              View all {countryProjects.length} research records
+            </Link>
           </details>
 
           <section className="profile-section insight">

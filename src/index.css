@@ -1424,6 +1424,100 @@ h1 {
   background: linear-gradient(90deg, var(--smi-cyan), var(--country-accent));
 }
 
+.profile-intensity-explainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 10px 0 0;
+  color: var(--smi-muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.profile-intensity-explainer svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.profile-stats-row {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 6px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0, 212, 216, 0.15);
+  color: #d2e8f0;
+  font-size: 0.88rem;
+}
+
+.profile-stats-row strong {
+  color: var(--smi-white);
+  font-size: 1.1rem;
+}
+
+.profile-list-count {
+  margin-left: 6px;
+  color: var(--smi-muted);
+  font-size: 0.82rem;
+}
+
+.research-record-list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.research-record-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid rgba(142, 219, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.research-record-title {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--smi-white);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.research-record-title:hover {
+  color: var(--smi-teal);
+}
+
+.research-record-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--smi-muted);
+  font-size: 0.76rem;
+}
+
+.research-record-topic {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+}
+
+.profile-view-all-link {
+  display: inline-block;
+  color: var(--smi-teal);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.profile-view-all-link:hover {
+  text-decoration: underline;
+}
+
 .profile-section {
   margin-top: 14px;
   padding-top: 14px;
@@ -1801,6 +1895,18 @@ h1 {
 .source-empty {
   color: var(--text-muted);
   line-height: 1.5;
+}
+
+.intensity-explainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.8rem;
+}
+
+.intensity-explainer svg {
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .detail-list {
