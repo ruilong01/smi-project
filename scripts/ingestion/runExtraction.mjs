@@ -9,6 +9,7 @@ import {
 } from "./adapters/openalex.adapter.mjs";
 import { enrichInstitutionFromRor } from "./adapters/ror.adapter.mjs";
 import { fetchMpaOfficialRecords } from "./adapters/mpa.adapter.mjs";
+import { fetchManualRecords } from "./adapters/manual.adapter.mjs";
 import { buildDataset } from "./buildDataset.mjs";
 import { resolveSourcePagesForProject } from "./enrichment/resolveSourcePages.mjs";
 import { extractWebpage } from "./enrichment/extractWebpage.mjs";
@@ -289,15 +290,37 @@ async function runExtractionOnce() {
     async () => fetchMpaOfficialRecords(nowIso)
   );
 
+  const manual = await runSource(
+    "manual",
+    "Manually Curated Records",
+    "human-verified manual entry",
+    async () => fetchManualRecords(nowIso)
+  );
+
   // Accumulate with history instead of rebuilding from scratch each run:
   // feed the previous run's already-built projects/institutions/sources/
   // relationships back into buildDataset alongside this run's fresh
   // records. buildDataset dedupes by id (fresher wins) and recomputes all
   // derived fields (scores, country aggregates) from the full set, so this
   // is safe to do unconditionally, including when a run finds 0 new records.
+  //
+  // Manual entries are the one exception: manualSources.mjs is a hand-
+  // edited, user-authoritative list, unlike OpenAlex results (dropping out
+  // of a search's top results doesn't mean a paper stopped existing). If a
+  // project id was removed from manualSources.mjs, it must disappear from
+  // the dataset too, not linger forever via accumulation.
+  const currentManualProjectIds = new Set(
+    manual.records.map((record) => record.project.id)
+  );
+  const carriedForwardProjects = (previous?.projects ?? []).filter(
+    (project) =>
+      !project.id.startsWith("project-manual-") ||
+      currentManualProjectIds.has(project.id)
+  );
+
   const previousAsAdapterOutput = previous
     ? {
-        projects: previous.projects ?? [],
+        projects: carriedForwardProjects,
         institutions: previous.institutions ?? [],
         sources: previous.sources ?? [],
         relationships: previous.relationships ?? [],
@@ -310,6 +333,7 @@ async function runExtractionOnce() {
     ...crossref.records,
     ...ror.records,
     ...mpa.records,
+    ...manual.records,
   ];
 
   const dataset = buildDataset({
@@ -319,10 +343,17 @@ async function runExtractionOnce() {
       crossref.run,
       ror.run,
       mpa.run,
+      manual.run,
       ...(previous?.extractionRuns ?? []),
     ].slice(0, 40),
     nowIso,
-    sourceStatus: [openAlex.status, crossref.status, ror.status, mpa.status],
+    sourceStatus: [
+      openAlex.status,
+      crossref.status,
+      ror.status,
+      mpa.status,
+      manual.status,
+    ],
   });
 
   await fs.mkdir(path.dirname(outputPath), { recursive: true });

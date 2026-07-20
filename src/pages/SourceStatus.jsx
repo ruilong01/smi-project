@@ -9,6 +9,7 @@ import {
   Link2,
   RefreshCw,
   ShieldCheck,
+  UserCheck,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
@@ -23,6 +24,7 @@ const SOURCE_ICONS = {
   Link2,
   Building2,
   Landmark,
+  UserCheck,
 };
 
 function formatDateTime(value) {
@@ -89,13 +91,15 @@ export default function SourceStatus() {
                 {meta ? (
                   <p className="source-monitor-description">
                     {meta.description}{" "}
-                    <a
-                      href={meta.homepage}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      Visit source <ExternalLink size={13} aria-hidden="true" />
-                    </a>
+                    {meta.homepage ? (
+                      <a
+                        href={meta.homepage}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        Visit source <ExternalLink size={13} aria-hidden="true" />
+                      </a>
+                    ) : null}
                   </p>
                 ) : null}
                 <dl className="relationship-meta">

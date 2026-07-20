@@ -10,7 +10,7 @@ export const SOURCE_AUTHORITY_LEVELS = {
   F: "Unverified secondary content",
 };
 
-// Static metadata about the four configured pipeline sources themselves
+// Static metadata about the configured pipeline sources themselves
 // (not extracted research records, so no per-item URL/timestamp needed).
 // homepage values match the base API/site URLs already used in
 // scripts/ingestion/adapters/*.mjs.
@@ -38,6 +38,12 @@ export const SOURCE_ADAPTER_META = {
     homepage: "https://www.mpa.gov.sg/",
     description:
       "Maritime and Port Authority of Singapore's official R&D pages. Controlled extraction of Singapore government maritime research programmes.",
+  },
+  manual: {
+    icon: "UserCheck",
+    homepage: null,
+    description:
+      "Human-verified records added by hand in scripts/ingestion/manualSources.mjs, each with its own real source URL and verification date — no automated fetching involved.",
   },
 };
 
