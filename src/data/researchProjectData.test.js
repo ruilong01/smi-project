@@ -32,7 +32,12 @@ describe("generated maritime research data", () => {
     expect(liveResearchMeta.unavailable).toBe(false);
     expect(liveResearchMeta.testingRefreshIntervalMs).toBe(5 * 60 * 1000);
     expect(liveResearchMeta.sourceStatus.length).toBeGreaterThan(0);
-    expect(extractionRuns.length).toBe(liveResearchMeta.sourceStatus.length);
+    // Extraction runs accumulate across syncs (capped, not reset each run),
+    // so history is always at least one run per configured source.
+    expect(extractionRuns.length).toBeGreaterThanOrEqual(
+      liveResearchMeta.sourceStatus.length
+    );
+    expect(extractionRuns.length).toBeLessThanOrEqual(40);
   });
 
   it("uses valid source URLs and resolvable source references", () => {
