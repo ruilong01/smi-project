@@ -64,6 +64,16 @@ export const topicToProjectCategories = {
   "Maritime Cybersecurity": ["Maritime cybersecurity", "Safety and risk management"],
 };
 
+// Reverse lookup: a raw research category (e.g. "Vessel efficiency") is not
+// itself a topic slug — it belongs to one or more of the 6 curated topics
+// above. Used anywhere a country/project theme tag needs to link to a real
+// /topic/:slug page instead of the category name itself.
+export function getTopicNameForCategory(category) {
+  return Object.keys(topicToProjectCategories).find((topicName) =>
+    topicToProjectCategories[topicName].includes(category)
+  );
+}
+
 export const technologyExplanations = {
   Sensors:
     "Sensors collect information from vessels, ports, engines, weather, cargo and nearby traffic so digital systems can understand what is happening in real time.",

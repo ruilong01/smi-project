@@ -16,6 +16,7 @@ import {
   getProjectsForCountry,
   getRelationshipEvidenceSources,
   getResearchProjectById,
+  getTopicNameForCategory,
 } from "../data/researchProjectData.js";
 import { getSourcesByIds } from "../data/sourceRegistry.js";
 import { getTopicSlug } from "../data/topicData.js";
@@ -159,15 +160,22 @@ export default function CountryDetail() {
             Key Maritime Research Themes
           </h2>
           <div className="tag-list">
-            {(country.themes ?? []).map((theme) => (
-              <Link
-                className="tag topic-link"
-                key={theme}
-                to={`/topic/${getTopicSlug(theme)}`}
-              >
-                {theme}
-              </Link>
-            ))}
+            {(country.themes ?? []).map((theme) => {
+              const topicSlug = getTopicSlug(getTopicNameForCategory(theme));
+              return topicSlug ? (
+                <Link
+                  className="tag topic-link"
+                  key={theme}
+                  to={`/topic/${topicSlug}`}
+                >
+                  {theme}
+                </Link>
+              ) : (
+                <span className="tag" key={theme}>
+                  {theme}
+                </span>
+              );
+            })}
           </div>
         </article>
 

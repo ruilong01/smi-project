@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Gauge, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getTopicSlug } from "../data/topicData.js";
+import { getTopicNameForCategory } from "../data/researchProjectData.js";
 import {
   getIntensityColor,
   getIntensityLabel,
@@ -75,16 +76,23 @@ export default function CountryPopup({
       <p>{country.summary}</p>
 
       <div className="popup-themes">
-        {country.themes.map((theme) => (
-          <Link
-            className="popup-term-static topic-link"
-            key={theme}
-            onClick={onInteractionEnd}
-            to={`/topic/${getTopicSlug(theme)}`}
-          >
-            {theme}
-          </Link>
-        ))}
+        {country.themes.map((theme) => {
+          const topicSlug = getTopicSlug(getTopicNameForCategory(theme));
+          return topicSlug ? (
+            <Link
+              className="popup-term-static topic-link"
+              key={theme}
+              onClick={onInteractionEnd}
+              to={`/topic/${topicSlug}`}
+            >
+              {theme}
+            </Link>
+          ) : (
+            <span className="popup-term-static" key={theme}>
+              {theme}
+            </span>
+          );
+        })}
       </div>
 
       <p className="popup-updated">

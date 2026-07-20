@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { BrainCircuit, Building2, Database, FlaskConical, MapPin, Ship, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getTopicSlug } from "../data/topicData.js";
+import { getTopicNameForCategory } from "../data/researchProjectData.js";
 import {
   getIntensityColor,
   getIntensityLabel,
@@ -69,15 +70,22 @@ export default function CountryProfilePanel({ country, onClose }) {
               Top Maritime Themes
             </h3>
             <div className="tag-list">
-              {country.themes.map((theme) => (
-                <Link
-                  className="tag topic-link"
-                  key={theme}
-                  to={`/topic/${getTopicSlug(theme)}`}
-                >
-                  {theme}
-                </Link>
-              ))}
+              {country.themes.map((theme) => {
+                const topicSlug = getTopicSlug(getTopicNameForCategory(theme));
+                return topicSlug ? (
+                  <Link
+                    className="tag topic-link"
+                    key={theme}
+                    to={`/topic/${topicSlug}`}
+                  >
+                    {theme}
+                  </Link>
+                ) : (
+                  <span className="tag" key={theme}>
+                    {theme}
+                  </span>
+                );
+              })}
             </div>
           </section>
 
