@@ -1,0 +1,79 @@
+<svg viewBox="0 0 1200 460" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c232b"/>
+      <stop offset="100%" stop-color="#061319"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="460" fill="url(#bg2)"/>
+
+  <!-- sources -->
+  <g>
+    <rect x="30" y="40" width="220" height="150" rx="12" fill="#0e2730" stroke="#2fe0c9" stroke-width="1.5"/>
+    <text x="50" y="70" font-size="13" letter-spacing="2" fill="#39d6c4" font-weight="700">SOURCES</text>
+    <text x="50" y="98" font-size="15" fill="#eaf6f6">OpenAlex API</text>
+    <text x="50" y="122" font-size="15" fill="#eaf6f6">Crossref API</text>
+    <text x="50" y="146" font-size="15" fill="#eaf6f6">ROR API</text>
+    <text x="50" y="170" font-size="15" fill="#eaf6f6">MPA (official page)</text>
+  </g>
+  <text x="150" y="215" font-size="12" fill="#5c8a89" text-anchor="middle">public APIs / RSS only —</text>
+  <text x="150" y="230" font-size="12" fill="#5c8a89" text-anchor="middle">no AI fetching</text>
+
+  <!-- arrow 1 -->
+  <path d="M255 115 L320 115" stroke="#2fe0c9" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ingestion -->
+  <g>
+    <rect x="325" y="40" width="230" height="150" rx="12" fill="#0e2730" stroke="#2fe0c9" stroke-width="1.5"/>
+    <text x="345" y="70" font-size="13" letter-spacing="2" fill="#39d6c4" font-weight="700">INGESTION</text>
+    <text x="345" y="100" font-size="15" fill="#eaf6f6">scripts/ingestion/*.mjs</text>
+    <text x="345" y="124" font-size="14" fill="#cfe9e8">normalise + dedupe</text>
+    <text x="345" y="148" font-size="14" fill="#cfe9e8">retry / backoff per source</text>
+    <text x="345" y="172" font-size="13" fill="#8fb9b8">one failure ≠ pipeline stop</text>
+  </g>
+
+  <!-- arrow 2 -->
+  <path d="M555 115 L620 115" stroke="#2fe0c9" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- dataset -->
+  <g>
+    <rect x="625" y="40" width="230" height="150" rx="12" fill="#12343a" stroke="#f2b94d" stroke-width="1.5"/>
+    <text x="645" y="70" font-size="13" letter-spacing="2" fill="#f2b94d" font-weight="700">GENERATED DATA</text>
+    <text x="645" y="100" font-size="14" fill="#eaf6f6">liveResearchData.json</text>
+    <text x="645" y="124" font-size="14" fill="#cfe9e8">source URL +</text>
+    <text x="645" y="146" font-size="14" fill="#cfe9e8">fetched timestamp</text>
+    <text x="645" y="170" font-size="13" fill="#8fb9b8">per record, always</text>
+  </g>
+
+  <!-- arrows to frontend + backend -->
+  <path d="M740 190 L740 240 L400 240 L400 280" stroke="#2fe0c9" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M740 190 L740 240 L1000 240 L1000 280" stroke="#2fe0c9" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- frontend -->
+  <g>
+    <rect x="250" y="285" width="300" height="140" rx="12" fill="#0e2730" stroke="#2fe0c9" stroke-width="1.5"/>
+    <text x="270" y="315" font-size="13" letter-spacing="2" fill="#39d6c4" font-weight="700">FRONTEND — LIVE</text>
+    <text x="270" y="343" font-size="15" fill="#eaf6f6">React 18 + Vite 6</text>
+    <text x="270" y="367" font-size="14" fill="#cfe9e8">globe, popups, topic + country pages</text>
+    <text x="270" y="391" font-size="13" fill="#8fb9b8">build-time import (today)</text>
+    <text x="270" y="411" font-size="13" fill="#8fb9b8">→ API fetch (planned)</text>
+  </g>
+
+  <!-- backend -->
+  <g>
+    <rect x="850" y="285" width="300" height="140" rx="12" fill="#0e2730" stroke="#f2b94d" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="870" y="315" font-size="13" letter-spacing="2" fill="#f2b94d" font-weight="700">BACKEND API — BOOTSTRAP</text>
+    <text x="870" y="343" font-size="15" fill="#eaf6f6">server/server.mjs (Node)</text>
+    <text x="870" y="367" font-size="14" fill="#cfe9e8">/api/projects /api/countries</text>
+    <text x="870" y="391" font-size="14" fill="#cfe9e8">/api/topics /api/search</text>
+    <text x="870" y="411" font-size="13" fill="#8fb9b8">not yet wired to frontend</text>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#2fe0c9"/>
+    </marker>
+  </defs>
+
+  <text x="1170" y="450" font-size="12" fill="#3f6b6a" text-anchor="end">AI analysis layer (classification, digests) — planned, Phase 3</text>
+</svg>
