@@ -96,11 +96,10 @@ export default function CountryProfilePanel({ country, onClose }) {
             </div>
             <p className="profile-intensity-explainer">
               <Info size={13} />
-              Relative score (0-100) from verified project, institution,
-              partner and publication relationships for this country, scaled
-              against the most active country in the current dataset. Not an
-              official ranking and not a measure of research quality — it
-              only reflects observed activity in the extracted data.
+              Research intensity is a relative score based on the number of
+              maritime R&amp;D records, active institutions and topic
+              diversity in the current dataset. It is not an official
+              national ranking.
             </p>
           </section>
 

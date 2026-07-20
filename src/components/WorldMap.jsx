@@ -13,7 +13,6 @@ import { AnimatePresence } from "framer-motion";
 import { Minus, Pause, Play, Plus, RotateCcw } from "lucide-react";
 import CountryPopup from "./CountryPopup.jsx";
 import HoverPreviewCard from "./HoverPreviewCard.jsx";
-import ProjectPopup from "./ProjectPopup.jsx";
 import {
   countryMatchesTopicFilter,
   projectMatchesTopicFilter,
@@ -224,16 +223,13 @@ export default function WorldMap({
   countries,
   activeFilter,
   popupCountry,
-  popupProject,
   projects = [],
   dataStatusLabel,
   selectedCountry,
   isProfileOpen,
   onClearSelection,
   onClosePopup,
-  onCloseProjectPopup,
   onCountryClick,
-  onProjectClick,
   onViewProfile,
 }) {
   const shellRef = useRef(null);
@@ -261,9 +257,7 @@ export default function WorldMap({
   const isPausedRef = useRef(false);
   const isAutoRotationEnabledRef = useRef(true);
   const popupCountryRef = useRef(popupCountry);
-  const popupProjectRef = useRef(popupProject);
   const popupPositionRef = useRef(null);
-  const projectPopupPositionRef = useRef(null);
   const profileOpenRef = useRef(Boolean(isProfileOpen));
   const countriesRef = useRef(countries);
   const projectsRef = useRef(projects);
@@ -277,7 +271,6 @@ export default function WorldMap({
   const [isDragging, setIsDragging] = useState(false);
   const [isAutoRotationEnabled, setIsAutoRotationEnabled] = useState(true);
   const [popupPosition, setPopupPosition] = useState(null);
-  const [projectPopupPosition, setProjectPopupPosition] = useState(null);
   const hasFilter = activeFilter !== "All";
 
   const countriesByAtlasName = useMemo(() => {
@@ -328,10 +321,9 @@ export default function WorldMap({
 
   useEffect(() => {
     popupCountryRef.current = popupCountry;
-    popupProjectRef.current = popupProject;
     profileOpenRef.current = Boolean(isProfileOpen);
 
-    if (popupCountry || popupProject || isProfileOpen) {
+    if (popupCountry || isProfileOpen) {
       pauseAutoRotation();
     } else {
       resumeAutoRotationAfterDelay();
@@ -342,13 +334,8 @@ export default function WorldMap({
       setPopupPosition(null);
     }
 
-    if (!popupProject) {
-      projectPopupPositionRef.current = null;
-      setProjectPopupPosition(null);
-    }
-
     markGlobeDirty();
-  }, [popupCountry, popupProject, isProfileOpen]);
+  }, [popupCountry, isProfileOpen]);
 
   useEffect(() => {
     if (!selectedCountry) {
@@ -433,7 +420,6 @@ export default function WorldMap({
         !isDraggingRef.current &&
         isAutoRotationEnabledRef.current &&
         !popupCountryRef.current &&
-        !popupProjectRef.current &&
         !profileOpenRef.current &&
         !document.hidden;
 
@@ -567,7 +553,6 @@ export default function WorldMap({
       isDraggingRef.current ||
       !isAutoRotationEnabledRef.current ||
       popupCountryRef.current ||
-      popupProjectRef.current ||
       profileOpenRef.current ||
       document.hidden
     ) {
@@ -588,7 +573,6 @@ export default function WorldMap({
       (!isPausedRef.current &&
         isAutoRotationEnabledRef.current &&
         !popupCountryRef.current &&
-        !popupProjectRef.current &&
         !profileOpenRef.current &&
         !document.hidden)
     );
@@ -674,7 +658,6 @@ export default function WorldMap({
     });
 
     updatePopupPosition(projection);
-    updateProjectPopupPosition(projection);
   }
 
   function updatePopupPosition(projection) {
@@ -707,43 +690,6 @@ export default function WorldMap({
     ) {
       popupPositionRef.current = nextPosition;
       setPopupPosition(nextPosition);
-    }
-  }
-
-  function updateProjectPopupPosition(projection) {
-    const project = popupProjectRef.current;
-    const coordinates = project ? getProjectCoordinates(project) : null;
-
-    if (
-      !project ||
-      !isCoordinateVisible(coordinates, rotationRef.current)
-    ) {
-      if (projectPopupPositionRef.current) {
-        projectPopupPositionRef.current = null;
-        setProjectPopupPosition(null);
-      }
-      return;
-    }
-
-    const projected = projection(coordinates);
-
-    if (!projected) {
-      return;
-    }
-
-    const nextPosition = {
-      x: clamp((projected[0] / width) * 100, 20, 80),
-      y: clamp((projected[1] / height) * 100, 22, 78),
-    };
-    const previousPosition = projectPopupPositionRef.current;
-
-    if (
-      !previousPosition ||
-      Math.abs(previousPosition.x - nextPosition.x) > 0.3 ||
-      Math.abs(previousPosition.y - nextPosition.y) > 0.3
-    ) {
-      projectPopupPositionRef.current = nextPosition;
-      setProjectPopupPosition(nextPosition);
     }
   }
 
@@ -1004,7 +950,6 @@ export default function WorldMap({
     }
 
     if (!clickedInteractiveLayer) {
-      onCloseProjectPopup();
       onClosePopup();
       resumeAutoRotationAfterDelay();
     }
@@ -1013,7 +958,6 @@ export default function WorldMap({
   useEffect(() => {
     function handleEscape(event) {
       if (event.key === "Escape") {
-        onCloseProjectPopup();
         onClosePopup();
         resumeAutoRotationAfterDelay();
       }
@@ -1021,7 +965,7 @@ export default function WorldMap({
 
     window.addEventListener("keydown", handleEscape);
     return () => window.removeEventListener("keydown", handleEscape);
-  }, [onCloseProjectPopup, onClosePopup]);
+  }, [onClosePopup]);
 
   return (
     <section
@@ -1268,7 +1212,6 @@ export default function WorldMap({
           <g className="project-marker-layer">
             {visibleProjects.map((project) => {
               const isThemeMatch = projectMatchesTopicFilter(project, activeFilter);
-              const isSelected = popupProject?.id === project.id;
               const coordinates = getProjectCoordinates(project);
               const initialVisible = isCoordinateVisible(coordinates, defaultRotation);
               const initialProjected =
@@ -1287,7 +1230,6 @@ export default function WorldMap({
                     "project-marker",
                     `project-marker-${project.displayTier}`,
                     isThemeMatch ? "active" : "muted",
-                    isSelected ? "selected" : "",
                   ]
                     .filter(Boolean)
                     .join(" ")}
@@ -1372,19 +1314,6 @@ export default function WorldMap({
             onInteractionStart={pauseAutoRotation}
             onViewProfile={onViewProfile}
             position={popupPosition}
-          />
-        ) : null}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {popupProject ? (
-          <ProjectPopup
-            key={popupProject.id}
-            onClose={onCloseProjectPopup}
-            onInteractionEnd={resumeAutoRotationAfterDelay}
-            onInteractionStart={pauseAutoRotation}
-            position={projectPopupPosition}
-            project={popupProject}
           />
         ) : null}
       </AnimatePresence>

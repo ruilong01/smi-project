@@ -27,18 +27,11 @@ export const SOURCE_ADAPTER_META = {
     description:
       "DOI registration agency's public API. Supplies publication metadata (titles, dates, links) used to verify and enrich research records.",
   },
-  ror: {
-    icon: "Building2",
-    homepage: "https://api.ror.org/v2/organizations",
-    description:
-      "Research Organization Registry — a persistent identifier registry for research institutions. Used to resolve and de-duplicate institution names.",
-  },
-  mpa: {
-    icon: "Landmark",
-    homepage: "https://www.mpa.gov.sg/",
-    description:
-      "Maritime and Port Authority of Singapore's official R&D pages. Controlled extraction of Singapore government maritime research programmes.",
-  },
+  // ror/mpa parked for the lean MVP (see CLAUDE.md) — ROR institution
+  // enrichment and the MPA official-page adapter are real, working code,
+  // just not run by default right now. Restore from git history
+  // (scripts/ingestion/adapters/{ror,mpa}.adapter.mjs are still on disk)
+  // and re-add their entries here if resumed.
   manual: {
     icon: "UserCheck",
     homepage: null,

@@ -11,15 +11,15 @@ import {
   slugify,
 } from "./normalization.mjs";
 
-const RELATIONSHIP_WEIGHTS = {
-  PROJECT_LOCATION: 1,
-  TRIAL_LOCATION: 1,
-  COORDINATOR_COUNTRY: 0.8,
-  LEAD_INSTITUTION_COUNTRY: 0.8,
-  PARTNER_COUNTRY: 0.4,
-  FUNDER_COUNTRY: 0.25,
-  AUTHOR_AFFILIATION_COUNTRY: 0.15,
-  PUBLICATION_AFFILIATION: 0.15,
+// Lean-MVP intensity score: record count dominates, institution count and
+// topic diversity are minor adjustments only — deliberately simpler than a
+// relationship-type-weighted formula. Always relative to whichever country
+// currently has the highest raw score in this dataset, never an absolute
+// or official measure. See the UI explanation text next to every score.
+const INTENSITY_WEIGHTS = {
+  recordCount: 1,
+  institutionCount: 0.3,
+  topicDiversity: 0.2,
 };
 
 function uniqueById(items) {
@@ -271,7 +271,6 @@ export function buildCountries(projects, relationships, institutionsById, nowIso
   }
 
   const projectById = new Map(projects.map((project) => [project.id, project]));
-  const relationshipContributions = new Map();
 
   relationships
     .filter((relationship) => relationship.sourceEntityType === "COUNTRY")
@@ -279,10 +278,6 @@ export function buildCountries(projects, relationships, institutionsById, nowIso
       const country = ensureCountry(relationship.sourceEntityId);
       const project = projectById.get(relationship.targetEntityId);
       if (!country || !project) return;
-
-      const weight = RELATIONSHIP_WEIGHTS[relationship.relationType] ?? 0.1;
-      const key = `${country.code}-${project.id}-${relationship.relationType}`;
-      relationshipContributions.set(key, weight);
 
       country.whyRelated.push(relationship);
       if (!country.exampleProjects.includes(project.title)) {
@@ -329,21 +324,26 @@ export function buildCountries(projects, relationships, institutionsById, nowIso
   });
 
   const rawScores = [...countries.values()].map((country) => {
-    const raw = [...relationshipContributions.entries()]
-      .filter(([key]) => key.startsWith(`${country.code}-`))
-      .reduce((total, [, value]) => total + value, 0);
-    country.activity.activityScore = Number(raw.toFixed(2));
+    const verifiedProjects = new Set(country.activity._projectIds ?? []).size;
+    const institutionCount = country.institutions.length;
+    const topicDiversity = country.themes.length;
+    const raw =
+      verifiedProjects * INTENSITY_WEIGHTS.recordCount +
+      institutionCount * INTENSITY_WEIGHTS.institutionCount +
+      topicDiversity * INTENSITY_WEIGHTS.topicDiversity;
+    country.activity._rawScore = raw;
     return raw;
   });
-  const maxScore = Math.max(...rawScores, 1);
+  const maxRawScore = Math.max(...rawScores, 1);
 
   return [...countries.values()].map((country) => {
-    const scaled = Math.round((Math.log1p(country.activity.activityScore) / Math.log1p(maxScore)) * 100);
+    const scaled = Math.round((country.activity._rawScore / maxRawScore) * 100);
     country.activity.verifiedProjects = new Set(country.activity._projectIds ?? []).size;
     country.activity.leadProjects = new Set(country.activity._leadProjectIds ?? []).size;
     country.activity.partnerProjects = new Set(country.activity._partnerProjectIds ?? []).size;
     country.activity.publications = new Set(country.activity._publicationProjectIds ?? []).size;
     country.activity.institutions = country.institutions.length;
+    country.activity.activityScore = Number(country.activity._rawScore.toFixed(2));
     country.researchIntensity = scaled;
     country.summary = `${country.name} has ${country.activity.verifiedProjects} verified maritime R&D record(s) in the extracted dataset.`;
     country.aiInsight = "Relationship explanations are assembled from source-backed relationship records, not unsupported AI inference.";
@@ -351,6 +351,7 @@ export function buildCountries(projects, relationships, institutionsById, nowIso
     delete country.activity._leadProjectIds;
     delete country.activity._partnerProjectIds;
     delete country.activity._publicationProjectIds;
+    delete country.activity._rawScore;
     return country;
   });
 }

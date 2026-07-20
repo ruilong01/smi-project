@@ -2281,22 +2281,14 @@ h1 {
 
 .relationship-grid,
 .why-related-grid,
-.source-monitor-grid,
-.source-page-grid {
+.source-monitor-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.source-page-grid {
-  display: grid;
-  gap: 10px;
 }
 
 .relationship-card,
 .why-related-card,
 .source-monitor-card,
-.source-page-card,
-.extraction-run-card,
-.evidence-snippet-card {
+.extraction-run-card {
   display: grid;
   gap: 10px;
   padding: 13px;
@@ -2306,93 +2298,9 @@ h1 {
   background: rgba(255, 255, 255, 0.045);
 }
 
-.enrichment-card {
-  border-color: rgba(95, 255, 224, 0.22);
-}
-
-.enrichment-block {
-  margin-top: 16px;
-}
-
-.enrichment-block:first-child {
-  margin-top: 0;
-}
-
-.enrichment-block h3 {
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--smi-teal);
-}
-
-.evidence-snippet-list {
-  display: grid;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.evidence-snippet-text {
-  font-style: italic;
-  line-height: 1.5;
-  color: #e6fbff;
-}
-
-.evidence-snippet-why {
-  font-size: 0.82rem;
-  color: var(--smi-muted);
-}
-
-.evidence-snippet-card a {
-  justify-self: start;
-  color: var(--smi-teal);
-  font-size: 0.82rem;
-  text-decoration: none;
-}
-
-.evidence-snippet-card a:hover {
-  text-decoration: underline;
-}
-
-.image-candidate-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 10px;
-}
-
-.image-candidate-card {
-  display: grid;
-  gap: 6px;
-  overflow: hidden;
-  border: 1px solid rgba(142, 219, 255, 0.16);
-  border-radius: 8px;
-  color: var(--smi-muted);
-  font-size: 0.76rem;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.image-candidate-card img {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-  display: block;
-}
-
-.image-candidate-card span {
-  padding: 0 8px 8px;
-  line-height: 1.35;
-}
-
-.data-quality-row dl {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .relationship-card h3,
 .why-related-card h3,
-.source-monitor-card h3,
-.source-page-card h3 {
+.source-monitor-card h3 {
   margin-bottom: 6px;
   font-size: 1rem;
   line-height: 1.35;
@@ -2655,8 +2563,7 @@ h1 {
   .source-grid,
   .relationship-grid,
   .why-related-grid,
-  .source-monitor-grid,
-  .source-page-grid {
+  .source-monitor-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2707,7 +2614,6 @@ h1 {
   .relationship-grid,
   .why-related-grid,
   .source-monitor-grid,
-  .source-page-grid,
   .source-status-kpis,
   .project-index-list {
     grid-template-columns: 1fr;

@@ -25,7 +25,6 @@ import {
 function MapDashboard() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [popupCountry, setPopupCountry] = useState(null);
-  const [popupProject, setPopupProject] = useState(null);
   const [profileCountry, setProfileCountry] = useState(null);
 
   const highlightedCountries = useMemo(() => {
@@ -42,25 +41,16 @@ function MapDashboard() {
 
   function openCountryPopup(country) {
     setPopupCountry(country);
-    setPopupProject(null);
-    setProfileCountry(null);
-  }
-
-  function openProjectPopup(project) {
-    setPopupProject(project);
-    setPopupCountry(null);
     setProfileCountry(null);
   }
 
   function openCountryProfile(country) {
     setProfileCountry(country);
     setPopupCountry(null);
-    setPopupProject(null);
   }
 
   function clearSelection() {
     setPopupCountry(null);
-    setPopupProject(null);
     setProfileCountry(null);
   }
 
@@ -184,12 +174,9 @@ function MapDashboard() {
             dataStatusLabel={getLiveDataStatusLabel()}
             onClearSelection={clearSelection}
             onClosePopup={() => setPopupCountry(null)}
-            onCloseProjectPopup={() => setPopupProject(null)}
             onCountryClick={openCountryPopup}
-            onProjectClick={openProjectPopup}
             onViewProfile={openCountryProfile}
             popupCountry={popupCountry}
-            popupProject={popupProject}
             projects={publicResearchProjects}
             selectedCountry={selectedCountry}
             isProfileOpen={Boolean(profileCountry)}
