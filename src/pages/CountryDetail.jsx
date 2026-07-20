@@ -7,6 +7,7 @@ import {
   Info,
   ShieldCheck,
   Ship,
+  Sparkles,
 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { useMemo } from "react";
@@ -23,6 +24,7 @@ import {
   getResearchProjectById,
 } from "../data/researchProjectData.js";
 import { getSourcesByIds } from "../data/sourceRegistry.js";
+import { isValidExternalUrl } from "../utils/url.js";
 import {
   getIntensityColor,
   getIntensityLabel,
@@ -69,20 +71,50 @@ export default function CountryDetail() {
   const { slug } = useParams();
   const country = getCountryBySlug(slug);
 
-  const { countryProjects, institutionRecordCounts, sources } = useMemo(() => {
+  const {
+    countryProjects,
+    institutionRecordCounts,
+    sources,
+    countryEvidence,
+    countryImages,
+    enrichedCount,
+  } = useMemo(() => {
     if (!country) {
-      return { countryProjects: [], institutionRecordCounts: new Map(), sources: [] };
+      return {
+        countryProjects: [],
+        institutionRecordCounts: new Map(),
+        sources: [],
+        countryEvidence: [],
+        countryImages: [],
+        enrichedCount: 0,
+      };
     }
     const projects = getProjectsForCountry(country.name);
     const counts = new Map();
+    let enriched = 0;
+    const evidence = [];
+    const images = [];
     projects.forEach((project) => {
-      if (!project.leadOrganisation) return;
-      counts.set(project.leadOrganisation, (counts.get(project.leadOrganisation) ?? 0) + 1);
+      if (project.leadOrganisation) {
+        counts.set(project.leadOrganisation, (counts.get(project.leadOrganisation) ?? 0) + 1);
+      }
+      if (project.selectedEvidence?.length) {
+        enriched += 1;
+        evidence.push(
+          ...project.selectedEvidence.map((item) => ({ ...item, projectTitle: project.title }))
+        );
+      }
+      (project.sourcePages ?? []).forEach((page) => {
+        images.push(...(page.images ?? []));
+      });
     });
     return {
       countryProjects: projects,
       institutionRecordCounts: counts,
       sources: getSourcesByIds(country.sources ?? []),
+      countryEvidence: evidence,
+      countryImages: images,
+      enrichedCount: enriched,
     };
   }, [country]);
 
@@ -208,6 +240,57 @@ export default function CountryDetail() {
           <ResearchRecordList projects={countryProjects} />
         </article>
 
+        {countryEvidence.length ? (
+          <article className="detail-card wide">
+            <h2>
+              <Sparkles size={20} />
+              Evidence ({countryEvidence.length})
+            </h2>
+            <ul className="evidence-snippet-list">
+              {countryEvidence.slice(0, 8).map((evidence) => (
+                <li className="evidence-snippet-card" key={evidence.evidenceId}>
+                  <p className="eyebrow">
+                    {evidence.evidenceType} · {evidence.projectTitle}
+                  </p>
+                  <p className="evidence-snippet-text">&ldquo;{evidence.snippet}&rdquo;</p>
+                  <p className="evidence-snippet-why">{evidence.whyImportant}</p>
+                  {isValidExternalUrl(evidence.sourceUrl) ? (
+                    <a href={evidence.sourceUrl} rel="noreferrer" target="_blank">
+                      {evidence.sourceName || "View source"}
+                    </a>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ) : null}
+
+        {countryImages.length ? (
+          <article className="detail-card wide">
+            <h2>
+              <Sparkles size={20} />
+              Media ({countryImages.length})
+            </h2>
+            <p className="source-empty">
+              Rights not verified — source preview only, not official images.
+            </p>
+            <div className="image-candidate-grid">
+              {countryImages.slice(0, 6).map((image) => (
+                <a
+                  className="image-candidate-card"
+                  href={image.sourceUrl}
+                  key={image.imageUrl}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <img alt={image.altText || "Image candidate"} src={image.imageUrl} />
+                  <span>{image.caption || image.altText || "Untitled figure"}</span>
+                </a>
+              ))}
+            </div>
+          </article>
+        ) : null}
+
         <article className="detail-card wide ai-detail">
           <h2>
             <BrainCircuit size={20} />
@@ -231,6 +314,12 @@ export default function CountryDetail() {
           </h2>
           <p>{country.dataStatus}</p>
           <p>Data updated until: {country.dataUpdatedUntil}</p>
+          <p className="profile-list-count">
+            {enrichedCount} of {countryProjects.length} record
+            {countryProjects.length === 1 ? "" : "s"} have detailed evidence;
+            the rest are metadata-only (title, institution, topic, source
+            link).
+          </p>
           <div className="source-grid">
             {sources.map((source) => (
               <SourceCard key={source.id} source={source} />

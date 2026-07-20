@@ -11,7 +11,29 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const outputPath = path.resolve(__dirname, "../../data/enriched/china-sample.json");
+const runsDir = path.resolve(__dirname, "../../data/raw/enrichment-runs");
+
+// enrichSample.mjs writes a dated file per run (<country>-sample-<date>.json)
+// rather than one fixed name — verify the most recently modified one.
+async function findLatestOutputPath() {
+  const entries = await fs.readdir(runsDir, { withFileTypes: true });
+  const candidates = entries.filter(
+    (entry) => entry.isFile() && /-sample-\d{4}-\d{2}-\d{2}\.json$/.test(entry.name)
+  );
+  if (candidates.length === 0) {
+    return null;
+  }
+
+  const withStats = await Promise.all(
+    candidates.map(async (entry) => {
+      const fullPath = path.join(runsDir, entry.name);
+      const stats = await fs.stat(fullPath);
+      return { fullPath, mtimeMs: stats.mtimeMs };
+    })
+  );
+  withStats.sort((a, b) => b.mtimeMs - a.mtimeMs);
+  return withStats[0].fullPath;
+}
 
 const failures = [];
 const warnings = [];
@@ -36,6 +58,13 @@ async function main() {
   console.log("=".repeat(60));
 
   // 1. File exists and is valid JSON.
+  const outputPath = await findLatestOutputPath();
+  if (!outputPath) {
+    fail(`No enrichment run output found in ${runsDir} (run npm run enrich:sample first)`);
+    printSummaryAndExit();
+    return;
+  }
+
   let raw;
   try {
     raw = await fs.readFile(outputPath, "utf8");

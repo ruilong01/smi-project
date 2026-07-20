@@ -6,6 +6,7 @@ import {
   ImageOff,
   MapPin,
   ShieldCheck,
+  Sparkles,
 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import OrganisationCard from "../components/OrganisationCard.jsx";
@@ -145,6 +146,9 @@ export default function ProjectDetail() {
   }
 
   const sources = getSourcesForProject(project);
+  const projectImageCandidates = (project.sourcePages ?? []).flatMap(
+    (page) => page.images ?? []
+  );
   const relationships = getRelationshipsForProject(project.id);
   const countryRelationships = relationships.filter(
     (relationship) => relationship.sourceEntityType === "COUNTRY"
@@ -337,6 +341,70 @@ export default function ProjectDetail() {
               <SourceCard key={source.id} source={source} />
             ))}
           </div>
+        </article>
+
+        <article className="detail-card wide">
+          <h2>
+            <Sparkles size={20} />
+            Evidence &amp; Media
+          </h2>
+          {project.selectedEvidence?.length || projectImageCandidates.length ? (
+            <>
+              {project.selectedEvidence?.length ? (
+                <details className="evidence-collapsible" open>
+                  <summary>
+                    Selected evidence ({project.selectedEvidence.length})
+                  </summary>
+                  <ul className="evidence-snippet-list">
+                    {project.selectedEvidence.slice(0, 5).map((evidence) => (
+                      <li className="evidence-snippet-card" key={evidence.evidenceId}>
+                        <p className="eyebrow">{evidence.evidenceType}</p>
+                        <p className="evidence-snippet-text">
+                          &ldquo;{evidence.snippet}&rdquo;
+                        </p>
+                        <p className="evidence-snippet-why">{evidence.whyImportant}</p>
+                        {isValidExternalUrl(evidence.sourceUrl) ? (
+                          <a href={evidence.sourceUrl} rel="noreferrer" target="_blank">
+                            {evidence.sourceName || "View source"}
+                          </a>
+                        ) : null}
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ) : null}
+
+              {projectImageCandidates.length ? (
+                <details className="evidence-collapsible">
+                  <summary>
+                    Image candidates ({projectImageCandidates.length})
+                  </summary>
+                  <p className="source-empty">
+                    Rights not verified — shown as source preview only, not
+                    an official project image.
+                  </p>
+                  <div className="image-candidate-grid">
+                    {projectImageCandidates.slice(0, 6).map((image) => (
+                      <a
+                        className="image-candidate-card"
+                        href={image.sourceUrl}
+                        key={image.imageUrl}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <img alt={image.altText || "Image candidate"} src={image.imageUrl} />
+                        <span>{image.caption || image.altText || "Untitled figure"}</span>
+                      </a>
+                    ))}
+                  </div>
+                </details>
+              ) : null}
+            </>
+          ) : (
+            <p className="source-empty">
+              Detailed evidence not available yet for this project.
+            </p>
+          )}
         </article>
 
         <article className="detail-card wide project-index-card">

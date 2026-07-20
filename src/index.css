@@ -1880,6 +1880,102 @@ h1 {
   font-size: 1.05rem;
 }
 
+/* Collapsible evidence/media sections — closed by default except the
+   first, so a project or country with real enrichment data doesn't
+   dump everything open at once (see the "don't crowd the panel" rule). */
+.evidence-collapsible {
+  margin-top: 12px;
+}
+
+.evidence-collapsible:first-child {
+  margin-top: 0;
+}
+
+.evidence-collapsible summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--smi-teal);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.evidence-collapsible summary::-webkit-details-marker {
+  display: none;
+}
+
+.evidence-snippet-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.evidence-snippet-card {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid rgba(142, 219, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.evidence-snippet-text {
+  font-style: italic;
+  line-height: 1.5;
+  color: #e6fbff;
+}
+
+.evidence-snippet-why {
+  font-size: 0.82rem;
+  color: var(--smi-muted);
+}
+
+.evidence-snippet-card a {
+  justify-self: start;
+  color: var(--smi-teal);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.evidence-snippet-card a:hover {
+  text-decoration: underline;
+}
+
+.image-candidate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.image-candidate-card {
+  display: grid;
+  gap: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(142, 219, 255, 0.16);
+  border-radius: 8px;
+  color: var(--smi-muted);
+  font-size: 0.76rem;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.image-candidate-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-candidate-card span {
+  padding: 0 8px 8px;
+  line-height: 1.35;
+}
+
 .intensity-detail {
   display: flex;
   flex-direction: column;

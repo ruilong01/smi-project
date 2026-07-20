@@ -31,7 +31,6 @@ const HOST_MIN_GAP_MS = 6000;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const liveDataPath = path.resolve(__dirname, "../../src/data/generated/liveResearchData.json");
-const outputPath = path.resolve(__dirname, "../../data/enriched/china-sample.json");
 
 const args = Object.fromEntries(
   process.argv.slice(2).map((arg) => {
@@ -41,6 +40,15 @@ const args = Object.fromEntries(
 );
 const TARGET_COUNTRY = args.country ?? "China";
 const LIMIT = Number(args.limit ?? 10);
+
+// Archived under data/raw/ (see data/raw/enrichment-runs/README.md) rather
+// than overwritten in place — each run is a dated raw-evidence snapshot,
+// not the app's live dataset.
+const runDate = new Date().toISOString().slice(0, 10);
+const outputPath = path.resolve(
+  __dirname,
+  `../../data/raw/enrichment-runs/${TARGET_COUNTRY.toLowerCase()}-sample-${runDate}.json`
+);
 const TOPIC_KEYWORDS = [
   "maritime AI",
   "smart port",
