@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Building2, Gauge } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getInstitutionSlugForName } from "../data/researchProjectData.js";
 import { getIntensityColor, getIntensityLabel } from "../utils/intensity.js";
 
 function formatDate(isoDate) {
@@ -116,6 +117,7 @@ export default function HoverPreviewCard({
   }
 
   const topTechnologies = (project.technologies ?? project.categories ?? []).slice(0, 3);
+  const institutionSlug = getInstitutionSlugForName(project.leadOrganisation);
 
   return (
     <motion.article
@@ -135,7 +137,13 @@ export default function HoverPreviewCard({
       <div className="hover-card-stats">
         <span>
           <Building2 size={14} />
-          {project.leadOrganisation}
+          {institutionSlug ? (
+            <Link className="institution-link" onClick={onMouseLeave} to={`/institution/${institutionSlug}`}>
+              {project.leadOrganisation}
+            </Link>
+          ) : (
+            project.leadOrganisation
+          )}
         </span>
         <span>{project.country}</span>
       </div>

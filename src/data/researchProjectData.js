@@ -112,6 +112,35 @@ export const researchProjectsById = new Map(
 export const institutionsById = new Map(
   liveResearchInstitutions.map((institution) => [institution.id, institution])
 );
+
+// Institutions aren't assigned a slug during ingestion (unlike countries,
+// projects and topics), so one is derived here for routing to
+// /institution/:slug. Kept purely client-side since it's just a display
+// convenience over the canonical name, not new extracted data.
+function slugifyName(value) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 90);
+}
+
+export const institutionsBySlug = new Map(
+  liveResearchInstitutions.map((institution) => [
+    slugifyName(institution.canonicalName),
+    institution,
+  ])
+);
+// Projects only carry an ID reference for the LEAD institution
+// (leadInstitutionId); partner organisations are plain name strings from
+// the source data, so this is the fallback used to resolve those to a
+// linkable institution record.
+export const institutionsByName = new Map(
+  liveResearchInstitutions.map((institution) => [
+    institution.canonicalName,
+    institution,
+  ])
+);
 export const countriesByCode = new Map(
   liveResearchCountries.map((country) => [country.code, country])
 );
@@ -147,6 +176,39 @@ export function getCountryByCode(countryCode) {
 
 export function getInstitutionById(institutionId) {
   return institutionsById.get(institutionId);
+}
+
+export function getInstitutionBySlug(slug) {
+  return institutionsBySlug.get(slug);
+}
+
+// Resolves a plain organisation-name string (as found on
+// leadOrganisation/partnerOrganisations) to a linkable slug, or undefined
+// if no matching institution record exists — callers should fall back to
+// plain, non-link text in that case rather than link to a dead page.
+export function getInstitutionSlugForName(name) {
+  const institution = institutionsByName.get(name);
+  return institution ? slugifyName(institution.canonicalName) : undefined;
+}
+
+export function getProjectsForInstitution(institution) {
+  if (!institution) {
+    return { led: [], partnered: [] };
+  }
+
+  const led = publicResearchProjects.filter(
+    (project) =>
+      project.leadInstitutionId === institution.id ||
+      project.leadOrganisation === institution.canonicalName
+  );
+  const partnered = publicResearchProjects.filter(
+    (project) =>
+      project.leadInstitutionId !== institution.id &&
+      project.leadOrganisation !== institution.canonicalName &&
+      (project.partnerOrganisations ?? []).includes(institution.canonicalName)
+  );
+
+  return { led, partnered };
 }
 
 export function getLiveSourceById(sourceId) {

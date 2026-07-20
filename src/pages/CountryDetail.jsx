@@ -13,6 +13,7 @@ import SourceCard from "../components/SourceCard.jsx";
 import {
   formatRelationType,
   getCountryBySlug,
+  getInstitutionSlugForName,
   getLiveDataStatusLabel,
   getProjectsForCountry,
   getRelationshipEvidenceSources,
@@ -188,18 +189,27 @@ export default function CountryDetail() {
           </h2>
           {country.institutions?.length ? (
             <ul className="detail-list">
-              {country.institutions.map((name) => (
-                <li key={name}>
-                  {name}
-                  {institutionRecordCounts.get(name) ? (
-                    <span className="profile-list-count">
-                      {" "}
-                      ({institutionRecordCounts.get(name)} record
-                      {institutionRecordCounts.get(name) === 1 ? "" : "s"})
-                    </span>
-                  ) : null}
-                </li>
-              ))}
+              {country.institutions.map((name) => {
+                const institutionSlug = getInstitutionSlugForName(name);
+                return (
+                  <li key={name}>
+                    {institutionSlug ? (
+                      <Link className="institution-link" to={`/institution/${institutionSlug}`}>
+                        {name}
+                      </Link>
+                    ) : (
+                      name
+                    )}
+                    {institutionRecordCounts.get(name) ? (
+                      <span className="profile-list-count">
+                        {" "}
+                        ({institutionRecordCounts.get(name)} record
+                        {institutionRecordCounts.get(name) === 1 ? "" : "s"})
+                      </span>
+                    ) : null}
+                  </li>
+                );
+              })}
             </ul>
           ) : (
             <p className="source-empty">No extracted records yet.</p>
@@ -217,6 +227,7 @@ export default function CountryDetail() {
                 const topicSlug = getTopicSlug(
                   getTopicNameForCategory(project.researchCategories?.[0])
                 );
+                const institutionSlug = getInstitutionSlugForName(project.leadOrganisation);
                 return (
                   <li className="research-record-row" key={project.id}>
                     <div className="research-record-main">
@@ -227,7 +238,16 @@ export default function CountryDetail() {
                         {project.title}
                       </Link>
                       <div className="research-record-meta">
-                        <span>{project.leadOrganisation}</span>
+                        {institutionSlug ? (
+                          <Link
+                            className="institution-link"
+                            to={`/institution/${institutionSlug}`}
+                          >
+                            {project.leadOrganisation}
+                          </Link>
+                        ) : (
+                          <span>{project.leadOrganisation}</span>
+                        )}
                         <span>
                           {(project.startDate || project.lastVerifiedAt || "").slice(0, 10) ||
                             "Not recorded"}

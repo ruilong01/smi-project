@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import { getTopicSlug } from "../data/topicData.js";
 import {
+  getInstitutionSlugForName,
   getProjectsForCountry,
   getTopicNameForCategory,
 } from "../data/researchProjectData.js";
@@ -22,30 +23,29 @@ import {
 
 const RESEARCH_RECORDS_PREVIEW_COUNT = 6;
 
-function CompactList({ items }) {
-  return (
-    <ul className="profile-list">
-      {items.map((item) => (
-        <li key={item}>{item}</li>
-      ))}
-    </ul>
-  );
-}
-
 function InstitutionList({ institutions, recordCounts }) {
   return (
     <ul className="profile-list">
-      {institutions.map((name) => (
-        <li key={name}>
-          {name}
-          {recordCounts.get(name) ? (
-            <span className="profile-list-count">
-              {recordCounts.get(name)} record
-              {recordCounts.get(name) === 1 ? "" : "s"}
-            </span>
-          ) : null}
-        </li>
-      ))}
+      {institutions.map((name) => {
+        const institutionSlug = getInstitutionSlugForName(name);
+        return (
+          <li key={name}>
+            {institutionSlug ? (
+              <Link className="institution-link" to={`/institution/${institutionSlug}`}>
+                {name}
+              </Link>
+            ) : (
+              name
+            )}
+            {recordCounts.get(name) ? (
+              <span className="profile-list-count">
+                {recordCounts.get(name)} record
+                {recordCounts.get(name) === 1 ? "" : "s"}
+              </span>
+            ) : null}
+          </li>
+        );
+      })}
     </ul>
   );
 }
@@ -59,6 +59,7 @@ function compactDate(value) {
 
 function ResearchRecordRow({ project }) {
   const topicSlug = getTopicSlug(getTopicNameForCategory(project.researchCategories?.[0]));
+  const institutionSlug = getInstitutionSlugForName(project.leadOrganisation);
 
   return (
     <li className="research-record-row">
@@ -67,7 +68,13 @@ function ResearchRecordRow({ project }) {
           {project.title}
         </Link>
         <div className="research-record-meta">
-          <span>{project.leadOrganisation}</span>
+          {institutionSlug ? (
+            <Link className="institution-link" to={`/institution/${institutionSlug}`}>
+              {project.leadOrganisation}
+            </Link>
+          ) : (
+            <span>{project.leadOrganisation}</span>
+          )}
           <span>{compactDate(project.startDate || project.lastVerifiedAt)}</span>
           <span>{project.extractionMethod}</span>
         </div>

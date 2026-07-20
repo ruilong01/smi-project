@@ -14,6 +14,7 @@ import TechnologyCard from "../components/TechnologyCard.jsx";
 import Timeline from "../components/Timeline.jsx";
 import {
   getResearchProjectBySlug,
+  getInstitutionSlugForName,
   getRelationshipEntityLabel,
   getRelationshipEvidenceSources,
   getRelationshipsForProject,
@@ -279,12 +280,14 @@ export default function ProjectDetail() {
             <OrganisationCard
               name={project.leadOrganisation}
               role="Lead institution"
+              slug={getInstitutionSlugForName(project.leadOrganisation)}
             />
             {(project.partnerOrganisations ?? []).map((organisation) => (
               <OrganisationCard
                 key={organisation}
                 name={organisation}
                 role="Research partner"
+                slug={getInstitutionSlugForName(organisation)}
               />
             ))}
           </div>

@@ -1,6 +1,7 @@
 import { Building2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
-export default function OrganisationCard({ name, role }) {
+export default function OrganisationCard({ name, role, slug }) {
   return (
     <article className="organisation-card">
       <span>
@@ -8,7 +9,15 @@ export default function OrganisationCard({ name, role }) {
       </span>
       <div>
         <p className="eyebrow">{role}</p>
-        <h3>{name}</h3>
+        {slug ? (
+          <h3>
+            <Link className="institution-link" to={`/institution/${slug}`}>
+              {name}
+            </Link>
+          </h3>
+        ) : (
+          <h3>{name}</h3>
+        )}
       </div>
     </article>
   );

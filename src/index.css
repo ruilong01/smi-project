@@ -943,6 +943,21 @@ h1 {
   background: rgba(25, 199, 184, 0.15);
 }
 
+.institution-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(95, 255, 224, 0.35);
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.institution-link:hover,
+.institution-link:focus-visible {
+  color: var(--smi-teal);
+  text-decoration-color: var(--smi-teal);
+  outline: none;
+}
+
 .popup-entry:hover,
 .popup-entry.active {
   border-color: rgba(95, 255, 224, 0.58);

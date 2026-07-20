@@ -14,6 +14,7 @@ import {
 import { Link, useParams } from "react-router-dom";
 import {
   countryMatchesTopicFilter,
+  getInstitutionSlugForName,
   getLiveDataStatusLabel,
   liveResearchCountries,
   projectMatchesTopicFilter,
@@ -53,15 +54,26 @@ function TopicReferenceGrid({ items, label, topic }) {
 
   return (
     <div className="topic-reference-grid">
-      {items.map((item) => (
-        <article className="topic-reference-card" key={item}>
-          <span>{label}</span>
-          <strong>{item}</strong>
-          <Link className="topic-mini-link" to={`/topic/${topic.slug}`}>
-            {topic.name}
-          </Link>
-        </article>
-      ))}
+      {items.map((item) => {
+        const institutionSlug = getInstitutionSlugForName(item);
+        return (
+          <article className="topic-reference-card" key={item}>
+            <span>{label}</span>
+            {institutionSlug ? (
+              <strong>
+                <Link className="institution-link" to={`/institution/${institutionSlug}`}>
+                  {item}
+                </Link>
+              </strong>
+            ) : (
+              <strong>{item}</strong>
+            )}
+            <Link className="topic-mini-link" to={`/topic/${topic.slug}`}>
+              {topic.name}
+            </Link>
+          </article>
+        );
+      })}
     </div>
   );
 }

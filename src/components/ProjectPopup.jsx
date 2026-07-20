@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Database, MapPin, ShieldCheck, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getInstitutionSlugForName } from "../data/researchProjectData.js";
 import { getSourcesForProject } from "../data/sourceRegistry.js";
 
 function getSourceIndicator(sources) {
@@ -32,6 +33,7 @@ export default function ProjectPopup({
   }
 
   const sources = getSourcesForProject(project);
+  const institutionSlug = getInstitutionSlugForName(project.leadOrganisation);
   const popupStyle = position
     ? {
         left: `${position.x}%`,
@@ -80,7 +82,17 @@ export default function ProjectPopup({
 
       <section className="popup-evidence-block">
         <h3>Lead organisation</h3>
-        <p>{project.leadOrganisation}</p>
+        {institutionSlug ? (
+          <Link
+            className="institution-link"
+            onClick={onInteractionEnd}
+            to={`/institution/${institutionSlug}`}
+          >
+            {project.leadOrganisation}
+          </Link>
+        ) : (
+          <p>{project.leadOrganisation}</p>
+        )}
       </section>
 
       <section className="popup-evidence-block">
