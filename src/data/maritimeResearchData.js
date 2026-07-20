@@ -2,9 +2,6 @@ export const DATA_UPDATED_UNTIL = "2026-07-02";
 
 export const DATA_STATUS = "Prototype demo data - source verification pending.";
 
-export const DEMO_DATA_LABEL =
-  `Prototype demo data - source verification pending. Data updated until: ${DATA_UPDATED_UNTIL}.`;
-
 export const filters = [
   "All",
   "Green Shipping",

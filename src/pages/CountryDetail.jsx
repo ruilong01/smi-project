@@ -9,19 +9,20 @@ import {
   Ship,
 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
+import { useMemo } from "react";
 import SourceCard from "../components/SourceCard.jsx";
+import InstitutionLink from "../components/InstitutionLink.jsx";
+import TopicTag from "../components/TopicTag.jsx";
+import ResearchRecordList from "../components/ResearchRecordRow.jsx";
 import {
   formatRelationType,
   getCountryBySlug,
-  getInstitutionSlugForName,
   getLiveDataStatusLabel,
   getProjectsForCountry,
   getRelationshipEvidenceSources,
   getResearchProjectById,
-  getTopicNameForCategory,
 } from "../data/researchProjectData.js";
 import { getSourcesByIds } from "../data/sourceRegistry.js";
-import { getTopicSlug } from "../data/topicData.js";
 import {
   getIntensityColor,
   getIntensityLabel,
@@ -68,6 +69,23 @@ export default function CountryDetail() {
   const { slug } = useParams();
   const country = getCountryBySlug(slug);
 
+  const { countryProjects, institutionRecordCounts, sources } = useMemo(() => {
+    if (!country) {
+      return { countryProjects: [], institutionRecordCounts: new Map(), sources: [] };
+    }
+    const projects = getProjectsForCountry(country.name);
+    const counts = new Map();
+    projects.forEach((project) => {
+      if (!project.leadOrganisation) return;
+      counts.set(project.leadOrganisation, (counts.get(project.leadOrganisation) ?? 0) + 1);
+    });
+    return {
+      countryProjects: projects,
+      institutionRecordCounts: counts,
+      sources: getSourcesByIds(country.sources ?? []),
+    };
+  }, [country]);
+
   if (!country) {
     return (
       <main className="detail-shell">
@@ -83,17 +101,6 @@ export default function CountryDetail() {
       </main>
     );
   }
-
-  const countryProjects = getProjectsForCountry(country.name);
-  const sources = getSourcesByIds(country.sources ?? []);
-  const institutionRecordCounts = new Map();
-  countryProjects.forEach((project) => {
-    if (!project.leadOrganisation) return;
-    institutionRecordCounts.set(
-      project.leadOrganisation,
-      (institutionRecordCounts.get(project.leadOrganisation) ?? 0) + 1
-    );
-  });
 
   return (
     <main className="detail-shell">
@@ -163,22 +170,9 @@ export default function CountryDetail() {
             Key Maritime Research Themes
           </h2>
           <div className="tag-list">
-            {(country.themes ?? []).map((theme) => {
-              const topicSlug = getTopicSlug(getTopicNameForCategory(theme));
-              return topicSlug ? (
-                <Link
-                  className="tag topic-link"
-                  key={theme}
-                  to={`/topic/${topicSlug}`}
-                >
-                  {theme}
-                </Link>
-              ) : (
-                <span className="tag" key={theme}>
-                  {theme}
-                </span>
-              );
-            })}
+            {(country.themes ?? []).map((theme) => (
+              <TopicTag category={theme} key={theme} />
+            ))}
           </div>
         </article>
 
@@ -189,27 +183,18 @@ export default function CountryDetail() {
           </h2>
           {country.institutions?.length ? (
             <ul className="detail-list">
-              {country.institutions.map((name) => {
-                const institutionSlug = getInstitutionSlugForName(name);
-                return (
-                  <li key={name}>
-                    {institutionSlug ? (
-                      <Link className="institution-link" to={`/institution/${institutionSlug}`}>
-                        {name}
-                      </Link>
-                    ) : (
-                      name
-                    )}
-                    {institutionRecordCounts.get(name) ? (
-                      <span className="profile-list-count">
-                        {" "}
-                        ({institutionRecordCounts.get(name)} record
-                        {institutionRecordCounts.get(name) === 1 ? "" : "s"})
-                      </span>
-                    ) : null}
-                  </li>
-                );
-              })}
+              {country.institutions.map((name) => (
+                <li key={name}>
+                  <InstitutionLink name={name} />
+                  {institutionRecordCounts.get(name) ? (
+                    <span className="profile-list-count">
+                      {" "}
+                      ({institutionRecordCounts.get(name)} record
+                      {institutionRecordCounts.get(name) === 1 ? "" : "s"})
+                    </span>
+                  ) : null}
+                </li>
+              ))}
             </ul>
           ) : (
             <p className="source-empty">No extracted records yet.</p>
@@ -221,55 +206,7 @@ export default function CountryDetail() {
             <FlaskConical size={20} />
             Research Records ({countryProjects.length})
           </h2>
-          {countryProjects.length ? (
-            <ul className="research-record-list">
-              {countryProjects.map((project) => {
-                const topicSlug = getTopicSlug(
-                  getTopicNameForCategory(project.researchCategories?.[0])
-                );
-                const institutionSlug = getInstitutionSlugForName(project.leadOrganisation);
-                return (
-                  <li className="research-record-row" key={project.id}>
-                    <div className="research-record-main">
-                      <Link
-                        className="research-record-title"
-                        to={`/projects/${project.slug}`}
-                      >
-                        {project.title}
-                      </Link>
-                      <div className="research-record-meta">
-                        {institutionSlug ? (
-                          <Link
-                            className="institution-link"
-                            to={`/institution/${institutionSlug}`}
-                          >
-                            {project.leadOrganisation}
-                          </Link>
-                        ) : (
-                          <span>{project.leadOrganisation}</span>
-                        )}
-                        <span>
-                          {(project.startDate || project.lastVerifiedAt || "").slice(0, 10) ||
-                            "Not recorded"}
-                        </span>
-                        <span>{project.extractionMethod}</span>
-                      </div>
-                    </div>
-                    {topicSlug ? (
-                      <Link
-                        className="tag topic-link research-record-topic"
-                        to={`/topic/${topicSlug}`}
-                      >
-                        {project.researchCategories[0]}
-                      </Link>
-                    ) : null}
-                  </li>
-                );
-              })}
-            </ul>
-          ) : (
-            <p className="source-empty">No extracted records yet.</p>
-          )}
+          <ResearchRecordList projects={countryProjects} />
         </article>
 
         <article className="detail-card wide ai-detail">

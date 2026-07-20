@@ -14,7 +14,6 @@ import {
 import { Link, useParams } from "react-router-dom";
 import {
   countryMatchesTopicFilter,
-  getInstitutionSlugForName,
   getLiveDataStatusLabel,
   liveResearchCountries,
   projectMatchesTopicFilter,
@@ -24,6 +23,7 @@ import {
   getTopicBySlug,
   topicData,
 } from "../data/topicData.js";
+import InstitutionLink from "../components/InstitutionLink.jsx";
 
 const topicIcons = {
   leaf: Leaf,
@@ -55,19 +55,12 @@ function TopicReferenceGrid({ items, label, topic }) {
   return (
     <div className="topic-reference-grid">
       {items.map((item) => {
-        const institutionSlug = getInstitutionSlugForName(item);
         return (
           <article className="topic-reference-card" key={item}>
             <span>{label}</span>
-            {institutionSlug ? (
-              <strong>
-                <Link className="institution-link" to={`/institution/${institutionSlug}`}>
-                  {item}
-                </Link>
-              </strong>
-            ) : (
-              <strong>{item}</strong>
-            )}
+            <strong>
+              <InstitutionLink name={item} />
+            </strong>
             <Link className="topic-mini-link" to={`/topic/${topic.slug}`}>
               {topic.name}
             </Link>

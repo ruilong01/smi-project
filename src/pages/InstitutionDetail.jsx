@@ -11,52 +11,9 @@ import {
   getInstitutionBySlug,
   getLiveDataStatusLabel,
   getProjectsForInstitution,
-  getTopicNameForCategory,
 } from "../data/researchProjectData.js";
-import { getTopicSlug } from "../data/topicData.js";
 import { isValidExternalUrl } from "../utils/url.js";
-
-function ResearchRecordList({ projects, role, emptyText }) {
-  if (!projects.length) {
-    return <p className="source-empty">{emptyText}</p>;
-  }
-
-  return (
-    <ul className="research-record-list">
-      {projects.map((project) => {
-        const topicSlug = getTopicSlug(
-          getTopicNameForCategory(project.researchCategories?.[0])
-        );
-
-        return (
-          <li className="research-record-row" key={project.id}>
-            <div className="research-record-main">
-              <Link className="research-record-title" to={`/projects/${project.slug}`}>
-                {project.title}
-              </Link>
-              <div className="research-record-meta">
-                <span>{project.country}</span>
-                <span>
-                  {(project.startDate || project.lastVerifiedAt || "").slice(0, 10) ||
-                    "Not recorded"}
-                </span>
-                {role ? <span>{role}</span> : null}
-              </div>
-            </div>
-            {topicSlug ? (
-              <Link
-                className="tag topic-link research-record-topic"
-                to={`/topic/${topicSlug}`}
-              >
-                {project.researchCategories[0]}
-              </Link>
-            ) : null}
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
+import ResearchRecordList from "../components/ResearchRecordRow.jsx";
 
 export default function InstitutionDetail() {
   const { slug } = useParams();
@@ -147,7 +104,8 @@ export default function InstitutionDetail() {
           </h2>
           <ResearchRecordList
             projects={led}
-            role="Lead"
+            showInstitution={false}
+            extraLabel="Lead"
             emptyText="No records where this institution leads yet."
           />
         </article>
@@ -159,7 +117,8 @@ export default function InstitutionDetail() {
           </h2>
           <ResearchRecordList
             projects={partnered}
-            role="Partner"
+            showInstitution={false}
+            extraLabel="Partner"
             emptyText="No records where this institution is a partner yet."
           />
         </article>

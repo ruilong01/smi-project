@@ -288,6 +288,17 @@ export default function WorldMap({
     return new Map(countries.map((country) => [country.code, country]));
   }, [countries]);
 
+  // Filters out projects with no distinct location (see
+  // hasDistinctProjectLocation above) so they don't get a redundant marker
+  // stacked on their country's own marker. Memoized because WorldMap
+  // re-renders on every hover/drag/popup state change, not just when
+  // `projects` itself changes.
+  const visibleProjects = useMemo(() => {
+    return projects.filter((project) =>
+      hasDistinctProjectLocation(project, countriesByCode.get(project.countryCode))
+    );
+  }, [projects, countriesByCode]);
+
   useEffect(() => {
     const reducedMotionQuery = window.matchMedia?.("(prefers-reduced-motion: reduce)");
     if (reducedMotionQuery?.matches) {
@@ -1255,14 +1266,7 @@ export default function WorldMap({
           </g>
 
           <g className="project-marker-layer">
-            {projects
-              .filter((project) =>
-                hasDistinctProjectLocation(
-                  project,
-                  countriesByCode.get(project.countryCode)
-                )
-              )
-              .map((project) => {
+            {visibleProjects.map((project) => {
               const isThemeMatch = projectMatchesTopicFilter(project, activeFilter);
               const isSelected = popupProject?.id === project.id;
               const coordinates = getProjectCoordinates(project);

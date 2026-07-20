@@ -10,12 +10,11 @@ import {
   X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { getTopicSlug } from "../data/topicData.js";
-import {
-  getInstitutionSlugForName,
-  getProjectsForCountry,
-  getTopicNameForCategory,
-} from "../data/researchProjectData.js";
+import { useMemo } from "react";
+import { getProjectsForCountry } from "../data/researchProjectData.js";
+import InstitutionLink from "./InstitutionLink.jsx";
+import TopicTag from "./TopicTag.jsx";
+import ResearchRecordList from "./ResearchRecordRow.jsx";
 import {
   getIntensityColor,
   getIntensityLabel,
@@ -26,78 +25,31 @@ const RESEARCH_RECORDS_PREVIEW_COUNT = 6;
 function InstitutionList({ institutions, recordCounts }) {
   return (
     <ul className="profile-list">
-      {institutions.map((name) => {
-        const institutionSlug = getInstitutionSlugForName(name);
-        return (
-          <li key={name}>
-            {institutionSlug ? (
-              <Link className="institution-link" to={`/institution/${institutionSlug}`}>
-                {name}
-              </Link>
-            ) : (
-              name
-            )}
-            {recordCounts.get(name) ? (
-              <span className="profile-list-count">
-                {recordCounts.get(name)} record
-                {recordCounts.get(name) === 1 ? "" : "s"}
-              </span>
-            ) : null}
-          </li>
-        );
-      })}
+      {institutions.map((name) => (
+        <li key={name}>
+          <InstitutionLink name={name} />
+          {recordCounts.get(name) ? (
+            <span className="profile-list-count">
+              {recordCounts.get(name)} record
+              {recordCounts.get(name) === 1 ? "" : "s"}
+            </span>
+          ) : null}
+        </li>
+      ))}
     </ul>
   );
 }
 
-function compactDate(value) {
-  if (!value) {
-    return "Not recorded";
-  }
-  return String(value).slice(0, 10);
-}
-
-function ResearchRecordRow({ project }) {
-  const topicSlug = getTopicSlug(getTopicNameForCategory(project.researchCategories?.[0]));
-  const institutionSlug = getInstitutionSlugForName(project.leadOrganisation);
-
-  return (
-    <li className="research-record-row">
-      <div className="research-record-main">
-        <Link className="research-record-title" to={`/projects/${project.slug}`}>
-          {project.title}
-        </Link>
-        <div className="research-record-meta">
-          {institutionSlug ? (
-            <Link className="institution-link" to={`/institution/${institutionSlug}`}>
-              {project.leadOrganisation}
-            </Link>
-          ) : (
-            <span>{project.leadOrganisation}</span>
-          )}
-          <span>{compactDate(project.startDate || project.lastVerifiedAt)}</span>
-          <span>{project.extractionMethod}</span>
-        </div>
-      </div>
-      {topicSlug ? (
-        <Link className="tag topic-link research-record-topic" to={`/topic/${topicSlug}`}>
-          {project.researchCategories[0]}
-        </Link>
-      ) : null}
-    </li>
-  );
-}
-
 export default function CountryProfilePanel({ country, onClose }) {
-  const countryProjects = country ? getProjectsForCountry(country.name) : [];
-  const institutionRecordCounts = new Map();
-  countryProjects.forEach((project) => {
-    if (!project.leadOrganisation) return;
-    institutionRecordCounts.set(
-      project.leadOrganisation,
-      (institutionRecordCounts.get(project.leadOrganisation) ?? 0) + 1
-    );
-  });
+  const { countryProjects, institutionRecordCounts } = useMemo(() => {
+    const projects = country ? getProjectsForCountry(country.name) : [];
+    const counts = new Map();
+    projects.forEach((project) => {
+      if (!project.leadOrganisation) return;
+      counts.set(project.leadOrganisation, (counts.get(project.leadOrganisation) ?? 0) + 1);
+    });
+    return { countryProjects: projects, institutionRecordCounts: counts };
+  }, [country]);
 
   return (
     <AnimatePresence>
@@ -169,22 +121,9 @@ export default function CountryProfilePanel({ country, onClose }) {
               Top Maritime Themes
             </h3>
             <div className="tag-list">
-              {country.themes.map((theme) => {
-                const topicSlug = getTopicSlug(getTopicNameForCategory(theme));
-                return topicSlug ? (
-                  <Link
-                    className="tag topic-link"
-                    key={theme}
-                    to={`/topic/${topicSlug}`}
-                  >
-                    {theme}
-                  </Link>
-                ) : (
-                  <span className="tag" key={theme}>
-                    {theme}
-                  </span>
-                );
-              })}
+              {country.themes.map((theme) => (
+                <TopicTag category={theme} key={theme} />
+              ))}
             </div>
           </section>
 
@@ -204,17 +143,7 @@ export default function CountryProfilePanel({ country, onClose }) {
               <FlaskConical size={17} />
               Research Records ({countryProjects.length})
             </summary>
-            {countryProjects.length ? (
-              <ul className="research-record-list">
-                {countryProjects
-                  .slice(0, RESEARCH_RECORDS_PREVIEW_COUNT)
-                  .map((project) => (
-                    <ResearchRecordRow key={project.id} project={project} />
-                  ))}
-              </ul>
-            ) : (
-              <p className="source-empty">No extracted records yet.</p>
-            )}
+            <ResearchRecordList projects={countryProjects.slice(0, RESEARCH_RECORDS_PREVIEW_COUNT)} />
             <Link
               className="profile-view-all-link"
               to={`/country/${country.slug}#research-records`}

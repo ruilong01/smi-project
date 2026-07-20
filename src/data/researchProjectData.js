@@ -18,16 +18,6 @@ export function loadResearchData() {
   return researchDataset;
 }
 
-export const entityTypes = [
-  "PROJECT",
-  "ORGANISATION",
-  "RESEARCH_PAPER",
-  "PATENT",
-  "RESEARCH_FACILITY",
-  "POLICY_OR_ROADMAP",
-  "TRIAL_OR_DEMONSTRATION",
-];
-
 export const maritimeResearchCategories = [
   "Autonomous port operations",
   "Alternative energy and fuels",
