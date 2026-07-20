@@ -1,10 +1,29 @@
-import { ArrowLeft, Clock3, Database, RefreshCw, ShieldCheck } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  Building2,
+  Clock3,
+  Database,
+  ExternalLink,
+  Landmark,
+  Link2,
+  RefreshCw,
+  ShieldCheck,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   extractionRuns,
   liveResearchMeta,
   liveResearchSources,
 } from "../data/researchProjectData.js";
+import { getSourceAdapterMeta } from "../data/sourceRegistry.js";
+
+const SOURCE_ICONS = {
+  BookOpen,
+  Link2,
+  Building2,
+  Landmark,
+};
 
 function formatDateTime(value) {
   if (!value) {
