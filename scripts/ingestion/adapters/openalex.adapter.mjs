@@ -38,7 +38,7 @@ export async function fetchOpenAlexRecords() {
     try {
       const url = new URL("https://api.openalex.org/works");
       url.searchParams.set("search", query);
-      url.searchParams.set("per-page", "8");
+      url.searchParams.set("per-page", "25");
       url.searchParams.set("filter", "from_publication_date:2023-01-01");
       url.searchParams.set("mailto", EMAIL);
 
