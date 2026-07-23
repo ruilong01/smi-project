@@ -27,6 +27,7 @@
     "triage:records": "node scripts/ingestion/triageRecords.mjs",
     "verify:display-eligibility": "node scripts/ingestion/verifyDisplayEligibility.mjs",
     "compare:records": "node scripts/ingestion/compareRecords.mjs",
+    "verify:incremental-comparison": "node scripts/ingestion/verifyIncrementalComparison.mjs",
     "fetch:global-updates": "node scripts/ingestion/fetchGlobalUpdates.mjs",
     "queue:enrichment": "node scripts/ingestion/queueEnrichment.mjs",
     "enrich:images": "node scripts/ingestion/enrichImages.mjs",

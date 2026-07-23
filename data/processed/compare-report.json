@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T05:13:07.704Z",
+  "generatedAt": "2026-07-23T08:28:23.749Z",
   "counts": {
     "unchanged": 329
   },
@@ -7,1647 +7,3292 @@
     {
       "recordId": "cordis-101138620",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101138620"
+      "matchedRecordId": "cordis-101138620",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "163015c51a644588975f2fbb",
+      "existingHash": "163015c51a644588975f2fbb"
     },
     {
       "recordId": "cordis-101138478",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101138478"
+      "matchedRecordId": "cordis-101138478",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d763c092a5e818df8e691a4d",
+      "existingHash": "d763c092a5e818df8e691a4d"
     },
     {
       "recordId": "cordis-101192583",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101192583"
+      "matchedRecordId": "cordis-101192583",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "1cdeedc16fc6ecde3e281ac0",
+      "existingHash": "1cdeedc16fc6ecde3e281ac0"
     },
     {
       "recordId": "cordis-101138411",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101138411"
+      "matchedRecordId": "cordis-101138411",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "6b4479b2dc360f8ab509f5fd",
+      "existingHash": "6b4479b2dc360f8ab509f5fd"
     },
     {
       "recordId": "cordis-101270016",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101270016"
+      "matchedRecordId": "cordis-101270016",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d535658f73d833fec225c7cc",
+      "existingHash": "d535658f73d833fec225c7cc"
     },
     {
       "recordId": "cordis-101189796",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101189796"
+      "matchedRecordId": "cordis-101189796",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "9d9679544e9121aeab82e320",
+      "existingHash": "9d9679544e9121aeab82e320"
     },
     {
       "recordId": "cordis-101136257",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101136257"
+      "matchedRecordId": "cordis-101136257",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "76c015cfe8276dc9e6de0fd9",
+      "existingHash": "76c015cfe8276dc9e6de0fd9"
     },
     {
       "recordId": "cordis-101056799",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101056799"
+      "matchedRecordId": "cordis-101056799",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "705353b82af7bf347d50974a",
+      "existingHash": "705353b82af7bf347d50974a"
     },
     {
       "recordId": "cordis-101096923",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101096923"
+      "matchedRecordId": "cordis-101096923",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b672d6c7235c4dab0d1ca741",
+      "existingHash": "b672d6c7235c4dab0d1ca741"
     },
     {
       "recordId": "cordis-101173002",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101173002"
+      "matchedRecordId": "cordis-101173002",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "bf329eec9d0afeebbbcdab9c",
+      "existingHash": "bf329eec9d0afeebbbcdab9c"
     },
     {
       "recordId": "cordis-101138583",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101138583"
+      "matchedRecordId": "cordis-101138583",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0e6905c9b7e6389605ce6e28",
+      "existingHash": "0e6905c9b7e6389605ce6e28"
     },
     {
       "recordId": "cordis-101271064",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101271064"
+      "matchedRecordId": "cordis-101271064",
+      "matchMethod": "cordisId",
+      "confidence": 100,
+      "reason": "Matched an existing record by cordisId with an identical content hash - nothing to re-process.",
+      "incomingHash": "c6d4bc85ee45c7c6544ae780",
+      "existingHash": "c6d4bc85ee45c7c6544ae780"
     },
     {
       "recordId": "cordis-101225772",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101225772"
+      "matchedRecordId": "cordis-101225772",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "27118bdda91487cd5571d28f",
+      "existingHash": "27118bdda91487cd5571d28f"
     },
     {
       "recordId": "cordis-101328431",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101328431"
+      "matchedRecordId": "cordis-101328431",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "15455b620f0ec80bd0db3724",
+      "existingHash": "15455b620f0ec80bd0db3724"
     },
     {
       "recordId": "cordis-101250260",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101250260"
+      "matchedRecordId": "cordis-101250260",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "548871f89efa668c47eaafc6",
+      "existingHash": "548871f89efa668c47eaafc6"
     },
     {
       "recordId": "cordis-101069828",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101069828"
+      "matchedRecordId": "cordis-101069828",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c85b94518c12087ce8341de3",
+      "existingHash": "c85b94518c12087ce8341de3"
     },
     {
       "recordId": "cordis-887927",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-887927"
+      "matchedRecordId": "cordis-887927",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5685d0a2ecebe4f71264686d",
+      "existingHash": "5685d0a2ecebe4f71264686d"
     },
     {
       "recordId": "cordis-101236476",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101236476"
+      "matchedRecordId": "cordis-101236476",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "52ba068f2cdd4d6974e96166",
+      "existingHash": "52ba068f2cdd4d6974e96166"
     },
     {
       "recordId": "cordis-955413",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-955413"
+      "matchedRecordId": "cordis-955413",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b04ab31a595414985dcd63c8",
+      "existingHash": "b04ab31a595414985dcd63c8"
     },
     {
       "recordId": "cordis-101136349",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101136349"
+      "matchedRecordId": "cordis-101136349",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d6ebf0f0728352ef28932826",
+      "existingHash": "d6ebf0f0728352ef28932826"
     },
     {
       "recordId": "cordis-101096487",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101096487"
+      "matchedRecordId": "cordis-101096487",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "e64e7e415b0e0aa6efe3d784",
+      "existingHash": "e64e7e415b0e0aa6efe3d784"
     },
     {
       "recordId": "cordis-101121129",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101121129"
+      "matchedRecordId": "cordis-101121129",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f0d1edc8826ce5ec4dcb6509",
+      "existingHash": "f0d1edc8826ce5ec4dcb6509"
     },
     {
       "recordId": "cordis-101296556",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101296556"
+      "matchedRecordId": "cordis-101296556",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "2c37a66ac5312466753a1c24",
+      "existingHash": "2c37a66ac5312466753a1c24"
     },
     {
       "recordId": "cordis-101096224",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101096224"
+      "matchedRecordId": "cordis-101096224",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c472edcb2d1401cb3f51b59a",
+      "existingHash": "c472edcb2d1401cb3f51b59a"
     },
     {
       "recordId": "cordis-101272708",
       "classification": "unchanged",
-      "matchedRecordId": "cordis-101272708"
+      "matchedRecordId": "cordis-101272708",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5fb518d86883c33f22b0eff6",
+      "existingHash": "5fb518d86883c33f22b0eff6"
     },
     {
       "recordId": "openalex-https-openalex-org-w4388551166",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4388551166"
+      "matchedRecordId": "openalex-https-openalex-org-w4388551166",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "eb25bd237c370c12e9b89441",
+      "existingHash": "eb25bd237c370c12e9b89441"
     },
     {
       "recordId": "openalex-https-openalex-org-w3155205771",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3155205771"
+      "matchedRecordId": "openalex-https-openalex-org-w3155205771",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "683ffba255beb937a8668a98",
+      "existingHash": "683ffba255beb937a8668a98"
     },
     {
       "recordId": "openalex-https-openalex-org-w4376597726",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4376597726"
+      "matchedRecordId": "openalex-https-openalex-org-w4376597726",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d271eb19581e7fac56220800",
+      "existingHash": "d271eb19581e7fac56220800"
     },
     {
       "recordId": "openalex-https-openalex-org-w3117037508",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3117037508"
+      "matchedRecordId": "openalex-https-openalex-org-w3117037508",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "86cff5b2862c15703bf4f24c",
+      "existingHash": "86cff5b2862c15703bf4f24c"
     },
     {
       "recordId": "openalex-https-openalex-org-w3093547115",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3093547115"
+      "matchedRecordId": "openalex-https-openalex-org-w3093547115",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "34ebbf14bd53cbe6023562d3",
+      "existingHash": "34ebbf14bd53cbe6023562d3"
     },
     {
       "recordId": "openalex-https-openalex-org-w3016994415",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3016994415"
+      "matchedRecordId": "openalex-https-openalex-org-w3016994415",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "2367ca8b13dd8a6fed70dc5d",
+      "existingHash": "2367ca8b13dd8a6fed70dc5d"
     },
     {
       "recordId": "openalex-https-openalex-org-w3038723752",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3038723752"
+      "matchedRecordId": "openalex-https-openalex-org-w3038723752",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "9f5d02ca48e9302a1a2105b4",
+      "existingHash": "9f5d02ca48e9302a1a2105b4"
     },
     {
       "recordId": "openalex-https-openalex-org-w3161725877",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3161725877"
+      "matchedRecordId": "openalex-https-openalex-org-w3161725877",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "678a2f4116efc0373f218639",
+      "existingHash": "678a2f4116efc0373f218639"
     },
     {
       "recordId": "openalex-https-openalex-org-w4401582571",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4401582571"
+      "matchedRecordId": "openalex-https-openalex-org-w4401582571",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "cb6fa93b61e3e4dfd5468c5a",
+      "existingHash": "cb6fa93b61e3e4dfd5468c5a"
     },
     {
       "recordId": "openalex-https-openalex-org-w4400493457",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4400493457"
+      "matchedRecordId": "openalex-https-openalex-org-w4400493457",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5bd050e1f9eb72c605eb4018",
+      "existingHash": "5bd050e1f9eb72c605eb4018"
     },
     {
       "recordId": "openalex-https-openalex-org-w4391090797",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4391090797"
+      "matchedRecordId": "openalex-https-openalex-org-w4391090797",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "6deb4bcc3ae94cf06e6ed679",
+      "existingHash": "6deb4bcc3ae94cf06e6ed679"
     },
     {
       "recordId": "openalex-https-openalex-org-w3204034991",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3204034991"
+      "matchedRecordId": "openalex-https-openalex-org-w3204034991",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b8fe5cb87d2065f6d9f26e2a",
+      "existingHash": "b8fe5cb87d2065f6d9f26e2a"
     },
     {
       "recordId": "openalex-https-openalex-org-w4200075150",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4200075150"
+      "matchedRecordId": "openalex-https-openalex-org-w4200075150",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "fefa643537770bfd54611777",
+      "existingHash": "fefa643537770bfd54611777"
     },
     {
       "recordId": "openalex-https-openalex-org-w4381855955",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4381855955"
+      "matchedRecordId": "openalex-https-openalex-org-w4381855955",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "9b44fcf994e069da44d213c3",
+      "existingHash": "9b44fcf994e069da44d213c3"
     },
     {
       "recordId": "openalex-https-openalex-org-w4210821094",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4210821094"
+      "matchedRecordId": "openalex-https-openalex-org-w4210821094",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "afce07f5006ed7872d87b5f8",
+      "existingHash": "afce07f5006ed7872d87b5f8"
     },
     {
       "recordId": "openalex-https-openalex-org-w4382358215",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4382358215"
+      "matchedRecordId": "openalex-https-openalex-org-w4382358215",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a3b65bd384266302d18d7b5c",
+      "existingHash": "a3b65bd384266302d18d7b5c"
     },
     {
       "recordId": "openalex-https-openalex-org-w4293010200",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4293010200"
+      "matchedRecordId": "openalex-https-openalex-org-w4293010200",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d37986f52a579f081055c57f",
+      "existingHash": "d37986f52a579f081055c57f"
     },
     {
       "recordId": "openalex-https-openalex-org-w4304585218",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4304585218"
+      "matchedRecordId": "openalex-https-openalex-org-w4304585218",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "bec02a9cdbc98e65e02c167c",
+      "existingHash": "bec02a9cdbc98e65e02c167c"
     },
     {
       "recordId": "openalex-https-openalex-org-w4362614467",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4362614467"
+      "matchedRecordId": "openalex-https-openalex-org-w4362614467",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b4e1db4068a5cbeb3e9b6c54",
+      "existingHash": "b4e1db4068a5cbeb3e9b6c54"
     },
     {
       "recordId": "openalex-https-openalex-org-w4381885538",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4381885538"
+      "matchedRecordId": "openalex-https-openalex-org-w4381885538",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "ae81c0fb27ee4106cf2baedb",
+      "existingHash": "ae81c0fb27ee4106cf2baedb"
     },
     {
       "recordId": "openalex-https-openalex-org-w4309542870",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4309542870"
+      "matchedRecordId": "openalex-https-openalex-org-w4309542870",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f0e76296d4d9f6b3a638644d",
+      "existingHash": "f0e76296d4d9f6b3a638644d"
     },
     {
       "recordId": "openalex-https-openalex-org-w4220821975",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4220821975"
+      "matchedRecordId": "openalex-https-openalex-org-w4220821975",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "51e5ffd18a803ff45454eb97",
+      "existingHash": "51e5ffd18a803ff45454eb97"
     },
     {
       "recordId": "openalex-https-openalex-org-w4390861587",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4390861587"
+      "matchedRecordId": "openalex-https-openalex-org-w4390861587",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "313aac202ed2a46dd327d42b",
+      "existingHash": "313aac202ed2a46dd327d42b"
     },
     {
       "recordId": "openalex-https-openalex-org-w3124518435",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3124518435"
+      "matchedRecordId": "openalex-https-openalex-org-w3124518435",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0a1e7149b62e42e17fb3d918",
+      "existingHash": "0a1e7149b62e42e17fb3d918"
     },
     {
       "recordId": "openalex-https-openalex-org-w4400227989",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4400227989"
+      "matchedRecordId": "openalex-https-openalex-org-w4400227989",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "05877fe245f1d977e3dbd453",
+      "existingHash": "05877fe245f1d977e3dbd453"
     },
     {
       "recordId": "openalex-https-openalex-org-w3122164608",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3122164608"
+      "matchedRecordId": "openalex-https-openalex-org-w3122164608",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "792167404587fa818d4f1495",
+      "existingHash": "792167404587fa818d4f1495"
     },
     {
       "recordId": "openalex-https-openalex-org-w3136464795",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3136464795"
+      "matchedRecordId": "openalex-https-openalex-org-w3136464795",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4d0738543fc62fbe93026f43",
+      "existingHash": "4d0738543fc62fbe93026f43"
     },
     {
       "recordId": "openalex-https-openalex-org-w4225300209",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4225300209"
+      "matchedRecordId": "openalex-https-openalex-org-w4225300209",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "755377604f22fcd6e222026c",
+      "existingHash": "755377604f22fcd6e222026c"
     },
     {
       "recordId": "openalex-https-openalex-org-w4386891308",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4386891308"
+      "matchedRecordId": "openalex-https-openalex-org-w4386891308",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "93c97b5c6fc410674e274db3",
+      "existingHash": "93c97b5c6fc410674e274db3"
     },
     {
       "recordId": "openalex-https-openalex-org-w4391839668",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4391839668"
+      "matchedRecordId": "openalex-https-openalex-org-w4391839668",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "69ab711a0e83852b6299a8d2",
+      "existingHash": "69ab711a0e83852b6299a8d2"
     },
     {
       "recordId": "openalex-https-openalex-org-w3206792527",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3206792527"
+      "matchedRecordId": "openalex-https-openalex-org-w3206792527",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "6f1e7c164d9b95b2c28786f1",
+      "existingHash": "6f1e7c164d9b95b2c28786f1"
     },
     {
       "recordId": "openalex-https-openalex-org-w4390517607",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4390517607"
+      "matchedRecordId": "openalex-https-openalex-org-w4390517607",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d226b5209178de28aeb9a770",
+      "existingHash": "d226b5209178de28aeb9a770"
     },
     {
       "recordId": "openalex-https-openalex-org-w3156539977",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3156539977"
+      "matchedRecordId": "openalex-https-openalex-org-w3156539977",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "7bcc0b82666b4152329f16e2",
+      "existingHash": "7bcc0b82666b4152329f16e2"
     },
     {
       "recordId": "openalex-https-openalex-org-w2964013661",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2964013661"
+      "matchedRecordId": "openalex-https-openalex-org-w2964013661",
+      "matchMethod": "openAlexId",
+      "confidence": 100,
+      "reason": "Matched an existing record by openAlexId with an identical content hash - nothing to re-process.",
+      "incomingHash": "723e978a8ba576e6d7ebbb54",
+      "existingHash": "723e978a8ba576e6d7ebbb54"
     },
     {
       "recordId": "openalex-https-openalex-org-w3177468118",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3177468118"
+      "matchedRecordId": "openalex-https-openalex-org-w3177468118",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "e6781e3b163ffd2dccc5217b",
+      "existingHash": "e6781e3b163ffd2dccc5217b"
     },
     {
       "recordId": "openalex-https-openalex-org-w4318473692",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4318473692"
+      "matchedRecordId": "openalex-https-openalex-org-w4318473692",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "efaf35cea12bb8b720b254f9",
+      "existingHash": "efaf35cea12bb8b720b254f9"
     },
     {
       "recordId": "openalex-https-openalex-org-w4394807657",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4394807657"
+      "matchedRecordId": "openalex-https-openalex-org-w4394807657",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f544fbad125dcedc640ee33a",
+      "existingHash": "f544fbad125dcedc640ee33a"
     },
     {
       "recordId": "openalex-https-openalex-org-w4403215665",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4403215665"
+      "matchedRecordId": "openalex-https-openalex-org-w4403215665",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5a42b6ab1f9706c0f28db159",
+      "existingHash": "5a42b6ab1f9706c0f28db159"
     },
     {
       "recordId": "openalex-https-openalex-org-w4384284153",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4384284153"
+      "matchedRecordId": "openalex-https-openalex-org-w4384284153",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "1e9d053768ddef4ee513168c",
+      "existingHash": "1e9d053768ddef4ee513168c"
     },
     {
       "recordId": "openalex-https-openalex-org-w4385380676",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4385380676"
+      "matchedRecordId": "openalex-https-openalex-org-w4385380676",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "cd5c8ca9074d005bca40c2e5",
+      "existingHash": "cd5c8ca9074d005bca40c2e5"
     },
     {
       "recordId": "openalex-https-openalex-org-w4311719747",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4311719747"
+      "matchedRecordId": "openalex-https-openalex-org-w4311719747",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b644c8a2ef475666c07e10c7",
+      "existingHash": "b644c8a2ef475666c07e10c7"
     },
     {
       "recordId": "openalex-https-openalex-org-w4206739815",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4206739815"
+      "matchedRecordId": "openalex-https-openalex-org-w4206739815",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "8e05345a3539e25453d333a0",
+      "existingHash": "8e05345a3539e25453d333a0"
     },
     {
       "recordId": "openalex-https-openalex-org-w3010975660",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3010975660"
+      "matchedRecordId": "openalex-https-openalex-org-w3010975660",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "de6166fab5a36da57978c0f2",
+      "existingHash": "de6166fab5a36da57978c0f2"
     },
     {
       "recordId": "openalex-https-openalex-org-w4285171351",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4285171351"
+      "matchedRecordId": "openalex-https-openalex-org-w4285171351",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "dd9724838306b54f14d5a36b",
+      "existingHash": "dd9724838306b54f14d5a36b"
     },
     {
       "recordId": "openalex-https-openalex-org-w3196974186",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3196974186"
+      "matchedRecordId": "openalex-https-openalex-org-w3196974186",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "496117ee88f123f1b648f3ad",
+      "existingHash": "496117ee88f123f1b648f3ad"
     },
     {
       "recordId": "openalex-https-openalex-org-w4396676992",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4396676992"
+      "matchedRecordId": "openalex-https-openalex-org-w4396676992",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f71b7736d681bc9c04a3747a",
+      "existingHash": "f71b7736d681bc9c04a3747a"
     },
     {
       "recordId": "openalex-https-openalex-org-w3205789855",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3205789855"
+      "matchedRecordId": "openalex-https-openalex-org-w3205789855",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "16a8fb80ede47e32e04e3539",
+      "existingHash": "16a8fb80ede47e32e04e3539"
     },
     {
       "recordId": "openalex-https-openalex-org-w4388160838",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4388160838"
+      "matchedRecordId": "openalex-https-openalex-org-w4388160838",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5a1689e8a243c0b179ee717c",
+      "existingHash": "5a1689e8a243c0b179ee717c"
     },
     {
       "recordId": "openalex-https-openalex-org-w4317936671",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4317936671"
+      "matchedRecordId": "openalex-https-openalex-org-w4317936671",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "445922ced22be7c7f01bd78c",
+      "existingHash": "445922ced22be7c7f01bd78c"
     },
     {
       "recordId": "openalex-https-openalex-org-w3032769960",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3032769960"
+      "matchedRecordId": "openalex-https-openalex-org-w3032769960",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "744b87a9a0f01add839736e2",
+      "existingHash": "744b87a9a0f01add839736e2"
     },
     {
       "recordId": "openalex-https-openalex-org-w4382236847",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4382236847"
+      "matchedRecordId": "openalex-https-openalex-org-w4382236847",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "aa3e204d42a2c2894d009bd0",
+      "existingHash": "aa3e204d42a2c2894d009bd0"
     },
     {
       "recordId": "openalex-https-openalex-org-w4390906089",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4390906089"
+      "matchedRecordId": "openalex-https-openalex-org-w4390906089",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "83f3a5f9b23dc59710e1427b",
+      "existingHash": "83f3a5f9b23dc59710e1427b"
     },
     {
       "recordId": "openalex-https-openalex-org-w3175230485",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3175230485"
+      "matchedRecordId": "openalex-https-openalex-org-w3175230485",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "031aff77b0c48d45140e18df",
+      "existingHash": "031aff77b0c48d45140e18df"
     },
     {
       "recordId": "openalex-https-openalex-org-w4224324254",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4224324254"
+      "matchedRecordId": "openalex-https-openalex-org-w4224324254",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "9722850dceafbe9b345550bb",
+      "existingHash": "9722850dceafbe9b345550bb"
     },
     {
       "recordId": "openalex-https-openalex-org-w3138924974",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3138924974"
+      "matchedRecordId": "openalex-https-openalex-org-w3138924974",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "ce736295a6c063d9363e8753",
+      "existingHash": "ce736295a6c063d9363e8753"
     },
     {
       "recordId": "openalex-https-openalex-org-w4240839386",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4240839386"
+      "matchedRecordId": "openalex-https-openalex-org-w4240839386",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "395839f815285b6aec7c11f6",
+      "existingHash": "395839f815285b6aec7c11f6"
     },
     {
       "recordId": "openalex-https-openalex-org-w3041382323",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3041382323"
+      "matchedRecordId": "openalex-https-openalex-org-w3041382323",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "9578ca2cb98423ba4827b4d4",
+      "existingHash": "9578ca2cb98423ba4827b4d4"
     },
     {
       "recordId": "openalex-https-openalex-org-w4402646181",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4402646181"
+      "matchedRecordId": "openalex-https-openalex-org-w4402646181",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4c62d2560bac66477cb4db40",
+      "existingHash": "4c62d2560bac66477cb4db40"
     },
     {
       "recordId": "openalex-https-openalex-org-w4392358104",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4392358104"
+      "matchedRecordId": "openalex-https-openalex-org-w4392358104",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "08baf707125996d7213d59a3",
+      "existingHash": "08baf707125996d7213d59a3"
     },
     {
       "recordId": "openalex-https-openalex-org-w4411134447",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4411134447"
+      "matchedRecordId": "openalex-https-openalex-org-w4411134447",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c5f65f3db52c3b5391ce2f16",
+      "existingHash": "c5f65f3db52c3b5391ce2f16"
     },
     {
       "recordId": "openalex-https-openalex-org-w3199820141",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3199820141"
+      "matchedRecordId": "openalex-https-openalex-org-w3199820141",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "27001f1fa9cb9628fea01995",
+      "existingHash": "27001f1fa9cb9628fea01995"
     },
     {
       "recordId": "openalex-https-openalex-org-w4394623675",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4394623675"
+      "matchedRecordId": "openalex-https-openalex-org-w4394623675",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4672a173b63092c534245200",
+      "existingHash": "4672a173b63092c534245200"
     },
     {
       "recordId": "openalex-https-openalex-org-w4220741294",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4220741294"
+      "matchedRecordId": "openalex-https-openalex-org-w4220741294",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f2e92987c99e6cc8d7968e99",
+      "existingHash": "f2e92987c99e6cc8d7968e99"
     },
     {
       "recordId": "openalex-https-openalex-org-w4393232293",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4393232293"
+      "matchedRecordId": "openalex-https-openalex-org-w4393232293",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a2f543d04cc39024e324af41",
+      "existingHash": "a2f543d04cc39024e324af41"
     },
     {
       "recordId": "openalex-https-openalex-org-w2917580293",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2917580293"
+      "matchedRecordId": "openalex-https-openalex-org-w2917580293",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0ac5ea75e8727216dd3237f0",
+      "existingHash": "0ac5ea75e8727216dd3237f0"
     },
     {
       "recordId": "openalex-https-openalex-org-w4410004931",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4410004931"
+      "matchedRecordId": "openalex-https-openalex-org-w4410004931",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "1f9226a57a3d1edeab1252c1",
+      "existingHash": "1f9226a57a3d1edeab1252c1"
     },
     {
       "recordId": "openalex-https-openalex-org-w4402417144",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4402417144"
+      "matchedRecordId": "openalex-https-openalex-org-w4402417144",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "8cabe7fd1682efd218acbe34",
+      "existingHash": "8cabe7fd1682efd218acbe34"
     },
     {
       "recordId": "openalex-https-openalex-org-w2944924828",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2944924828"
+      "matchedRecordId": "openalex-https-openalex-org-w2944924828",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d3499fd76db8de98015772d6",
+      "existingHash": "d3499fd76db8de98015772d6"
     },
     {
       "recordId": "openalex-https-openalex-org-w3174398482",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3174398482"
+      "matchedRecordId": "openalex-https-openalex-org-w3174398482",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0fa773d3aee0c1289faaa4f9",
+      "existingHash": "0fa773d3aee0c1289faaa4f9"
     },
     {
       "recordId": "openalex-https-openalex-org-w3147456683",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3147456683"
+      "matchedRecordId": "openalex-https-openalex-org-w3147456683",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0a030d5fcea0ae81d7c9e015",
+      "existingHash": "0a030d5fcea0ae81d7c9e015"
     },
     {
       "recordId": "openalex-https-openalex-org-w4288064704",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4288064704"
+      "matchedRecordId": "openalex-https-openalex-org-w4288064704",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "8098bac5be655a17e7f25db4",
+      "existingHash": "8098bac5be655a17e7f25db4"
     },
     {
       "recordId": "openalex-https-openalex-org-w3181175604",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3181175604"
+      "matchedRecordId": "openalex-https-openalex-org-w3181175604",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "094f08f175eb5f66e42b5391",
+      "existingHash": "094f08f175eb5f66e42b5391"
     },
     {
       "recordId": "openalex-https-openalex-org-w4392438470",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4392438470"
+      "matchedRecordId": "openalex-https-openalex-org-w4392438470",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "20fc2f5866229b0783dda8ce",
+      "existingHash": "20fc2f5866229b0783dda8ce"
     },
     {
       "recordId": "openalex-https-openalex-org-w4404797734",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4404797734"
+      "matchedRecordId": "openalex-https-openalex-org-w4404797734",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b8b202521bca7ae65892805d",
+      "existingHash": "b8b202521bca7ae65892805d"
     },
     {
       "recordId": "openalex-https-openalex-org-w4412076062",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4412076062"
+      "matchedRecordId": "openalex-https-openalex-org-w4412076062",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "7381df1e82518de1fabd1d6f",
+      "existingHash": "7381df1e82518de1fabd1d6f"
     },
     {
       "recordId": "openalex-https-openalex-org-w3171579550",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3171579550"
+      "matchedRecordId": "openalex-https-openalex-org-w3171579550",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "2d1baa286d3902d7a37c7e3c",
+      "existingHash": "2d1baa286d3902d7a37c7e3c"
     },
     {
       "recordId": "openalex-https-openalex-org-w3010898450",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3010898450"
+      "matchedRecordId": "openalex-https-openalex-org-w3010898450",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "580dd6584afa7e27ca185538",
+      "existingHash": "580dd6584afa7e27ca185538"
     },
     {
       "recordId": "openalex-https-openalex-org-w3040469417",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3040469417"
+      "matchedRecordId": "openalex-https-openalex-org-w3040469417",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "caf7ab32367350b8d5376a78",
+      "existingHash": "caf7ab32367350b8d5376a78"
     },
     {
       "recordId": "openalex-https-openalex-org-w2889393096",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2889393096"
+      "matchedRecordId": "openalex-https-openalex-org-w2889393096",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "6008e598c36c5d6a1f9a58fd",
+      "existingHash": "6008e598c36c5d6a1f9a58fd"
     },
     {
       "recordId": "openalex-https-openalex-org-w2985141487",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2985141487"
+      "matchedRecordId": "openalex-https-openalex-org-w2985141487",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d8b149af08d57fd5fefc43d0",
+      "existingHash": "d8b149af08d57fd5fefc43d0"
     },
     {
       "recordId": "openalex-https-openalex-org-w4283275376",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4283275376"
+      "matchedRecordId": "openalex-https-openalex-org-w4283275376",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a9792f468f279c52f821640c",
+      "existingHash": "a9792f468f279c52f821640c"
     },
     {
       "recordId": "openalex-https-openalex-org-w4386496448",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4386496448"
+      "matchedRecordId": "openalex-https-openalex-org-w4386496448",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "bafab61dadd2b6e405e20aee",
+      "existingHash": "bafab61dadd2b6e405e20aee"
     },
     {
       "recordId": "openalex-https-openalex-org-w4387397415",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4387397415"
+      "matchedRecordId": "openalex-https-openalex-org-w4387397415",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "ca232de38943c9e84c3e8a80",
+      "existingHash": "ca232de38943c9e84c3e8a80"
     },
     {
       "recordId": "openalex-https-openalex-org-w4317933195",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4317933195"
+      "matchedRecordId": "openalex-https-openalex-org-w4317933195",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f1275e61299896dca8f7470f",
+      "existingHash": "f1275e61299896dca8f7470f"
     },
     {
       "recordId": "openalex-https-openalex-org-w3093929720",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3093929720"
+      "matchedRecordId": "openalex-https-openalex-org-w3093929720",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d235d4803cd5123e51372f93",
+      "existingHash": "d235d4803cd5123e51372f93"
     },
     {
       "recordId": "openalex-https-openalex-org-w4282570835",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4282570835"
+      "matchedRecordId": "openalex-https-openalex-org-w4282570835",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a81a780fce787e4b71c8e890",
+      "existingHash": "a81a780fce787e4b71c8e890"
     },
     {
       "recordId": "openalex-https-openalex-org-w4392893849",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4392893849"
+      "matchedRecordId": "openalex-https-openalex-org-w4392893849",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "ecf9fa21dcc0161bc4dfd61c",
+      "existingHash": "ecf9fa21dcc0161bc4dfd61c"
     },
     {
       "recordId": "openalex-https-openalex-org-w4406814899",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4406814899"
+      "matchedRecordId": "openalex-https-openalex-org-w4406814899",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b738de331ec5fdb42a1c3c3d",
+      "existingHash": "b738de331ec5fdb42a1c3c3d"
     },
     {
       "recordId": "openalex-https-openalex-org-w4376139506",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4376139506"
+      "matchedRecordId": "openalex-https-openalex-org-w4376139506",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "16af169cbb4cf6d81f671bb1",
+      "existingHash": "16af169cbb4cf6d81f671bb1"
     },
     {
       "recordId": "openalex-https-openalex-org-w3198040634",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3198040634"
+      "matchedRecordId": "openalex-https-openalex-org-w3198040634",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a8d647bca5a44ec0cc355126",
+      "existingHash": "a8d647bca5a44ec0cc355126"
     },
     {
       "recordId": "openalex-https-openalex-org-w4321101119",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4321101119"
+      "matchedRecordId": "openalex-https-openalex-org-w4321101119",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "3e99d102c6a55c7231ab5781",
+      "existingHash": "3e99d102c6a55c7231ab5781"
     },
     {
       "recordId": "openalex-https-openalex-org-w3048327660",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3048327660"
+      "matchedRecordId": "openalex-https-openalex-org-w3048327660",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4dc3f44a160038b732aefec9",
+      "existingHash": "4dc3f44a160038b732aefec9"
     },
     {
       "recordId": "openalex-https-openalex-org-w4409563974",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4409563974"
+      "matchedRecordId": "openalex-https-openalex-org-w4409563974",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a85767cb989d6d710378f249",
+      "existingHash": "a85767cb989d6d710378f249"
     },
     {
       "recordId": "openalex-https-openalex-org-w3211661740",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3211661740"
+      "matchedRecordId": "openalex-https-openalex-org-w3211661740",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "967dbc4eb1910accbe47d35b",
+      "existingHash": "967dbc4eb1910accbe47d35b"
     },
     {
       "recordId": "openalex-https-openalex-org-w4389922283",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4389922283"
+      "matchedRecordId": "openalex-https-openalex-org-w4389922283",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b55be5ff4b517ad5b94e13fa",
+      "existingHash": "b55be5ff4b517ad5b94e13fa"
     },
     {
       "recordId": "openalex-https-openalex-org-w2330188877",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2330188877"
+      "matchedRecordId": "openalex-https-openalex-org-w2330188877",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "77b1352db679a9c8fe6e525b",
+      "existingHash": "77b1352db679a9c8fe6e525b"
     },
     {
       "recordId": "openalex-https-openalex-org-w2598925596",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2598925596"
+      "matchedRecordId": "openalex-https-openalex-org-w2598925596",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "3f2d18b34e4ca9afc4bbe215",
+      "existingHash": "3f2d18b34e4ca9afc4bbe215"
     },
     {
       "recordId": "openalex-https-openalex-org-w2907106190",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2907106190"
+      "matchedRecordId": "openalex-https-openalex-org-w2907106190",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4b28131c29493443cc7c9041",
+      "existingHash": "4b28131c29493443cc7c9041"
     },
     {
       "recordId": "openalex-https-openalex-org-w3089916726",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3089916726"
+      "matchedRecordId": "openalex-https-openalex-org-w3089916726",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "8c3388e7aee3cb9f50d4312b",
+      "existingHash": "8c3388e7aee3cb9f50d4312b"
     },
     {
       "recordId": "openalex-https-openalex-org-w2999926820",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2999926820"
+      "matchedRecordId": "openalex-https-openalex-org-w2999926820",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b32eb2109251fa1276f14676",
+      "existingHash": "b32eb2109251fa1276f14676"
     },
     {
       "recordId": "openalex-https-openalex-org-w2990216432",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2990216432"
+      "matchedRecordId": "openalex-https-openalex-org-w2990216432",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "6de8a0a24d46eadb18c64a6e",
+      "existingHash": "6de8a0a24d46eadb18c64a6e"
     },
     {
       "recordId": "openalex-https-openalex-org-w4315474734",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4315474734"
+      "matchedRecordId": "openalex-https-openalex-org-w4315474734",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "e6545c52dcba08a3a8a4a1cc",
+      "existingHash": "e6545c52dcba08a3a8a4a1cc"
     },
     {
       "recordId": "openalex-https-openalex-org-w4385800465",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4385800465"
+      "matchedRecordId": "openalex-https-openalex-org-w4385800465",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0e9c82b1f0764b09c4bd225d",
+      "existingHash": "0e9c82b1f0764b09c4bd225d"
     },
     {
       "recordId": "openalex-https-openalex-org-w2984080257",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2984080257"
+      "matchedRecordId": "openalex-https-openalex-org-w2984080257",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "3f9d894970db0ac02a7936f3",
+      "existingHash": "3f9d894970db0ac02a7936f3"
     },
     {
       "recordId": "openalex-https-openalex-org-w3128019105",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3128019105"
+      "matchedRecordId": "openalex-https-openalex-org-w3128019105",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d48d5dcf443010321b8140de",
+      "existingHash": "d48d5dcf443010321b8140de"
     },
     {
       "recordId": "openalex-https-openalex-org-w2938580280",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2938580280"
+      "matchedRecordId": "openalex-https-openalex-org-w2938580280",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "df842021507bccf09b8d012a",
+      "existingHash": "df842021507bccf09b8d012a"
     },
     {
       "recordId": "openalex-https-openalex-org-w3130435805",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3130435805"
+      "matchedRecordId": "openalex-https-openalex-org-w3130435805",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f0890ec3304412912829432c",
+      "existingHash": "f0890ec3304412912829432c"
     },
     {
       "recordId": "openalex-https-openalex-org-w3087460198",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3087460198"
+      "matchedRecordId": "openalex-https-openalex-org-w3087460198",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d941e35e299e17041b98872f",
+      "existingHash": "d941e35e299e17041b98872f"
     },
     {
       "recordId": "openalex-https-openalex-org-w2948162897",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2948162897"
+      "matchedRecordId": "openalex-https-openalex-org-w2948162897",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c35910f254b33564463d1a6d",
+      "existingHash": "c35910f254b33564463d1a6d"
     },
     {
       "recordId": "openalex-https-openalex-org-w3081871549",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3081871549"
+      "matchedRecordId": "openalex-https-openalex-org-w3081871549",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "de3b8efb8c3c5436df854e87",
+      "existingHash": "de3b8efb8c3c5436df854e87"
     },
     {
       "recordId": "openalex-https-openalex-org-w2974556546",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2974556546"
+      "matchedRecordId": "openalex-https-openalex-org-w2974556546",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5f5c9c61ffdd997f5ce37884",
+      "existingHash": "5f5c9c61ffdd997f5ce37884"
     },
     {
       "recordId": "openalex-https-openalex-org-w4291476219",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4291476219"
+      "matchedRecordId": "openalex-https-openalex-org-w4291476219",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "265776c38ae218dd52329969",
+      "existingHash": "265776c38ae218dd52329969"
     },
     {
       "recordId": "openalex-https-openalex-org-w2940919353",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2940919353"
+      "matchedRecordId": "openalex-https-openalex-org-w2940919353",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "70da41d0ce040e1935219e85",
+      "existingHash": "70da41d0ce040e1935219e85"
     },
     {
       "recordId": "openalex-https-openalex-org-w3095974075",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3095974075"
+      "matchedRecordId": "openalex-https-openalex-org-w3095974075",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4dee3b51e4f565b71e19d078",
+      "existingHash": "4dee3b51e4f565b71e19d078"
     },
     {
       "recordId": "openalex-https-openalex-org-w3006408222",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3006408222"
+      "matchedRecordId": "openalex-https-openalex-org-w3006408222",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "100b2df1c0703b72522e44d7",
+      "existingHash": "100b2df1c0703b72522e44d7"
     },
     {
       "recordId": "openalex-https-openalex-org-w4396977266",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4396977266"
+      "matchedRecordId": "openalex-https-openalex-org-w4396977266",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "7aff5c6dacbe474b89bc2df4",
+      "existingHash": "7aff5c6dacbe474b89bc2df4"
     },
     {
       "recordId": "openalex-https-openalex-org-w2462876168",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2462876168"
+      "matchedRecordId": "openalex-https-openalex-org-w2462876168",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "11cbf210dc15bb9f8ff91d29",
+      "existingHash": "11cbf210dc15bb9f8ff91d29"
     },
     {
       "recordId": "openalex-https-openalex-org-w4225272915",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4225272915"
+      "matchedRecordId": "openalex-https-openalex-org-w4225272915",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "011b60bacd1b469760ced392",
+      "existingHash": "011b60bacd1b469760ced392"
     },
     {
       "recordId": "openalex-https-openalex-org-w2557621405",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2557621405"
+      "matchedRecordId": "openalex-https-openalex-org-w2557621405",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "e3b0dd460cb3b861ca265810",
+      "existingHash": "e3b0dd460cb3b861ca265810"
     },
     {
       "recordId": "openalex-https-openalex-org-w2610334615",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2610334615"
+      "matchedRecordId": "openalex-https-openalex-org-w2610334615",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a773368854461d740ccd2e51",
+      "existingHash": "a773368854461d740ccd2e51"
     },
     {
       "recordId": "openalex-https-openalex-org-w2336502929",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2336502929"
+      "matchedRecordId": "openalex-https-openalex-org-w2336502929",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "e2acf0df3620d1292478e621",
+      "existingHash": "e2acf0df3620d1292478e621"
     },
     {
       "recordId": "openalex-https-openalex-org-w3181805889",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3181805889"
+      "matchedRecordId": "openalex-https-openalex-org-w3181805889",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a3f325498d9cec877b7e6bc9",
+      "existingHash": "a3f325498d9cec877b7e6bc9"
     },
     {
       "recordId": "openalex-https-openalex-org-w3119343336",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3119343336"
+      "matchedRecordId": "openalex-https-openalex-org-w3119343336",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "46fbafd42a808cd9b7c871c1",
+      "existingHash": "46fbafd42a808cd9b7c871c1"
     },
     {
       "recordId": "openalex-https-openalex-org-w2961832654",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2961832654"
+      "matchedRecordId": "openalex-https-openalex-org-w2961832654",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "58ed348a30f3fd93e7d66cd0",
+      "existingHash": "58ed348a30f3fd93e7d66cd0"
     },
     {
       "recordId": "openalex-https-openalex-org-w3111446176",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3111446176"
+      "matchedRecordId": "openalex-https-openalex-org-w3111446176",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "e8df537df311779ac5a0233b",
+      "existingHash": "e8df537df311779ac5a0233b"
     },
     {
       "recordId": "openalex-https-openalex-org-w3083914918",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3083914918"
+      "matchedRecordId": "openalex-https-openalex-org-w3083914918",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "01a2f5901c13d009eaccc4c4",
+      "existingHash": "01a2f5901c13d009eaccc4c4"
     },
     {
       "recordId": "openalex-https-openalex-org-w4280566538",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4280566538"
+      "matchedRecordId": "openalex-https-openalex-org-w4280566538",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "38b992c21f1292c5671898d4",
+      "existingHash": "38b992c21f1292c5671898d4"
     },
     {
       "recordId": "openalex-https-openalex-org-w2213095886",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2213095886"
+      "matchedRecordId": "openalex-https-openalex-org-w2213095886",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "27fbe5df1e2c80361b4b2b25",
+      "existingHash": "27fbe5df1e2c80361b4b2b25"
     },
     {
       "recordId": "openalex-https-openalex-org-w2991232381",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2991232381"
+      "matchedRecordId": "openalex-https-openalex-org-w2991232381",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4b14377501e4f21e4d99fa33",
+      "existingHash": "4b14377501e4f21e4d99fa33"
     },
     {
       "recordId": "openalex-https-openalex-org-w3127267938",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3127267938"
+      "matchedRecordId": "openalex-https-openalex-org-w3127267938",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4d841a204c3109c3000e2e1e",
+      "existingHash": "4d841a204c3109c3000e2e1e"
     },
     {
       "recordId": "openalex-https-openalex-org-w3009841136",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3009841136"
+      "matchedRecordId": "openalex-https-openalex-org-w3009841136",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "51eee6bbdc73be1cdde4fd35",
+      "existingHash": "51eee6bbdc73be1cdde4fd35"
     },
     {
       "recordId": "openalex-https-openalex-org-w4406334305",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4406334305"
+      "matchedRecordId": "openalex-https-openalex-org-w4406334305",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "25779bdf82dc36e80f49ee3e",
+      "existingHash": "25779bdf82dc36e80f49ee3e"
     },
     {
       "recordId": "openalex-https-openalex-org-w3115594038",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3115594038"
+      "matchedRecordId": "openalex-https-openalex-org-w3115594038",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "378e2ed40ff6ce5110a09649",
+      "existingHash": "378e2ed40ff6ce5110a09649"
     },
     {
       "recordId": "openalex-https-openalex-org-w3134146379",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3134146379"
+      "matchedRecordId": "openalex-https-openalex-org-w3134146379",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0a53ba72c48d69eecceeafbe",
+      "existingHash": "0a53ba72c48d69eecceeafbe"
     },
     {
       "recordId": "openalex-https-openalex-org-w3134967399",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3134967399"
+      "matchedRecordId": "openalex-https-openalex-org-w3134967399",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "907f0c8749a88fce2ad3722b",
+      "existingHash": "907f0c8749a88fce2ad3722b"
     },
     {
       "recordId": "openalex-https-openalex-org-w3197569697",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3197569697"
+      "matchedRecordId": "openalex-https-openalex-org-w3197569697",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "1dda9b2b4d5085af3a91944e",
+      "existingHash": "1dda9b2b4d5085af3a91944e"
     },
     {
       "recordId": "openalex-https-openalex-org-w4406341213",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4406341213"
+      "matchedRecordId": "openalex-https-openalex-org-w4406341213",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4769eadb22d7b32d30e80276",
+      "existingHash": "4769eadb22d7b32d30e80276"
     },
     {
       "recordId": "openalex-https-openalex-org-w4301596210",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4301596210"
+      "matchedRecordId": "openalex-https-openalex-org-w4301596210",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5dca67606b7d4b9fc8f38891",
+      "existingHash": "5dca67606b7d4b9fc8f38891"
     },
     {
       "recordId": "openalex-https-openalex-org-w3016531454",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3016531454"
+      "matchedRecordId": "openalex-https-openalex-org-w3016531454",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "288f6e47e4c5673f9d05dfb3",
+      "existingHash": "288f6e47e4c5673f9d05dfb3"
     },
     {
       "recordId": "openalex-https-openalex-org-w4389819157",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4389819157"
+      "matchedRecordId": "openalex-https-openalex-org-w4389819157",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "577f8b7a360fc673eda60566",
+      "existingHash": "577f8b7a360fc673eda60566"
     },
     {
       "recordId": "openalex-https-openalex-org-w3035188391",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3035188391"
+      "matchedRecordId": "openalex-https-openalex-org-w3035188391",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "eb2793b232521d673f1995fe",
+      "existingHash": "eb2793b232521d673f1995fe"
     },
     {
       "recordId": "openalex-https-openalex-org-w4313584439",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4313584439"
+      "matchedRecordId": "openalex-https-openalex-org-w4313584439",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "1f9aaa6464b5cc758dde339e",
+      "existingHash": "1f9aaa6464b5cc758dde339e"
     },
     {
       "recordId": "openalex-https-openalex-org-w3009208041",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3009208041"
+      "matchedRecordId": "openalex-https-openalex-org-w3009208041",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b54ef1b4ddb963c4df15681e",
+      "existingHash": "b54ef1b4ddb963c4df15681e"
     },
     {
       "recordId": "openalex-https-openalex-org-w2914130738",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2914130738"
+      "matchedRecordId": "openalex-https-openalex-org-w2914130738",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "49b6317fbbb4ba8f6afe6da9",
+      "existingHash": "49b6317fbbb4ba8f6afe6da9"
     },
     {
       "recordId": "openalex-https-openalex-org-w2914300732",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2914300732"
+      "matchedRecordId": "openalex-https-openalex-org-w2914300732",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "98d7f59242658e722b74db38",
+      "existingHash": "98d7f59242658e722b74db38"
     },
     {
       "recordId": "openalex-https-openalex-org-w3118694283",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3118694283"
+      "matchedRecordId": "openalex-https-openalex-org-w3118694283",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "7b7664a48e2e639ae09c5e05",
+      "existingHash": "7b7664a48e2e639ae09c5e05"
     },
     {
       "recordId": "openalex-https-openalex-org-w4310248763",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4310248763"
+      "matchedRecordId": "openalex-https-openalex-org-w4310248763",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "423c308e59ec261e65605a86",
+      "existingHash": "423c308e59ec261e65605a86"
     },
     {
       "recordId": "openalex-https-openalex-org-w2626025588",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2626025588"
+      "matchedRecordId": "openalex-https-openalex-org-w2626025588",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a6365711cda3bba5d8a13058",
+      "existingHash": "a6365711cda3bba5d8a13058"
     },
     {
       "recordId": "openalex-https-openalex-org-w4392543952",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4392543952"
+      "matchedRecordId": "openalex-https-openalex-org-w4392543952",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5a418e4b53cebb4fe86e3c5b",
+      "existingHash": "5a418e4b53cebb4fe86e3c5b"
     },
     {
       "recordId": "openalex-https-openalex-org-w2948425123",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2948425123"
+      "matchedRecordId": "openalex-https-openalex-org-w2948425123",
+      "matchMethod": "openAlexId",
+      "confidence": 100,
+      "reason": "Matched an existing record by openAlexId with an identical content hash - nothing to re-process.",
+      "incomingHash": "ac364554f39470a515671dd4",
+      "existingHash": "ac364554f39470a515671dd4"
     },
     {
       "recordId": "openalex-https-openalex-org-w4312223627",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4312223627"
+      "matchedRecordId": "openalex-https-openalex-org-w4312223627",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "ebff3501d70cfcaa34804755",
+      "existingHash": "ebff3501d70cfcaa34804755"
     },
     {
       "recordId": "openalex-https-openalex-org-w4284673149",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4284673149"
+      "matchedRecordId": "openalex-https-openalex-org-w4284673149",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "2a4dac6ef042a91180b9856f",
+      "existingHash": "2a4dac6ef042a91180b9856f"
     },
     {
       "recordId": "openalex-https-openalex-org-w4321010063",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4321010063"
+      "matchedRecordId": "openalex-https-openalex-org-w4321010063",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b5e3d1e7ca5d3a7b7e22aee2",
+      "existingHash": "b5e3d1e7ca5d3a7b7e22aee2"
     },
     {
       "recordId": "openalex-https-openalex-org-w4391252433",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4391252433"
+      "matchedRecordId": "openalex-https-openalex-org-w4391252433",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "81d6b6732248607ac18fe5fe",
+      "existingHash": "81d6b6732248607ac18fe5fe"
     },
     {
       "recordId": "openalex-https-openalex-org-w3165168336",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3165168336"
+      "matchedRecordId": "openalex-https-openalex-org-w3165168336",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "342e6e493c8560d9f2ac4c5a",
+      "existingHash": "342e6e493c8560d9f2ac4c5a"
     },
     {
       "recordId": "openalex-https-openalex-org-w4386220176",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4386220176"
+      "matchedRecordId": "openalex-https-openalex-org-w4386220176",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "796addc517585943813cc722",
+      "existingHash": "796addc517585943813cc722"
     },
     {
       "recordId": "openalex-https-openalex-org-w4406697492",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4406697492"
+      "matchedRecordId": "openalex-https-openalex-org-w4406697492",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "41aee530abe1f9485f94ccb5",
+      "existingHash": "41aee530abe1f9485f94ccb5"
     },
     {
       "recordId": "openalex-https-openalex-org-w4391344408",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4391344408"
+      "matchedRecordId": "openalex-https-openalex-org-w4391344408",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "de866a67ca743fb734a034d6",
+      "existingHash": "de866a67ca743fb734a034d6"
     },
     {
       "recordId": "openalex-https-openalex-org-w3012250252",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3012250252"
+      "matchedRecordId": "openalex-https-openalex-org-w3012250252",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "24b548acc24c0947f2de5011",
+      "existingHash": "24b548acc24c0947f2de5011"
     },
     {
       "recordId": "openalex-https-openalex-org-w4220904600",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4220904600"
+      "matchedRecordId": "openalex-https-openalex-org-w4220904600",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "e81e1edeb33ad14fe5567d8f",
+      "existingHash": "e81e1edeb33ad14fe5567d8f"
     },
     {
       "recordId": "openalex-https-openalex-org-w3092640103",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3092640103"
+      "matchedRecordId": "openalex-https-openalex-org-w3092640103",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "79d69f8fd717ab1dcfe231c4",
+      "existingHash": "79d69f8fd717ab1dcfe231c4"
     },
     {
       "recordId": "openalex-https-openalex-org-w2584794099",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2584794099"
+      "matchedRecordId": "openalex-https-openalex-org-w2584794099",
+      "matchMethod": "openAlexId",
+      "confidence": 100,
+      "reason": "Matched an existing record by openAlexId with an identical content hash - nothing to re-process.",
+      "incomingHash": "2056eea758c7894cb4d4fca6",
+      "existingHash": "2056eea758c7894cb4d4fca6"
     },
     {
       "recordId": "openalex-https-openalex-org-w4394566964",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4394566964"
+      "matchedRecordId": "openalex-https-openalex-org-w4394566964",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a780449d28e60d0ee2e48ada",
+      "existingHash": "a780449d28e60d0ee2e48ada"
     },
     {
       "recordId": "openalex-https-openalex-org-w3021475808",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3021475808"
+      "matchedRecordId": "openalex-https-openalex-org-w3021475808",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "61793cdce3c3f16207917070",
+      "existingHash": "61793cdce3c3f16207917070"
     },
     {
       "recordId": "openalex-https-openalex-org-w4320339933",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4320339933"
+      "matchedRecordId": "openalex-https-openalex-org-w4320339933",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f44550775d5f1b4100e81aae",
+      "existingHash": "f44550775d5f1b4100e81aae"
     },
     {
       "recordId": "openalex-https-openalex-org-w2773874939",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2773874939"
+      "matchedRecordId": "openalex-https-openalex-org-w2773874939",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "328b17752c6debc46f65b0fb",
+      "existingHash": "328b17752c6debc46f65b0fb"
     },
     {
       "recordId": "openalex-https-openalex-org-w3109725889",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3109725889"
+      "matchedRecordId": "openalex-https-openalex-org-w3109725889",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "478d01047a2fede490df9e8b",
+      "existingHash": "478d01047a2fede490df9e8b"
     },
     {
       "recordId": "openalex-https-openalex-org-w2769455556",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2769455556"
+      "matchedRecordId": "openalex-https-openalex-org-w2769455556",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "59f7129b6a5b00431c1818ac",
+      "existingHash": "59f7129b6a5b00431c1818ac"
     },
     {
       "recordId": "openalex-https-openalex-org-w2899568779",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2899568779"
+      "matchedRecordId": "openalex-https-openalex-org-w2899568779",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d45c8aa802b82072acf7e1dd",
+      "existingHash": "d45c8aa802b82072acf7e1dd"
     },
     {
       "recordId": "openalex-https-openalex-org-w2770338946",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2770338946"
+      "matchedRecordId": "openalex-https-openalex-org-w2770338946",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "70232c30b46cd5680eef6b07",
+      "existingHash": "70232c30b46cd5680eef6b07"
     },
     {
       "recordId": "openalex-https-openalex-org-w3089842096",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3089842096"
+      "matchedRecordId": "openalex-https-openalex-org-w3089842096",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "fd9dcfb2326d0eab7badcf76",
+      "existingHash": "fd9dcfb2326d0eab7badcf76"
     },
     {
       "recordId": "openalex-https-openalex-org-w4380768819",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4380768819"
+      "matchedRecordId": "openalex-https-openalex-org-w4380768819",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "7b2370da5b85a56927a4f379",
+      "existingHash": "7b2370da5b85a56927a4f379"
     },
     {
       "recordId": "openalex-https-openalex-org-w4384436077",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4384436077"
+      "matchedRecordId": "openalex-https-openalex-org-w4384436077",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "36803ae83c01d1184c9d3f66",
+      "existingHash": "36803ae83c01d1184c9d3f66"
     },
     {
       "recordId": "openalex-https-openalex-org-w4391097217",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4391097217"
+      "matchedRecordId": "openalex-https-openalex-org-w4391097217",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "ec4d4399f2290e1319eef59b",
+      "existingHash": "ec4d4399f2290e1319eef59b"
     },
     {
       "recordId": "openalex-https-openalex-org-w4205557186",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4205557186"
+      "matchedRecordId": "openalex-https-openalex-org-w4205557186",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d4088c2221ba6a3e2e452bd8",
+      "existingHash": "d4088c2221ba6a3e2e452bd8"
     },
     {
       "recordId": "openalex-https-openalex-org-w2891787788",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2891787788"
+      "matchedRecordId": "openalex-https-openalex-org-w2891787788",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "11cbd36daa2857c37be1b04e",
+      "existingHash": "11cbd36daa2857c37be1b04e"
     },
     {
       "recordId": "openalex-https-openalex-org-w4410515905",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4410515905"
+      "matchedRecordId": "openalex-https-openalex-org-w4410515905",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "11bf722c39e2fea067e34139",
+      "existingHash": "11bf722c39e2fea067e34139"
     },
     {
       "recordId": "openalex-https-openalex-org-w4393003256",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4393003256"
+      "matchedRecordId": "openalex-https-openalex-org-w4393003256",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "94bedcfa2fb2b6683ee26062",
+      "existingHash": "94bedcfa2fb2b6683ee26062"
     },
     {
       "recordId": "openalex-https-openalex-org-w4390503774",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4390503774"
+      "matchedRecordId": "openalex-https-openalex-org-w4390503774",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "9b2d27a7acbb4800217e52f0",
+      "existingHash": "9b2d27a7acbb4800217e52f0"
     },
     {
       "recordId": "openalex-https-openalex-org-w4309577990",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4309577990"
+      "matchedRecordId": "openalex-https-openalex-org-w4309577990",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b4c43327472f9aae9cfec71d",
+      "existingHash": "b4c43327472f9aae9cfec71d"
     },
     {
       "recordId": "openalex-https-openalex-org-w4405936754",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4405936754"
+      "matchedRecordId": "openalex-https-openalex-org-w4405936754",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "ab5b014eb927b250ad2a9ef8",
+      "existingHash": "ab5b014eb927b250ad2a9ef8"
     },
     {
       "recordId": "openalex-https-openalex-org-w3197830394",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3197830394"
+      "matchedRecordId": "openalex-https-openalex-org-w3197830394",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "794eb6d714daa06deb047722",
+      "existingHash": "794eb6d714daa06deb047722"
     },
     {
       "recordId": "openalex-https-openalex-org-w4200009490",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4200009490"
+      "matchedRecordId": "openalex-https-openalex-org-w4200009490",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0f745fe08481dcdc6d7f19ab",
+      "existingHash": "0f745fe08481dcdc6d7f19ab"
     },
     {
       "recordId": "openalex-https-openalex-org-w4399283331",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4399283331"
+      "matchedRecordId": "openalex-https-openalex-org-w4399283331",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5fc88fe19e6ff03469d28539",
+      "existingHash": "5fc88fe19e6ff03469d28539"
     },
     {
       "recordId": "openalex-https-openalex-org-w2994681232",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2994681232"
+      "matchedRecordId": "openalex-https-openalex-org-w2994681232",
+      "matchMethod": "openAlexId",
+      "confidence": 100,
+      "reason": "Matched an existing record by openAlexId with an identical content hash - nothing to re-process.",
+      "incomingHash": "c92d073614714922f7456ee1",
+      "existingHash": "c92d073614714922f7456ee1"
     },
     {
       "recordId": "openalex-https-openalex-org-w4301401032",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4301401032"
+      "matchedRecordId": "openalex-https-openalex-org-w4301401032",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "9abc5f1be66f04b5d8a96988",
+      "existingHash": "9abc5f1be66f04b5d8a96988"
     },
     {
       "recordId": "openalex-https-openalex-org-w4321512825",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4321512825"
+      "matchedRecordId": "openalex-https-openalex-org-w4321512825",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0cb48f815bc1db1b249b6e7b",
+      "existingHash": "0cb48f815bc1db1b249b6e7b"
     },
     {
       "recordId": "openalex-https-openalex-org-w4399206781",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4399206781"
+      "matchedRecordId": "openalex-https-openalex-org-w4399206781",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "7704f1fc15eef7453b3071a7",
+      "existingHash": "7704f1fc15eef7453b3071a7"
     },
     {
       "recordId": "openalex-https-openalex-org-w3018983062",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3018983062"
+      "matchedRecordId": "openalex-https-openalex-org-w3018983062",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "721f22f075d9b7ac5d6b2b97",
+      "existingHash": "721f22f075d9b7ac5d6b2b97"
     },
     {
       "recordId": "openalex-https-openalex-org-w4393003458",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4393003458"
+      "matchedRecordId": "openalex-https-openalex-org-w4393003458",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f9bbcb582e54788fe4943c65",
+      "existingHash": "f9bbcb582e54788fe4943c65"
     },
     {
       "recordId": "openalex-https-openalex-org-w2997233153",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2997233153"
+      "matchedRecordId": "openalex-https-openalex-org-w2997233153",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b5a17f777e8ca1b475cc1cf7",
+      "existingHash": "b5a17f777e8ca1b475cc1cf7"
     },
     {
       "recordId": "openalex-https-openalex-org-w2787053267",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2787053267"
+      "matchedRecordId": "openalex-https-openalex-org-w2787053267",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "645cf644463e5483ecaffeed",
+      "existingHash": "645cf644463e5483ecaffeed"
     },
     {
       "recordId": "openalex-https-openalex-org-w4386245296",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4386245296"
+      "matchedRecordId": "openalex-https-openalex-org-w4386245296",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0b80db1b0642ae187877fa8d",
+      "existingHash": "0b80db1b0642ae187877fa8d"
     },
     {
       "recordId": "openalex-https-openalex-org-w4399053898",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4399053898"
+      "matchedRecordId": "openalex-https-openalex-org-w4399053898",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "bde790a8fda3440f4a1b190b",
+      "existingHash": "bde790a8fda3440f4a1b190b"
     },
     {
       "recordId": "openalex-https-openalex-org-w4388827803",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4388827803"
+      "matchedRecordId": "openalex-https-openalex-org-w4388827803",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "6222b353d1c4cde43eb28809",
+      "existingHash": "6222b353d1c4cde43eb28809"
     },
     {
       "recordId": "openalex-https-openalex-org-w3004774144",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3004774144"
+      "matchedRecordId": "openalex-https-openalex-org-w3004774144",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "e1fd79c05c16b115e5255ec8",
+      "existingHash": "e1fd79c05c16b115e5255ec8"
     },
     {
       "recordId": "openalex-https-openalex-org-w3155516278",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3155516278"
+      "matchedRecordId": "openalex-https-openalex-org-w3155516278",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "35e8e65edd294ddf90319f7c",
+      "existingHash": "35e8e65edd294ddf90319f7c"
     },
     {
       "recordId": "openalex-https-openalex-org-w3168393667",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3168393667"
+      "matchedRecordId": "openalex-https-openalex-org-w3168393667",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d4c7986f3c2e1680f5c87d16",
+      "existingHash": "d4c7986f3c2e1680f5c87d16"
     },
     {
       "recordId": "openalex-https-openalex-org-w4413268536",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4413268536"
+      "matchedRecordId": "openalex-https-openalex-org-w4413268536",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4a864f68eccb00eafa919b41",
+      "existingHash": "4a864f68eccb00eafa919b41"
     },
     {
       "recordId": "openalex-https-openalex-org-w4225993858",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4225993858"
+      "matchedRecordId": "openalex-https-openalex-org-w4225993858",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "da43cf50a1efaa8741c657eb",
+      "existingHash": "da43cf50a1efaa8741c657eb"
     },
     {
       "recordId": "openalex-https-openalex-org-w3013499512",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3013499512"
+      "matchedRecordId": "openalex-https-openalex-org-w3013499512",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0cab9d688368635d3f2281bd",
+      "existingHash": "0cab9d688368635d3f2281bd"
     },
     {
       "recordId": "openalex-https-openalex-org-w2341806142",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2341806142"
+      "matchedRecordId": "openalex-https-openalex-org-w2341806142",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f818220adc060ed76ad2dae4",
+      "existingHash": "f818220adc060ed76ad2dae4"
     },
     {
       "recordId": "openalex-https-openalex-org-w3031031267",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3031031267"
+      "matchedRecordId": "openalex-https-openalex-org-w3031031267",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a79523ee6b23001dcf7c4634",
+      "existingHash": "a79523ee6b23001dcf7c4634"
     },
     {
       "recordId": "openalex-https-openalex-org-w2920398186",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2920398186"
+      "matchedRecordId": "openalex-https-openalex-org-w2920398186",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "8aca4248ec7b2d1b88c0b718",
+      "existingHash": "8aca4248ec7b2d1b88c0b718"
     },
     {
       "recordId": "openalex-https-openalex-org-w4288051329",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4288051329"
+      "matchedRecordId": "openalex-https-openalex-org-w4288051329",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "3a978348231fe5df59b561b2",
+      "existingHash": "3a978348231fe5df59b561b2"
     },
     {
       "recordId": "openalex-https-openalex-org-w2478189671",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2478189671"
+      "matchedRecordId": "openalex-https-openalex-org-w2478189671",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "e36a9ae9ba93089814b987ee",
+      "existingHash": "e36a9ae9ba93089814b987ee"
     },
     {
       "recordId": "openalex-https-openalex-org-w2924370719",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2924370719"
+      "matchedRecordId": "openalex-https-openalex-org-w2924370719",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "1295d020bf5a7e3cf304b024",
+      "existingHash": "1295d020bf5a7e3cf304b024"
     },
     {
       "recordId": "openalex-https-openalex-org-w3168469624",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3168469624"
+      "matchedRecordId": "openalex-https-openalex-org-w3168469624",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d41c63e0639b8c0851046490",
+      "existingHash": "d41c63e0639b8c0851046490"
     },
     {
       "recordId": "openalex-https-openalex-org-w2797535019",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2797535019"
+      "matchedRecordId": "openalex-https-openalex-org-w2797535019",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "8da47c2e1d3796c34e0ac744",
+      "existingHash": "8da47c2e1d3796c34e0ac744"
     },
     {
       "recordId": "openalex-https-openalex-org-w2594174180",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2594174180"
+      "matchedRecordId": "openalex-https-openalex-org-w2594174180",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "71e4466aefb42f61b418c6b5",
+      "existingHash": "71e4466aefb42f61b418c6b5"
     },
     {
       "recordId": "openalex-https-openalex-org-w1851981756",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w1851981756"
+      "matchedRecordId": "openalex-https-openalex-org-w1851981756",
+      "matchMethod": "openAlexId",
+      "confidence": 100,
+      "reason": "Matched an existing record by openAlexId with an identical content hash - nothing to re-process.",
+      "incomingHash": "03677291e741e08f0477b0c5",
+      "existingHash": "03677291e741e08f0477b0c5"
     },
     {
       "recordId": "openalex-https-openalex-org-w4387821672",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4387821672"
+      "matchedRecordId": "openalex-https-openalex-org-w4387821672",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "146aa3e3bb063a871b8bd0f1",
+      "existingHash": "146aa3e3bb063a871b8bd0f1"
     },
     {
       "recordId": "openalex-https-openalex-org-w2784614186",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2784614186"
+      "matchedRecordId": "openalex-https-openalex-org-w2784614186",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "aabf650183d312ea53f59d4c",
+      "existingHash": "aabf650183d312ea53f59d4c"
     },
     {
       "recordId": "openalex-https-openalex-org-w4312184485",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4312184485"
+      "matchedRecordId": "openalex-https-openalex-org-w4312184485",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c673e5c8253b8c26594f5ec6",
+      "existingHash": "c673e5c8253b8c26594f5ec6"
     },
     {
       "recordId": "openalex-https-openalex-org-w2788227973",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2788227973"
+      "matchedRecordId": "openalex-https-openalex-org-w2788227973",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d538cdf863b9ad7447f9e726",
+      "existingHash": "d538cdf863b9ad7447f9e726"
     },
     {
       "recordId": "openalex-https-openalex-org-w3048846564",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3048846564"
+      "matchedRecordId": "openalex-https-openalex-org-w3048846564",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d4512157f584cd115e1fb241",
+      "existingHash": "d4512157f584cd115e1fb241"
     },
     {
       "recordId": "openalex-https-openalex-org-w4387184932",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4387184932"
+      "matchedRecordId": "openalex-https-openalex-org-w4387184932",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b121e573dfacea958149f3c9",
+      "existingHash": "b121e573dfacea958149f3c9"
     },
     {
       "recordId": "openalex-https-openalex-org-w4403651930",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4403651930"
+      "matchedRecordId": "openalex-https-openalex-org-w4403651930",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "704cb1c17f60aa398cffeeb3",
+      "existingHash": "704cb1c17f60aa398cffeeb3"
     },
     {
       "recordId": "openalex-https-openalex-org-w3213918042",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3213918042"
+      "matchedRecordId": "openalex-https-openalex-org-w3213918042",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5966719bddb220a0ccee2c7f",
+      "existingHash": "5966719bddb220a0ccee2c7f"
     },
     {
       "recordId": "openalex-https-openalex-org-w2903816995",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2903816995"
+      "matchedRecordId": "openalex-https-openalex-org-w2903816995",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "2bed6f64734673627e6e8502",
+      "existingHash": "2bed6f64734673627e6e8502"
     },
     {
       "recordId": "openalex-https-openalex-org-w2990055250",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2990055250"
+      "matchedRecordId": "openalex-https-openalex-org-w2990055250",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "04561a30db391ef2afa6a799",
+      "existingHash": "04561a30db391ef2afa6a799"
     },
     {
       "recordId": "openalex-https-openalex-org-w3137740479",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3137740479"
+      "matchedRecordId": "openalex-https-openalex-org-w3137740479",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4ce3b8601a627737d0d76453",
+      "existingHash": "4ce3b8601a627737d0d76453"
     },
     {
       "recordId": "openalex-https-openalex-org-w3023684259",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3023684259"
+      "matchedRecordId": "openalex-https-openalex-org-w3023684259",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "807854a154fb33d1f555369d",
+      "existingHash": "807854a154fb33d1f555369d"
     },
     {
       "recordId": "openalex-https-openalex-org-w4391959017",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4391959017"
+      "matchedRecordId": "openalex-https-openalex-org-w4391959017",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "1611d8807d6b67feef185170",
+      "existingHash": "1611d8807d6b67feef185170"
     },
     {
       "recordId": "openalex-https-openalex-org-w4213053588",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4213053588"
+      "matchedRecordId": "openalex-https-openalex-org-w4213053588",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "8a4efe6a656b655263175002",
+      "existingHash": "8a4efe6a656b655263175002"
     },
     {
       "recordId": "openalex-https-openalex-org-w2910458317",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2910458317"
+      "matchedRecordId": "openalex-https-openalex-org-w2910458317",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "bc006adfd5f450f357efd8c0",
+      "existingHash": "bc006adfd5f450f357efd8c0"
     },
     {
       "recordId": "openalex-https-openalex-org-w4205413854",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4205413854"
+      "matchedRecordId": "openalex-https-openalex-org-w4205413854",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4975c3eabb2799647188ca9a",
+      "existingHash": "4975c3eabb2799647188ca9a"
     },
     {
       "recordId": "openalex-https-openalex-org-w2530749968",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2530749968"
+      "matchedRecordId": "openalex-https-openalex-org-w2530749968",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "95f0f33225c4ad62aaf70187",
+      "existingHash": "95f0f33225c4ad62aaf70187"
     },
     {
       "recordId": "openalex-https-openalex-org-w2964482263",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2964482263"
+      "matchedRecordId": "openalex-https-openalex-org-w2964482263",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0f9fc6c86659b86de70a5158",
+      "existingHash": "0f9fc6c86659b86de70a5158"
     },
     {
       "recordId": "openalex-https-openalex-org-w3011713008",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3011713008"
+      "matchedRecordId": "openalex-https-openalex-org-w3011713008",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "470a0154f860df7c02e93f3f",
+      "existingHash": "470a0154f860df7c02e93f3f"
     },
     {
       "recordId": "openalex-https-openalex-org-w2464205760",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2464205760"
+      "matchedRecordId": "openalex-https-openalex-org-w2464205760",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "04f7ed7ca69aa227444fb4fa",
+      "existingHash": "04f7ed7ca69aa227444fb4fa"
     },
     {
       "recordId": "openalex-https-openalex-org-w3120887917",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3120887917"
+      "matchedRecordId": "openalex-https-openalex-org-w3120887917",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "6eb3f725b2ece1164a20d1eb",
+      "existingHash": "6eb3f725b2ece1164a20d1eb"
     },
     {
       "recordId": "openalex-https-openalex-org-w2488775031",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2488775031"
+      "matchedRecordId": "openalex-https-openalex-org-w2488775031",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c5ca071a9ce738deabd0ed94",
+      "existingHash": "c5ca071a9ce738deabd0ed94"
     },
     {
       "recordId": "openalex-https-openalex-org-w2806332726",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2806332726"
+      "matchedRecordId": "openalex-https-openalex-org-w2806332726",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c0819fa559c13a4fccd55c0e",
+      "existingHash": "c0819fa559c13a4fccd55c0e"
     },
     {
       "recordId": "openalex-https-openalex-org-w2754483672",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2754483672"
+      "matchedRecordId": "openalex-https-openalex-org-w2754483672",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f6dfd5b8d5470085f465df5d",
+      "existingHash": "f6dfd5b8d5470085f465df5d"
     },
     {
       "recordId": "openalex-https-openalex-org-w2588109978",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2588109978"
+      "matchedRecordId": "openalex-https-openalex-org-w2588109978",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "67069ae3f9509ca87ce46d8b",
+      "existingHash": "67069ae3f9509ca87ce46d8b"
     },
     {
       "recordId": "openalex-https-openalex-org-w2033892743",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2033892743"
+      "matchedRecordId": "openalex-https-openalex-org-w2033892743",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "16aa9bdc7069c74b314f3020",
+      "existingHash": "16aa9bdc7069c74b314f3020"
     },
     {
       "recordId": "openalex-https-openalex-org-w2952392130",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2952392130"
+      "matchedRecordId": "openalex-https-openalex-org-w2952392130",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f7df8274f50fd96aed55edff",
+      "existingHash": "f7df8274f50fd96aed55edff"
     },
     {
       "recordId": "openalex-https-openalex-org-w2946050739",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2946050739"
+      "matchedRecordId": "openalex-https-openalex-org-w2946050739",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "886691f3a579e8c0f8d9b341",
+      "existingHash": "886691f3a579e8c0f8d9b341"
     },
     {
       "recordId": "openalex-https-openalex-org-w3093310142",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3093310142"
+      "matchedRecordId": "openalex-https-openalex-org-w3093310142",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "af8e47a0b891fc73549d3e8c",
+      "existingHash": "af8e47a0b891fc73549d3e8c"
     },
     {
       "recordId": "openalex-https-openalex-org-w4391169722",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4391169722"
+      "matchedRecordId": "openalex-https-openalex-org-w4391169722",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "95832fef84bc4896f7ad9d76",
+      "existingHash": "95832fef84bc4896f7ad9d76"
     },
     {
       "recordId": "openalex-https-openalex-org-w2970948886",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2970948886"
+      "matchedRecordId": "openalex-https-openalex-org-w2970948886",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5edf3f3b9a0392327cd65a04",
+      "existingHash": "5edf3f3b9a0392327cd65a04"
     },
     {
       "recordId": "openalex-https-openalex-org-w2731434693",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2731434693"
+      "matchedRecordId": "openalex-https-openalex-org-w2731434693",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4eaee493733cd30bb52a61ee",
+      "existingHash": "4eaee493733cd30bb52a61ee"
     },
     {
       "recordId": "openalex-https-openalex-org-w3044806866",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3044806866"
+      "matchedRecordId": "openalex-https-openalex-org-w3044806866",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "cfb0130777fbb22838ea0903",
+      "existingHash": "cfb0130777fbb22838ea0903"
     },
     {
       "recordId": "openalex-https-openalex-org-w2508141790",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2508141790"
+      "matchedRecordId": "openalex-https-openalex-org-w2508141790",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "36d5e6c8b7a95ec56f4ab8f3",
+      "existingHash": "36d5e6c8b7a95ec56f4ab8f3"
     },
     {
       "recordId": "openalex-https-openalex-org-w4211117779",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4211117779"
+      "matchedRecordId": "openalex-https-openalex-org-w4211117779",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "38f38794391eba800cd8bf46",
+      "existingHash": "38f38794391eba800cd8bf46"
     },
     {
       "recordId": "openalex-https-openalex-org-w2993859739",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2993859739"
+      "matchedRecordId": "openalex-https-openalex-org-w2993859739",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d876a5d06d2a74cced9ad7b4",
+      "existingHash": "d876a5d06d2a74cced9ad7b4"
     },
     {
       "recordId": "openalex-https-openalex-org-w3211813355",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3211813355"
+      "matchedRecordId": "openalex-https-openalex-org-w3211813355",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "6ff4fc16b2b8e7f0b12e76cc",
+      "existingHash": "6ff4fc16b2b8e7f0b12e76cc"
     },
     {
       "recordId": "openalex-https-openalex-org-w2283345470",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2283345470"
+      "matchedRecordId": "openalex-https-openalex-org-w2283345470",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c76aa61cb12fd55c63d975be",
+      "existingHash": "c76aa61cb12fd55c63d975be"
     },
     {
       "recordId": "openalex-https-openalex-org-w2770757993",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2770757993"
+      "matchedRecordId": "openalex-https-openalex-org-w2770757993",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "02c61ba2c32e45868c72228f",
+      "existingHash": "02c61ba2c32e45868c72228f"
     },
     {
       "recordId": "openalex-https-openalex-org-w3159858237",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3159858237"
+      "matchedRecordId": "openalex-https-openalex-org-w3159858237",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "2d537ef0f96a634452469524",
+      "existingHash": "2d537ef0f96a634452469524"
     },
     {
       "recordId": "openalex-https-openalex-org-w2915513980",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2915513980"
+      "matchedRecordId": "openalex-https-openalex-org-w2915513980",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a095f57388a4b4b779b12bba",
+      "existingHash": "a095f57388a4b4b779b12bba"
     },
     {
       "recordId": "openalex-https-openalex-org-w2811107749",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2811107749"
+      "matchedRecordId": "openalex-https-openalex-org-w2811107749",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "3f2d76709f59133c56061a64",
+      "existingHash": "3f2d76709f59133c56061a64"
     },
     {
       "recordId": "openalex-https-openalex-org-w4367292510",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4367292510"
+      "matchedRecordId": "openalex-https-openalex-org-w4367292510",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "9f1e60d962b29ef6c2440134",
+      "existingHash": "9f1e60d962b29ef6c2440134"
     },
     {
       "recordId": "openalex-https-openalex-org-w4317433355",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4317433355"
+      "matchedRecordId": "openalex-https-openalex-org-w4317433355",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "2562d349a9a7b3896b11bac5",
+      "existingHash": "2562d349a9a7b3896b11bac5"
     },
     {
       "recordId": "openalex-https-openalex-org-w1914140920",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w1914140920"
+      "matchedRecordId": "openalex-https-openalex-org-w1914140920",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d20d98508e60eba1f8314e5b",
+      "existingHash": "d20d98508e60eba1f8314e5b"
     },
     {
       "recordId": "openalex-https-openalex-org-w1585434156",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w1585434156"
+      "matchedRecordId": "openalex-https-openalex-org-w1585434156",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "dba2f3aab80328eccf4ac9ed",
+      "existingHash": "dba2f3aab80328eccf4ac9ed"
     },
     {
       "recordId": "openalex-https-openalex-org-w2183134231",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2183134231"
+      "matchedRecordId": "openalex-https-openalex-org-w2183134231",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "69e3161fb00c6c2610bcef2d",
+      "existingHash": "69e3161fb00c6c2610bcef2d"
     },
     {
       "recordId": "openalex-https-openalex-org-w227127889",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w227127889"
+      "matchedRecordId": "openalex-https-openalex-org-w227127889",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "07bb8272ed95c9eac1ce490d",
+      "existingHash": "07bb8272ed95c9eac1ce490d"
     },
     {
       "recordId": "openalex-https-openalex-org-w3118335127",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3118335127"
+      "matchedRecordId": "openalex-https-openalex-org-w3118335127",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "7e2f48e3d626460d7ddb8709",
+      "existingHash": "7e2f48e3d626460d7ddb8709"
     },
     {
       "recordId": "openalex-https-openalex-org-w2502868461",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2502868461"
+      "matchedRecordId": "openalex-https-openalex-org-w2502868461",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c05a2c5dee44bd2873366bd6",
+      "existingHash": "c05a2c5dee44bd2873366bd6"
     },
     {
       "recordId": "openalex-https-openalex-org-w3127746231",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3127746231"
+      "matchedRecordId": "openalex-https-openalex-org-w3127746231",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "e2d1e8477cfbdd7d815577f9",
+      "existingHash": "e2d1e8477cfbdd7d815577f9"
     },
     {
       "recordId": "openalex-https-openalex-org-w4200123276",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4200123276"
+      "matchedRecordId": "openalex-https-openalex-org-w4200123276",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d6379e30b2e2fd7901622988",
+      "existingHash": "d6379e30b2e2fd7901622988"
     },
     {
       "recordId": "openalex-https-openalex-org-w3217727701",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3217727701"
+      "matchedRecordId": "openalex-https-openalex-org-w3217727701",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "a71b813771234b985b013ee1",
+      "existingHash": "a71b813771234b985b013ee1"
     },
     {
       "recordId": "openalex-https-openalex-org-w4323927796",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4323927796"
+      "matchedRecordId": "openalex-https-openalex-org-w4323927796",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "98b29e0225a029a3d08f4545",
+      "existingHash": "98b29e0225a029a3d08f4545"
     },
     {
       "recordId": "openalex-https-openalex-org-w2767044256",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2767044256"
+      "matchedRecordId": "openalex-https-openalex-org-w2767044256",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "eb713e195c74d72cd34635e3",
+      "existingHash": "eb713e195c74d72cd34635e3"
     },
     {
       "recordId": "openalex-https-openalex-org-w2811211442",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2811211442"
+      "matchedRecordId": "openalex-https-openalex-org-w2811211442",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "59ea8b1ebc46e1d01c36795d",
+      "existingHash": "59ea8b1ebc46e1d01c36795d"
     },
     {
       "recordId": "openalex-https-openalex-org-w4311729195",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4311729195"
+      "matchedRecordId": "openalex-https-openalex-org-w4311729195",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "8165dc3da4364eb62dbd6024",
+      "existingHash": "8165dc3da4364eb62dbd6024"
     },
     {
       "recordId": "openalex-https-openalex-org-w4307552289",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4307552289"
+      "matchedRecordId": "openalex-https-openalex-org-w4307552289",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "013efeab1877a240131fc9f2",
+      "existingHash": "013efeab1877a240131fc9f2"
     },
     {
       "recordId": "openalex-https-openalex-org-w4313362278",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4313362278"
+      "matchedRecordId": "openalex-https-openalex-org-w4313362278",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5cb2293ebb7472e0ec960e30",
+      "existingHash": "5cb2293ebb7472e0ec960e30"
     },
     {
       "recordId": "openalex-https-openalex-org-w4403949792",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4403949792"
+      "matchedRecordId": "openalex-https-openalex-org-w4403949792",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "7b14b81d96f010e2c2b1935e",
+      "existingHash": "7b14b81d96f010e2c2b1935e"
     },
     {
       "recordId": "openalex-https-openalex-org-w4307752077",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4307752077"
+      "matchedRecordId": "openalex-https-openalex-org-w4307752077",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c373331476be93fa10791bb7",
+      "existingHash": "c373331476be93fa10791bb7"
     },
     {
       "recordId": "openalex-https-openalex-org-w4312126210",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4312126210"
+      "matchedRecordId": "openalex-https-openalex-org-w4312126210",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4a2d6da574f5a97e1196b78c",
+      "existingHash": "4a2d6da574f5a97e1196b78c"
     },
     {
       "recordId": "openalex-https-openalex-org-w4409471041",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4409471041"
+      "matchedRecordId": "openalex-https-openalex-org-w4409471041",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "71d298825ba688e045040c80",
+      "existingHash": "71d298825ba688e045040c80"
     },
     {
       "recordId": "openalex-https-openalex-org-w4403952905",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4403952905"
+      "matchedRecordId": "openalex-https-openalex-org-w4403952905",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "1a658799c3e0d10dfd2eb910",
+      "existingHash": "1a658799c3e0d10dfd2eb910"
     },
     {
       "recordId": "openalex-https-openalex-org-w4411027350",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4411027350"
+      "matchedRecordId": "openalex-https-openalex-org-w4411027350",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "0006f9c137596809d0be0596",
+      "existingHash": "0006f9c137596809d0be0596"
     },
     {
       "recordId": "openalex-https-openalex-org-w4404939180",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4404939180"
+      "matchedRecordId": "openalex-https-openalex-org-w4404939180",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "69d7bdfb764611380a0ee2db",
+      "existingHash": "69d7bdfb764611380a0ee2db"
     },
     {
       "recordId": "openalex-https-openalex-org-w4407393077",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4407393077"
+      "matchedRecordId": "openalex-https-openalex-org-w4407393077",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "66977f95d4c3738b61356c2e",
+      "existingHash": "66977f95d4c3738b61356c2e"
     },
     {
       "recordId": "openalex-https-openalex-org-w4407189872",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4407189872"
+      "matchedRecordId": "openalex-https-openalex-org-w4407189872",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5fc79c0f86cbf4946c868d74",
+      "existingHash": "5fc79c0f86cbf4946c868d74"
     },
     {
       "recordId": "openalex-https-openalex-org-w4416025063",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4416025063"
+      "matchedRecordId": "openalex-https-openalex-org-w4416025063",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "e2f17821ee3e49fc6f7dc2b0",
+      "existingHash": "e2f17821ee3e49fc6f7dc2b0"
     },
     {
       "recordId": "openalex-https-openalex-org-w4391160375",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4391160375"
+      "matchedRecordId": "openalex-https-openalex-org-w4391160375",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "63ee7c4cdc96d043e78264c9",
+      "existingHash": "63ee7c4cdc96d043e78264c9"
     },
     {
       "recordId": "openalex-https-openalex-org-w3177047809",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3177047809"
+      "matchedRecordId": "openalex-https-openalex-org-w3177047809",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "1e4ca6fd179c8de4f9d6a5ce",
+      "existingHash": "1e4ca6fd179c8de4f9d6a5ce"
     },
     {
       "recordId": "openalex-https-openalex-org-w4319724843",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4319724843"
+      "matchedRecordId": "openalex-https-openalex-org-w4319724843",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "ef8d61a56d76f2ab83a048ea",
+      "existingHash": "ef8d61a56d76f2ab83a048ea"
     },
     {
       "recordId": "openalex-https-openalex-org-w2945214992",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2945214992"
+      "matchedRecordId": "openalex-https-openalex-org-w2945214992",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f685d3ab50605d9f89176786",
+      "existingHash": "f685d3ab50605d9f89176786"
     },
     {
       "recordId": "openalex-https-openalex-org-w2332283998",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2332283998"
+      "matchedRecordId": "openalex-https-openalex-org-w2332283998",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d7982eb5f2fefea52aa06355",
+      "existingHash": "d7982eb5f2fefea52aa06355"
     },
     {
       "recordId": "openalex-https-openalex-org-w2581111877",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2581111877"
+      "matchedRecordId": "openalex-https-openalex-org-w2581111877",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "d396ac6f9f59342f2bd2bc9f",
+      "existingHash": "d396ac6f9f59342f2bd2bc9f"
     },
     {
       "recordId": "openalex-https-openalex-org-w3082243195",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3082243195"
+      "matchedRecordId": "openalex-https-openalex-org-w3082243195",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "1d2cab25bf45abcb9a9c66d7",
+      "existingHash": "1d2cab25bf45abcb9a9c66d7"
     },
     {
       "recordId": "openalex-https-openalex-org-w2913393332",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2913393332"
+      "matchedRecordId": "openalex-https-openalex-org-w2913393332",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "4884050bbcdc2041fd82e7da",
+      "existingHash": "4884050bbcdc2041fd82e7da"
     },
     {
       "recordId": "openalex-https-openalex-org-w3121887140",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3121887140"
+      "matchedRecordId": "openalex-https-openalex-org-w3121887140",
+      "matchMethod": "openAlexId",
+      "confidence": 100,
+      "reason": "Matched an existing record by openAlexId with an identical content hash - nothing to re-process.",
+      "incomingHash": "d4c861a40b99c304dc77f768",
+      "existingHash": "d4c861a40b99c304dc77f768"
     },
     {
       "recordId": "openalex-https-openalex-org-w4285818829",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4285818829"
+      "matchedRecordId": "openalex-https-openalex-org-w4285818829",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c8083a036eeb4201a72a66a3",
+      "existingHash": "c8083a036eeb4201a72a66a3"
     },
     {
       "recordId": "openalex-https-openalex-org-w2956110096",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2956110096"
+      "matchedRecordId": "openalex-https-openalex-org-w2956110096",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "145e80f1ef9ae145eca07e93",
+      "existingHash": "145e80f1ef9ae145eca07e93"
     },
     {
       "recordId": "openalex-https-openalex-org-w3096656822",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3096656822"
+      "matchedRecordId": "openalex-https-openalex-org-w3096656822",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "1f009d931a5ee9004fcf01c3",
+      "existingHash": "1f009d931a5ee9004fcf01c3"
     },
     {
       "recordId": "openalex-https-openalex-org-w4287854497",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4287854497"
+      "matchedRecordId": "openalex-https-openalex-org-w4287854497",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "72cee9b72b37d6c515967936",
+      "existingHash": "72cee9b72b37d6c515967936"
     },
     {
       "recordId": "openalex-https-openalex-org-w2910756055",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2910756055"
+      "matchedRecordId": "openalex-https-openalex-org-w2910756055",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "276b62ca186b43d1e2aa78c2",
+      "existingHash": "276b62ca186b43d1e2aa78c2"
     },
     {
       "recordId": "openalex-https-openalex-org-w3031747086",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3031747086"
+      "matchedRecordId": "openalex-https-openalex-org-w3031747086",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "b3dca99ce68292cab6ff77be",
+      "existingHash": "b3dca99ce68292cab6ff77be"
     },
     {
       "recordId": "openalex-https-openalex-org-w2728589724",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2728589724"
+      "matchedRecordId": "openalex-https-openalex-org-w2728589724",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "2a532d668a8735156a3ffbe0",
+      "existingHash": "2a532d668a8735156a3ffbe0"
     },
     {
       "recordId": "openalex-https-openalex-org-w4200337841",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4200337841"
+      "matchedRecordId": "openalex-https-openalex-org-w4200337841",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "377ed3935e8a4a26eafbfe8e",
+      "existingHash": "377ed3935e8a4a26eafbfe8e"
     },
     {
       "recordId": "openalex-https-openalex-org-w3019075159",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3019075159"
+      "matchedRecordId": "openalex-https-openalex-org-w3019075159",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "7fa888b21f06ed7706e26166",
+      "existingHash": "7fa888b21f06ed7706e26166"
     },
     {
       "recordId": "openalex-https-openalex-org-w2572191223",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2572191223"
+      "matchedRecordId": "openalex-https-openalex-org-w2572191223",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "5e55ca98081485a51eeaa537",
+      "existingHash": "5e55ca98081485a51eeaa537"
     },
     {
       "recordId": "openalex-https-openalex-org-w2013138470",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2013138470"
+      "matchedRecordId": "openalex-https-openalex-org-w2013138470",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "f6e179021b7353d63b10c6c3",
+      "existingHash": "f6e179021b7353d63b10c6c3"
     },
     {
       "recordId": "openalex-https-openalex-org-w4288079564",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w4288079564"
+      "matchedRecordId": "openalex-https-openalex-org-w4288079564",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "c4d827fb3a956a08fe20c89f",
+      "existingHash": "c4d827fb3a956a08fe20c89f"
     },
     {
       "recordId": "openalex-https-openalex-org-w3136247427",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w3136247427"
+      "matchedRecordId": "openalex-https-openalex-org-w3136247427",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "fea3b07f17a3c5a8001c86cf",
+      "existingHash": "fea3b07f17a3c5a8001c86cf"
     },
     {
       "recordId": "openalex-https-openalex-org-w2918836041",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2918836041"
+      "matchedRecordId": "openalex-https-openalex-org-w2918836041",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "8902baab7e2917f24618b926",
+      "existingHash": "8902baab7e2917f24618b926"
     },
     {
       "recordId": "openalex-https-openalex-org-w2953103152",
       "classification": "unchanged",
-      "matchedRecordId": "openalex-https-openalex-org-w2953103152"
+      "matchedRecordId": "openalex-https-openalex-org-w2953103152",
+      "matchMethod": "doi",
+      "confidence": 100,
+      "reason": "Matched an existing record by doi with an identical content hash - nothing to re-process.",
+      "incomingHash": "2da30bb1d2ec0598f5dde062",
+      "existingHash": "2da30bb1d2ec0598f5dde062"
     }
   ]
 }
