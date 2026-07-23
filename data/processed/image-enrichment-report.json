@@ -1,0 +1,117 @@
+{
+  "generatedAt": "2026-07-23T09:21:02.182Z",
+  "limit": 10,
+  "attempted": 10,
+  "recordsGivenImages": 0,
+  "recordsStillPending": 321,
+  "sourcePagesCheckedTotal": 11,
+  "imageCandidatesFoundTotal": 7,
+  "newImageCandidatesWritten": 0,
+  "promoted": true,
+  "validationProblems": [],
+  "displayEligibleBefore": 8,
+  "displayEligibleAfter": 8,
+  "entries": [
+    {
+      "recordId": "cordis-101096224",
+      "title": "SMART EUROPEAN SHIPBUILDING",
+      "sourcePagesChecked": [
+        "https://cordis.europa.eu/project/id/101096224"
+      ],
+      "imageCandidatesFound": 1,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101096224 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific."
+    },
+    {
+      "recordId": "cordis-101271064",
+      "title": "SUPPORTING MARITIME ALTERNATIVE FUEL PROJECTS",
+      "sourcePagesChecked": [
+        "https://cordis.europa.eu/project/id/101271064"
+      ],
+      "imageCandidatesFound": 1,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101271064 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific."
+    },
+    {
+      "recordId": "cordis-101236476",
+      "title": "Adaptive strategies for enhancing threat-agnostic resilience of port ecosystems",
+      "sourcePagesChecked": [
+        "https://cordis.europa.eu/project/id/101236476"
+      ],
+      "imageCandidatesFound": 1,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101236476 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific."
+    },
+    {
+      "recordId": "cordis-101225772",
+      "title": "Securing Europe’s MARitime domain against threats through vessel-CONNECTed services",
+      "sourcePagesChecked": [
+        "https://cordis.europa.eu/project/id/101225772"
+      ],
+      "imageCandidatesFound": 1,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101225772 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific."
+    },
+    {
+      "recordId": "cordis-101096487",
+      "title": "AUTONOMOUS FLYING SHIPS FOR INTER-ISLAND AND INLAND WATERS TRANSPORT",
+      "sourcePagesChecked": [
+        "https://cordis.europa.eu/project/id/101096487"
+      ],
+      "imageCandidatesFound": 1,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101096487 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific."
+    },
+    {
+      "recordId": "cordis-101272708",
+      "title": "Sustainable Energy Transition in Shipping through Agreements, Industrial Leadership and Subsidies",
+      "sourcePagesChecked": [
+        "https://cordis.europa.eu/project/id/101272708"
+      ],
+      "imageCandidatesFound": 1,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101272708 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific."
+    },
+    {
+      "recordId": "cordis-887927",
+      "title": "A Novel Smart System for the safe Management of Nautical operations",
+      "sourcePagesChecked": [
+        "https://cordis.europa.eu/project/id/887927"
+      ],
+      "imageCandidatesFound": 1,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/887927 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_h2020_big.jpg: Image URL matches a known template/logo/icon path pattern - a generic programme asset, not a project-specific image."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4388551166",
+      "title": "Decarbonising international shipping – A life cycle perspective on alternative fuel options",
+      "sourcePagesChecked": [
+        "https://doi.org/10.1016/j.enconman.2023.117848"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://doi.org/10.1016/j.enconman.2023.117848 successfully but it has no embedded images."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3155205771",
+      "title": "Decarbonization in Shipping Industry: A Review of Research, Technology Development, and Innovation Proposals",
+      "sourcePagesChecked": [
+        "https://doi.org/10.3390/jmse9040415",
+        "https://www.mdpi.com/2077-1312/9/4/415/pdf?version=1619098263"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.mdpi.com/2077-1312/9/4/415/pdf?version=1619098263)."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4376597726",
+      "title": "Review of current regulations, available technologies, and future trends in the green shipping industry",
+      "sourcePagesChecked": [
+        "https://doi.org/10.1016/j.oceaneng.2023.114670"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://doi.org/10.1016/j.oceaneng.2023.114670 successfully but it has no embedded images."
+    }
+  ]
+}

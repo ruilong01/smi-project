@@ -1,0 +1,170 @@
+{
+  "generatedAt": "2026-07-23T09:21:01.052Z",
+  "limit": 10,
+  "totalCandidatesConsidered": 321,
+  "skippedCooldown": 10,
+  "queuedCount": 10,
+  "queue": [
+    {
+      "recordId": "cordis-101096224",
+      "title": "SMART EUROPEAN SHIPBUILDING",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101096224",
+        "https://doi.org/10.3030/101096224"
+      ],
+      "recordType": "funded_project",
+      "countryOrRegion": "EU / multi-country consortium",
+      "institutions": [],
+      "coordinator": "",
+      "relevanceScore": 88,
+      "actionabilityScore": 82,
+      "queueReason": "funded project record (preferred over generic publications); CORDIS project record (preferred over publisher-only records); high relevance score (88); high actionability score (82)",
+      "queuedAt": "2026-07-23T09:21:01.052Z"
+    },
+    {
+      "recordId": "cordis-101271064",
+      "title": "SUPPORTING MARITIME ALTERNATIVE FUEL PROJECTS",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101271064"
+      ],
+      "recordType": "funded_project",
+      "countryOrRegion": "EU / multi-country consortium",
+      "institutions": [],
+      "coordinator": "",
+      "relevanceScore": 88,
+      "actionabilityScore": 80,
+      "queueReason": "funded project record (preferred over generic publications); CORDIS project record (preferred over publisher-only records); high relevance score (88); high actionability score (80)",
+      "queuedAt": "2026-07-23T09:21:01.052Z"
+    },
+    {
+      "recordId": "cordis-101236476",
+      "title": "Adaptive strategies for enhancing threat-agnostic resilience of port ecosystems",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101236476",
+        "https://doi.org/10.3030/101236476"
+      ],
+      "recordType": "funded_project",
+      "countryOrRegion": "EU / multi-country consortium",
+      "institutions": [],
+      "coordinator": "",
+      "relevanceScore": 88,
+      "actionabilityScore": 79,
+      "queueReason": "funded project record (preferred over generic publications); CORDIS project record (preferred over publisher-only records); high relevance score (88); high actionability score (79)",
+      "queuedAt": "2026-07-23T09:21:01.052Z"
+    },
+    {
+      "recordId": "cordis-101225772",
+      "title": "Securing Europe’s MARitime domain against threats through vessel-CONNECTed services",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101225772",
+        "https://doi.org/10.3030/101225772"
+      ],
+      "recordType": "funded_project",
+      "countryOrRegion": "EU / multi-country consortium",
+      "institutions": [],
+      "coordinator": "",
+      "relevanceScore": 86,
+      "actionabilityScore": 78,
+      "queueReason": "funded project record (preferred over generic publications); CORDIS project record (preferred over publisher-only records); high relevance score (86); high actionability score (78)",
+      "queuedAt": "2026-07-23T09:21:01.052Z"
+    },
+    {
+      "recordId": "cordis-101096487",
+      "title": "AUTONOMOUS FLYING SHIPS FOR INTER-ISLAND AND INLAND WATERS TRANSPORT",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101096487",
+        "https://doi.org/10.3030/101096487"
+      ],
+      "recordType": "funded_project",
+      "countryOrRegion": "EU / multi-country consortium",
+      "institutions": [],
+      "coordinator": "",
+      "relevanceScore": 85,
+      "actionabilityScore": 77,
+      "queueReason": "funded project record (preferred over generic publications); CORDIS project record (preferred over publisher-only records); high relevance score (85); high actionability score (77)",
+      "queuedAt": "2026-07-23T09:21:01.052Z"
+    },
+    {
+      "recordId": "cordis-101272708",
+      "title": "Sustainable Energy Transition in Shipping through Agreements, Industrial Leadership and Subsidies",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101272708",
+        "https://doi.org/10.3030/101272708"
+      ],
+      "recordType": "funded_project",
+      "countryOrRegion": "EU / policy-focused research",
+      "institutions": [],
+      "coordinator": "",
+      "relevanceScore": 84,
+      "actionabilityScore": 72,
+      "queueReason": "funded project record (preferred over generic publications); CORDIS project record (preferred over publisher-only records); high relevance score (84); high actionability score (72)",
+      "queuedAt": "2026-07-23T09:21:01.052Z"
+    },
+    {
+      "recordId": "cordis-887927",
+      "title": "A Novel Smart System for the safe Management of Nautical operations",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/887927",
+        "https://doi.org/10.3030/887927"
+      ],
+      "recordType": "funded_project",
+      "countryOrRegion": "EU / multi-country consortium",
+      "institutions": [],
+      "coordinator": "",
+      "relevanceScore": 84,
+      "actionabilityScore": 68,
+      "queueReason": "funded project record (preferred over generic publications); CORDIS project record (preferred over publisher-only records); high relevance score (84)",
+      "queuedAt": "2026-07-23T09:21:01.052Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4388551166",
+      "title": "Decarbonising international shipping – A life cycle perspective on alternative fuel options",
+      "sourceUrls": [
+        "https://doi.org/10.1016/j.enconman.2023.117848"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "University of Manchester"
+      ],
+      "coordinator": "University of Manchester",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:21:01.052Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3155205771",
+      "title": "Decarbonization in Shipping Industry: A Review of Research, Technology Development, and Innovation Proposals",
+      "sourceUrls": [
+        "https://doi.org/10.3390/jmse9040415",
+        "https://www.mdpi.com/2077-1312/9/4/415/pdf?version=1619098263"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [],
+      "coordinator": "",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:21:01.052Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4376597726",
+      "title": "Review of current regulations, available technologies, and future trends in the green shipping industry",
+      "sourceUrls": [
+        "https://doi.org/10.1016/j.oceaneng.2023.114670"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "Alexandria University"
+      ],
+      "coordinator": "Alexandria University",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:21:01.052Z"
+    }
+  ]
+}

@@ -13,6 +13,7 @@ yarn-error.log*
 # not in git history. data/processed/*.json stays committed (small,
 # meaningful summaries, same convention as src/data/generated/).
 data/raw/openalex/
+data/raw/media-candidates/
 data/logs/
 data/processed/.tmp-*/
 data/processed/*.tmp-*.json

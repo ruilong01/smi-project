@@ -141,6 +141,33 @@ export function parseHtml(html, url) {
 
   const images = [];
   const seenImages = new Set();
+
+  // Meta-tag images (the page's own og:image/twitter:image) go first -
+  // these are the page owner's own choice of representative image, a
+  // stronger relevance signal than any arbitrary inline <img>.
+  const META_IMAGE_SELECTORS = [
+    "meta[property='og:image:secure_url']",
+    "meta[property='og:image']",
+    "meta[name='twitter:image']",
+    "meta[name='twitter:image:src']",
+  ];
+  META_IMAGE_SELECTORS.forEach((selector) => {
+    if (images.length >= MAX_IMAGES) return;
+    const content = $(selector).attr("content");
+    const absolute = toAbsoluteUrl(content, url);
+    if (!absolute || seenImages.has(absolute)) return;
+    seenImages.add(absolute);
+    images.push({
+      imageUrl: absolute,
+      altText: pageTitle ?? "",
+      caption: "",
+      sourceUrl: url,
+      canEmbed: false,
+      rightsNote: "Rights not verified; not embedded automatically.",
+      isMetaImage: true,
+    });
+  });
+
   $("img[src]").each((_, el) => {
     if (images.length >= MAX_IMAGES) return;
     const absolute = toAbsoluteUrl($(el).attr("src"), url);
@@ -153,6 +180,7 @@ export function parseHtml(html, url) {
       sourceUrl: url,
       canEmbed: false,
       rightsNote: "Rights not verified; not embedded automatically.",
+      isMetaImage: false,
     });
   });
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T05:13:07.704Z",
+  "generatedAt": "2026-07-23T09:21:02.182Z",
   "rawRunFilesProcessed": 3,
   "totalRawWorksSeen": 1521,
   "openAlexRecordCount": 304,
@@ -1405,14 +1405,35 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "official_source_page",
+        "sourcePagesChecked": [
+          "https://cordis.europa.eu/project/id/101271064"
+        ],
+        "sourcePagesAccepted": [
+          "https://cordis.europa.eu/project/id/101271064"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [
+          "https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg"
+        ],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101271064 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": true,
         "source": "source_curated"
       },
-      "triageDecision": "hold_pending_image"
+      "triageDecision": "hold_pending_image",
+      "lastImageAttemptAt": "2026-07-23T09:21:02.182Z"
     },
     {
       "recordId": "cordis-101225772",
@@ -1505,14 +1526,35 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "official_source_page",
+        "sourcePagesChecked": [
+          "https://cordis.europa.eu/project/id/101225772"
+        ],
+        "sourcePagesAccepted": [
+          "https://cordis.europa.eu/project/id/101225772"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [
+          "https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg"
+        ],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101225772 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": true,
         "source": "source_curated"
       },
-      "triageDecision": "hold_pending_image"
+      "triageDecision": "hold_pending_image",
+      "lastImageAttemptAt": "2026-07-23T09:21:02.182Z"
     },
     {
       "recordId": "cordis-101328431",
@@ -1908,14 +1950,35 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "official_source_page",
+        "sourcePagesChecked": [
+          "https://cordis.europa.eu/project/id/887927"
+        ],
+        "sourcePagesAccepted": [
+          "https://cordis.europa.eu/project/id/887927"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [
+          "https://cordis.europa.eu/projects/icons/logo_h2020_big.jpg"
+        ],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/887927 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_h2020_big.jpg: Image URL matches a known template/logo/icon path pattern - a generic programme asset, not a project-specific image.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": true,
         "source": "source_curated"
       },
-      "triageDecision": "hold_pending_image"
+      "triageDecision": "hold_pending_image",
+      "lastImageAttemptAt": "2026-07-23T09:21:02.182Z"
     },
     {
       "recordId": "cordis-101236476",
@@ -2008,14 +2071,35 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "official_source_page",
+        "sourcePagesChecked": [
+          "https://cordis.europa.eu/project/id/101236476"
+        ],
+        "sourcePagesAccepted": [
+          "https://cordis.europa.eu/project/id/101236476"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [
+          "https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg"
+        ],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101236476 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": true,
         "source": "source_curated"
       },
-      "triageDecision": "hold_pending_image"
+      "triageDecision": "hold_pending_image",
+      "lastImageAttemptAt": "2026-07-23T09:21:02.182Z"
     },
     {
       "recordId": "cordis-955413",
@@ -2310,14 +2394,35 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "official_source_page",
+        "sourcePagesChecked": [
+          "https://cordis.europa.eu/project/id/101096487"
+        ],
+        "sourcePagesAccepted": [
+          "https://cordis.europa.eu/project/id/101096487"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [
+          "https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg"
+        ],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101096487 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": true,
         "source": "source_curated"
       },
-      "triageDecision": "hold_pending_image"
+      "triageDecision": "hold_pending_image",
+      "lastImageAttemptAt": "2026-07-23T09:21:02.182Z"
     },
     {
       "recordId": "cordis-101121129",
@@ -2612,14 +2717,35 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "official_source_page",
+        "sourcePagesChecked": [
+          "https://cordis.europa.eu/project/id/101096224"
+        ],
+        "sourcePagesAccepted": [
+          "https://cordis.europa.eu/project/id/101096224"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [
+          "https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg"
+        ],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101096224 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": true,
         "source": "source_curated"
       },
-      "triageDecision": "hold_pending_image"
+      "triageDecision": "hold_pending_image",
+      "lastImageAttemptAt": "2026-07-23T09:21:02.182Z"
     },
     {
       "recordId": "cordis-101272708",
@@ -2712,14 +2838,35 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "official_source_page",
+        "sourcePagesChecked": [
+          "https://cordis.europa.eu/project/id/101272708"
+        ],
+        "sourcePagesAccepted": [
+          "https://cordis.europa.eu/project/id/101272708"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [
+          "https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg"
+        ],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://cordis.europa.eu/project/id/101272708 successfully but found 1 image(s), none accepted: https://cordis.europa.eu/projects/icons/logo_horizon_big.jpg: shared with other unrelated record(s) - a generic/template image, not project-specific.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": true,
         "source": "source_curated"
       },
-      "triageDecision": "hold_pending_image"
+      "triageDecision": "hold_pending_image",
+      "lastImageAttemptAt": "2026-07-23T09:21:02.182Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w4388551166",
@@ -2806,8 +2953,26 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "project_website",
+        "sourcePagesChecked": [
+          "https://doi.org/10.1016/j.enconman.2023.117848"
+        ],
+        "sourcePagesAccepted": [
+          "https://doi.org/10.1016/j.enconman.2023.117848"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://doi.org/10.1016/j.enconman.2023.117848 successfully but it has no embedded images.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -2822,7 +2987,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "eb25bd237c370c12e9b89441"
+      "recordHash": "eb25bd237c370c12e9b89441",
+      "lastImageAttemptAt": "2026-07-23T09:21:02.182Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w3155205771",
@@ -2910,8 +3076,28 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "no_image_found",
+        "sourcePagesChecked": [
+          "https://doi.org/10.3390/jmse9040415",
+          "https://www.mdpi.com/2077-1312/9/4/415/pdf?version=1619098263"
+        ],
+        "sourcePagesAccepted": [],
+        "sourcePagesRejected": [
+          "https://doi.org/10.3390/jmse9040415",
+          "https://www.mdpi.com/2077-1312/9/4/415/pdf?version=1619098263"
+        ],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.mdpi.com/2077-1312/9/4/415/pdf?version=1619098263).",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -2926,7 +3112,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "683ffba255beb937a8668a98"
+      "recordHash": "683ffba255beb937a8668a98",
+      "lastImageAttemptAt": "2026-07-23T09:21:02.182Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w4376597726",
@@ -3018,8 +3205,26 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "project_website",
+        "sourcePagesChecked": [
+          "https://doi.org/10.1016/j.oceaneng.2023.114670"
+        ],
+        "sourcePagesAccepted": [
+          "https://doi.org/10.1016/j.oceaneng.2023.114670"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://doi.org/10.1016/j.oceaneng.2023.114670 successfully but it has no embedded images.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -3034,7 +3239,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "d271eb19581e7fac56220800"
+      "recordHash": "d271eb19581e7fac56220800",
+      "lastImageAttemptAt": "2026-07-23T09:21:02.182Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w3117037508",
