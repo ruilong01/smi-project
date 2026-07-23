@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T09:21:02.182Z",
+  "generatedAt": "2026-07-23T09:30:05.508Z",
   "rawRunFilesProcessed": 3,
   "totalRawWorksSeen": 1521,
   "openAlexRecordCount": 304,
@@ -3328,8 +3328,28 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "no_image_found",
+        "sourcePagesChecked": [
+          "https://doi.org/10.3390/su13010298",
+          "https://www.mdpi.com/2071-1050/13/1/298/pdf?version=1609394133"
+        ],
+        "sourcePagesAccepted": [],
+        "sourcePagesRejected": [
+          "https://doi.org/10.3390/su13010298",
+          "https://www.mdpi.com/2071-1050/13/1/298/pdf?version=1609394133"
+        ],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.mdpi.com/2071-1050/13/1/298/pdf?version=1609394133).",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -3344,7 +3364,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "86cff5b2862c15703bf4f24c"
+      "recordHash": "86cff5b2862c15703bf4f24c",
+      "lastImageAttemptAt": "2026-07-23T09:30:05.508Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w3093547115",
@@ -3432,8 +3453,28 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "no_image_found",
+        "sourcePagesChecked": [
+          "https://doi.org/10.1080/14693062.2020.1831430",
+          "https://www.tandfonline.com/doi/pdf/10.1080/14693062.2020.1831430?needAccess=true"
+        ],
+        "sourcePagesAccepted": [],
+        "sourcePagesRejected": [
+          "https://doi.org/10.1080/14693062.2020.1831430",
+          "https://www.tandfonline.com/doi/pdf/10.1080/14693062.2020.1831430?needAccess=true"
+        ],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.tandfonline.com/doi/pdf/10.1080/14693062.2020.1831430?needAccess=true).",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -3448,7 +3489,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "34ebbf14bd53cbe6023562d3"
+      "recordHash": "34ebbf14bd53cbe6023562d3",
+      "lastImageAttemptAt": "2026-07-23T09:30:05.508Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w3016994415",
@@ -3535,8 +3577,28 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "no_image_found",
+        "sourcePagesChecked": [
+          "https://doi.org/10.3390/su12083220",
+          "https://www.mdpi.com/2071-1050/12/8/3220/pdf?version=1587036736"
+        ],
+        "sourcePagesAccepted": [],
+        "sourcePagesRejected": [
+          "https://doi.org/10.3390/su12083220",
+          "https://www.mdpi.com/2071-1050/12/8/3220/pdf?version=1587036736"
+        ],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.mdpi.com/2071-1050/12/8/3220/pdf?version=1587036736).",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -3551,7 +3613,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "2367ca8b13dd8a6fed70dc5d"
+      "recordHash": "2367ca8b13dd8a6fed70dc5d",
+      "lastImageAttemptAt": "2026-07-23T09:30:05.508Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w3038723752",
@@ -3641,8 +3704,26 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "project_website",
+        "sourcePagesChecked": [
+          "https://doi.org/10.1057/s41278-020-00160-9"
+        ],
+        "sourcePagesAccepted": [
+          "https://doi.org/10.1057/s41278-020-00160-9"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://doi.org/10.1057/s41278-020-00160-9 successfully but it has no embedded images.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -3657,7 +3738,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "9f5d02ca48e9302a1a2105b4"
+      "recordHash": "9f5d02ca48e9302a1a2105b4",
+      "lastImageAttemptAt": "2026-07-23T09:30:05.508Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w3161725877",
@@ -3745,8 +3827,28 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "no_image_found",
+        "sourcePagesChecked": [
+          "https://doi.org/10.1039/d1se00345c",
+          "https://pubs.rsc.org/en/content/articlepdf/2021/se/d1se00345c"
+        ],
+        "sourcePagesAccepted": [],
+        "sourcePagesRejected": [
+          "https://doi.org/10.1039/d1se00345c",
+          "https://pubs.rsc.org/en/content/articlepdf/2021/se/d1se00345c"
+        ],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://pubs.rsc.org/en/content/articlepdf/2021/se/d1se00345c).",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -3761,7 +3863,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "678a2f4116efc0373f218639"
+      "recordHash": "678a2f4116efc0373f218639",
+      "lastImageAttemptAt": "2026-07-23T09:30:05.508Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w4401582571",
@@ -3850,8 +3953,26 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "project_website",
+        "sourcePagesChecked": [
+          "https://doi.org/10.1016/j.apenergy.2024.124163"
+        ],
+        "sourcePagesAccepted": [
+          "https://doi.org/10.1016/j.apenergy.2024.124163"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://doi.org/10.1016/j.apenergy.2024.124163 successfully but it has no embedded images.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -3866,7 +3987,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "cb6fa93b61e3e4dfd5468c5a"
+      "recordHash": "cb6fa93b61e3e4dfd5468c5a",
+      "lastImageAttemptAt": "2026-07-23T09:30:05.508Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w4400493457",
@@ -3962,8 +4084,28 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "no_image_found",
+        "sourcePagesChecked": [
+          "https://doi.org/10.3390/app14145994",
+          "https://www.mdpi.com/2076-3417/14/14/5994/pdf?version=1721282785"
+        ],
+        "sourcePagesAccepted": [],
+        "sourcePagesRejected": [
+          "https://doi.org/10.3390/app14145994",
+          "https://www.mdpi.com/2076-3417/14/14/5994/pdf?version=1721282785"
+        ],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.mdpi.com/2076-3417/14/14/5994/pdf?version=1721282785).",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -3978,7 +4120,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "5bd050e1f9eb72c605eb4018"
+      "recordHash": "5bd050e1f9eb72c605eb4018",
+      "lastImageAttemptAt": "2026-07-23T09:30:05.508Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w4391090797",
@@ -4067,8 +4210,26 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "project_website",
+        "sourcePagesChecked": [
+          "https://doi.org/10.1016/j.rtbm.2024.101100"
+        ],
+        "sourcePagesAccepted": [
+          "https://doi.org/10.1016/j.rtbm.2024.101100"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://doi.org/10.1016/j.rtbm.2024.101100 successfully but it has no embedded images.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -4083,7 +4244,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "6deb4bcc3ae94cf06e6ed679"
+      "recordHash": "6deb4bcc3ae94cf06e6ed679",
+      "lastImageAttemptAt": "2026-07-23T09:30:05.508Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w3204034991",
@@ -4173,8 +4335,26 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "project_website",
+        "sourcePagesChecked": [
+          "https://doi.org/10.1016/j.ijhydene.2021.09.041"
+        ],
+        "sourcePagesAccepted": [
+          "https://doi.org/10.1016/j.ijhydene.2021.09.041"
+        ],
+        "sourcePagesRejected": [],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "Fetched https://doi.org/10.1016/j.ijhydene.2021.09.041 successfully but it has no embedded images.",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -4189,7 +4369,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "b8fe5cb87d2065f6d9f26e2a"
+      "recordHash": "b8fe5cb87d2065f6d9f26e2a",
+      "lastImageAttemptAt": "2026-07-23T09:30:05.508Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w4200075150",
@@ -4277,8 +4458,28 @@
         "source": "field_fallback"
       },
       "imageDiscoveryProvenance": {
-        "method": "none",
-        "attemptedAt": null
+        "searchMethod": "no_image_found",
+        "sourcePagesChecked": [
+          "https://doi.org/10.3390/en14248502",
+          "https://www.mdpi.com/1996-1073/14/24/8502/pdf?version=1640066606"
+        ],
+        "sourcePagesAccepted": [],
+        "sourcePagesRejected": [
+          "https://doi.org/10.3390/en14248502",
+          "https://www.mdpi.com/1996-1073/14/24/8502/pdf?version=1640066606"
+        ],
+        "imageCandidatesFound": [],
+        "selectedImageCandidates": [],
+        "selectionCriteria": [
+          "official or project-related source",
+          "clearly related to the record",
+          "has caption or useful surrounding context",
+          "not random stock image",
+          "source URL is preserved",
+          "rights note recorded"
+        ],
+        "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.mdpi.com/1996-1073/14/24/8502/pdf?version=1640066606).",
+        "limitations": "Only the record's own listed source URL(s) were checked; no broader web search was performed."
       },
       "evaluationProvenance": {
         "hasScores": false,
@@ -4293,7 +4494,8 @@
       ],
       "processingStatus": "pending_image_enrichment",
       "triageDecision": "hold_pending_image",
-      "recordHash": "fefa643537770bfd54611777"
+      "recordHash": "fefa643537770bfd54611777",
+      "lastImageAttemptAt": "2026-07-23T09:30:05.508Z"
     },
     {
       "recordId": "openalex-https-openalex-org-w4381855955",
