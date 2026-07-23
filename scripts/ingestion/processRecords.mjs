@@ -12,6 +12,7 @@ import {
   slugify,
 } from "./normalization.mjs";
 import { delayMs } from "./http.mjs";
+import { normalizeResearchRecord } from "../processing/normalizeResearchRecord.mjs";
 
 // Turns every raw data/raw/openalex/*.json run file into
 // data/processed/research-records.json - one entry per real, deduplicated
@@ -67,67 +68,77 @@ async function listRawRunFiles(rawDir) {
   }
 }
 
-// A previous, separate pipeline (npm run ingest:media-seed) already writes
-// real, source-backed CORDIS records into this exact output path, in an
-// older/simpler schema. This run must NOT silently delete them just
-// because it doesn't recognise the shape - convert them to the current
-// provenance schema (dataOrigin: "manual_seed", one of the schema's own
-// allowed values) and carry them forward untouched otherwise. Only
-// "openalex-*" record ids are ever replaced by this function's own output.
-async function loadNonOpenAlexRecords(outputPath, nowIso) {
-  let existing;
+async function readJsonIfExists(filePath) {
   try {
-    existing = JSON.parse(await fs.readFile(outputPath, "utf8"));
+    return JSON.parse(await fs.readFile(filePath, "utf8"));
   } catch {
-    return [];
+    return null;
+  }
+}
+
+// A previous, separate pipeline (npm run ingest:media-seed) already writes
+// real, source-backed CORDIS records into this exact output path. This run
+// must NOT silently delete them just because it doesn't recognise the
+// shape - every non-OpenAlex record is passed through the SAME shared
+// normalizeResearchRecord() that ingestMediaSeed.mjs uses, so both
+// pipelines agree on field names and on what "verified" means. Only
+// "openalex-*" record ids are ever replaced by this function's own output.
+function loadNonOpenAlexRecords(previousRecords, nowIso) {
+  return previousRecords
+    .filter((record) => !record.recordId?.startsWith("openalex-"))
+    .map((record) => normalizeResearchRecord(record, { nowIso }));
+}
+
+// Fields that must survive process:records for a record that already had
+// them - this is the exact guarantee the schema/provenance fix exists to
+// enforce (acronym/topic/image fields were previously being dropped here
+// for every CORDIS media-seed record). A record with no value for a field
+// before is exempt (nothing to preserve); a record that HAD a value and now
+// doesn't is a hard failure, not a warning.
+const PRESERVED_FIELDS = [
+  "acronym",
+  "topicPrimary",
+  "topicSecondary",
+  "sourceUrls",
+  "summary",
+  "evidenceSnippet",
+  "whyUseful",
+  "actionabilityScore",
+  "relevanceScore",
+  "imageIds",
+  "hasImageCandidates",
+  "verificationStatus",
+  "dataOrigin",
+];
+
+function isEmptyValue(value) {
+  if (value === undefined || value === null || value === "") return true;
+  if (Array.isArray(value)) return value.length === 0;
+  return false;
+}
+
+function validateFieldPreservation(previousRecords, newRecords) {
+  const newById = new Map(newRecords.map((record) => [record.recordId, record]));
+  const problems = [];
+
+  for (const previousRecord of previousRecords) {
+    const newRecord = newById.get(previousRecord.recordId);
+    if (!newRecord) {
+      problems.push(`Record ${previousRecord.recordId} disappeared entirely during process:records.`);
+      continue;
+    }
+    for (const field of PRESERVED_FIELDS) {
+      const before = previousRecord[field];
+      const after = newRecord[field];
+      if (!isEmptyValue(before) && isEmptyValue(after)) {
+        problems.push(
+          `Record ${previousRecord.recordId} lost field "${field}" (was ${JSON.stringify(before)}, now ${JSON.stringify(after)}).`
+        );
+      }
+    }
   }
 
-  return (existing.records ?? [])
-    .filter((record) => !record.recordId?.startsWith("openalex-"))
-    .map((record) => {
-      // Already in the current schema (e.g. re-running on an output this
-      // same script already wrote) - keep as-is.
-      if (record.fieldProvenance && record.dataOrigin) {
-        return record;
-      }
-
-      // Legacy ingestMediaSeed.mjs shape - convert.
-      const countryCode = record.countryCode ?? null;
-      return {
-        recordId: record.recordId,
-        recordType: "funded_project",
-        title: record.title,
-        summary: record.summary || record.whyUseful || record.title,
-        abstract: record.evidenceSnippet || "",
-        sourceDatabase: record.sourceDatabase || "unknown",
-        sourceUrls: record.sourceUrl ? [record.sourceUrl] : [],
-        doi: "",
-        openAlexUrl: "",
-        rawSourceFiles: ["data/seed/maritime_rnd_records_with_image_candidates.json"],
-        publicationDate: record.extractedAt ? String(record.extractedAt).slice(0, 10) : "",
-        countryCode,
-        countryName: countryCode ? COUNTRY_NAMES[countryCode] ?? null : null,
-        institution: record.coordinator || "",
-        institutionId: "",
-        categories: [],
-        technologies: [],
-        matchedQuery: null,
-        extractedAt: record.extractedAt ?? nowIso,
-        processedAt: nowIso,
-        verificationStatus: record.sourceUrl ? "verified" : "metadata_only",
-        dataOrigin: "manual_seed",
-        fieldProvenance: {
-          title: "source",
-          summary: "source",
-          abstract: record.evidenceSnippet ? "source" : "missing",
-          image: record.hasImageCandidates ? "source_candidate" : "missing",
-          country: countryCode ? "source" : "missing",
-          institution: record.coordinator ? "source" : "missing",
-        },
-        dataQualityFlags: countryCode ? [] : ["missing_country"],
-        crossrefVerified: false,
-      };
-    });
+  return problems;
 }
 
 function buildRecordFromWork({ work, query, sourceRelativePath, runFetchedAt, nowIso }) {
@@ -258,12 +269,17 @@ export async function processRecords({
         // provenance shows every run that ever surfaced this record.
         record.rawSourceFiles = [...new Set([...existing.rawSourceFiles, ...record.rawSourceFiles])];
       }
-      recordsById.set(record.recordId, record);
+      // Route through the same shared normalizer the media-seed pipeline
+      // uses, so verificationStatus is decided by ONE rule for every
+      // record regardless of which pipeline produced it.
+      recordsById.set(record.recordId, normalizeResearchRecord(record, { nowIso }));
     }
   }
 
   const openAlexRecords = [...recordsById.values()];
-  const preservedNonOpenAlexRecords = await loadNonOpenAlexRecords(previousOutputPath, nowIso);
+  const previousData = await readJsonIfExists(previousOutputPath);
+  const previousRecords = previousData?.records ?? [];
+  const preservedNonOpenAlexRecords = loadNonOpenAlexRecords(previousRecords, nowIso);
   const records = [...preservedNonOpenAlexRecords, ...openAlexRecords];
 
   if (verifyDoisWithCrossref) {
@@ -298,10 +314,41 @@ export async function processRecords({
   };
 
   const outputPath = path.join(outputDir, "research-records.json");
-  await fs.writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`);
+  const tempOutputPath = path.join(outputDir, `.research-records.tmp-${Date.now()}.json`);
+  const backupPath = path.join(outputDir, "research-records.json.bak");
+
+  await fs.writeFile(tempOutputPath, `${JSON.stringify(output, null, 2)}\n`);
+
+  // Guard against exactly the bug this fix exists to close: a CORDIS
+  // media-seed record silently losing its acronym/topic/image fields
+  // because this script's own field mapping didn't preserve them. Compares
+  // against previousRecords (the file previousOutputPath pointed at before
+  // this run), not the fresh output - so this still works when outputDir is
+  // a temp directory (refreshData.mjs's own atomic-swap flow).
+  const preservationProblems = validateFieldPreservation(previousRecords, records);
+  if (preservationProblems.length > 0) {
+    await fs.rm(tempOutputPath, { force: true });
+    throw new Error(
+      `process:records aborted - field preservation check failed for ${preservationProblems.length} record field(s):\n` +
+        preservationProblems.slice(0, 20).join("\n") +
+        (preservationProblems.length > 20 ? `\n...and ${preservationProblems.length - 20} more.` : "")
+    );
+  }
+
+  const previousFileExists = await fs
+    .access(outputPath)
+    .then(() => true)
+    .catch(() => false);
+  if (previousFileExists) {
+    await fs.copyFile(outputPath, backupPath);
+  }
+  await fs.rename(tempOutputPath, outputPath);
 
   console.log(
     `[process:records] ${openAlexRecords.length} OpenAlex records kept (${droppedCount} dropped) + ${preservedNonOpenAlexRecords.length} preserved non-OpenAlex records = ${records.length} total, from ${runFiles.length} raw run file(s) -> ${path.relative(rootDir, outputPath)}`
+  );
+  console.log(
+    `[process:records] Field preservation check passed for ${previousRecords.length} previously-existing record(s).${previousFileExists ? ` Backup written to ${path.relative(rootDir, backupPath)}.` : ""}`
   );
 
   return { outputPath, recordCount: records.length, droppedCount, dropReasons };

@@ -12,6 +12,7 @@ import {
 import { emptyAiFields } from "./enrichment/schemaDefaults.mjs";
 import { buildDataset } from "./buildDataset.mjs";
 import { shouldHideImage } from "./aiCuration/verdict.mjs";
+import { normalizeResearchRecord } from "../processing/normalizeResearchRecord.mjs";
 
 // Ingests the static, human-curated media-enabled seed dataset (CORDIS
 // project records with image candidates) into:
@@ -300,9 +301,9 @@ async function main() {
   seed.records.forEach((record) => {
     const countryCode = deriveCountryCode(record.country_or_region, record.coordinator);
 
-    const recordImages = (record.images ?? []).map((image, index) => {
+    const recordImageObjects = (record.images ?? []).map((image, index) => {
       const imageId = `${record.record_id}-img-${index + 1}`;
-      imageCandidates.push({
+      const imageCandidate = {
         imageId,
         recordId: record.record_id,
         imageUrl: image.imageUrl,
@@ -322,36 +323,50 @@ async function main() {
         // added directly to image-candidates.json - see the merge logic
         // below, which must not delete those on a re-run.
         origin: "media-seed",
-      });
-      return imageId;
+      };
+      imageCandidates.push(imageCandidate);
+      return imageCandidate;
     });
+    const recordImageIds = recordImageObjects.map((image) => image.imageId);
 
-    researchRecords.push({
-      recordId: record.record_id,
-      title: record.title,
-      acronym: record.acronym ?? "",
-      sourceDatabase: record.source_database ?? "",
-      sourceUrl: record.source_url,
-      sourceType: record.source_type ?? "",
-      topicPrimary: record.topic_primary ?? "",
-      topicSecondary: record.topic_secondary ?? "",
-      countryOrRegion: record.country_or_region ?? "",
-      countryCode,
-      coordinator: record.coordinator ?? "",
-      summary: record.summary ?? "",
-      whyUseful: record.why_useful ?? "",
-      evidenceSnippet: record.evidence_snippet ?? "",
-      recencyCategory: record.recency_category ?? "",
-      actionabilityScore: record.actionability_score ?? null,
-      relevanceScore: record.relevance_score ?? null,
-      sourceQuality: record.source_quality ?? "",
-      followUpStatus: record.follow_up_status ?? "",
-      dataStatus: record.data_status ?? "",
-      hasImageCandidates: Boolean(record.has_image_candidates),
-      imageCandidateCount: record.image_candidate_count ?? recordImages.length,
-      imageIds: recordImages,
-      extractedAt: record.extracted_at ?? nowIso,
-    });
+    // Every field below is passed straight to normalizeResearchRecord() so
+    // this is the ONE place a media-seed record's shape is decided - see
+    // scripts/processing/normalizeResearchRecord.mjs for what happens to
+    // each field (e.g. sourceUrl -> sourceUrls[], verificationStatus is
+    // computed from real evidence, never left unset).
+    researchRecords.push(
+      normalizeResearchRecord(
+        {
+          recordId: record.record_id,
+          recordType: "funded_project",
+          title: record.title,
+          acronym: record.acronym ?? "",
+          sourceDatabase: record.source_database ?? "",
+          sourceUrl: record.source_url,
+          sourceType: record.source_type ?? "",
+          topicPrimary: record.topic_primary ?? "",
+          topicSecondary: record.topic_secondary ?? "",
+          countryOrRegion: record.country_or_region ?? "",
+          countryCode,
+          coordinator: record.coordinator ?? "",
+          summary: record.summary ?? "",
+          whyUseful: record.why_useful ?? "",
+          evidenceSnippet: record.evidence_snippet ?? "",
+          recencyCategory: record.recency_category ?? "",
+          actionabilityScore: record.actionability_score ?? null,
+          relevanceScore: record.relevance_score ?? null,
+          sourceQuality: record.source_quality ?? "",
+          followUpStatus: record.follow_up_status ?? "",
+          dataStatus: record.data_status ?? "",
+          hasImageCandidates: Boolean(record.has_image_candidates),
+          imageCandidateCount: record.image_candidate_count ?? recordImageObjects.length,
+          imageIds: recordImageIds,
+          images: recordImageObjects,
+          extractedAt: record.extracted_at ?? nowIso,
+        },
+        { nowIso }
+      )
+    );
   });
 
   await fs.mkdir(processedDir, { recursive: true });
@@ -490,12 +505,22 @@ async function main() {
   await fs.mkdir(path.dirname(generatedPath), { recursive: true });
   await fs.writeFile(generatedPath, `${JSON.stringify(dataset, null, 2)}\n`);
 
+  const verificationStatusCounts = researchRecords.reduce((counts, record) => {
+    counts[record.verificationStatus] = (counts[record.verificationStatus] ?? 0) + 1;
+    return counts;
+  }, {});
+
   console.log("\n" + "=".repeat(60));
   console.log("📦 Media Seed Ingestion Summary");
   console.log("=".repeat(60));
   console.log(`Records read from seed:         ${researchRecords.length}`);
   console.log(`Records with image candidates:  ${recordsOutput.recordsWithImageCandidates}`);
   console.log(`Image candidates total:         ${imageCandidates.length}`);
+  console.log(
+    `Verification status breakdown:  ${Object.entries(verificationStatusCounts)
+      .map(([status, count]) => `${status}=${count}`)
+      .join(", ")}`
+  );
   console.log(`Records attributed to a country: ${attributedRecords.length} (${attributedRecords.map((r) => r.countryCode).join(", ")})`);
   console.log(`  -> ${researchRecords.length - attributedRecords.length} records are real "EU / multi-country consortium" entries with no single named coordinator country - kept in the processed files, NOT forced onto a country pin.`);
   console.log(`Processed files written:`);
