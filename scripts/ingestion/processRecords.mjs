@@ -13,6 +13,7 @@ import {
 } from "./normalization.mjs";
 import { delayMs } from "./http.mjs";
 import { normalizeResearchRecord } from "../processing/normalizeResearchRecord.mjs";
+import { buildTriageOutputFiles } from "./triageRecords.mjs";
 
 // Turns every raw data/raw/openalex/*.json run file into
 // data/processed/research-records.json - one entry per real, deduplicated
@@ -239,6 +240,13 @@ export async function processRecords({
     );
   }
 
+  // Read once, up front, so both the OpenAlex-rebuild loop below and
+  // loadNonOpenAlexRecords() share the same snapshot of what was already
+  // there before this run.
+  const previousData = await readJsonIfExists(previousOutputPath);
+  const previousRecords = previousData?.records ?? [];
+  const previousRecordsById = new Map(previousRecords.map((r) => [r.recordId, r]));
+
   const recordsById = new Map();
   const dropReasons = {};
   let totalRawWorks = 0;
@@ -269,6 +277,27 @@ export async function processRecords({
         // provenance shows every run that ever surfaced this record.
         record.rawSourceFiles = [...new Set([...existing.rawSourceFiles, ...record.rawSourceFiles])];
       }
+
+      // buildRecordFromWork always starts a record with no images -
+      // enrich:images (scripts/ingestion/enrichImages.mjs) is what finds
+      // them afterwards, as a separate deliberate step, and this loop
+      // rebuilds every OpenAlex record from the raw fetch file every run.
+      // Carry forward whatever enrich:images already found (and its
+      // lastImageAttemptAt cooldown marker) so re-running process:records
+      // doesn't silently erase that work.
+      const previousRecord = previousRecordsById.get(record.recordId);
+      if (previousRecord) {
+        if (!record.imageIds?.length && previousRecord.imageIds?.length) {
+          record.images = previousRecord.images ?? [];
+          record.imageIds = previousRecord.imageIds;
+          record.hasImageCandidates = previousRecord.hasImageCandidates;
+          record.imageCandidateCount = previousRecord.imageCandidateCount;
+        }
+        if (previousRecord.lastImageAttemptAt) {
+          record.lastImageAttemptAt = previousRecord.lastImageAttemptAt;
+        }
+      }
+
       // Route through the same shared normalizer the media-seed pipeline
       // uses, so verificationStatus is decided by ONE rule for every
       // record regardless of which pipeline produced it.
@@ -277,8 +306,6 @@ export async function processRecords({
   }
 
   const openAlexRecords = [...recordsById.values()];
-  const previousData = await readJsonIfExists(previousOutputPath);
-  const previousRecords = previousData?.records ?? [];
   const preservedNonOpenAlexRecords = loadNonOpenAlexRecords(previousRecords, nowIso);
   const records = [...preservedNonOpenAlexRecords, ...openAlexRecords];
 
@@ -313,11 +340,23 @@ export async function processRecords({
     records,
   };
 
-  const outputPath = path.join(outputDir, "research-records.json");
-  const tempOutputPath = path.join(outputDir, `.research-records.tmp-${Date.now()}.json`);
-  const backupPath = path.join(outputDir, "research-records.json.bak");
+  // display-records.json / pending-image-enrichment.json / rejected-
+  // records.json / display-eligibility-report.json are derived from the
+  // exact same `records` array research-records.json is about to get, and
+  // are written through the SAME temp-write/validate/backup/swap safeguard
+  // below - triage is not a separate, less-safe write step bolted on
+  // afterwards.
+  const triageFiles = buildTriageOutputFiles(records, { nowIso });
+  const filesToWrite = { "research-records.json": output, ...triageFiles };
 
-  await fs.writeFile(tempOutputPath, `${JSON.stringify(output, null, 2)}\n`);
+  const runToken = Date.now();
+  const tempPaths = Object.fromEntries(
+    Object.keys(filesToWrite).map((fileName) => [fileName, path.join(outputDir, `.${fileName}.tmp-${runToken}`)])
+  );
+
+  for (const [fileName, content] of Object.entries(filesToWrite)) {
+    await fs.writeFile(tempPaths[fileName], `${JSON.stringify(content, null, 2)}\n`);
+  }
 
   // Guard against exactly the bug this fix exists to close: a CORDIS
   // media-seed record silently losing its acronym/topic/image fields
@@ -327,7 +366,7 @@ export async function processRecords({
   // a temp directory (refreshData.mjs's own atomic-swap flow).
   const preservationProblems = validateFieldPreservation(previousRecords, records);
   if (preservationProblems.length > 0) {
-    await fs.rm(tempOutputPath, { force: true });
+    await Promise.all(Object.values(tempPaths).map((p) => fs.rm(p, { force: true })));
     throw new Error(
       `process:records aborted - field preservation check failed for ${preservationProblems.length} record field(s):\n` +
         preservationProblems.slice(0, 20).join("\n") +
@@ -335,23 +374,43 @@ export async function processRecords({
     );
   }
 
-  const previousFileExists = await fs
-    .access(outputPath)
-    .then(() => true)
-    .catch(() => false);
-  if (previousFileExists) {
-    await fs.copyFile(outputPath, backupPath);
+  for (const fileName of Object.keys(filesToWrite)) {
+    const finalPath = path.join(outputDir, fileName);
+    const backupPath = path.join(outputDir, `${fileName}.bak`);
+    const previousFileExists = await fs
+      .access(finalPath)
+      .then(() => true)
+      .catch(() => false);
+    if (previousFileExists) {
+      await fs.copyFile(finalPath, backupPath);
+    }
+    await fs.rename(tempPaths[fileName], finalPath);
   }
-  await fs.rename(tempOutputPath, outputPath);
+
+  const outputPath = path.join(outputDir, "research-records.json");
+  const displayEligibleCount = triageFiles["display-records.json"].recordCount;
+  const pendingCount = triageFiles["pending-image-enrichment.json"].recordCount;
+  const rejectedCount = triageFiles["rejected-records.json"].recordCount;
 
   console.log(
     `[process:records] ${openAlexRecords.length} OpenAlex records kept (${droppedCount} dropped) + ${preservedNonOpenAlexRecords.length} preserved non-OpenAlex records = ${records.length} total, from ${runFiles.length} raw run file(s) -> ${path.relative(rootDir, outputPath)}`
   );
   console.log(
-    `[process:records] Field preservation check passed for ${previousRecords.length} previously-existing record(s).${previousFileExists ? ` Backup written to ${path.relative(rootDir, backupPath)}.` : ""}`
+    `[process:records] Field preservation check passed for ${previousRecords.length} previously-existing record(s).`
+  );
+  console.log(
+    `[process:records] Display eligible: ${displayEligibleCount}, pending image enrichment: ${pendingCount}, rejected: ${rejectedCount}.`
   );
 
-  return { outputPath, recordCount: records.length, droppedCount, dropReasons };
+  return {
+    outputPath,
+    recordCount: records.length,
+    droppedCount,
+    dropReasons,
+    displayEligibleCount,
+    pendingImageEnrichmentCount: pendingCount,
+    rejectedCount,
+  };
 }
 
 async function main() {

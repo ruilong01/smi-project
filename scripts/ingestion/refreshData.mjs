@@ -60,9 +60,28 @@ async function writeUpdateStatus(status) {
   await fs.writeFile(updateStatusPath, `${JSON.stringify(status, null, 2)}\n`);
 }
 
+// process:records now also writes display-records.json/pending-image-
+// enrichment.json/rejected-records.json/display-eligibility-report.json
+// alongside research-records.json (see triageRecords.mjs) - all of them
+// must be promoted together so display-records.json (the only file the
+// frontend reads) never goes stale relative to research-records.json.
 async function moveTempIntoPlace(tempDir) {
-  for (const fileName of ["research-records.json", "country-profiles.json"]) {
-    await fs.copyFile(path.join(tempDir, fileName), path.join(processedDir, fileName));
+  const fileNames = [
+    "research-records.json",
+    "country-profiles.json",
+    "display-records.json",
+    "pending-image-enrichment.json",
+    "rejected-records.json",
+    "display-eligibility-report.json",
+  ];
+  for (const fileName of fileNames) {
+    const tempPath = path.join(tempDir, fileName);
+    try {
+      await fs.access(tempPath);
+    } catch {
+      continue; // optional file this run didn't produce
+    }
+    await fs.copyFile(tempPath, path.join(processedDir, fileName));
   }
 }
 

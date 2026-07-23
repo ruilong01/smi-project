@@ -194,14 +194,7 @@ export default function ResearchGalleryDetail() {
               {" "}Based on: {(evaluation.explanationProvenance?.basedOnFields ?? []).join(", ") || "source metadata"}.
             </p>
           </article>
-        ) : (
-          <article className="detail-card wide">
-            <h2>Research Explanation</h2>
-            <p className="source-empty">
-              Explanation fields have not been generated yet for this record.
-            </p>
-          </article>
-        )}
+        ) : null}
 
         {otherImages.length ? (
           <article className="detail-card wide">

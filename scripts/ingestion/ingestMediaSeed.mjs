@@ -315,10 +315,12 @@ async function main() {
     "doi",
   ];
   let previousCordisDetailsByRecordId = new Map();
+  let previousRecordsById = new Map();
   try {
     const previousRecords = JSON.parse(
       await fs.readFile(path.join(processedDir, "research-records.json"), "utf8")
     );
+    previousRecordsById = new Map((previousRecords.records ?? []).map((r) => [r.recordId, r]));
     previousCordisDetailsByRecordId = new Map(
       (previousRecords.records ?? [])
         .filter((r) => r.startDate)
@@ -362,6 +364,16 @@ async function main() {
     });
     const recordImageIds = recordImageObjects.map((image) => image.imageId);
 
+    // enrich:images (scripts/ingestion/enrichImages.mjs) may have since
+    // found a real image for a record the seed itself has none for - this
+    // script rebuilds recordImageObjects from the seed every run, so
+    // without this fallback that finding would be silently erased the next
+    // time ingest:media-seed runs. Only used when the seed has NOTHING;
+    // never overrides a real seed-curated image.
+    const previousRecord = previousRecordsById.get(record.record_id);
+    const enrichedImages = recordImageObjects.length === 0 ? previousRecord?.images ?? [] : [];
+    const enrichedImageIds = recordImageIds.length === 0 ? previousRecord?.imageIds ?? [] : [];
+
     // Every field below is passed straight to normalizeResearchRecord() so
     // this is the ONE place a media-seed record's shape is decided - see
     // scripts/processing/normalizeResearchRecord.mjs for what happens to
@@ -391,11 +403,13 @@ async function main() {
           sourceQuality: record.source_quality ?? "",
           followUpStatus: record.follow_up_status ?? "",
           dataStatus: record.data_status ?? "",
-          hasImageCandidates: Boolean(record.has_image_candidates),
-          imageCandidateCount: record.image_candidate_count ?? recordImageObjects.length,
-          imageIds: recordImageIds,
-          images: recordImageObjects,
+          hasImageCandidates: Boolean(record.has_image_candidates) || enrichedImageIds.length > 0,
+          imageCandidateCount:
+            record.image_candidate_count ?? (recordImageObjects.length || enrichedImageIds.length),
+          imageIds: recordImageIds.length ? recordImageIds : enrichedImageIds,
+          images: recordImageObjects.length ? recordImageObjects : enrichedImages,
           extractedAt: record.extracted_at ?? nowIso,
+          lastImageAttemptAt: previousRecord?.lastImageAttemptAt,
           ...(previousCordisDetailsByRecordId.get(record.record_id) ?? {}),
         },
         { nowIso }

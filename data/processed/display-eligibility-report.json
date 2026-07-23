@@ -1,0 +1,3605 @@
+{
+  "generatedAt": "2026-07-23T03:31:38.222Z",
+  "totalRecords": 329,
+  "displayEligibleCount": 8,
+  "hiddenCount": 321,
+  "hiddenNoImage": 321,
+  "hiddenRejected": 0,
+  "entries": [
+    {
+      "recordId": "cordis-101138620",
+      "title": "Green Ammonia and Biomethanol fuel MAritime Vessels",
+      "displayEligible": true,
+      "displayEligibilityReasons": [],
+      "processingStatus": "accepted",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101138478",
+      "title": "Dynamic navigation and port call optimisation in real time",
+      "displayEligible": true,
+      "displayEligibilityReasons": [],
+      "processingStatus": "accepted",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101192583",
+      "title": "Integrated Digital Twin Framework to Enable Green Ship Operations Towards Zero Emission Vessels",
+      "displayEligible": true,
+      "displayEligibilityReasons": [],
+      "processingStatus": "accepted",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101138411",
+      "title": "Safe and Efficient Use of Sustainable Fuels in Maritime Transport Applications",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101270016",
+      "title": "Flexible Tool Environment for Holistic Retrofits and Decarbonization of Ships",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101189796",
+      "title": "Demonstration of long-endurance intelligent multi-purpose autonomous vehicles for marine applications",
+      "displayEligible": true,
+      "displayEligibilityReasons": [],
+      "processingStatus": "accepted",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101136257",
+      "title": "AUTOnomous small and FLEXible vessels",
+      "displayEligible": true,
+      "displayEligibilityReasons": [],
+      "processingStatus": "accepted",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101056799",
+      "title": "Open collaboration and open Digital Twin infrastructure for Green Smart Shipping",
+      "displayEligible": true,
+      "displayEligibilityReasons": [],
+      "processingStatus": "accepted",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101096923",
+      "title": "Safe, Efficient and Autonomous: Multimodal Library of European Shortsea and inland Solutions",
+      "displayEligible": true,
+      "displayEligibilityReasons": [],
+      "processingStatus": "accepted",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101173002",
+      "title": "Sustainable Energy and Alternative Fuels from Advanced Intermediate Renewable Energy carrieR technology",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101138583",
+      "title": "MARITIME JUST-IN-TIME OPTIMIZATION INTEROPERABLE PORT CALL AND VOYAGE OPTIMIZATION TOOL",
+      "displayEligible": true,
+      "displayEligibilityReasons": [],
+      "processingStatus": "accepted",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101271064",
+      "title": "SUPPORTING MARITIME ALTERNATIVE FUEL PROJECTS",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101225772",
+      "title": "Securing Europe’s MARitime domain against threats through vessel-CONNECTed services",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101328431",
+      "title": "Physical AI-powered hybrid maritime agent for coastal monitoring and infrastructure inspection",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101250260",
+      "title": "Million Nautical Mile Fuel Cell System",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101069828",
+      "title": "Multifuel SOFC system with Maritime Energy vectors",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-887927",
+      "title": "A Novel Smart System for the safe Management of Nautical operations",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101236476",
+      "title": "Adaptive strategies for enhancing threat-agnostic resilience of port ecosystems",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-955413",
+      "title": "Sustainable technologies for future long distance shipping towards complete decarbonisation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101136349",
+      "title": "Centre of Excellence in Maritime Robotics and Technologies for Sustainable Blue Economy",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101096487",
+      "title": "AUTONOMOUS FLYING SHIPS FOR INTER-ISLAND AND INLAND WATERS TRANSPORT",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101121129",
+      "title": "Smart Maritime and Underwater Guardian",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101296556",
+      "title": "FAcilitate the development of unmanned Vehicles in the maritime sectOR",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101096224",
+      "title": "SMART EUROPEAN SHIPBUILDING",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "cordis-101272708",
+      "title": "Sustainable Energy Transition in Shipping through Agreements, Industrial Leadership and Subsidies",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "source_linked_seed"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4388551166",
+      "title": "Decarbonising international shipping – A life cycle perspective on alternative fuel options",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3155205771",
+      "title": "Decarbonization in Shipping Industry: A Review of Research, Technology Development, and Innovation Proposals",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4376597726",
+      "title": "Review of current regulations, available technologies, and future trends in the green shipping industry",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3117037508",
+      "title": "The Role of Green and Blue Hydrogen in the Energy Transition—A Technological and Geopolitical Perspective",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3093547115",
+      "title": "Decarbonising the critical sectors of aviation, shipping, road freight and industry to limit warming to 1.5–2°C",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3016994415",
+      "title": "Towards the IMO’s GHG Goals: A Critical Overview of the Perspectives and Challenges of the Main Options for Decarbonizing International Shipping",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3038723752",
+      "title": "Potential for, and drivers of, private voluntary initiatives for the decarbonisation of short sea shipping: evidence from a Swedish ferry line",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3161725877",
+      "title": "Green ammonia as a spatial energy vector: a review",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4401582571",
+      "title": "An assessment of decarbonisation pathways for intercontinental deep-sea shipping using power-to-X fuels",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4400493457",
+      "title": "Harnessing AI for Sustainable Shipping and Green Ports: Challenges and Opportunities",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391090797",
+      "title": "A roadmap to alternative fuels for decarbonising shipping: The case of green ammonia",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3204034991",
+      "title": "Hydrogen supply chain scenarios for the decarbonisation of a German multi-modal energy system",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4200075150",
+      "title": "A Comparison of Alternative Fuels for Shipping in Terms of Lifecycle Energy and Cost",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4381855955",
+      "title": "Public response to decarbonisation through alternative shipping fuels",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4210821094",
+      "title": "Regional supply chains for decarbonising steel: Energy efficiency and green premium mitigation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4382358215",
+      "title": "Accelerating shipping decarbonisation: A case study on UK shore power",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4293010200",
+      "title": "Maritime Shipping Decarbonization: Roadmap to Meet Zero-Emission Target in Shipping as a Link in the Global Supply Chains",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4304585218",
+      "title": "Estimates of the Decarbonization Potential of Alternative Fuels for Shipping as a Function of Vessel Type, Cargo, and Voyage",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4362614467",
+      "title": "The prospects for, and implications of, emissions trading in shipping",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4381885538",
+      "title": "Renewable marine fuel production for decarbonised maritime shipping: Pathways, policy measures and transition dynamics",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4309542870",
+      "title": "A review of law and policy on decarbonization of shipping",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4220821975",
+      "title": "Study on Applicability of Energy-Saving Devices to Hydrogen Fuel Cell-Powered Ships",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4390861587",
+      "title": "Environmental-economic sustainability of hydrogen and ammonia fuels for short sea shipping operations",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3124518435",
+      "title": "Prospects and Challenges of Green Hydrogen Economy via Multi-Sector Global Symbiosis in Qatar",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4400227989",
+      "title": "Shore power for reduction of shipping emission in port: A bibliometric analysis",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3122164608",
+      "title": "Decarbonising ships, planes and trucks: An analysis of suitable low-carbon fuels for the maritime, aviation and haulage sectors",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3136464795",
+      "title": "Taking the slow route to decarbonisation? Developing climate governance for international transport",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4225300209",
+      "title": "Impacts of a bunker levy on decarbonizing shipping: A tanker case study",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4386891308",
+      "title": "\"THE GREEN SHIPPING. STUDY ON REGULATIONS AND SUSTAINABLE OPTIONS FOR DECARBONISATION \"",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391839668",
+      "title": "A Literature Review of Seaport Decarbonisation: Solution Measures and Roadmap to Net Zero",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3206792527",
+      "title": "A Comparative Review of Alternative Fuels for the Maritime Sector: Economic, Technology, and Policy Challenges for Clean Energy Implementation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4390517607",
+      "title": "The decarbonisation of the maritime sector: Horizon 2050",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3156539977",
+      "title": "Can Market-based Measures Stimulate Investments in Green Technologies for the Abatement of GHG Emissions from Shipping? A Review of Proposed Market-based Measures",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2964013661",
+      "title": "Decarbonisation of transport: options and challenges",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3177468118",
+      "title": "Inclusion of Shipping in the EU-ETS: Assessing the Direct Costs for the Maritime Sector Using the MRV Data",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4318473692",
+      "title": "Roadmap to Achieving Sustainable Development via Green Hydrogen",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4394807657",
+      "title": "A Review of Port Decarbonisation Options: Identified Opportunities for Deploying Hydrogen Technologies",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4403215665",
+      "title": "A Bibliometric Analysis of Green Shipping: Research Progress and Challenges for Sustainable Maritime Transport",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4384284153",
+      "title": "Digital Twins for Ports: Derived From Smart City and Supply Chain Twinning Experience",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4385380676",
+      "title": "TwinPort: 5G drone-assisted data collection with digital twin for smart seaports",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4311719747",
+      "title": "Innovation in Smart Ports: Future Directions of Digitalization in Container Ports",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4206739815",
+      "title": "Microgrid Digital Twins: Concepts, Applications, and Future Trends",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3010975660",
+      "title": "Integrating Virtual Reality and Digital Twin in Circular Economy Practices: A Laboratory Application Case",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4285171351",
+      "title": "Architecting Digital Twins",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3196974186",
+      "title": "Universal Digital Twin - A Dynamic Knowledge Graph",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4396676992",
+      "title": "Digital Twins in Agriculture: Orchestration and Applications",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3205789855",
+      "title": "Digital Twins Supporting Efficient Digital Industrial Transformation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4388160838",
+      "title": "Data Fusion for Smart Civil Infrastructure Management: A Conceptual Digital Twin Framework",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4317936671",
+      "title": "Predictive digital twin for offshore wind farms",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3032769960",
+      "title": "Digital readiness index assessment towards smart port development",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4382236847",
+      "title": "Digital Twin in the Maritime Domain: A Review and Emerging Trends",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4390906089",
+      "title": "Digital Twin-Enabled Smart Maritime Logistics Management in the Context of Industry 5.0",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3175230485",
+      "title": "Digital Twins, Internet of Things and Mobile Medicine: A Review of Current Platforms to Support Smart Healthcare",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4224324254",
+      "title": "A Digital Twin-Based Operation Status Monitoring System for Port Cranes",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3138924974",
+      "title": "Enabling Technologies for Urban Smart Mobility: Recent Trends, Opportunities and Challenges",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4240839386",
+      "title": "Developing a Dynamic Digital Twin at a Building Level: using Cambridge Campus as Case Study",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3041382323",
+      "title": "Big data and artificial intelligence in the maritime industry: a bibliometric review and future research directions",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4402646181",
+      "title": "Artificial Intelligence in Maritime Transportation: A Comprehensive Review of Safety and Risk Management Applications",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4392358104",
+      "title": "Application of Artificial Intelligence in Maritime Transportation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4411134447",
+      "title": "Artificial Intelligence and Machine Learning in Maritime Shipping",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3199820141",
+      "title": "Space-Based Global Maritime Surveillance. Part II: Artificial Intelligence and Data Fusion Techniques",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4394623675",
+      "title": "Application of Artificial Intelligence in Maritime Transportation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4220741294",
+      "title": "The Impacts of the Applications of Artificial Intelligence in Maritime Logistics",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4393232293",
+      "title": "Exploring the integration of artificial intelligence (AI) and augmented reality (AR) in maritime medicine",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2917580293",
+      "title": "Toward Digitalization of Maritime Transport?",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4410004931",
+      "title": "Artificial Intelligence in Maritime Cybersecurity: A Systematic Review of AI-Driven Threat Detection and Risk Mitigation Strategies",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4402417144",
+      "title": "A Fault Diagnosis Approach Utilizing Artificial Intelligence for Maritime Power Systems within an Integrated Digital Twin Framework",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2944924828",
+      "title": "Traffic Pattern Mining and Forecasting Technologies in Maritime Traffic Service Networks: A Comprehensive Survey",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3174398482",
+      "title": "Collision-avoidance navigation systems for Maritime Autonomous Surface Ships: A state of the art survey",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3147456683",
+      "title": "Artificial intelligence and operations research in maritime logistics",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4288064704",
+      "title": "Vessel Trajectory Prediction in Maritime Transportation: Current Approaches and Beyond",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3181175604",
+      "title": "An enhanced CNN-enabled learning method for promoting ship detection in maritime surveillance system",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4392438470",
+      "title": "Artificial Intelligence and Machine Learning for Green Shipping: Navigating towards Sustainable Maritime Practices",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4404797734",
+      "title": "The possibilities of applying artificial intelligence in maritime navigation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4412076062",
+      "title": "Advancing artificial intelligence in ocean and maritime engineering: Trends, progress, and future directions",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3171579550",
+      "title": "Research of the Relations Among Cloud Computing, Internet of Things, Big Data, Artificial Intelligence, Block Chain and Their Application in Maritime Field",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3010898450",
+      "title": "Use of Artificial Intelligence as a Problem Solution for Maritime Transport",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3040469417",
+      "title": "Artificial Intelligence in Maritime Navigation: A Human Factors Perspective",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2889393096",
+      "title": "Perspectives on the Impact of Machine Learning, Deep Learning, and Artificial Intelligence on Materials, Processes, and Structures Engineering",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2985141487",
+      "title": "Recent Developments of Artificial Intelligence in Business Logistics: A Maritime Industry Case",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4283275376",
+      "title": "Artificial intelligence and blockchain implementation in supply chains: a pathway to sustainability and data monetisation?",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4386496448",
+      "title": "A Review of Artificial Intelligence-Based Optimization Applications in Traditional Active Maritime Collision Avoidance",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4387397415",
+      "title": "Artificial intelligence ‐ driven sustainable development: Examining organizational, technical, and processing approaches to achieving global goals",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4317933195",
+      "title": "Application of Artificial Intelligence in Marine Corrosion Prediction and Detection",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3093929720",
+      "title": "6G Wireless Channel Measurements and Models: Trends and Challenges",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4282570835",
+      "title": "Supervised learning for maritime search operations: An artificial intelligence approach to search efficiency evaluation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4392893849",
+      "title": "The transformative potential of artificial intelligence in the maritime transport and its impact on port industry",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4406814899",
+      "title": "Artificial Intelligence in Maritime Anomaly Detection: A Decadal Bibliometric Analysis (2014–2024)",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4376139506",
+      "title": "Survey on the Developments of Unmanned Marine Vehicles: Intelligence and Cooperation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3198040634",
+      "title": "Setting B2B digital marketing in artificial intelligence-based CRMs: A review and directions for future research",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4321101119",
+      "title": "A review of artificial intelligence in marine science",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3048327660",
+      "title": "Artificial intelligence technologies for Maritime Surveillance applications",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4409563974",
+      "title": "Artificial Intelligence as Enabler for Adoption of Sustainable Nuclear-Powered Maritime Ships: Challenges and Opportunities",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3211661740",
+      "title": "DLTIF: Deep Learning-Driven Cyber Threat Intelligence Modeling and Identification Framework in IoT-Enabled Maritime Transportation Systems",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4389922283",
+      "title": "Small Unmanned Surface Vessels—A Review and Critical Analysis of Relations to Safety and Safety Assurance of Larger Autonomous Ships",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2330188877",
+      "title": "Intelligent rudder control of an unmanned surface vessel",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2598925596",
+      "title": "Towards the assessment of potential impact of unmanned vessels on maritime transportation safety",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2907106190",
+      "title": "Generalized velocity obstacle algorithm for preventing ship collisions at sea",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3089916726",
+      "title": "Sensors and AI Techniques for Situational Awareness in Autonomous Ships: A Review",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2999926820",
+      "title": "The Ocean-Going Autonomous Ship—Challenges and Threats",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2990216432",
+      "title": "State-of-the-Art Research on Motion Control of Maritime Autonomous Surface Ships",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4315474734",
+      "title": "Autonomous Collision Avoidance of Unmanned Surface Vehicles Based on Improved A-Star and Dynamic Window Approach Algorithms",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4385800465",
+      "title": "An overview of developments and challenges for unmanned surface vehicle autonomous berthing",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2984080257",
+      "title": "Maritime autonomous surface ships (MASS): implementation and legal issues",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3128019105",
+      "title": "Path planning and collision avoidance for autonomous surface vehicles I: a review",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2938580280",
+      "title": "Universal Autonomous Control and Management System for Multipurpose Unmanned Surface Vessel",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3130435805",
+      "title": "The Impact of Autonomous Ships on Safety at Sea – A Statistical Analysis",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3087460198",
+      "title": "A ship collision avoidance system for human-machine cooperation during collision avoidance",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2948162897",
+      "title": "Cybersecurity Attacks and Defences for Unmanned Smart Ships",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3081871549",
+      "title": "A framework to model the STPA hierarchical control structure of an autonomous ship",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2974556546",
+      "title": "Decision-Making for the Autonomous Navigation of Maritime Autonomous Surface Ships Based on Scene Division and Deep Reinforcement Learning",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4291476219",
+      "title": "The autonomous navigation system of a sea-going vessel",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2940919353",
+      "title": "Regulating Autonomous Ships—Concepts, Challenges and Precedents",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3095974075",
+      "title": "COLREGs-Compliant Unmanned Surface Vehicles Collision Avoidance Based on Multi-Objective Genetic Algorithm",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3006408222",
+      "title": "Adaptive modeling of maritime autonomous surface ships with uncertainty using a weighted LS-SVR robust to outliers",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4396977266",
+      "title": "A Review of Path Planning Methods for Marine Autonomous Surface Vehicles",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2462876168",
+      "title": "Control of an Unmanned Surface Vehicle With Uncertain Displacement and Drag",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4225272915",
+      "title": "Advances in maritime autonomous surface ships (MASS) in merchant shipping",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2557621405",
+      "title": "A multi-layered fast marching method for unmanned surface vehicle path planning in a time-variant maritime environment",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2610334615",
+      "title": "Hostile Control of Ships via False GPS Signals: Demonstration and Detection",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2336502929",
+      "title": "The Use of Ship-Launched Fixed-Wing UAVs for Measuring the Marine Atmospheric Boundary Layer and Ocean Surface Processes",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3181805889",
+      "title": "Prediction of human–machine interface (HMI) operational errors for maritime autonomous surface ships (MASS)",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3119343336",
+      "title": "Collision Risk Inference System for Maritime Autonomous Surface Ships Using COLREGs Rules Compliant Collision Avoidance",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2961832654",
+      "title": "A systemic hazard analysis and management process for the concept design phase of an autonomous vessel",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3111446176",
+      "title": "A Survey of Technologies for Unmanned Merchant Ships",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3083914918",
+      "title": "COLREG-Compliant Collision Avoidance for Unmanned Surface Vehicle Using Deep Reinforcement Learning",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4280566538",
+      "title": "[Retracted] Deep Reinforcement Learning‐Based Path Control and Optimization for Unmanned Ships",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2213095886",
+      "title": "Autonomous robotic refueling of an unmanned surface vehicle in varying sea states",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2991232381",
+      "title": "Learn to Navigate: Cooperative Path Planning for Unmanned Surface Vehicles Using Deep Reinforcement Learning",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3127267938",
+      "title": "A multinomial process tree for reliability assessment of machinery in autonomous ships",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3009841136",
+      "title": "An unmanned inland cargo vessel: Design, build, and experiments",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4406334305",
+      "title": "Maritime Autonomous Surface Ships: Architecture for Autonomous Navigation Systems",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3115594038",
+      "title": "Simulation of Maneuvering Trials of an Unmanned or Autonomous Surface Ship on a Navigation Simulator",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3134146379",
+      "title": "Alternative fuel options for low carbon maritime transportation: Pathways to 2050",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3134967399",
+      "title": "Review on Ammonia as a Potential Fuel: From Synthesis to Economics",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3197569697",
+      "title": "Reviewing two decades of cleaner alternative marine fuels: Towards IMO's decarbonization of the maritime transport sector",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4406341213",
+      "title": "Hydrogen as an alternative fuel: A comprehensive review of challenges and opportunities in production, storage, and transportation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4301596210",
+      "title": "A review of low and zero carbon fuel technologies: Achieving ship carbon reduction targets",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3016531454",
+      "title": "The Potential Role of Ammonia as Marine Fuel—Based on Energy Systems Modeling and Multi-Criteria Decision Analysis",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4389819157",
+      "title": "Sustainable E-Fuels: Green Hydrogen, Methanol and Ammonia for Carbon-Neutral Transportation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3035188391",
+      "title": "A study on the necessity of integrated evaluation of alternative marine fuels",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4313584439",
+      "title": "The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3009208041",
+      "title": "A Preliminary Study on an Alternative Ship Propulsion System Fueled by Ammonia: Environmental and Economic Assessments",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2914130738",
+      "title": "Reversible ammonia-based and liquid organic hydrogen carriers for high-density hydrogen storage: Recent progress",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2914300732",
+      "title": "Application of hydrides in hydrogen storage and compression: Achievements, outlook and perspectives",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3118694283",
+      "title": "Challenges in the use of hydrogen for maritime applications",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4310248763",
+      "title": "Recent advances in sustainable and safe marine engine operation with alternative fuels",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2626025588",
+      "title": "Clean energy and the hydrogen economy",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4392543952",
+      "title": "Ammonia marine engine design for enhanced efficiency and reduced greenhouse gas emissions",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2948425123",
+      "title": "Safe and effective application of ammonia as a marine fuel",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4312223627",
+      "title": "A Perspective on the Overarching Role of Hydrogen, Ammonia, and Methanol Carbon-Neutral Fuels towards Net Zero Emission in the Next Three Decades",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4284673149",
+      "title": "Hydrogen Fuel for Future Mobility: Challenges and Future Aspects",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4321010063",
+      "title": "Hydrogen liquefaction and storage: Recent progress and perspectives",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391252433",
+      "title": "Methanol, a Plugin Marine Fuel for Green House Gas Reduction—A Review",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3165168336",
+      "title": "Review on the Safe Use of Ammonia Fuel Cells in the Maritime Industry",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4386220176",
+      "title": "The Potential Role of Ammonia for Hydrogen Storage and Transport: A Critical Review of Challenges and Opportunities",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4406697492",
+      "title": "A Review of LCA Studies on Marine Alternative Fuels: Fuels, Methodology, Case Studies, and Recommendations",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391344408",
+      "title": "A review on the research progress and application of compressed hydrogen in the marine hydrogen fuel cell power system",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3012250252",
+      "title": "Critical infrastructures cybersecurity and the maritime sector",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4220904600",
+      "title": "Cybersecurity Challenges in the Maritime Sector",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3092640103",
+      "title": "Cybersecurity in ports and maritime industry: Reasons for raising awareness on this issue",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2584794099",
+      "title": "Maritime Critical Infrastructure Protection: DHS Needs to Enhance Efforts to Address Port Cybersecurity",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4394566964",
+      "title": "A survey on blockchain technology in the maritime industry: Challenges and future perspectives",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3021475808",
+      "title": "Towards Smart Port Infrastructures: Enhancing Port Activities Using Information and Communications Technology",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4320339933",
+      "title": "A BN driven FMEA approach to assess maritime cybersecurity risks",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2773874939",
+      "title": "A framework for cybersecurity assessments of critical port infrastructure",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3109725889",
+      "title": "A Holistic Review of Cybersecurity and Reliability Perspectives in Smart Airports",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2769455556",
+      "title": "Cybersecurity in ports : a conceptual approach",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2899568779",
+      "title": "A Taxonomy Framework for Maritime Cybersecurity: A Demonstration Using the Automatic Identification System",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2770338946",
+      "title": "Digitization in maritime logistics—What is there and what is missing?",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3089842096",
+      "title": "Assessing Cyber Challenges of Maritime Navigation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4380768819",
+      "title": "MaCySTe: A virtual testbed for maritime cybersecurity",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4384436077",
+      "title": "Critical maritime infrastructure protection: What’s the trouble?",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391097217",
+      "title": "Maritime Autonomous Surface Ships: A Review of Cybersecurity Challenges, Countermeasures, and Future Perspectives",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4205557186",
+      "title": "Cyber Security in the Maritime Industry: A Systematic Survey of Recent Advances and Future Trends",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2891787788",
+      "title": "Effective maritime cybersecurity regulation – the case for a cyber code",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4410515905",
+      "title": "Intelligent Maritime Shipping: A Bibliometric Analysis of Internet Technologies and Automated Port Infrastructure Applications",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4393003256",
+      "title": "Future of maritime autonomy: cybersecurity, trust and mariner's situational awareness",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4390503774",
+      "title": "Maritime cybersecurity: protecting digital seas",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4309577990",
+      "title": "Digital transformation of maritime logistics: Exploring trends in the liner shipping segment",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4405936754",
+      "title": "Enhancing Port and Maritime Cybersecurity Through AI - Enabled Threat Detection and Response",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3197830394",
+      "title": "Towards a Maritime Cyber Range training environment",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4200009490",
+      "title": "Cyber Physical Systems Security for Maritime Assets",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4399283331",
+      "title": "Comprehensive Analysis of Maritime Cybersecurity Landscape Based on the NIST CSF v2.0",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2994681232",
+      "title": "Evaluating cybersecurity risks in the maritime industry: a literature review",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4301401032",
+      "title": "Evaluating SLIM-based human error probability for ECDIS cybersecurity in maritime",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4321512825",
+      "title": "Cyber-physical security for ports infrastructure",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4399206781",
+      "title": "Advancing coordination in critical maritime infrastructure protection: Lessons from maritime piracy and cybersecurity",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3018983062",
+      "title": "Cybersecurity at Sea",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4393003458",
+      "title": "Preventing Catastrophic Cyber–Physical Attacks on the Global Maritime Transportation System: A Case Study of Hybrid Maritime Security in the Straits of Malacca and Singapore",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2997233153",
+      "title": "Antecedents and Consequences of Cybersecurity Awareness: A Case Study for Turkish Maritime Sector",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2787053267",
+      "title": "Enhancing the Cybersecurity of Port Community Systems",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4386245296",
+      "title": "Navigating the Sea of Data: A Comprehensive Review on Data Analysis in Maritime IoT Applications",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4399053898",
+      "title": "Enhancing Maritime Cybersecurity through Operational Technology Sensor Data Fusion: A Comprehensive Survey and Analysis",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4388827803",
+      "title": "Digital information in maritime supply chains with blockchain and cloud platforms: Supply chain capabilities, barriers, and research opportunities",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3004774144",
+      "title": "Maritime Cybersecurity: Meeting Threats to Globalization’s Great Conveyor",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3155516278",
+      "title": "CR CyberMar as a Solution Path towards Cybersecurity Soundness in Maritime Logistics Domain",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3168393667",
+      "title": "Cybersecurity in the European Union port sector in light of the digital transformation and the COVID-19 pandemic",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4413268536",
+      "title": "Port resilience: a systematic literature review",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4225993858",
+      "title": "Digitalization in Maritime Transport and Seaports: Bibliometric, Content and Thematic Analysis",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3013499512",
+      "title": "A Tale of Sea and Sky On the Security of Maritime VSAT Communications",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2341806142",
+      "title": "The influence of supply chain collaboration on collaborative advantage and port performance in maritime logistics",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3031031267",
+      "title": "Port disruptions due to natural disasters: Insights into port and logistics resilience",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2920398186",
+      "title": "Sustainability Challenges in Maritime Transport and Logistics Industry and Its Way Ahead",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4288051329",
+      "title": "Ports’ criticality in international trade and global supply-chains",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2478189671",
+      "title": "Scenario analysis and disaster preparedness for port and maritime logistics risk management",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2924370719",
+      "title": "An advanced fuzzy Bayesian-based FMEA approach for assessing maritime supply chain risks",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3168469624",
+      "title": "Blockchain technology for port logistics capability: Exclusive or sharing",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2797535019",
+      "title": "Digitalization in maritime and sustainable logistics: city logistics, port logistics and sustainable supply chain management in the digital age",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2594174180",
+      "title": "An Analysis of Digital Transformation in the History and Future of Modern Ports",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w1851981756",
+      "title": "Maritime Logistics : A Guide to Contemporary Shipping and Port Management",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4387821672",
+      "title": "Maritime Ports, Supply Chains and Logistics Corridors",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2784614186",
+      "title": "The impacts of port infrastructure and logistics performance on economic growth: the mediating role of seaborne trade",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4312184485",
+      "title": "Improving the resilience of maritime supply chains: The integration of ports and inland transporters in duopoly markets",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2788227973",
+      "title": "Environmental upgrading in global value chains: The potential and limitations of ports in the greening of maritime transport",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3048846564",
+      "title": "An Exploratory Study on the Logistics Supply Chain of Maritime Port",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4387184932",
+      "title": "Review of Maritime Transport 2023",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4403651930",
+      "title": "Maritime Supply Chain Optimisation: A Case Study of Blockchain Integration in Port Logistics Management",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3213918042",
+      "title": "Blockchain adoption in the maritime supply chain: Examining barriers and salient stakeholders in containerized international trade",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2903816995",
+      "title": "Logistics 4.0 and sustainable supply chain management : innovative solutions for logistics and sustainable supply chain management in the context of industry 4.0",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2990055250",
+      "title": "Blockchain and Smart Contracts for Entrepreneurial Collaboration in Maritime Supply Chains",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3137740479",
+      "title": "Container Logistics and Maritime Transport",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3023684259",
+      "title": "Seaports as Nodal Points of Circular Supply Chains: Opportunities and Challenges for Secondary Ports",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391959017",
+      "title": "The Red Sea Crisis: ramifications for vessel operations, shipping networks, and maritime supply chains",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4213053588",
+      "title": "Developing a smart port architecture and essential elements in the era of Industry 4.0",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2910458317",
+      "title": "Gigantism in container shipping, ports and global logistics: a time-lapse into the future",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4205413854",
+      "title": "A comprehensive literature review on spare parts logistics management in the maritime industry",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2530749968",
+      "title": "A game-theoretical approach for modeling competitions in a maritime supply chain",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2964482263",
+      "title": "How big data enriches maritime research – a critical review of Automatic Identification System (AIS) data applications",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3011713008",
+      "title": "Innovation in the maritime sector: aligning strategy with outcomes",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2464205760",
+      "title": "Examining sustainability performance at ports: port managers’ perspectives on developing sustainable supply chains",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3120887917",
+      "title": "Disruptions and resilience in global container shipping and ports: the COVID-19 pandemic versus the 2008–2009 financial crisis",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2488775031",
+      "title": "All-Electric Ship Design: From Electrical Propulsion to Integrated Electrical and Electronic Power Systems",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2806332726",
+      "title": "AC Ship Microgrids: Control and Power Management Optimization",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2754483672",
+      "title": "Dimension reduction in heterogeneous parametric spaces with application to naval engineering shape design problems",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2588109978",
+      "title": "Review of Ship Microgrids: System Architectures, Storage Technologies and Power Quality Aspects",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2033892743",
+      "title": "Full-scale unsteady RANS CFD simulations of ship behaviour and performance in head seas due to slow steaming",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2952392130",
+      "title": "Data-driven ship digital twin for estimating the speed loss caused by the marine fouling",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2946050739",
+      "title": "A Comprehensive Review of Maritime Microgrids: System Architectures, Energy Efficiency, Power Quality, and Regulations",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3093310142",
+      "title": "Review of Underwater Ship Hull Cleaning Technologies",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391169722",
+      "title": "Systems Engineering for Naval Ship Design Evolution",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2970948886",
+      "title": "Machine learning models for predicting ship main engine Fuel Oil Consumption: A comparative study",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2731434693",
+      "title": "Estimation of added resistance and ship speed loss in a seaway",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3044806866",
+      "title": "A novel cyber-risk assessment method for ship systems",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2508141790",
+      "title": "Evaluating a digital ship design tool prototype: Designers’ perceptions of novel ergonomics software",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4211117779",
+      "title": "Artificial Intelligence Design for Ship Structures: A Variant Multiple-Input Neural Network-Based Ship Resistance Prediction",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2993859739",
+      "title": "A Model for Intact and Damage Stability Evaluation of CNG Ships during the Concept Design Stage",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3211813355",
+      "title": "A Review of DC Shipboard Microgrids—Part II: Control Architectures, Stability Analysis, and Protection Schemes",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2283345470",
+      "title": "Exploration of System Vulnerability in Naval Ship Concept Design",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2770757993",
+      "title": "Predicting ship machinery system condition through analytical reliability tools and artificial neural networks",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3159858237",
+      "title": "A Triggering Mechanism for Cyber-Attacks in Naval Sensors and Systems",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2915513980",
+      "title": "Two-phase optimal solutions for ship speed and trim optimization over a voyage using voyage report data",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2811107749",
+      "title": "Multifunction RF Systems for Naval Platforms",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4367292510",
+      "title": "ShipHullGAN: A generic parametric modeller for ship hull design using deep convolutional generative model",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4317433355",
+      "title": "Battery Energy Storage Systems in Ships’ Hybrid/Electric Propulsion Systems",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w1914140920",
+      "title": "Integrating Human Factors &amp; Ergonomics in large-scale engineering projects: Investigating a practical approach for ship design",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w1585434156",
+      "title": "Modeling and data exchange in a concurrent and collaborative design environment for electric ships",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2183134231",
+      "title": "Technical cross-fertilization between terrestrial microgrids and ship power systems",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w227127889",
+      "title": "Project Based Coursework In A Naval Architecture Curriculum",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3118335127",
+      "title": "Prediction of the aerodynamic behaviour of a full-scale naval ship in head waves using Detached Eddy Simulation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2502868461",
+      "title": "Full-scale unsteady RANS simulations of vertical ship motions in shallow water",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3127746231",
+      "title": "Development of a Fuel Consumption Prediction Model Based on Machine Learning Using Ship In-Service Data",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4200123276",
+      "title": "Ports’ role in shipping decarbonisation: A common port incentive scheme for shipping greenhouse gas emissions reduction",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3217727701",
+      "title": "Using digitalisation to achieve decarbonisation in the shipping industry",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4323927796",
+      "title": "Electrification of onshore power systems in maritime transportation towards decarbonization of ports: A review of the cold ironing technology",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2767044256",
+      "title": "Assessment of full life-cycle air emissions of alternative shipping fuels",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2811211442",
+      "title": "Decarbonization Pathways for International Maritime Transport: A Model-Based Policy Impact Assessment",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4311729195",
+      "title": "Liquefied Natural Gas (LNG) as a Transitional Choice Replacing Marine Conventional Fuels (Heavy Fuel Oil/Marine Diesel Oil), towards the Era of Decarbonisation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4307552289",
+      "title": "Ship Energy Efficiency and Maritime Sector Initiatives to Reduce Carbon Emissions",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4313362278",
+      "title": "Fuel Cell Systems for Maritime: A Review of Research Development, Commercial Products, Applications, and Perspectives",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4403949792",
+      "title": "Integrating ports into green shipping corridors: Drivers, challenges, and pathways to implementation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4307752077",
+      "title": "Cost competitiveness of alternative maritime fuels in the new regulatory framework",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4312126210",
+      "title": "Life Cycle Greenhouse Gas Emission Assessment for Using Alternative Marine Fuels: A Very Large Crude Carrier (VLCC) Case Study",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4409471041",
+      "title": "Strategies For Decarbonisation in The Port and Maritime Sector: Key Challenges and Leading Ports",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4403952905",
+      "title": "A comprehensive analysis of strategies for reducing GHG emissions in maritime ports",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4411027350",
+      "title": "Assessing the role of short-sea shipping and ports in maritime well-to-wake emissions",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4404939180",
+      "title": "Energy systems integration and sector coupling in future ports: A qualitative study of Norwegian ports",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4407393077",
+      "title": "Maritime emissions trading in the EU: Systematic literature review and policy assessment",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4407189872",
+      "title": "Decarbonising Maritime Transport: The Role of Green Shipping Corridors in Making Sustainable Port‐City Ecosystems",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4416025063",
+      "title": "A systematic review of technologies, measures, and CO2 emission reduction potential for maritime transport decarbonisation",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391160375",
+      "title": "Decarbonising road freight transport: The role of zero-emission trucks and intangible costs",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3177047809",
+      "title": "Preliminary design of a fuel cell/battery hybrid powertrain for a heavy-duty yard truck for port logistics",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4319724843",
+      "title": "A review on ports’ readiness to facilitate international hydrogen trade",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2945214992",
+      "title": "Underwater Robots: From Remotely Operated Vehicles to Intervention-Autonomous Underwater Vehicles",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2332283998",
+      "title": "Integral Line-of-Sight Guidance and Control of Underactuated Marine Vehicles: Theory, Simulations, and Experiments",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2581111877",
+      "title": "Advanced Control in Marine Mechatronic Systems: A Survey",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3082243195",
+      "title": "Marine Robots for Underwater Surveillance",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2913393332",
+      "title": "A Survey on Unmanned Surface Vehicles for Disaster Robotics: Main Challenges and Directions",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3121887140",
+      "title": "Internet of underwater things and big marine data analytics – a comprehensive survey",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4285818829",
+      "title": "Intelligent Path Planning of Underwater Robot Based on Reinforcement Learning",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2956110096",
+      "title": "Fuel cell systems for long-endurance autonomous underwater vehicles – challenges and benefits",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3096656822",
+      "title": "Collaborative Multi-Robot Search and Rescue: Planning, Coordination, Perception, and Active Vision",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4287854497",
+      "title": "On the History and Future of 100% Renewable Energy Systems Research",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2910756055",
+      "title": "Capture and simulation of the ocean environment for offshore renewable energy",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3031747086",
+      "title": "Renewable energy for sustainable development in India: current status, future prospects, challenges, employment, and investment opportunities",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2728589724",
+      "title": "Ocean beliefs and support for an offshore wind energy project",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4200337841",
+      "title": "Renewable Energy in the Sustainable Development of Electrical Power Sector: A Review",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3019075159",
+      "title": "A Comprehensive Review on Renewable Energy Development, Challenges, and Policies of Leading Indian States With an International Perspective",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2572191223",
+      "title": "Energy Saving in Public Transport Using Renewable Energy",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2013138470",
+      "title": "Solar Energy: Review of Potential Green &amp; Clean Energy for Coastal and Offshore Applications",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4288079564",
+      "title": "Developments in Renewable Energies Offshore",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3136247427",
+      "title": "Fostering a blue economy: Offshore renewable energy",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2918836041",
+      "title": "Benthic effects of offshore renewables: identification of knowledge gaps and urgently needed research",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2953103152",
+      "title": "The Potential and Status of Renewable Energy Development in Malaysia",
+      "displayEligible": false,
+      "displayEligibilityReasons": [
+        "missing_image_candidate",
+        "pending_image_enrichment"
+      ],
+      "processingStatus": "pending_image_enrichment",
+      "verificationStatus": "verified_api_extracted"
+    }
+  ]
+}

@@ -27,6 +27,16 @@
 // It is intentionally a pure function operating on ONE record at a time
 // (no file I/O, no dataset-wide joins) so it is trivial to unit-test - see
 // scripts/processing/verifySchemaCompatibility.mjs.
+//
+// Also decides displayEligible/displayEligibilityReasons/processingStatus -
+// the gate scripts/ingestion/triageRecords.mjs uses to split every record
+// into data/processed/display-records.json (shown in the app),
+// pending-image-enrichment.json (real, but no image yet) or
+// rejected-records.json (mock/demo/unverified). A record is eligible only
+// with real source evidence AND at least one image candidate - the app
+// must never show a real-looking record with no verifiable image.
+
+import { createHash } from "node:crypto";
 
 // No \b word-boundary here deliberately: dataStatus/recordType values are
 // our own snake_case tokens (e.g. "mock_demo_sample"), and \b never matches
@@ -96,6 +106,118 @@ function inferDataOrigin(rawSourceFiles, sourceUrls, explicitOrigin) {
   if (rawSourceFiles.length > 0) return "api_extracted";
   if (sourceUrls.length > 0) return "manual_seed";
   return "unknown";
+}
+
+// verificationStatus values a record must have to ever be shown in the
+// app. "metadata_only" (our actual classifier output, assigned only when
+// sourceUrls is empty) is deliberately NOT in this set - such a record is
+// always also caught by missing_source_url below, but must never be
+// admitted by verificationStatus alone if that ever changes.
+const DISPLAY_ELIGIBLE_VERIFICATION_STATUSES = new Set([
+  "verified_api_extracted",
+  "source_linked_seed",
+  "metadata_only_with_source",
+]);
+
+// A record already staged for later handling (rejected/archived/pending-
+// image/needs-review) must never be admitted just because its other
+// fields happen to look eligible.
+const PROCESSING_STATUS_BLOCKLIST = new Set([
+  "rejected",
+  "archived",
+  "pending_image_enrichment",
+  "needs_manual_review",
+]);
+
+const DATA_ORIGIN_BLOCKLIST = new Set(["mock_demo", "unknown", "ai_generated_only"]);
+
+// The ONE gate deciding whether a record is allowed to appear in the main
+// app - see scripts/ingestion/processRecords.mjs, which partitions every
+// record into display-records.json / pending-image-enrichment.json /
+// rejected-records.json based on this function's result. Real evidence
+// (source URL + a verified-eligible status) AND at least one real image
+// candidate are BOTH required; a record failing either one is never shown.
+export function isDisplayEligible(record) {
+  const reasons = [];
+
+  if (!record.recordId) reasons.push("missing_record_id");
+  if (!record.title) reasons.push("missing_title");
+
+  if (record.verificationStatus === "mock_demo") {
+    reasons.push("mock_demo_record");
+  } else if (record.verificationStatus === "unverified") {
+    reasons.push("unverified_record");
+  } else if (!DISPLAY_ELIGIBLE_VERIFICATION_STATUSES.has(record.verificationStatus)) {
+    // Any other value (metadata_only, or an unrecognised status) is
+    // conservatively treated the same as unverified - never silently
+    // admitted just because it isn't one of the two explicit bad values.
+    reasons.push("unverified_record");
+  }
+
+  if (!(record.sourceUrls?.length > 0)) {
+    reasons.push("missing_source_url");
+  }
+
+  if (!record.hasImageCandidates || !((record.imageCandidateCount ?? 0) > 0)) {
+    reasons.push("missing_image_candidate");
+  }
+
+  if (record.processingStatus && PROCESSING_STATUS_BLOCKLIST.has(record.processingStatus)) {
+    if (record.processingStatus === "rejected") reasons.push("rejected_record");
+    else if (record.processingStatus === "archived") reasons.push("archived_record");
+    else reasons.push(record.processingStatus); // pending_image_enrichment / needs_manual_review
+  }
+
+  if (record.dataOrigin && DATA_ORIGIN_BLOCKLIST.has(record.dataOrigin)) {
+    reasons.push("unknown_data_origin");
+  }
+
+  return { displayEligible: reasons.length === 0, displayEligibilityReasons: [...new Set(reasons)] };
+}
+
+// Backward-compatible alias - normalizeResearchRecord() below still needs
+// to compute a processingStatus BEFORE isDisplayEligible can run (the
+// function above treats an already-rejected/pending processingStatus as an
+// input, not an output), so the initial classification happens here.
+function classifyProcessingStatus({ verificationStatus, sourceUrls, hasImageCandidates, imageCandidateCount }) {
+  if (verificationStatus === "mock_demo" || verificationStatus === "unverified") {
+    return "rejected";
+  }
+  const hasSourceUrl = sourceUrls?.length > 0;
+  const hasImage = hasImageCandidates && (imageCandidateCount ?? 0) > 0;
+  if (hasSourceUrl && hasImage) return "accepted";
+  return "pending_image_enrichment";
+}
+
+function computeRecencyScore(record) {
+  if (record.recencyScore != null) return record.recencyScore;
+  const dateValue = record.publicationDate || record.extractedAt || record.processedAt;
+  const parsed = dateValue ? new Date(dateValue) : null;
+  if (!parsed || Number.isNaN(parsed.getTime())) return 0;
+  const ageYears = (Date.now() - parsed.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
+  return Math.max(0, Math.round(100 - ageYears * 10));
+}
+
+// Content hash used by scripts/ingestion/compareRecords.mjs to skip
+// re-enriching a record whose actual content hasn't changed since the last
+// refresh. Deliberately excludes extractedAt/processedAt/lastSeenAt/
+// lastUpdatedAt themselves - those change every run regardless of content,
+// which would make the hash useless for detecting real changes.
+export function computeRecordHash(record) {
+  const basis = JSON.stringify({
+    title: record.title,
+    summary: record.summary,
+    evidenceSnippet: record.evidenceSnippet,
+    sourceUrls: [...(record.sourceUrls ?? [])].sort(),
+    doi: record.doi,
+    countryCode: record.countryCode,
+    imageUrls: (record.images ?? []).map((image) => image.imageUrl).sort(),
+    imageIds: [...(record.imageIds ?? [])].sort(),
+    startDate: record.startDate ?? null,
+    endDate: record.endDate ?? null,
+    totalCostEur: record.totalCostEur ?? null,
+  });
+  return createHash("sha256").update(basis).digest("hex").slice(0, 24);
 }
 
 function inferFieldProvenance(raw, { hasImages, countryCode, coordinator, summary }) {
@@ -207,6 +329,56 @@ export function normalizeResearchRecord(raw, { nowIso = new Date().toISOString()
     verificationStatus === "unverified" ? "no_source_evidence" : null,
   ]);
 
+  const processingStatus = classifyProcessingStatus({
+    verificationStatus,
+    sourceUrls,
+    hasImageCandidates,
+    imageCandidateCount,
+  });
+
+  const recencyScore = computeRecencyScore({ ...raw, publicationDate: raw.publicationDate });
+
+  const explanationProvenance = raw.explanationProvenance ?? {
+    basedOnFields: [
+      summary ? "summary" : null,
+      evidenceSnippet ? "evidenceSnippet" : null,
+      whyUseful ? "whyUseful" : null,
+    ].filter(Boolean),
+    aiGenerated: false,
+    source: plainLanguageExplanation ? "field_fallback" : "none",
+  };
+
+  const imageDiscoveryProvenance = raw.imageDiscoveryProvenance ?? {
+    method: images[0]?.origin ?? (hasImageCandidates ? "unspecified" : "none"),
+    attemptedAt: raw.lastImageAttemptAt ?? null,
+  };
+
+  const evaluationProvenance = raw.evaluationProvenance ?? {
+    hasScores: actionabilityScore != null || relevanceScore != null,
+    source: actionabilityScore != null ? "source_curated" : "not_evaluated",
+  };
+
+  // The eligibility check needs verificationStatus/sourceUrls/hasImage*/
+  // processingStatus/dataOrigin/recordId/title all already computed -
+  // built as a plain object here (not the final return value yet) so
+  // isDisplayEligible can read from it directly.
+  const eligibilityInput = {
+    recordId,
+    title,
+    verificationStatus,
+    sourceUrls,
+    hasImageCandidates,
+    imageCandidateCount,
+    processingStatus,
+    dataOrigin,
+  };
+  const { displayEligible, displayEligibilityReasons } = isDisplayEligible(eligibilityInput);
+  const triageDecision = displayEligible
+    ? "accept"
+    : processingStatus === "pending_image_enrichment"
+      ? "hold_pending_image"
+      : "reject";
+
   return {
     // Preserve any field not explicitly re-mapped below (e.g. sourceType,
     // sourceQuality, abstract, categories, technologies, matchedQuery,
@@ -245,6 +417,7 @@ export function normalizeResearchRecord(raw, { nowIso = new Date().toISOString()
     actionabilityScore,
     relevanceScore,
     sourceQualityScore,
+    recencyScore,
     recencyCategory,
     followUpStatus,
     dataStatus,
@@ -256,7 +429,35 @@ export function normalizeResearchRecord(raw, { nowIso = new Date().toISOString()
     imageCandidateCount,
     fieldProvenance,
     dataQualityFlags,
+    explanationProvenance,
+    imageDiscoveryProvenance,
+    evaluationProvenance,
     extractedAt: firstDefined(raw.extractedAt, raw.extracted_at, nowIso) ?? nowIso,
     processedAt: nowIso,
+    // lastSeenAt is the first time this recordId was ever normalized -
+    // preserved across reruns (raw.lastSeenAt already carries it forward
+    // once set); lastUpdatedAt is always "now" since this function ran.
+    lastSeenAt: firstDefined(raw.lastSeenAt, raw.extractedAt, raw.extracted_at, nowIso) ?? nowIso,
+    lastUpdatedAt: nowIso,
+    displayEligible,
+    displayEligibilityReasons,
+    processingStatus,
+    triageDecision,
+    // recordHash is computed last, from the final normalized field values
+    // above (title/summary/sourceUrls/images/etc.), not from `raw` - see
+    // computeRecordHash for exactly which fields feed it.
+    recordHash: computeRecordHash({
+      title,
+      summary,
+      evidenceSnippet,
+      sourceUrls,
+      doi,
+      countryCode,
+      images,
+      imageIds,
+      startDate: raw.startDate,
+      endDate: raw.endDate,
+      totalCostEur: raw.totalCostEur,
+    }),
   };
 }

@@ -1,15 +1,18 @@
 {
-  "lastSuccessfulFetchAt": "2026-07-22T09:14:09.732Z",
-  "lastAttemptedFetchAt": "2026-07-22T09:14:09.732Z",
-  "lastSource": "openalex",
+  "lastSuccessfulRefreshAt": "",
+  "lastAttemptedRefreshAt": "2026-07-23T03:23:20.847Z",
+  "lastIncrementalWindowStart": "",
+  "lastIncrementalWindowEnd": "",
   "recordsFetched": 507,
-  "recordsProcessed": 329,
-  "recordsAdded": 0,
-  "recordsUpdated": 329,
-  "duplicatesSkipped": 178,
-  "frontendDataUpdatedAt": "2026-07-22T09:14:09.732Z",
-  "status": "success",
-  "errors": [],
-  "countryCount": 24,
-  "rawFile": "data\\raw\\openalex\\run-2026-07-22T09-14-09-732Z.json"
+  "recordsNew": 0,
+  "recordsUpdated": 0,
+  "recordsUnchanged": 0,
+  "duplicatesSkipped": 0,
+  "recordsMovedToImageQueue": 0,
+  "recordsDisplayEligible": 0,
+  "recordsPendingImageEnrichment": 0,
+  "status": "failed",
+  "errors": [
+    "All 11 OpenAlex queries failed during incremental fetch. First error: 429 Too Many Requests for https://api.openalex.org/works?search=green+shipping+decarbonisation+vessel&per-page=25&page=1&filter=from_updated_date%3A2026-06-23&mailto=research-demo%40example.invalid"
+  ]
 }
