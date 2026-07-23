@@ -33,6 +33,9 @@ export const maritimeResearchCategories = [
   "Maritime communications",
   "Safety and risk management",
   "Supply-chain and logistics",
+  "Marine robotics",
+  "Ship design and engineering",
+  "Offshore and ocean technology",
 ];
 
 export const topicToProjectCategories = {
@@ -48,7 +51,7 @@ export const topicToProjectCategories = {
     "Port automation",
     "Supply-chain and logistics",
   ],
-  "Autonomous Vessels": ["Autonomous navigation", "Smart ships"],
+  "Autonomous Vessels": ["Autonomous navigation", "Smart ships", "Marine robotics"],
   "Maritime AI": ["Artificial intelligence", "Digital twins"],
   "Alternative Fuels": ["Alternative energy and fuels", "Carbon capture"],
   "Maritime Cybersecurity": ["Maritime cybersecurity", "Safety and risk management"],

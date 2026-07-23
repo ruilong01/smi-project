@@ -1,0 +1,206 @@
+{
+  "generatedAt": "2026-07-23T01:18:52.884Z",
+  "recordCount": 8,
+  "evaluations": [
+    {
+      "recordId": "cordis-101138620",
+      "plainLanguageExplanation": "GAMMA aims to retrofit an Ultramax bulk carrier and demonstrate safe integration of biomethanol, ammonia and fuel-cell related systems for emission reduction in commercial vessels.",
+      "problemBeingAddressed": "The project goal is retrofitting an Ultramax bulk carrier for international routes and testing biomethanol/NH3 fuel systems.",
+      "technologyApproach": "Strong project-level record with vessel retrofit, demonstration, alternative fuels and fuel value-chain testing.",
+      "maritimeRelevance": "Directly relevant to Alternative Fuels and Green Shipping within maritime R&D.",
+      "possibleApplication": "Potentially applicable to maritime operators and researchers working on Alternative Fuels and Green Shipping, pending review of full project outcomes.",
+      "whyItMatters": "Strong project-level record with vessel retrofit, demonstration, alternative fuels and fuel value-chain testing.",
+      "followUpOrActionSignal": "Follow-up status: active or recent.",
+      "limitations": "Based on project metadata, summary and coordinator-page evidence gathered so far; full technical publications and outcome reports have not been reviewed.",
+      "explanationProvenance": {
+        "basedOnFields": [
+          "summary",
+          "evidence_snippet",
+          "why_useful",
+          "topic_primary",
+          "topic_secondary",
+          "follow_up_status"
+        ],
+        "aiGenerated": false,
+        "model": null,
+        "promptVersion": "heuristic-template-v1",
+        "generatedAt": "2026-07-23T01:18:52.884Z"
+      }
+    },
+    {
+      "recordId": "cordis-101138478",
+      "plainLanguageExplanation": "DYNAPORT develops optimisation and coordination tools for ports and ships to reduce fuel consumption and improve port efficiency by at least 10%.",
+      "problemBeingAddressed": "The project aims to reduce fuel consumption and enhance port efficiency by at least 10%.",
+      "technologyApproach": "Directly aligned with smart ports, emissions reduction and operational optimisation.",
+      "maritimeRelevance": "Directly relevant to Smart Ports and Green Shipping within maritime R&D.",
+      "possibleApplication": "Potentially applicable to maritime operators and researchers working on Smart Ports and Green Shipping, pending review of full project outcomes.",
+      "whyItMatters": "Directly aligned with smart ports, emissions reduction and operational optimisation.",
+      "followUpOrActionSignal": "Follow-up status: active or recent.",
+      "limitations": "Based on project metadata, summary and coordinator-page evidence gathered so far; full technical publications and outcome reports have not been reviewed.",
+      "explanationProvenance": {
+        "basedOnFields": [
+          "summary",
+          "evidence_snippet",
+          "why_useful",
+          "topic_primary",
+          "topic_secondary",
+          "follow_up_status"
+        ],
+        "aiGenerated": false,
+        "model": null,
+        "promptVersion": "heuristic-template-v1",
+        "generatedAt": "2026-07-23T01:18:52.884Z"
+      }
+    },
+    {
+      "recordId": "cordis-101192583",
+      "plainLanguageExplanation": "TwinShip develops an open-source digital platform and digital-twin enabled decision support system for green ship operations and emission reduction.",
+      "problemBeingAddressed": "The platform is powered by domain knowledge-based machine learning and AI capabilities and targets major GHG reductions.",
+      "technologyApproach": "Combines digital twin, AI/ML, clean fuels and green ship operations; suitable for country and technology-area panels.",
+      "maritimeRelevance": "Directly relevant to Green Shipping and Maritime AI / Digital Twin within maritime R&D.",
+      "possibleApplication": "Potentially applicable to maritime operators and researchers working on Green Shipping and Maritime AI / Digital Twin, pending review of full project outcomes.",
+      "whyItMatters": "Combines digital twin, AI/ML, clean fuels and green ship operations; suitable for country and technology-area panels.",
+      "followUpOrActionSignal": "Follow-up status: active or recent.",
+      "limitations": "Based on project metadata, summary and coordinator-page evidence gathered so far; full technical publications and outcome reports have not been reviewed.",
+      "explanationProvenance": {
+        "basedOnFields": [
+          "summary",
+          "evidence_snippet",
+          "why_useful",
+          "topic_primary",
+          "topic_secondary",
+          "follow_up_status"
+        ],
+        "aiGenerated": false,
+        "model": null,
+        "promptVersion": "heuristic-template-v1",
+        "generatedAt": "2026-07-23T01:18:52.884Z"
+      }
+    },
+    {
+      "recordId": "cordis-101138411",
+      "plainLanguageExplanation": "SAFeCRAFT demonstrates sustainable alternative fuel technologies, including hydrogen, ammonia and LOHC-based options, for waterborne transport applications.",
+      "problemBeingAddressed": "The project demonstrates four SAF-enabling technologies while utilising H2 on a demonstration vessel.",
+      "technologyApproach": "Very strong practical R&D record with demo vessel, safety assessment, energy efficiency and techno-economic feasibility.",
+      "maritimeRelevance": "Directly relevant to Alternative Fuels and Green Shipping within maritime R&D.",
+      "possibleApplication": "Potentially applicable to maritime operators and researchers working on Alternative Fuels and Green Shipping, pending review of full project outcomes.",
+      "whyItMatters": "Very strong practical R&D record with demo vessel, safety assessment, energy efficiency and techno-economic feasibility.",
+      "followUpOrActionSignal": "Follow-up status: active or recent.",
+      "limitations": "Based on project metadata, summary and coordinator-page evidence gathered so far; full technical publications and outcome reports have not been reviewed.",
+      "explanationProvenance": {
+        "basedOnFields": [
+          "summary",
+          "evidence_snippet",
+          "why_useful",
+          "topic_primary",
+          "topic_secondary",
+          "follow_up_status"
+        ],
+        "aiGenerated": false,
+        "model": null,
+        "promptVersion": "heuristic-template-v1",
+        "generatedAt": "2026-07-23T01:18:52.884Z"
+      }
+    },
+    {
+      "recordId": "cordis-101189796",
+      "plainLanguageExplanation": "MERLIN deploys hydrogen-powered unmanned surface vessels and autonomous underwater vessels operating autonomously using AI algorithms.",
+      "problemBeingAddressed": "MERLIN uses hydrogen fuel cells and renewable energy for USV/AUV autonomy with AI algorithms.",
+      "technologyApproach": "High-value autonomous marine robotics project with AI and hydrogen-powered vehicle signal.",
+      "maritimeRelevance": "Directly relevant to Autonomous Vessels and Maritime AI / Marine Robotics within maritime R&D.",
+      "possibleApplication": "Potentially applicable to maritime operators and researchers working on Autonomous Vessels and Maritime AI / Marine Robotics, pending review of full project outcomes.",
+      "whyItMatters": "High-value autonomous marine robotics project with AI and hydrogen-powered vehicle signal.",
+      "followUpOrActionSignal": "Follow-up status: active or recent.",
+      "limitations": "Based on project metadata, summary and coordinator-page evidence gathered so far; full technical publications and outcome reports have not been reviewed.",
+      "explanationProvenance": {
+        "basedOnFields": [
+          "summary",
+          "evidence_snippet",
+          "why_useful",
+          "topic_primary",
+          "topic_secondary",
+          "follow_up_status"
+        ],
+        "aiGenerated": false,
+        "model": null,
+        "promptVersion": "heuristic-template-v1",
+        "generatedAt": "2026-07-23T01:18:52.884Z"
+      }
+    },
+    {
+      "recordId": "cordis-101136257",
+      "plainLanguageExplanation": "AUTOFLEX develops small autonomous zero-emission vessels for inland waterway freight, focusing on narrow and shallow waterways.",
+      "problemBeingAddressed": "The project develops small, autonomous, zero-emission vessels optimized for energy efficiency and shallow waterways.",
+      "technologyApproach": "Clear autonomous vessel and zero-emission inland shipping application.",
+      "maritimeRelevance": "Directly relevant to Autonomous Vessels and Green Shipping within maritime R&D.",
+      "possibleApplication": "Potentially applicable to maritime operators and researchers working on Autonomous Vessels and Green Shipping, pending review of full project outcomes.",
+      "whyItMatters": "Clear autonomous vessel and zero-emission inland shipping application.",
+      "followUpOrActionSignal": "Follow-up status: active or recent.",
+      "limitations": "Based on project metadata, summary and coordinator-page evidence gathered so far; full technical publications and outcome reports have not been reviewed.",
+      "explanationProvenance": {
+        "basedOnFields": [
+          "summary",
+          "evidence_snippet",
+          "why_useful",
+          "topic_primary",
+          "topic_secondary",
+          "follow_up_status"
+        ],
+        "aiGenerated": false,
+        "model": null,
+        "promptVersion": "heuristic-template-v1",
+        "generatedAt": "2026-07-23T01:18:52.884Z"
+      }
+    },
+    {
+      "recordId": "cordis-101056799",
+      "plainLanguageExplanation": "DT4GS supports shipping companies in reducing CO2e through real-time configurable digital twins for ship and fleet operational performance optimisation.",
+      "problemBeingAddressed": "The project aims to support up to 20% CO2e reduction by deploying digital twins in Living Labs.",
+      "technologyApproach": "One of the clearest green-shipping digital twin projects; useful for AI/digitalisation country profiles.",
+      "maritimeRelevance": "Directly relevant to Green Shipping and Maritime AI / Digital Twin within maritime R&D.",
+      "possibleApplication": "Potentially applicable to maritime operators and researchers working on Green Shipping and Maritime AI / Digital Twin, pending review of full project outcomes.",
+      "whyItMatters": "One of the clearest green-shipping digital twin projects; useful for AI/digitalisation country profiles.",
+      "followUpOrActionSignal": "Follow-up status: active or recent.",
+      "limitations": "Based on project metadata, summary and coordinator-page evidence gathered so far; full technical publications and outcome reports have not been reviewed.",
+      "explanationProvenance": {
+        "basedOnFields": [
+          "summary",
+          "evidence_snippet",
+          "why_useful",
+          "topic_primary",
+          "topic_secondary",
+          "follow_up_status"
+        ],
+        "aiGenerated": false,
+        "model": null,
+        "promptVersion": "heuristic-template-v1",
+        "generatedAt": "2026-07-23T01:18:52.884Z"
+      }
+    },
+    {
+      "recordId": "cordis-101138583",
+      "plainLanguageExplanation": "MISSION focuses on interoperable port call and voyage optimisation tools for maritime just-in-time operations.",
+      "problemBeingAddressed": "MISSION develops a digital real-time optimisation and decision-support tool for port call operations.",
+      "technologyApproach": "Useful for smart port and voyage optimisation category, especially operational decarbonisation.",
+      "maritimeRelevance": "Directly relevant to Smart Ports and Maritime Logistics within maritime R&D.",
+      "possibleApplication": "Potentially applicable to maritime operators and researchers working on Smart Ports and Maritime Logistics, pending review of full project outcomes.",
+      "whyItMatters": "Useful for smart port and voyage optimisation category, especially operational decarbonisation.",
+      "followUpOrActionSignal": "Follow-up status: active or recent.",
+      "limitations": "Based on project metadata, summary and coordinator-page evidence gathered so far; full technical publications and outcome reports have not been reviewed.",
+      "explanationProvenance": {
+        "basedOnFields": [
+          "summary",
+          "evidence_snippet",
+          "why_useful",
+          "topic_primary",
+          "topic_secondary",
+          "follow_up_status"
+        ],
+        "aiGenerated": false,
+        "model": null,
+        "promptVersion": "heuristic-template-v1",
+        "generatedAt": "2026-07-23T01:18:52.884Z"
+      }
+    }
+  ]
+}

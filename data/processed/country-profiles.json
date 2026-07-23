@@ -1,0 +1,1046 @@
+{
+  "generatedAt": "2026-07-22T09:14:09.732Z",
+  "sourceResearchRecordsGeneratedAt": "2026-07-22T09:14:09.732Z",
+  "countryCount": 24,
+  "profiles": [
+    {
+      "countryCode": "GB",
+      "countryName": "United Kingdom",
+      "slug": "united-kingdom",
+      "coordinates": [
+        -3.436,
+        55.3781
+      ],
+      "recordCount": 50,
+      "recordsSince2020": 36,
+      "recordsSince2024": 9,
+      "verifiedCount": 50,
+      "researchIntensity": 100,
+      "institutions": [
+        "University of Manchester",
+        "University of Oxford",
+        "University of Bradford",
+        "University of Strathclyde",
+        "Liverpool John Moores University",
+        "Tyndall Centre",
+        "University of Liverpool",
+        "Southampton Solent University",
+        "University of Cambridge",
+        "Heriot-Watt University",
+        "University College London",
+        "Cardiff University",
+        "University of Birmingham",
+        "University of Portsmouth",
+        "Birmingham City University",
+        "Royal Holloway University of London",
+        "University of Plymouth",
+        "University of Warwick",
+        "Coventry University",
+        "University of Huddersfield",
+        "Aston University",
+        "University of Edinburgh"
+      ],
+      "categories": [
+        "Alternative energy and fuels",
+        "Vessel efficiency",
+        "Supply-chain and logistics",
+        "Marine robotics",
+        "Digital twins",
+        "Artificial intelligence",
+        "Autonomous navigation",
+        "Maritime cybersecurity",
+        "Intelligent port services",
+        "Ship design and engineering",
+        "Offshore and ocean technology"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4388551166",
+        "openalex-https-openalex-org-w3093547115",
+        "openalex-https-openalex-org-w3161725877",
+        "openalex-https-openalex-org-w4391090797",
+        "openalex-https-openalex-org-w4210821094",
+        "openalex-https-openalex-org-w4382358215",
+        "openalex-https-openalex-org-w4220821975",
+        "openalex-https-openalex-org-w4390861587",
+        "openalex-https-openalex-org-w4400227989",
+        "openalex-https-openalex-org-w3136464795",
+        "openalex-https-openalex-org-w4391839668",
+        "openalex-https-openalex-org-w3206792527",
+        "openalex-https-openalex-org-w3196974186",
+        "openalex-https-openalex-org-w4240839386",
+        "openalex-https-openalex-org-w3093929720",
+        "openalex-https-openalex-org-w2557621405",
+        "openalex-https-openalex-org-w2991232381",
+        "openalex-https-openalex-org-w3134967399",
+        "openalex-https-openalex-org-w2914130738",
+        "openalex-https-openalex-org-w4310248763",
+        "openalex-https-openalex-org-w4321010063",
+        "openalex-https-openalex-org-w3165168336",
+        "openalex-https-openalex-org-w4220904600",
+        "openalex-https-openalex-org-w4394566964",
+        "openalex-https-openalex-org-w4320339933",
+        "openalex-https-openalex-org-w4205557186",
+        "openalex-https-openalex-org-w2891787788",
+        "openalex-https-openalex-org-w4393003256",
+        "openalex-https-openalex-org-w3018983062",
+        "openalex-https-openalex-org-w4393003458",
+        "openalex-https-openalex-org-w4388827803",
+        "openalex-https-openalex-org-w3013499512",
+        "openalex-https-openalex-org-w2341806142",
+        "openalex-https-openalex-org-w3031031267",
+        "openalex-https-openalex-org-w4288051329",
+        "openalex-https-openalex-org-w3213918042",
+        "openalex-https-openalex-org-w3137740479",
+        "openalex-https-openalex-org-w2033892743",
+        "openalex-https-openalex-org-w2952392130",
+        "openalex-https-openalex-org-w2970948886",
+        "openalex-https-openalex-org-w2731434693",
+        "openalex-https-openalex-org-w3044806866",
+        "openalex-https-openalex-org-w2770757993",
+        "openalex-https-openalex-org-w4367292510",
+        "openalex-https-openalex-org-w3118335127",
+        "openalex-https-openalex-org-w2502868461",
+        "openalex-https-openalex-org-w2767044256",
+        "openalex-https-openalex-org-w4403952905",
+        "openalex-https-openalex-org-w4416025063",
+        "openalex-https-openalex-org-w2910756055"
+      ]
+    },
+    {
+      "countryCode": "CN",
+      "countryName": "China",
+      "slug": "china",
+      "coordinates": [
+        104.1954,
+        35.8617
+      ],
+      "recordCount": 38,
+      "recordsSince2020": 33,
+      "recordsSince2024": 7,
+      "verifiedCount": 38,
+      "researchIntensity": 76,
+      "institutions": [
+        "Shanghai Maritime University",
+        "Huazhong University of Science and Technology",
+        "Zhengzhou University of Light Industry",
+        "Wuhan University of Technology",
+        "Dalian Maritime University",
+        "Guangdong Ocean University",
+        "China University of Petroleum, East China",
+        "Ministry of Transport",
+        "Hangzhou Wanxiang Polytechnic",
+        "Tongji University",
+        "Tianjin University",
+        "Harbin Engineering University",
+        "East China University of Political Science and Law",
+        "Ludong University",
+        "Zhejiang Ocean University",
+        "Shenzhen University",
+        "Beijing Jiaotong University",
+        "Westlake University",
+        "Marine Design & Research Institute of China"
+      ],
+      "categories": [
+        "Vessel efficiency",
+        "Marine robotics",
+        "Alternative energy and fuels",
+        "Artificial intelligence",
+        "Supply-chain and logistics",
+        "Digital twins",
+        "Autonomous navigation",
+        "Intelligent port services",
+        "Ship design and engineering"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4309542870",
+        "openalex-https-openalex-org-w4403215665",
+        "openalex-https-openalex-org-w4382236847",
+        "openalex-https-openalex-org-w4390906089",
+        "openalex-https-openalex-org-w4224324254",
+        "openalex-https-openalex-org-w4392358104",
+        "openalex-https-openalex-org-w3174398482",
+        "openalex-https-openalex-org-w3181175604",
+        "openalex-https-openalex-org-w3171579550",
+        "openalex-https-openalex-org-w4386496448",
+        "openalex-https-openalex-org-w4321101119",
+        "openalex-https-openalex-org-w2990216432",
+        "openalex-https-openalex-org-w4315474734",
+        "openalex-https-openalex-org-w4385800465",
+        "openalex-https-openalex-org-w2974556546",
+        "openalex-https-openalex-org-w3095974075",
+        "openalex-https-openalex-org-w3006408222",
+        "openalex-https-openalex-org-w4396977266",
+        "openalex-https-openalex-org-w3181805889",
+        "openalex-https-openalex-org-w3111446176",
+        "openalex-https-openalex-org-w4280566538",
+        "openalex-https-openalex-org-w3134146379",
+        "openalex-https-openalex-org-w3197569697",
+        "openalex-https-openalex-org-w4301596210",
+        "openalex-https-openalex-org-w4313584439",
+        "openalex-https-openalex-org-w4312223627",
+        "openalex-https-openalex-org-w4406697492",
+        "openalex-https-openalex-org-w4391344408",
+        "openalex-https-openalex-org-w4410515905",
+        "openalex-https-openalex-org-w2920398186",
+        "openalex-https-openalex-org-w2924370719",
+        "openalex-https-openalex-org-w3168469624",
+        "openalex-https-openalex-org-w4312184485",
+        "openalex-https-openalex-org-w2530749968",
+        "openalex-https-openalex-org-w3093310142",
+        "openalex-https-openalex-org-w4211117779",
+        "openalex-https-openalex-org-w4312126210",
+        "openalex-https-openalex-org-w4285818829"
+      ]
+    },
+    {
+      "countryCode": "US",
+      "countryName": "United States",
+      "slug": "united-states",
+      "coordinates": [
+        -98.5795,
+        39.8283
+      ],
+      "recordCount": 19,
+      "recordsSince2020": 7,
+      "recordsSince2024": 3,
+      "verifiedCount": 19,
+      "researchIntensity": 38,
+      "institutions": [
+        "Western Michigan University",
+        "Pioneer (United States)",
+        "Dean College",
+        "The University of Texas at San Antonio",
+        "Atlantic University",
+        "The University of Texas at Austin",
+        "Scripps Institution of Oceanography",
+        "United States Naval Research Laboratory",
+        "University of Oklahoma",
+        "Google (United States)",
+        "Embry–Riddle Aeronautical University",
+        "nLIGHT (United States)",
+        "University of Houston",
+        "Bowling Green State University",
+        "Virginia Tech",
+        "University of South Carolina",
+        "United States Naval Academy",
+        "University of Rhode Island"
+      ],
+      "categories": [
+        "Digital twins",
+        "Artificial intelligence",
+        "Marine robotics",
+        "Vessel efficiency",
+        "Autonomous navigation",
+        "Alternative energy and fuels",
+        "Supply-chain and logistics",
+        "Maritime cybersecurity",
+        "Intelligent port services",
+        "Ship design and engineering",
+        "Offshore and ocean technology"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4388160838",
+        "openalex-https-openalex-org-w2889393096",
+        "openalex-https-openalex-org-w4392893849",
+        "openalex-https-openalex-org-w4409563974",
+        "openalex-https-openalex-org-w2462876168",
+        "openalex-https-openalex-org-w2610334615",
+        "openalex-https-openalex-org-w2336502929",
+        "openalex-https-openalex-org-w2213095886",
+        "openalex-https-openalex-org-w4406341213",
+        "openalex-https-openalex-org-w2626025588",
+        "openalex-https-openalex-org-w2899568779",
+        "openalex-https-openalex-org-w2997233153",
+        "openalex-https-openalex-org-w3004774144",
+        "openalex-https-openalex-org-w4213053588",
+        "openalex-https-openalex-org-w2283345470",
+        "openalex-https-openalex-org-w1585434156",
+        "openalex-https-openalex-org-w2183134231",
+        "openalex-https-openalex-org-w227127889",
+        "openalex-https-openalex-org-w2728589724"
+      ]
+    },
+    {
+      "countryCode": "IT",
+      "countryName": "Italy",
+      "slug": "italy",
+      "coordinates": [
+        12.5674,
+        41.8719
+      ],
+      "recordCount": 14,
+      "recordsSince2020": 10,
+      "recordsSince2024": 2,
+      "verifiedCount": 14,
+      "researchIntensity": 28,
+      "institutions": [
+        "Fondazione Eni Enrico Mattei",
+        "University of Cagliari",
+        "Politecnico di Milano",
+        "NATO Centre for Maritime Research and Experimentation",
+        "Università di Camerino",
+        "Politecnico di Torino",
+        "University of Genoa",
+        "University of Trieste",
+        "Scuola Internazionale Superiore di Studi Avanzati",
+        "Parthenope University of Naples",
+        "University of Pisa",
+        "University of Palermo"
+      ],
+      "categories": [
+        "Alternative energy and fuels",
+        "Supply-chain and logistics",
+        "Vessel efficiency",
+        "Marine robotics",
+        "Digital twins",
+        "Artificial intelligence",
+        "Maritime cybersecurity",
+        "Offshore and ocean technology",
+        "Ship design and engineering"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w3117037508",
+        "openalex-https-openalex-org-w3016994415",
+        "openalex-https-openalex-org-w3010975660",
+        "openalex-https-openalex-org-w3199820141",
+        "openalex-https-openalex-org-w4393232293",
+        "openalex-https-openalex-org-w4386220176",
+        "openalex-https-openalex-org-w4380768819",
+        "openalex-https-openalex-org-w2488775031",
+        "openalex-https-openalex-org-w2754483672",
+        "openalex-https-openalex-org-w4391169722",
+        "openalex-https-openalex-org-w2993859739",
+        "openalex-https-openalex-org-w3177047809",
+        "openalex-https-openalex-org-w3082243195",
+        "openalex-https-openalex-org-w2572191223"
+      ]
+    },
+    {
+      "countryCode": "SE",
+      "countryName": "Sweden",
+      "slug": "sweden",
+      "coordinates": [
+        18.6435,
+        60.1282
+      ],
+      "recordCount": 14,
+      "recordsSince2020": 12,
+      "recordsSince2024": 2,
+      "verifiedCount": 14,
+      "researchIntensity": 28,
+      "institutions": [
+        "University of Gothenburg",
+        "KTH Royal Institute of Technology",
+        "World Maritime University",
+        "Linköping University",
+        "Chalmers University of Technology",
+        "IVL Swedish Environmental Research Institute"
+      ],
+      "categories": [
+        "Alternative energy and fuels",
+        "Vessel efficiency",
+        "Marine robotics",
+        "Supply-chain and logistics",
+        "Ship design and engineering",
+        "Digital twins",
+        "Autonomous navigation",
+        "Artificial intelligence",
+        "Maritime cybersecurity"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w3038723752",
+        "openalex-https-openalex-org-w4381885538",
+        "openalex-https-openalex-org-w3156539977",
+        "openalex-https-openalex-org-w3177468118",
+        "openalex-https-openalex-org-w4384284153",
+        "openalex-https-openalex-org-w3040469417",
+        "openalex-https-openalex-org-w4406334305",
+        "openalex-https-openalex-org-w3016531454",
+        "openalex-https-openalex-org-w4309577990",
+        "openalex-https-openalex-org-w3155516278",
+        "openalex-https-openalex-org-w2508141790",
+        "openalex-https-openalex-org-w1914140920",
+        "openalex-https-openalex-org-w4200123276",
+        "openalex-https-openalex-org-w4403949792"
+      ]
+    },
+    {
+      "countryCode": "NO",
+      "countryName": "Norway",
+      "slug": "norway",
+      "coordinates": [
+        8.4689,
+        60.472
+      ],
+      "recordCount": 13,
+      "recordsSince2020": 9,
+      "recordsSince2024": 2,
+      "verifiedCount": 13,
+      "researchIntensity": 26,
+      "institutions": [
+        "SINTEF OCEAN AS",
+        "Offshore Simulator Centre (Norway)",
+        "University of South-Eastern Norway",
+        "Norwegian University of Science and Technology",
+        "University of Oslo",
+        "University of Agder",
+        "SINTEF",
+        "Norwegian Defence Research Establishment"
+      ],
+      "categories": [
+        "Digital twins",
+        "Offshore and ocean technology",
+        "Artificial intelligence",
+        "Marine robotics",
+        "Autonomous navigation",
+        "Alternative energy and fuels",
+        "Vessel efficiency",
+        "Supply-chain and logistics"
+      ],
+      "recordIds": [
+        "cordis-101138478",
+        "openalex-https-openalex-org-w4317936671",
+        "openalex-https-openalex-org-w3041382323",
+        "openalex-https-openalex-org-w3128019105",
+        "openalex-https-openalex-org-w2940919353",
+        "openalex-https-openalex-org-w4225272915",
+        "openalex-https-openalex-org-w3083914918",
+        "openalex-https-openalex-org-w3035188391",
+        "openalex-https-openalex-org-w2784614186",
+        "openalex-https-openalex-org-w3127746231",
+        "openalex-https-openalex-org-w4404939180",
+        "openalex-https-openalex-org-w2332283998",
+        "openalex-https-openalex-org-w2956110096"
+      ]
+    },
+    {
+      "countryCode": "GR",
+      "countryName": "Greece",
+      "slug": "greece",
+      "coordinates": [
+        21.8243,
+        39.0742
+      ],
+      "recordCount": 10,
+      "recordsSince2020": 10,
+      "recordsSince2024": 5,
+      "verifiedCount": 10,
+      "researchIntensity": 20,
+      "institutions": [
+        "HYDRUS",
+        "Prisma Electronics (Greece)",
+        "International Hellenic University",
+        "University of Western Macedonia",
+        "University of the Aegean",
+        "Democritus University of Thrace",
+        "Agricultural University of Athens",
+        "National Technical University of Athens"
+      ],
+      "categories": [
+        "Digital twins",
+        "Artificial intelligence",
+        "Marine robotics",
+        "Supply-chain and logistics",
+        "Alternative energy and fuels",
+        "Vessel efficiency",
+        "Maritime cybersecurity",
+        "Offshore and ocean technology"
+      ],
+      "recordIds": [
+        "cordis-101138411",
+        "openalex-https-openalex-org-w4402417144",
+        "openalex-https-openalex-org-w4283275376",
+        "openalex-https-openalex-org-w4391252433",
+        "openalex-https-openalex-org-w4200009490",
+        "openalex-https-openalex-org-w4399283331",
+        "openalex-https-openalex-org-w4321512825",
+        "openalex-https-openalex-org-w4413268536",
+        "openalex-https-openalex-org-w4205413854",
+        "openalex-https-openalex-org-w4311729195"
+      ]
+    },
+    {
+      "countryCode": "FI",
+      "countryName": "Finland",
+      "slug": "finland",
+      "coordinates": [
+        25.7482,
+        61.9241
+      ],
+      "recordCount": 10,
+      "recordsSince2020": 8,
+      "recordsSince2024": 0,
+      "verifiedCount": 10,
+      "researchIntensity": 20,
+      "institutions": [
+        "University of Turku",
+        "Åbo Akademi University",
+        "Kotka Maritime Research Centre",
+        "Finnish Geospatial Research Institute",
+        "Tampere University",
+        "Aalto University",
+        "Lappeenranta-Lahti University of Technology"
+      ],
+      "categories": [
+        "Intelligent port services",
+        "Artificial intelligence",
+        "Marine robotics",
+        "Autonomous navigation",
+        "Maritime cybersecurity",
+        "Alternative energy and fuels",
+        "Vessel efficiency"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4311719747",
+        "openalex-https-openalex-org-w4387397415",
+        "openalex-https-openalex-org-w4389922283",
+        "openalex-https-openalex-org-w3089916726",
+        "openalex-https-openalex-org-w2948162897",
+        "openalex-https-openalex-org-w3081871549",
+        "openalex-https-openalex-org-w2961832654",
+        "openalex-https-openalex-org-w4307752077",
+        "openalex-https-openalex-org-w3096656822",
+        "openalex-https-openalex-org-w4287854497"
+      ]
+    },
+    {
+      "countryCode": "AU",
+      "countryName": "Australia",
+      "slug": "australia",
+      "coordinates": [
+        133.7751,
+        -25.2744
+      ],
+      "recordCount": 9,
+      "recordsSince2020": 6,
+      "recordsSince2024": 1,
+      "verifiedCount": 9,
+      "researchIntensity": 18,
+      "institutions": [
+        "Swinburne University of Technology",
+        "UNSW Sydney",
+        "University of Tasmania",
+        "Australian Maritime College",
+        "James Cook University",
+        "Murdoch University"
+      ],
+      "categories": [
+        "Alternative energy and fuels",
+        "Vessel efficiency",
+        "Digital twins",
+        "Artificial intelligence",
+        "Supply-chain and logistics",
+        "Marine robotics",
+        "Maritime cybersecurity",
+        "Autonomous navigation"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4394807657",
+        "openalex-https-openalex-org-w3205789855",
+        "openalex-https-openalex-org-w3109725889",
+        "openalex-https-openalex-org-w2806332726",
+        "openalex-https-openalex-org-w2588109978",
+        "openalex-https-openalex-org-w2915513980",
+        "openalex-https-openalex-org-w4319724843",
+        "openalex-https-openalex-org-w3121887140",
+        "openalex-https-openalex-org-w3019075159"
+      ]
+    },
+    {
+      "countryCode": "DE",
+      "countryName": "Germany",
+      "slug": "germany",
+      "coordinates": [
+        10.4515,
+        51.1657
+      ],
+      "recordCount": 8,
+      "recordsSince2020": 3,
+      "recordsSince2024": 0,
+      "verifiedCount": 8,
+      "researchIntensity": 16,
+      "institutions": [
+        "Siemens (Germany)",
+        "Helmholtz-Zentrum Hereon",
+        "Osnabrück University",
+        "Institut für Seeverkehrswirtschaft und Logistik",
+        "Universität Hamburg",
+        "Kühne Logistics University",
+        "Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung"
+      ],
+      "categories": [
+        "Alternative energy and fuels",
+        "Supply-chain and logistics",
+        "Marine robotics",
+        "Artificial intelligence",
+        "Maritime cybersecurity",
+        "Intelligent port services",
+        "Ship design and engineering",
+        "Offshore and ocean technology"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w3204034991",
+        "openalex-https-openalex-org-w2914300732",
+        "openalex-https-openalex-org-w2770338946",
+        "openalex-https-openalex-org-w2787053267",
+        "openalex-https-openalex-org-w4225993858",
+        "openalex-https-openalex-org-w2594174180",
+        "openalex-https-openalex-org-w3011713008",
+        "openalex-https-openalex-org-w2918836041"
+      ]
+    },
+    {
+      "countryCode": "MY",
+      "countryName": "Malaysia",
+      "slug": "malaysia",
+      "coordinates": [
+        101.9758,
+        4.2105
+      ],
+      "recordCount": 8,
+      "recordsSince2020": 6,
+      "recordsSince2024": 0,
+      "verifiedCount": 8,
+      "researchIntensity": 16,
+      "institutions": [
+        "Universiti Sains Malaysia",
+        "Universiti Malaysia Terengganu",
+        "Universiti Malaysia Pahang Al-Sultan Abdullah",
+        "Sunway University",
+        "Universiti Malaysia Perlis",
+        "Heriot-Watt University Malaysia",
+        "Tenaga Nasional Berhad (Malaysia)"
+      ],
+      "categories": [
+        "Alternative energy and fuels",
+        "Vessel efficiency",
+        "Ship design and engineering",
+        "Artificial intelligence",
+        "Intelligent port services",
+        "Supply-chain and logistics",
+        "Marine robotics",
+        "Autonomous navigation"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4200075150",
+        "openalex-https-openalex-org-w4304585218",
+        "openalex-https-openalex-org-w4317933195",
+        "openalex-https-openalex-org-w4389819157",
+        "openalex-https-openalex-org-w3021475808",
+        "openalex-https-openalex-org-w4323927796",
+        "openalex-https-openalex-org-w2945214992",
+        "openalex-https-openalex-org-w2953103152"
+      ]
+    },
+    {
+      "countryCode": "DK",
+      "countryName": "Denmark",
+      "slug": "denmark",
+      "coordinates": [
+        9.5018,
+        56.2639
+      ],
+      "recordCount": 8,
+      "recordsSince2020": 6,
+      "recordsSince2024": 1,
+      "verifiedCount": 8,
+      "researchIntensity": 16,
+      "institutions": [
+        "Copenhagen Business School",
+        "Technical University of Denmark",
+        "Aalborg University",
+        "University of Copenhagen",
+        "Danfoss (Denmark)"
+      ],
+      "categories": [
+        "Vessel efficiency",
+        "Marine robotics",
+        "Digital twins",
+        "Artificial intelligence",
+        "Maritime cybersecurity",
+        "Offshore and ocean technology"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4362614467",
+        "openalex-https-openalex-org-w4225300209",
+        "openalex-https-openalex-org-w4206739815",
+        "openalex-https-openalex-org-w4384436077",
+        "openalex-https-openalex-org-w4399206781",
+        "openalex-https-openalex-org-w2788227973",
+        "openalex-https-openalex-org-w2946050739",
+        "openalex-https-openalex-org-w3211813355"
+      ]
+    },
+    {
+      "countryCode": "ES",
+      "countryName": "Spain",
+      "slug": "spain",
+      "coordinates": [
+        -3.7492,
+        40.4637
+      ],
+      "recordCount": 7,
+      "recordsSince2020": 5,
+      "recordsSince2024": 2,
+      "verifiedCount": 7,
+      "researchIntensity": 14,
+      "institutions": [
+        "Universidade da Coruña",
+        "Universitat de Lleida",
+        "Universidad Politécnica de Madrid",
+        "Universidad Rey Juan Carlos",
+        "Universidad Complutense de Madrid",
+        "Universidad de Cádiz"
+      ],
+      "categories": [
+        "Alternative energy and fuels",
+        "Vessel efficiency",
+        "Digital twins",
+        "Supply-chain and logistics",
+        "Artificial intelligence",
+        "Marine robotics",
+        "Ship design and engineering",
+        "Autonomous navigation",
+        "Maritime cybersecurity"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4390517607",
+        "openalex-https-openalex-org-w4396676992",
+        "openalex-https-openalex-org-w2917580293",
+        "openalex-https-openalex-org-w3198040634",
+        "openalex-https-openalex-org-w2330188877",
+        "openalex-https-openalex-org-w3012250252",
+        "openalex-https-openalex-org-w3092640103"
+      ]
+    },
+    {
+      "countryCode": "NL",
+      "countryName": "Netherlands",
+      "slug": "netherlands",
+      "coordinates": [
+        5.2913,
+        52.1326
+      ],
+      "recordCount": 6,
+      "recordsSince2020": 5,
+      "recordsSince2024": 2,
+      "verifiedCount": 6,
+      "researchIntensity": 12,
+      "institutions": [
+        "Delft University of Technology",
+        "University of Groningen"
+      ],
+      "categories": [
+        "Digital twins",
+        "Artificial intelligence",
+        "Autonomous navigation",
+        "Marine robotics",
+        "Maritime cybersecurity",
+        "Vessel efficiency",
+        "Alternative energy and fuels",
+        "Supply-chain and logistics"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w2907106190",
+        "openalex-https-openalex-org-w3130435805",
+        "openalex-https-openalex-org-w3087460198",
+        "openalex-https-openalex-org-w3127267938",
+        "openalex-https-openalex-org-w4407393077",
+        "openalex-https-openalex-org-w4407189872"
+      ]
+    },
+    {
+      "countryCode": "BE",
+      "countryName": "Belgium",
+      "slug": "belgium",
+      "coordinates": [
+        4.4699,
+        50.5039
+      ],
+      "recordCount": 5,
+      "recordsSince2020": 5,
+      "recordsSince2024": 2,
+      "verifiedCount": 5,
+      "researchIntensity": 10,
+      "institutions": [
+        "Ghent University",
+        "KU Leuven",
+        "University of Antwerp"
+      ],
+      "categories": [
+        "Autonomous navigation",
+        "Digital twins",
+        "Artificial intelligence",
+        "Supply-chain and logistics",
+        "Marine robotics",
+        "Alternative energy and fuels"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4412076062",
+        "openalex-https-openalex-org-w3009841136",
+        "openalex-https-openalex-org-w3118694283",
+        "openalex-https-openalex-org-w4391959017",
+        "openalex-https-openalex-org-w3120887917"
+      ]
+    },
+    {
+      "countryCode": "IN",
+      "countryName": "India",
+      "slug": "india",
+      "coordinates": [
+        78.9629,
+        20.5937
+      ],
+      "recordCount": 5,
+      "recordsSince2020": 4,
+      "recordsSince2024": 1,
+      "verifiedCount": 5,
+      "researchIntensity": 10,
+      "institutions": [
+        "National Institute of Technology Raipur",
+        "Technology Information, Forecasting and Assessment Council",
+        "Maharaja Engineering College",
+        "Yashwantrao Chavan Maharashtra Open University"
+      ],
+      "categories": [
+        "Artificial intelligence",
+        "Alternative energy and fuels",
+        "Vessel efficiency",
+        "Offshore and ocean technology"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4406814899",
+        "openalex-https-openalex-org-w3211661740",
+        "openalex-https-openalex-org-w4284673149",
+        "openalex-https-openalex-org-w3217727701",
+        "openalex-https-openalex-org-w2013138470"
+      ]
+    },
+    {
+      "countryCode": "CA",
+      "countryName": "Canada",
+      "slug": "canada",
+      "coordinates": [
+        -106.3468,
+        56.1304
+      ],
+      "recordCount": 4,
+      "recordsSince2020": 2,
+      "recordsSince2024": 0,
+      "verifiedCount": 4,
+      "researchIntensity": 8,
+      "institutions": [
+        "Université Laval",
+        "Defence Research and Development Canada",
+        "Université du Québec à Rimouski",
+        "University of Victoria"
+      ],
+      "categories": [
+        "Artificial intelligence",
+        "Marine robotics",
+        "Alternative energy and fuels",
+        "Vessel efficiency",
+        "Offshore and ocean technology"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4282570835",
+        "openalex-https-openalex-org-w2811107749",
+        "openalex-https-openalex-org-w4307552289",
+        "openalex-https-openalex-org-w2581111877"
+      ]
+    },
+    {
+      "countryCode": "KR",
+      "countryName": "South Korea",
+      "slug": "south-korea",
+      "coordinates": [
+        127.7669,
+        35.9078
+      ],
+      "recordCount": 4,
+      "recordsSince2020": 3,
+      "recordsSince2024": 0,
+      "verifiedCount": 4,
+      "researchIntensity": 8,
+      "institutions": [
+        "Changwon National University",
+        "Mokpo National Maritime University",
+        "Korean Register (South Korea)",
+        "Ajou University"
+      ],
+      "categories": [
+        "Autonomous navigation",
+        "Artificial intelligence",
+        "Marine robotics",
+        "Alternative energy and fuels",
+        "Vessel efficiency",
+        "Supply-chain and logistics"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4376139506",
+        "openalex-https-openalex-org-w3119343336",
+        "openalex-https-openalex-org-w3009208041",
+        "openalex-https-openalex-org-w2910458317"
+      ]
+    },
+    {
+      "countryCode": "SG",
+      "countryName": "Singapore",
+      "slug": "singapore",
+      "coordinates": [
+        103.8198,
+        1.3521
+      ],
+      "recordCount": 3,
+      "recordsSince2020": 2,
+      "recordsSince2024": 1,
+      "verifiedCount": 3,
+      "researchIntensity": 6,
+      "institutions": [
+        "Institute of High Performance Computing",
+        "Agency for Science, Technology and Research",
+        "National University of Singapore"
+      ],
+      "categories": [
+        "Artificial intelligence",
+        "Marine robotics",
+        "Alternative energy and fuels",
+        "Vessel efficiency"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w2944924828",
+        "openalex-https-openalex-org-w4288064704",
+        "openalex-https-openalex-org-w4392543952"
+      ]
+    },
+    {
+      "countryCode": "FR",
+      "countryName": "France",
+      "slug": "france",
+      "coordinates": [
+        2.2137,
+        46.2276
+      ],
+      "recordCount": 3,
+      "recordsSince2020": 2,
+      "recordsSince2024": 0,
+      "verifiedCount": 3,
+      "researchIntensity": 6,
+      "institutions": [
+        "Université Le Havre Normandie",
+        "Forum international des transports"
+      ],
+      "categories": [
+        "Supply-chain and logistics",
+        "Vessel efficiency",
+        "Offshore and ocean technology"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4387821672",
+        "openalex-https-openalex-org-w2811211442",
+        "openalex-https-openalex-org-w4288079564"
+      ]
+    },
+    {
+      "countryCode": "ID",
+      "countryName": "Indonesia",
+      "slug": "indonesia",
+      "coordinates": [
+        113.9213,
+        -0.7893
+      ],
+      "recordCount": 2,
+      "recordsSince2020": 2,
+      "recordsSince2024": 2,
+      "verifiedCount": 2,
+      "researchIntensity": 4,
+      "institutions": [
+        "Universitas 17 Agustus 1945 Jakarta",
+        "Sepuluh Nopember Institute of Technology"
+      ],
+      "categories": [
+        "Supply-chain and logistics",
+        "Marine robotics",
+        "Alternative energy and fuels",
+        "Vessel efficiency"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4403651930",
+        "openalex-https-openalex-org-w4411027350"
+      ]
+    },
+    {
+      "countryCode": "BR",
+      "countryName": "Brazil",
+      "slug": "brazil",
+      "coordinates": [
+        -51.9253,
+        -14.235
+      ],
+      "recordCount": 2,
+      "recordsSince2020": 1,
+      "recordsSince2024": 0,
+      "verifiedCount": 2,
+      "researchIntensity": 4,
+      "institutions": [
+        "Brazilian Naval School",
+        "Pontifícia Universidade Católica do Rio Grande do Sul"
+      ],
+      "categories": [
+        "Maritime cybersecurity",
+        "Autonomous navigation",
+        "Artificial intelligence",
+        "Marine robotics"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w3159858237",
+        "openalex-https-openalex-org-w2913393332"
+      ]
+    },
+    {
+      "countryCode": "IS",
+      "countryName": "Iceland",
+      "slug": "iceland",
+      "coordinates": [
+        -19.0208,
+        64.9631
+      ],
+      "recordCount": 1,
+      "recordsSince2020": 1,
+      "recordsSince2024": 1,
+      "verifiedCount": 1,
+      "researchIntensity": 2,
+      "institutions": [
+        "VERKIS HF"
+      ],
+      "categories": [],
+      "recordIds": [
+        "cordis-101138620"
+      ]
+    },
+    {
+      "countryCode": "PH",
+      "countryName": "Philippines",
+      "slug": "philippines",
+      "coordinates": [
+        121.774,
+        12.8797
+      ],
+      "recordCount": 1,
+      "recordsSince2020": 1,
+      "recordsSince2024": 1,
+      "verifiedCount": 1,
+      "researchIntensity": 2,
+      "institutions": [
+        "Mapúa University"
+      ],
+      "categories": [
+        "Maritime cybersecurity",
+        "Artificial intelligence"
+      ],
+      "recordIds": [
+        "openalex-https-openalex-org-w4405936754"
+      ]
+    }
+  ]
+}

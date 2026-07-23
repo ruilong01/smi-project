@@ -1,0 +1,48 @@
+{
+  "recordId": "cordis-101136257",
+  "acronym": "AUTOFLEX",
+  "fetchedUrl": "https://www.cml.fraunhofer.de/en/research-projects/AUTOFLEX.html",
+  "fetchedAt": "2026-07-23T01:18:52.884Z",
+  "sourceUrl": "https://www.cml.fraunhofer.de/en/research-projects/AUTOFLEX.html",
+  "pageTitle": "AUTOFLEX -  Fraunhofer CML",
+  "publishedDate": null,
+  "headings": [
+    "Introduction of small, autonomous and emission-free inland vessels",
+    "Project Description",
+    "AUTOFLEX Infographic"
+  ],
+  "sections": [
+    {
+      "heading": "Project Description",
+      "text": "In order to achieve climate neutrality for all EU countries by 2050 and thus realize the ambitious European Green Deal, increasing energy efficiency in all sectors is just as important as raising the use of renewable energy. In the transport sector, this means that the proportion of vehicles powered by electricity and sustainable alternative fuels must be enhanced - including inland waterway vessels. In addition, the aim is to achieve an environmentally friendly modal shift from heavily congested roads to less congested inland waterways."
+    },
+    {
+      "heading": "Project Description",
+      "text": "Development of a new transportation system independent of established structures. New inland waterway vessels are being developed that can provide reliable transportation services in small and narrow waterways, and at low water levels. New distribution hubs are being designed as interfaces to road traffic, which simultaneously ensure the transshipment of goods and the emission-free supply of energy to ships and trucks. Geographically speaking, the two AUTOFLEX use cases are located in the Randstad region around Amsterdam and in the East Flemish city of Ghent."
+    },
+    {
+      "heading": "Project Description",
+      "text": "In AUTOFLEX, Fraunhofer CML pools its logistical and technical expertise for autonomous ships by being responsible for the redesign of the transportation system and participating in the development and evaluation of methods to validate the safety of autonomous navigation systems as well as in the assessment of the safety status of autonomously operated ships."
+    },
+    {
+      "heading": "Project Description",
+      "text": "SINTEF Ocean AS, DFDS AS, NTUA (Ethnicon Metsovion Polytechnion), ISE Institut für Strukturleichtbau und Energieeffizienz gGmbH, Maritime Robotik AS, DST Entwicklungszentrum für Schiffstechnik und Transportsysteme e.V., Zero Emission Dienstleistungen BV and the Fraunhofer Center for Maritime Logistics and Services CML."
+    },
+    {
+      "heading": "Project Description",
+      "text": "AUTOFLEX is being funded by the European Commission with 4.5 million euros over a period of three years as part of the Horizon Europe program under grant agreement no. 101136257."
+    }
+  ],
+  "links": [],
+  "images": [
+    {
+      "imageUrl": "https://www.cml.fraunhofer.de/en/research-projects/AUTOFLEX/jcr:content/contentPar/sectioncomponent_200/sectionParsys/wideimage/imageComponent/image.img.jpg/1729250635817/Overview-AUTOFLEX.jpg",
+      "altText": "",
+      "caption": "",
+      "sourceUrl": "https://www.cml.fraunhofer.de/en/research-projects/AUTOFLEX.html",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    }
+  ],
+  "contentHash": "ac7c11b4920ed7100d00ef52cb61c829917f271cff544b33619fb315f3377173"
+}

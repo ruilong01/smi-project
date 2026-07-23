@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   geoCentroid,
+  geoCircle,
   geoDistance,
   geoGraticule,
   geoOrthographic,
@@ -9,8 +10,8 @@ import {
 import { feature } from "topojson-client";
 import { presimplify, quantile, simplify } from "topojson-simplify";
 import worldMap from "world-atlas/countries-50m.json";
-import { AnimatePresence } from "framer-motion";
-import { Minus, Pause, Play, Plus, RotateCcw } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Info, Minus, Pause, Play, Plus, RotateCcw, X } from "lucide-react";
 import CountryPopup from "./CountryPopup.jsx";
 import HoverPreviewCard from "./HoverPreviewCard.jsx";
 import {
@@ -29,7 +30,12 @@ import {
 
 const width = 960;
 const height = 620;
-const defaultRotation = [-18, -16, 0];
+// Singapore [lon, lat] = [103.8198, 1.3521]. Orthographic rotation convention
+// (see isCoordinateVisible below): the point currently facing the viewer is
+// [-rotation[0], -rotation[1]] - so centering on Singapore means rotating
+// to exactly the negative of its coordinates.
+const singaporeCoordinates = [103.8198, 1.3521];
+const defaultRotation = [-singaporeCoordinates[0], -singaporeCoordinates[1], 0];
 const baseScale = 286;
 const defaultZoom = 1;
 const minZoom = 0.7;
@@ -160,6 +166,28 @@ function easeOutCubic(t) {
   return 1 - Math.pow(1 - t, 3);
 }
 
+// Approximate subsolar point (the [lon, lat] directly under the sun right
+// now) from a plain Date - no external ephemeris library, per "do not
+// overbuild". Declination uses the standard simplified sinusoidal
+// approximation (accurate to within about a degree); longitude assumes
+// solar noon happens at UTC 12:00 exactly, ignoring the equation of time
+// (a real but small, +/-~15 minute seasonal wobble). Good enough for a
+// "does Singapore look lit or dark right now" visual, not for navigation.
+function computeSubsolarPoint(date) {
+  const start = Date.UTC(date.getUTCFullYear(), 0, 1);
+  const dayOfYear = Math.floor((date.getTime() - start) / 86400000);
+  const declination = -23.44 * Math.cos(((2 * Math.PI) / 365) * (dayOfYear + 10));
+
+  const utcHours = date.getUTCHours() + date.getUTCMinutes() / 60 + date.getUTCSeconds() / 3600;
+  const longitude = normalizeLongitude(-(utcHours - 12) * 15, 0);
+
+  return [longitude, declination];
+}
+
+function antipode([lon, lat]) {
+  return [normalizeLongitude(lon + 180, 0), -lat];
+}
+
 function getProjectCoordinates(project) {
   if (!Number.isFinite(project.longitude) || !Number.isFinite(project.latitude)) {
     return null;
@@ -251,6 +279,14 @@ export default function WorldMap({
   const sphereRef = useRef(null);
   const clipSphereRef = useRef(null);
   const graticuleRef = useRef(null);
+  const nightPathRef = useRef(null);
+  // Cached night-hemisphere GeoJSON geometry - only recomputed every 10
+  // minutes (see the effect below), not per animation frame. Re-projecting
+  // this SAME geometry every frame (cheap) is what makes the shading follow
+  // rotation/zoom without ever recalculating the sun's position per frame.
+  const nightGeometryRef = useRef(
+    geoCircle().center(antipode(computeSubsolarPoint(new Date()))).radius(90)()
+  );
   const geographyRefs = useRef(new Map());
   const markerRefs = useRef(new Map());
   const projectMarkerRefs = useRef(new Map());
@@ -292,6 +328,9 @@ export default function WorldMap({
   const [isDragging, setIsDragging] = useState(false);
   const [isAutoRotationEnabled, setIsAutoRotationEnabled] = useState(true);
   const [popupPosition, setPopupPosition] = useState(null);
+  // Legend starts collapsed - it's reference material, not something that
+  // needs to permanently occupy map real estate when nobody's reading it.
+  const [isLegendOpen, setIsLegendOpen] = useState(false);
   const hasFilter = activeFilter !== "All";
 
   const countriesByAtlasName = useMemo(() => {
@@ -396,6 +435,25 @@ export default function WorldMap({
     return () => {
       shell.removeEventListener("wheel", handleNativeWheel);
     };
+  }, []);
+
+  // Day/night terminator: recomputed on a slow timer (10 min), never per
+  // animation frame - the render loop just re-projects the same cached
+  // geometry every frame (as cheap as the sphere/graticule paths already
+  // re-projected each frame), so this adds no new per-frame cost and no
+  // second rAF loop.
+  useEffect(() => {
+    const NIGHT_UPDATE_INTERVAL_MS = 10 * 60 * 1000;
+
+    function updateNightGeometry() {
+      nightGeometryRef.current = geoCircle()
+        .center(antipode(computeSubsolarPoint(new Date())))
+        .radius(90)();
+      markGlobeDirty();
+    }
+
+    const intervalId = window.setInterval(updateNightGeometry, NIGHT_UPDATE_INTERVAL_MS);
+    return () => window.clearInterval(intervalId);
   }, []);
 
   useEffect(() => {
@@ -624,6 +682,10 @@ export default function WorldMap({
     sphereRef.current?.setAttribute("d", spherePath);
     clipSphereRef.current?.setAttribute("d", spherePath);
     graticuleRef.current?.setAttribute("d", mapPath(graticule) ?? "");
+    // Re-projects the cached night geometry (only its lat/lon boundary
+    // changes, every 10 min - see the effect above) through whatever
+    // rotation/zoom is current this frame, same cost as the graticule line.
+    nightPathRef.current?.setAttribute("d", mapPath(nightGeometryRef.current) ?? "");
 
     // LOD selection: simplified geometry while moving, full 50m when settled.
     const activeFeatures = moving ? simplifiedLandFeatures : landFeatures;
@@ -1249,6 +1311,13 @@ export default function WorldMap({
             );
           })}
 
+          <path
+            aria-hidden="true"
+            className="globe-night-shadow"
+            d={initialPath(nightGeometryRef.current) ?? undefined}
+            ref={nightPathRef}
+          />
+
           <rect
             aria-hidden="true"
             className="globe-vignette"
@@ -1452,39 +1521,84 @@ export default function WorldMap({
         ) : null}
       </AnimatePresence>
 
-      <div className="map-legend" aria-label="Research intensity legend">
-        <span>Research intensity</span>
-        <div className="legend-scale">
-          <i className="legend-coverage-pending" />
-          <i className="legend-very-low" />
-          <i className="legend-low" />
-          <i className="legend-low-medium" />
-          <i className="legend-medium" />
-          <i className="legend-medium-high" />
-          <i className="legend-high" />
-          <i className="legend-very-high" />
-        </div>
-        <div className="legend-labels">
-          <small>Coverage pending</small>
-          <small>Very Low</small>
-          <small>Low</small>
-          <small>Low-Med</small>
-          <small>Medium</small>
-          <small>Med-High</small>
-          <small>High</small>
-          <small>Very High</small>
-        </div>
-        <p className="legend-note">
-          Research intensity is calculated from verified project-location,
-          institution-country, partner, funder and publication-affiliation
-          relationships in the current dataset.
-        </p>
-        <p className="legend-note legend-note-emphasis">
-          <strong>Coverage pending</strong> does not mean no research
-          activity. It means the current dataset has not yet verified
-          extracted records for that country.
-        </p>
-      </div>
+      {!isLegendOpen ? (
+        <button
+          aria-controls="map-legend-panel"
+          aria-expanded="false"
+          aria-label="Show research intensity legend"
+          className="legend-toggle"
+          onClick={() => setIsLegendOpen(true)}
+          type="button"
+        >
+          <Info aria-hidden="true" size={14} />
+          Legend
+        </button>
+      ) : null}
+
+      <span
+        className="sunlight-note"
+        title="Approximate subsolar point from the current UTC time (declination + solar-noon longitude); does not account for the equation of time, refreshed every 10 minutes."
+      >
+        Sunlight based on current UTC time
+      </span>
+
+      <AnimatePresence>
+        {isLegendOpen ? (
+          <motion.div
+            animate={{ opacity: 1, y: 0 }}
+            aria-label="Research intensity legend"
+            className="map-legend"
+            exit={{ opacity: 0, y: 8 }}
+            id="map-legend-panel"
+            initial={{ opacity: 0, y: 8 }}
+            transition={{ duration: 0.16, ease: "easeOut" }}
+          >
+            <div className="legend-header">
+              <span>Research intensity</span>
+              <button
+                aria-controls="map-legend-panel"
+                aria-expanded="true"
+                aria-label="Hide research intensity legend"
+                className="legend-close"
+                onClick={() => setIsLegendOpen(false)}
+                type="button"
+              >
+                <X aria-hidden="true" size={14} />
+              </button>
+            </div>
+            <div className="legend-scale">
+              <i className="legend-coverage-pending" />
+              <i className="legend-very-low" />
+              <i className="legend-low" />
+              <i className="legend-low-medium" />
+              <i className="legend-medium" />
+              <i className="legend-medium-high" />
+              <i className="legend-high" />
+              <i className="legend-very-high" />
+            </div>
+            <div className="legend-labels">
+              <small>Coverage pending</small>
+              <small>Very Low</small>
+              <small>Low</small>
+              <small>Low-Med</small>
+              <small>Medium</small>
+              <small>Med-High</small>
+              <small>High</small>
+              <small>Very High</small>
+            </div>
+            <p className="legend-note">
+              Research intensity is calculated from verified project-location,
+              institution-country, partner, funder and publication-affiliation
+              relationships in the current dataset.
+            </p>
+            <p className="legend-note legend-note-emphasis">
+              <strong>Coverage pending</strong> does not mean no research
+              activity. It means the current dataset has not yet verified
+              extracted records for that country.
+            </p>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
 
       <div className="map-data-note">
         <p>{dataStatusLabel}</p>

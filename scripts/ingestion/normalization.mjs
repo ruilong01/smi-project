@@ -33,6 +33,18 @@ const CATEGORY_RULES = [
     category: "Supply-chain and logistics",
     terms: ["logistics", "supply chain", "route optimisation", "route optimization"],
   },
+  {
+    category: "Marine robotics",
+    terms: ["marine robot", "underwater vehicle", "auv", "rov", "underwater robot"],
+  },
+  {
+    category: "Ship design and engineering",
+    terms: ["ship design", "naval architecture", "hull design", "vessel design"],
+  },
+  {
+    category: "Offshore and ocean technology",
+    terms: ["offshore", "ocean energy", "marine renewable", "offshore wind"],
+  },
 ];
 
 const TECHNOLOGY_RULES = [
@@ -85,6 +97,26 @@ export function isStrongMaritimeMatch(text) {
     haystack.includes("port ");
 
   return maritimeTerm && classifyText(text).length > 0;
+}
+
+// OpenAlex's /works response never includes a plain `abstract` field - only
+// `abstract_inverted_index`, a {word: [positions]} map (its standard way of
+// serving abstract text without redistributing publisher-copyrighted raw
+// text verbatim). Reconstructs the plain-text abstract from it; returns ""
+// if the work has no inverted index at all (~20% of results, observed).
+export function reconstructAbstract(invertedIndex) {
+  if (!invertedIndex || typeof invertedIndex !== "object") {
+    return "";
+  }
+
+  const positions = [];
+  for (const [word, indices] of Object.entries(invertedIndex)) {
+    for (const index of indices) {
+      positions[index] = word;
+    }
+  }
+
+  return positions.join(" ").replace(/\s+/g, " ").trim();
 }
 
 export function firstSentence(text, fallback) {

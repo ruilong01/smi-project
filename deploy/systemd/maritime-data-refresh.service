@@ -1,0 +1,22 @@
+[Unit]
+Description=Maritime R&D data refresh (fetch:openalex -> process:records -> build:country-profiles -> verify:data-provenance)
+# Deliberately no dependency on / conflict with the Docker Compose units -
+# this runs npm directly against the host checkout at /opt/maritime-research.
+# The api container reads the same data/ directory via a bind mount
+# (see compose.yaml), so it never needs to be restarted for new data to
+# show up.
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/maritime-research
+EnvironmentFile=-/opt/maritime-research/.env
+ExecStart=/usr/bin/npm run refresh:data
+# A failed refresh (bad fetch, verification failure) must never crash
+# anything else on the box - refreshData.mjs itself already keeps the
+# previous good data/processed/ files untouched and exits 1. This just
+# stops systemd from restarting or escalating beyond logging the failure.
+TimeoutStartSec=1800
+StandardOutput=journal
+StandardError=journal

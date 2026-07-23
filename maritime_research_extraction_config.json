@@ -1,0 +1,212 @@
+{
+  "project": "Global Maritime R&D Intelligence Map",
+  "created_at": "2026-07-20T08:23:43.465417Z",
+  "date_strategy": {
+    "raw_collection_start": "2015-01-01",
+    "default_display_start": "2020-01-01",
+    "latest_highlight_start": "2024-01-01",
+    "exclude_before": "2015-01-01"
+  },
+  "source_policy": {
+    "no_data_label": "coverage_pending",
+    "no_data_warning": "No extracted records yet does not mean no research activity.",
+    "mvp_mode": "metadata_first",
+    "broad_crawling": false,
+    "image_extraction": "preserve_candidates_only",
+    "pdf_handling": "store_links_and_summaries_not_raw_text_in_ui"
+  },
+  "sources": [
+    {
+      "id": "openalex_works",
+      "priority": 1,
+      "type": "scholarly_metadata",
+      "endpoint": "https://api.openalex.org/works",
+      "docs": "https://developers.openalex.org/api-reference/works",
+      "date_filter": "from_publication_date:2015-01-01",
+      "pagination": "cursor",
+      "needs_key": true,
+      "fields": [
+        "id",
+        "doi",
+        "title",
+        "publication_date",
+        "authorships",
+        "concepts",
+        "abstract_inverted_index",
+        "locations",
+        "primary_location",
+        "cited_by_count",
+        "updated_date"
+      ]
+    },
+    {
+      "id": "crossref_works",
+      "priority": 2,
+      "type": "doi_metadata",
+      "endpoint": "https://api.crossref.org/works",
+      "docs": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/rest-api-filters/",
+      "date_filter": "from-index-date for incremental updates; from-pub-date for historical collection",
+      "needs_mailto": true
+    },
+    {
+      "id": "datacite_dois",
+      "priority": 3,
+      "type": "doi_metadata_datasets",
+      "endpoint": "https://api.datacite.org/dois",
+      "docs": "https://support.datacite.org/docs/api"
+    },
+    {
+      "id": "unpaywall",
+      "priority": 4,
+      "type": "open_access_resolver",
+      "endpoint": "https://api.unpaywall.org/v2/{doi}?email={email}",
+      "docs": "https://unpaywall.org/products/api",
+      "use": "resolve legal OA full text, do not bypass paywalls"
+    },
+    {
+      "id": "openaire_projects",
+      "priority": 5,
+      "type": "project_funding",
+      "endpoint": "https://api-beta.openaire.eu/graph/v4/projects",
+      "docs": "https://graph.openaire.eu/docs/apis/graph-api-v4/projects/"
+    },
+    {
+      "id": "cordis",
+      "priority": 6,
+      "type": "eu_project_database",
+      "docs": "https://cordis.europa.eu/about/dataextractions-api",
+      "downloads": [
+        "Horizon Europe",
+        "Horizon 2020"
+      ],
+      "use": "funded EU maritime/transport projects and outcomes"
+    },
+    {
+      "id": "trimis",
+      "priority": 7,
+      "type": "transport_research_projects",
+      "docs": "https://data.europa.eu/data/datasets/jrc-trimis-projects",
+      "use": "transport R&I projects with maritime/waterborne filters"
+    },
+    {
+      "id": "ukri_gtr",
+      "priority": 8,
+      "type": "uk_project_funding",
+      "docs": "https://www.ukri.org/publications/gateway-to-research-guide/a-guide-to-gateway-to-research/",
+      "use": "UK funded maritime/ocean/port/decarbonisation projects"
+    }
+  ],
+  "topic_groups": [
+    {
+      "topic": "Green Shipping",
+      "include": [
+        "green shipping",
+        "decarbonisation",
+        "emission reduction",
+        "zero-emission vessel",
+        "energy efficiency",
+        "wind-assisted propulsion"
+      ],
+      "exclude": [
+        "pure policy without technology",
+        "generic climate paper"
+      ]
+    },
+    {
+      "topic": "Alternative Fuels",
+      "include": [
+        "ammonia fuel",
+        "hydrogen fuel",
+        "methanol fuel",
+        "fuel cells",
+        "maritime fuel",
+        "bunkering"
+      ],
+      "exclude": [
+        "generic chemical fuel studies not maritime"
+      ]
+    },
+    {
+      "topic": "Smart Ports",
+      "include": [
+        "smart port",
+        "port automation",
+        "port digitalisation",
+        "terminal automation",
+        "port call optimisation",
+        "just-in-time arrival"
+      ],
+      "exclude": [
+        "airport only",
+        "road transport only"
+      ]
+    },
+    {
+      "topic": "Maritime AI",
+      "include": [
+        "maritime artificial intelligence",
+        "machine learning AIS",
+        "vessel prediction",
+        "maritime analytics",
+        "AI shipping",
+        "route optimisation"
+      ],
+      "exclude": [
+        "software shipping",
+        "postal shipping",
+        "data package shipping"
+      ]
+    },
+    {
+      "topic": "Autonomous Vessels",
+      "include": [
+        "autonomous ship",
+        "autonomous vessel",
+        "MASS",
+        "maritime autonomous surface ship",
+        "autonomous navigation"
+      ],
+      "exclude": [
+        "autonomous biology only"
+      ]
+    },
+    {
+      "topic": "Maritime Cybersecurity",
+      "include": [
+        "maritime cybersecurity",
+        "ship cyber",
+        "port cyber security",
+        "AIS spoofing",
+        "GNSS spoofing",
+        "OT cybersecurity"
+      ],
+      "exclude": [
+        "generic IT security not maritime"
+      ]
+    }
+  ],
+  "scoring": {
+    "default_intensity_uses": "2020-present records",
+    "record_sort_order": [
+      "actionabilityScore desc",
+      "recencyScore desc",
+      "relevanceScore desc",
+      "year desc"
+    ],
+    "recency_categories": {
+      "latest": "2024-present",
+      "recent": "2021-2023",
+      "active_default": "2020-present",
+      "archive_background": "2015-2019",
+      "excluded_old": "before 2015"
+    }
+  },
+  "expected_outputs": {
+    "raw_openalex": "data/raw/openalex/",
+    "raw_crossref": "data/raw/crossref/",
+    "processed_records": "data/processed/research-records.json",
+    "country_profiles": "data/processed/country-profiles.json",
+    "data_quality": "data/processed/data-quality-report.json",
+    "update_status": "data/processed/update-status.json"
+  }
+}

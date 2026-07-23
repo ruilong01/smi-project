@@ -6,6 +6,7 @@ import {
   firstSentence,
   hashContent,
   isStrongMaritimeMatch,
+  reconstructAbstract,
   slugify,
 } from "../normalization.mjs";
 import { emptyAiFields } from "../enrichment/schemaDefaults.mjs";
@@ -87,11 +88,16 @@ export async function fetchOpenAlexRecords() {
 export function normalizeOpenAlexRecord(rawRecord, nowIso) {
   const work = rawRecord.record;
   const title = work.title || work.display_name;
-  const abstract =
-    work.abstract ||
-    work.primary_location?.source?.display_name ||
-    work.concepts?.map((concept) => concept.display_name).join(", ");
-  const text = `${title} ${abstract ?? ""}`;
+  // OpenAlex's /works response never includes a plain `abstract` field -
+  // only `abstract_inverted_index` (a {word: [positions]} map). Previously
+  // this fell back to the journal name or a comma list of concepts and
+  // called THAT the abstract/summary - which is why real descriptions were
+  // showing up as e.g. "International Journal of Hydrogen Energy". Concept
+  // names are still folded into `text` below for classification matching
+  // only (a legitimate signal), never shown to users as if it were prose.
+  const abstract = work.abstract || reconstructAbstract(work.abstract_inverted_index);
+  const conceptNames = work.concepts?.map((concept) => concept.display_name).join(", ") ?? "";
+  const text = `${title} ${abstract} ${conceptNames}`.trim();
 
   if (!title || !isStrongMaritimeMatch(text)) {
     return null;
@@ -121,7 +127,7 @@ export function normalizeOpenAlexRecord(rawRecord, nowIso) {
     primaryLocationUrl: work.primary_location?.landing_page_url ?? null,
     openAccessUrl: work.open_access?.oa_url ?? work.best_oa_location?.pdf_url ?? null,
     concepts: (work.concepts ?? []).map((concept) => concept.display_name),
-    abstract: work.abstract ?? "",
+    abstract,
   };
 
   return {

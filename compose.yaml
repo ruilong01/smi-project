@@ -7,6 +7,13 @@ services:
     environment:
       API_HOST: 0.0.0.0
       API_PORT: 8787
+      OPENALEX_EMAIL: ${OPENALEX_EMAIL:-}
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-}
+    volumes:
+      # Shared with the host-level systemd timer (see docs/AWS_DATA_REFRESH.md)
+      # so refresh:data output reaches the API without an image rebuild,
+      # and so raw/, processed/, logs/ survive container restarts/redeploys.
+      - ./data:/app/data
     expose:
       - "8787"
 

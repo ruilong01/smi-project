@@ -1,0 +1,15 @@
+{
+  "lastSuccessfulFetchAt": "2026-07-22T09:14:09.732Z",
+  "lastAttemptedFetchAt": "2026-07-22T09:14:09.732Z",
+  "lastSource": "openalex",
+  "recordsFetched": 507,
+  "recordsProcessed": 329,
+  "recordsAdded": 0,
+  "recordsUpdated": 329,
+  "duplicatesSkipped": 178,
+  "frontendDataUpdatedAt": "2026-07-22T09:14:09.732Z",
+  "status": "success",
+  "errors": [],
+  "countryCount": 24,
+  "rawFile": "data\\raw\\openalex\\run-2026-07-22T09-14-09-732Z.json"
+}
