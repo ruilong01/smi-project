@@ -36,6 +36,11 @@ function DetailImage({ record }) {
   );
 }
 
+function formatEur(amount) {
+  if (amount == null) return null;
+  return `€${Math.round(amount).toLocaleString("en-US")}`;
+}
+
 function ExplanationSection({ title, text }) {
   if (!text) {
     return null;
@@ -99,6 +104,12 @@ export default function ResearchGalleryDetail() {
               ))}
             </div>
             <p>{evaluation?.plainLanguageExplanation || record.summary || "No summary available yet."}</p>
+            {record.sourceUrl ? (
+              <a className="gallery-open-source" href={record.sourceUrl} rel="noreferrer" target="_blank">
+                View source — {record.sourceDatabase || "project page"}
+                <ExternalLink size={14} aria-hidden="true" />
+              </a>
+            ) : null}
           </div>
         </div>
       </section>
@@ -127,6 +138,42 @@ export default function ResearchGalleryDetail() {
               <dt>Recency</dt>
               <dd>{(record.recencyCategory || "unknown").replace(/_/g, " ")}</dd>
             </div>
+            {record.startDate || record.endDate ? (
+              <div className="project-info-item">
+                <dt>Project timeline</dt>
+                <dd>
+                  {record.startDate || "unknown start"} – {record.endDate || "unknown end"}
+                </dd>
+              </div>
+            ) : null}
+            {record.fundedUnder?.length ? (
+              <div className="project-info-item">
+                <dt>Funded under</dt>
+                <dd>{record.fundedUnder.join(", ")}</dd>
+              </div>
+            ) : null}
+            {record.totalCostEur != null ? (
+              <div className="project-info-item">
+                <dt>Total project cost</dt>
+                <dd>{formatEur(record.totalCostEur)}</dd>
+              </div>
+            ) : null}
+            {record.euContributionEur != null ? (
+              <div className="project-info-item">
+                <dt>EU contribution</dt>
+                <dd>{formatEur(record.euContributionEur)}</dd>
+              </div>
+            ) : null}
+            {record.doi ? (
+              <div className="project-info-item">
+                <dt>DOI</dt>
+                <dd>
+                  <a href={`https://doi.org/${record.doi}`} rel="noreferrer" target="_blank">
+                    {record.doi}
+                  </a>
+                </dd>
+              </div>
+            ) : null}
           </dl>
         </article>
 

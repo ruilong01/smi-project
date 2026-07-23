@@ -243,6 +243,25 @@ h1 {
   background: rgba(255, 209, 102, 0.08);
 }
 
+.data-freshness-metric {
+  max-width: 260px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.data-freshness-metric span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.data-freshness-metric:hover,
+.data-freshness-metric:focus-visible {
+  border-color: rgba(95, 255, 224, 0.5);
+  color: var(--smi-aqua, #5fffe0);
+}
+
 .filter-bar {
   display: flex;
   align-items: center;

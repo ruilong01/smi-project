@@ -1,7 +1,7 @@
-import { Anchor, Images, Radar, Satellite } from "lucide-react";
+import { Anchor, Images, Radar, RefreshCw, Satellite } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export default function Header({ selectedCountryCount, activeFilter }) {
+export default function Header({ selectedCountryCount, activeFilter, dataStatusLabel }) {
   return (
     <header className="top-bar">
       <div className="brand-lockup">
@@ -30,6 +30,12 @@ export default function Header({ selectedCountryCount, activeFilter }) {
           <Satellite size={17} />
           <span>{activeFilter}</span>
         </div>
+        {dataStatusLabel ? (
+          <Link className="metric data-freshness-metric" title={dataStatusLabel} to="/sources/status">
+            <RefreshCw size={17} aria-hidden="true" />
+            <span>{dataStatusLabel}</span>
+          </Link>
+        ) : null}
       </div>
     </header>
   );

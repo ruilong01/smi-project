@@ -295,6 +295,39 @@ async function main() {
     );
   }
 
+  // scripts/ingestion/extractCordisProjectDetails.mjs patches startDate/
+  // endDate/ecSignatureDate/fundedUnder/totalCostEur/euContributionEur/
+  // grantAgreementId/doi onto data/processed/research-records.json as a
+  // separate, deliberate step - but this script rebuilds researchRecords
+  // from the seed JSON from scratch every run, so without this it would
+  // silently wipe those fields on the next `ingest:media-seed` run. Read
+  // whatever is already there and carry those specific fields forward by
+  // recordId, the same preserve-on-rebuild pattern already used above for
+  // aiCuration verdicts.
+  const CORDIS_DETAIL_FIELDS = [
+    "startDate",
+    "endDate",
+    "ecSignatureDate",
+    "fundedUnder",
+    "totalCostEur",
+    "euContributionEur",
+    "grantAgreementId",
+    "doi",
+  ];
+  let previousCordisDetailsByRecordId = new Map();
+  try {
+    const previousRecords = JSON.parse(
+      await fs.readFile(path.join(processedDir, "research-records.json"), "utf8")
+    );
+    previousCordisDetailsByRecordId = new Map(
+      (previousRecords.records ?? [])
+        .filter((r) => r.startDate)
+        .map((r) => [r.recordId, Object.fromEntries(CORDIS_DETAIL_FIELDS.map((f) => [f, r[f]]))])
+    );
+  } catch {
+    // No previous file yet - nothing to preserve.
+  }
+
   const researchRecords = [];
   const imageCandidates = [];
 
@@ -363,6 +396,7 @@ async function main() {
           imageIds: recordImageIds,
           images: recordImageObjects,
           extractedAt: record.extracted_at ?? nowIso,
+          ...(previousCordisDetailsByRecordId.get(record.record_id) ?? {}),
         },
         { nowIso }
       )

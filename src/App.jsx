@@ -61,6 +61,7 @@ function MapDashboard() {
       <div className="ocean-grid" aria-hidden="true" />
       <Header
         activeFilter={activeFilter}
+        dataStatusLabel={getLiveDataStatusLabel()}
         selectedCountryCount={highlightedCountries.length}
       />
 
