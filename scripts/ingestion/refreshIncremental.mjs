@@ -5,7 +5,7 @@ import { fetchGlobalUpdates } from "./fetchGlobalUpdates.mjs";
 import { processRecords } from "./processRecords.mjs";
 import { compareRecords } from "./compareRecords.mjs";
 import { triageRecords } from "./triageRecords.mjs";
-import { queueEnrichment } from "./queueEnrichment.mjs";
+import { queueImageEnrichment } from "./queueImageEnrichment.mjs";
 import { enrichImages } from "./enrichImages.mjs";
 import { enrichExplanations } from "./enrichExplanations.mjs";
 import { buildCountryProfiles } from "./buildCountryProfiles.mjs";
@@ -136,7 +136,7 @@ export async function refreshIncremental() {
       await triageRecords({ processedDir: tempDir, nowIso: attemptedAt });
 
       log("Step 5/10: queue:enrichment (into temp dir)");
-      const queueResult = await queueEnrichment({ processedDir: tempDir, nowIso: attemptedAt });
+      const queueResult = await queueImageEnrichment({ processedDir: tempDir, nowIso: attemptedAt });
       log(`  ${queueResult.queuedCount} record(s) queued (${queueResult.highPriorityCount} high priority)`);
 
       log("Step 6/10: enrich:images (into temp dir)");

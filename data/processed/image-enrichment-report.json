@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-07-23T09:30:05.508Z",
+  "limit": 10,
+  "attempted": 10,
+  "recordsGivenImages": 0,
+  "recordsStillPending": 321,
+  "sourcePagesCheckedTotal": 16,
+  "imageCandidatesFoundTotal": 0,
+  "newImageCandidatesWritten": 0,
+  "promoted": true,
+  "validationProblems": [],
+  "displayEligibleBefore": 8,
+  "displayEligibleAfter": 8,
+  "entries": [
+    {
+      "recordId": "openalex-https-openalex-org-w3117037508",
+      "title": "The Role of Green and Blue Hydrogen in the Energy Transition—A Technological and Geopolitical Perspective",
+      "sourcePagesChecked": [
+        "https://doi.org/10.3390/su13010298",
+        "https://www.mdpi.com/2071-1050/13/1/298/pdf?version=1609394133"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.mdpi.com/2071-1050/13/1/298/pdf?version=1609394133)."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3093547115",
+      "title": "Decarbonising the critical sectors of aviation, shipping, road freight and industry to limit warming to 1.5–2°C",
+      "sourcePagesChecked": [
+        "https://doi.org/10.1080/14693062.2020.1831430",
+        "https://www.tandfonline.com/doi/pdf/10.1080/14693062.2020.1831430?needAccess=true"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.tandfonline.com/doi/pdf/10.1080/14693062.2020.1831430?needAccess=true)."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3016994415",
+      "title": "Towards the IMO’s GHG Goals: A Critical Overview of the Perspectives and Challenges of the Main Options for Decarbonizing International Shipping",
+      "sourcePagesChecked": [
+        "https://doi.org/10.3390/su12083220",
+        "https://www.mdpi.com/2071-1050/12/8/3220/pdf?version=1587036736"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.mdpi.com/2071-1050/12/8/3220/pdf?version=1587036736)."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3038723752",
+      "title": "Potential for, and drivers of, private voluntary initiatives for the decarbonisation of short sea shipping: evidence from a Swedish ferry line",
+      "sourcePagesChecked": [
+        "https://doi.org/10.1057/s41278-020-00160-9"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://doi.org/10.1057/s41278-020-00160-9 successfully but it has no embedded images."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3161725877",
+      "title": "Green ammonia as a spatial energy vector: a review",
+      "sourcePagesChecked": [
+        "https://doi.org/10.1039/d1se00345c",
+        "https://pubs.rsc.org/en/content/articlepdf/2021/se/d1se00345c"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://pubs.rsc.org/en/content/articlepdf/2021/se/d1se00345c)."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4401582571",
+      "title": "An assessment of decarbonisation pathways for intercontinental deep-sea shipping using power-to-X fuels",
+      "sourcePagesChecked": [
+        "https://doi.org/10.1016/j.apenergy.2024.124163"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://doi.org/10.1016/j.apenergy.2024.124163 successfully but it has no embedded images."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4400493457",
+      "title": "Harnessing AI for Sustainable Shipping and Green Ports: Challenges and Opportunities",
+      "sourcePagesChecked": [
+        "https://doi.org/10.3390/app14145994",
+        "https://www.mdpi.com/2076-3417/14/14/5994/pdf?version=1721282785"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.mdpi.com/2076-3417/14/14/5994/pdf?version=1721282785)."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391090797",
+      "title": "A roadmap to alternative fuels for decarbonising shipping: The case of green ammonia",
+      "sourcePagesChecked": [
+        "https://doi.org/10.1016/j.rtbm.2024.101100"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://doi.org/10.1016/j.rtbm.2024.101100 successfully but it has no embedded images."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3204034991",
+      "title": "Hydrogen supply chain scenarios for the decarbonisation of a German multi-modal energy system",
+      "sourcePagesChecked": [
+        "https://doi.org/10.1016/j.ijhydene.2021.09.041"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "Fetched https://doi.org/10.1016/j.ijhydene.2021.09.041 successfully but it has no embedded images."
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4200075150",
+      "title": "A Comparison of Alternative Fuels for Shipping in Terms of Lifecycle Energy and Cost",
+      "sourcePagesChecked": [
+        "https://doi.org/10.3390/en14248502",
+        "https://www.mdpi.com/1996-1073/14/24/8502/pdf?version=1640066606"
+      ],
+      "imageCandidatesFound": 0,
+      "imageCandidatesAccepted": 0,
+      "finalDecisionReason": "All 2 source page(s) failed to fetch (last error: 403 Forbidden for https://www.mdpi.com/1996-1073/14/24/8502/pdf?version=1640066606)."
+    }
+  ]
+}

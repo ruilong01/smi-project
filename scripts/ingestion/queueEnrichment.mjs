@@ -2,31 +2,56 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-// Turns data/processed/pending-image-enrichment.json (real, source-linked
-// records with no image yet) into a prioritized queue so enrich:images
-// spends its limited, rate-limited attempts on the records most worth
-// showing first, rather than in whatever order they happen to appear in
-// research-records.json.
+// Builds data/processed/image-enrichment-queue.json: a small, prioritized
+// batch of records worth spending a real HTTP fetch on to look for an
+// official/source-linked image. Never queues rejected/mock/unverified
+// records, and never re-queues a record that already has an image or was
+// attempted too recently (see RETRY_COOLDOWN_DAYS) - most failures are a
+// page that will still be blocked/imageless tomorrow, so retrying it every
+// single run wastes the very budget --limit exists to protect.
 //
-// HIGH priority: actionabilityScore or relevanceScore >= HIGH_PRIORITY_
-// THRESHOLD, or a record that has never had an image attempt at all.
-// NORMAL priority: everything else real and pending.
-// Records that already failed an image attempt recently are pushed to the
-// back (not re-tried every single incremental run) via lastImageAttemptAt.
+// Sources, in priority order (data/processed/pending-image-enrichment.json
+// is the primary one - it's already exactly "real records with no image
+// yet"; records-for-processing.json and research-records.json are
+// secondary nets for anything not yet captured there):
+//   1. pending-image-enrichment.json
+//   2. records-for-processing.json (if it exists)
+//   3. research-records.json - any remaining record with a sourceUrl but
+//      no image candidate
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "../..");
-const processedDir = path.join(rootDir, "data/processed");
+const defaultProcessedDir = path.join(rootDir, "data/processed");
 
 const HIGH_PRIORITY_THRESHOLD = 70;
+const DEFAULT_LIMIT = 10;
 // Don't retry a record's image fetch more than once every N days - most
 // failures are a page that will still be blocked/unavailable tomorrow.
 const RETRY_COOLDOWN_DAYS = 14;
 
-function priorityFor(record) {
-  if ((record.actionabilityScore ?? 0) >= HIGH_PRIORITY_THRESHOLD) return "high";
-  if ((record.relevanceScore ?? 0) >= HIGH_PRIORITY_THRESHOLD) return "high";
-  return "normal";
+async function readJsonIfExists(filePath, fallback = null) {
+  try {
+    return JSON.parse(await fs.readFile(filePath, "utf8"));
+  } catch {
+    return fallback;
+  }
+}
+
+function hasSourceUrl(record) {
+  return (record.sourceUrls?.length ?? 0) > 0 || Boolean(record.sourceUrl);
+}
+
+function alreadyHasImages(record) {
+  return Boolean(record.hasImageCandidates) && (record.imageCandidateCount ?? 0) > 0;
+}
+
+// Never queue a record that isn't real, source-linked evidence to begin
+// with - mirrors the same rule display eligibility itself enforces.
+function isEligibleForQueue(record) {
+  if (!record) return false;
+  if (record.verificationStatus === "mock_demo" || record.verificationStatus === "unverified") return false;
+  if (record.processingStatus === "rejected") return false;
+  return hasSourceUrl(record);
 }
 
 function isInCooldown(record, nowIso) {
@@ -35,67 +60,116 @@ function isInCooldown(record, nowIso) {
   return elapsedMs < RETRY_COOLDOWN_DAYS * 24 * 60 * 60 * 1000;
 }
 
-export async function queueEnrichment({ processedDir: dir = processedDir, nowIso = new Date().toISOString() } = {}) {
-  const pendingData = JSON.parse(
-    await fs.readFile(path.join(dir, "pending-image-enrichment.json"), "utf8")
-  );
-  const records = pendingData.records ?? [];
+function priorityScore(record) {
+  const isProjectRecord = record.recordType === "funded_project";
+  const isCordisRecord = /cordis-/.test(record.recordId ?? "");
+  const typeBonus = isProjectRecord ? 1000 : 0;
+  const cordisBonus = isCordisRecord ? 500 : 0;
+  const scoreSum = (record.relevanceScore ?? 0) + (record.actionabilityScore ?? 0);
+  return typeBonus + cordisBonus + scoreSum;
+}
 
-  const queue = records
-    .filter((record) => !isInCooldown(record, nowIso))
-    .map((record) => ({
-      recordId: record.recordId,
-      title: record.title,
-      sourceUrl: record.sourceUrl || record.sourceUrls?.[0] || null,
-      priority: priorityFor(record),
-      actionabilityScore: record.actionabilityScore ?? null,
-      relevanceScore: record.relevanceScore ?? null,
-    }))
-    .filter((item) => item.sourceUrl)
-    .sort((a, b) => {
-      if (a.priority !== b.priority) return a.priority === "high" ? -1 : 1;
-      return (b.actionabilityScore ?? 0) - (a.actionabilityScore ?? 0);
-    });
+function queueReasonFor(record) {
+  const reasons = [];
+  if (record.recordType === "funded_project") reasons.push("funded project record (preferred over generic publications)");
+  if (/cordis-/.test(record.recordId ?? "")) reasons.push("CORDIS project record (preferred over publisher-only records)");
+  if ((record.relevanceScore ?? 0) >= HIGH_PRIORITY_THRESHOLD) reasons.push(`high relevance score (${record.relevanceScore})`);
+  if ((record.actionabilityScore ?? 0) >= HIGH_PRIORITY_THRESHOLD) reasons.push(`high actionability score (${record.actionabilityScore})`);
+  if (reasons.length === 0) reasons.push("has a real source URL but no image candidate yet");
+  return reasons.join("; ");
+}
 
-  const skippedNoSourceUrl = records.length - queue.length - records.filter((r) => isInCooldown(r, nowIso)).length;
-  const skippedCooldown = records.filter((r) => isInCooldown(r, nowIso)).length;
+export async function queueImageEnrichment({
+  processedDir = defaultProcessedDir,
+  limit = DEFAULT_LIMIT,
+  nowIso = new Date().toISOString(),
+} = {}) {
+  const pendingData = await readJsonIfExists(path.join(processedDir, "pending-image-enrichment.json"), { records: [] });
+  const forProcessingData = await readJsonIfExists(path.join(processedDir, "records-for-processing.json"), { records: [] });
+  const researchRecordsData = await readJsonIfExists(path.join(processedDir, "research-records.json"), { records: [] });
+
+  const byRecordId = new Map();
+  (pendingData.records ?? []).forEach((record) => byRecordId.set(record.recordId, record));
+  (forProcessingData.records ?? []).forEach((record) => {
+    if (!byRecordId.has(record.recordId) && !alreadyHasImages(record)) byRecordId.set(record.recordId, record);
+  });
+  (researchRecordsData.records ?? []).forEach((record) => {
+    if (!byRecordId.has(record.recordId) && !alreadyHasImages(record) && isEligibleForQueue(record)) {
+      byRecordId.set(record.recordId, record);
+    }
+  });
+
+  const allCandidates = [...byRecordId.values()].filter(isEligibleForQueue).filter((r) => !alreadyHasImages(r));
+  const skippedCooldown = allCandidates.filter((r) => isInCooldown(r, nowIso)).length;
+  const eligibleNow = allCandidates.filter((r) => !isInCooldown(r, nowIso));
+  const sorted = eligibleNow.sort((a, b) => priorityScore(b) - priorityScore(a));
+
+  const queue = sorted.slice(0, limit).map((record) => ({
+    recordId: record.recordId,
+    title: record.title ?? "",
+    sourceUrls: record.sourceUrls?.length ? record.sourceUrls : record.sourceUrl ? [record.sourceUrl] : [],
+    recordType: record.recordType ?? "",
+    countryOrRegion: record.countryOrRegion ?? "",
+    institutions: record.institutions ?? [],
+    coordinator: record.coordinator ?? "",
+    relevanceScore: record.relevanceScore ?? 0,
+    actionabilityScore: record.actionabilityScore ?? 0,
+    queueReason: queueReasonFor(record),
+    queuedAt: nowIso,
+  }));
 
   const output = {
     generatedAt: nowIso,
-    totalPending: records.length,
-    queuedCount: queue.length,
+    limit,
+    totalCandidatesConsidered: allCandidates.length,
     skippedCooldown,
-    skippedNoSourceUrl,
-    highPriorityCount: queue.filter((q) => q.priority === "high").length,
+    queuedCount: queue.length,
     queue,
   };
 
+  await fs.mkdir(processedDir, { recursive: true });
   await fs.writeFile(
-    path.join(dir, "enrichment-queue.json"),
+    path.join(processedDir, "image-enrichment-queue.json"),
     `${JSON.stringify(output, null, 2)}\n`
   );
 
   return output;
 }
 
+function parseArgs(argv) {
+  const args = {};
+  for (const arg of argv) {
+    if (!arg.startsWith("--")) continue;
+    const eqIndex = arg.indexOf("=");
+    if (eqIndex === -1) {
+      args[arg.slice(2)] = true;
+    } else {
+      args[arg.slice(2, eqIndex)] = arg.slice(eqIndex + 1);
+    }
+  }
+  return args;
+}
+
 async function main() {
-  const result = await queueEnrichment();
+  const args = parseArgs(process.argv.slice(2));
+  const limit = args.limit ? Number(args.limit) : DEFAULT_LIMIT;
+  const result = await queueImageEnrichment({ limit });
+
   console.log("\n" + "=".repeat(60));
-  console.log("Enrichment Queue Summary");
+  console.log("Image Enrichment Queue Summary");
   console.log("=".repeat(60));
-  console.log(`Total pending records:     ${result.totalPending}`);
-  console.log(`Queued (has source URL):   ${result.queuedCount}`);
-  console.log(`  high priority:           ${result.highPriorityCount}`);
-  console.log(`Skipped (cooldown):        ${result.skippedCooldown}`);
-  console.log(`Skipped (no source URL):  ${result.skippedNoSourceUrl}`);
-  console.log("Wrote data/processed/enrichment-queue.json");
+  console.log(`Limit:                       ${result.limit}`);
+  console.log(`Total eligible candidates:   ${result.totalCandidatesConsidered}`);
+  console.log(`Skipped (cooldown):          ${result.skippedCooldown}`);
+  console.log(`Queued:                      ${result.queuedCount}`);
+  console.log("Wrote data/processed/image-enrichment-queue.json");
   console.log("=".repeat(60) + "\n");
 }
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) {
   main().catch((error) => {
-    console.error("Fatal error during queue:enrichment:", error);
+    console.error("Fatal error during queue:image-enrichment:", error);
     process.exitCode = 1;
   });
 }

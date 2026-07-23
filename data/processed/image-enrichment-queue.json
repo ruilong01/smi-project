@@ -1,0 +1,187 @@
+{
+  "generatedAt": "2026-07-23T09:30:04.654Z",
+  "limit": 10,
+  "totalCandidatesConsidered": 321,
+  "skippedCooldown": 20,
+  "queuedCount": 10,
+  "queue": [
+    {
+      "recordId": "openalex-https-openalex-org-w3117037508",
+      "title": "The Role of Green and Blue Hydrogen in the Energy Transition—A Technological and Geopolitical Perspective",
+      "sourceUrls": [
+        "https://doi.org/10.3390/su13010298",
+        "https://www.mdpi.com/2071-1050/13/1/298/pdf?version=1609394133"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "Fondazione Eni Enrico Mattei"
+      ],
+      "coordinator": "Fondazione Eni Enrico Mattei",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:30:04.654Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3093547115",
+      "title": "Decarbonising the critical sectors of aviation, shipping, road freight and industry to limit warming to 1.5–2°C",
+      "sourceUrls": [
+        "https://doi.org/10.1080/14693062.2020.1831430",
+        "https://www.tandfonline.com/doi/pdf/10.1080/14693062.2020.1831430?needAccess=true"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "University of Manchester"
+      ],
+      "coordinator": "University of Manchester",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:30:04.654Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3016994415",
+      "title": "Towards the IMO’s GHG Goals: A Critical Overview of the Perspectives and Challenges of the Main Options for Decarbonizing International Shipping",
+      "sourceUrls": [
+        "https://doi.org/10.3390/su12083220",
+        "https://www.mdpi.com/2071-1050/12/8/3220/pdf?version=1587036736"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "University of Cagliari"
+      ],
+      "coordinator": "University of Cagliari",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:30:04.654Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3038723752",
+      "title": "Potential for, and drivers of, private voluntary initiatives for the decarbonisation of short sea shipping: evidence from a Swedish ferry line",
+      "sourceUrls": [
+        "https://doi.org/10.1057/s41278-020-00160-9",
+        "https://link.springer.com/content/pdf/10.1057/s41278-020-00160-9.pdf"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "University of Gothenburg"
+      ],
+      "coordinator": "University of Gothenburg",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:30:04.654Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3161725877",
+      "title": "Green ammonia as a spatial energy vector: a review",
+      "sourceUrls": [
+        "https://doi.org/10.1039/d1se00345c",
+        "https://pubs.rsc.org/en/content/articlepdf/2021/se/d1se00345c"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "University of Oxford"
+      ],
+      "coordinator": "University of Oxford",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:30:04.654Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4401582571",
+      "title": "An assessment of decarbonisation pathways for intercontinental deep-sea shipping using power-to-X fuels",
+      "sourceUrls": [
+        "https://doi.org/10.1016/j.apenergy.2024.124163"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "University College Cork"
+      ],
+      "coordinator": "University College Cork",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:30:04.654Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4400493457",
+      "title": "Harnessing AI for Sustainable Shipping and Green Ports: Challenges and Opportunities",
+      "sourceUrls": [
+        "https://doi.org/10.3390/app14145994",
+        "https://www.mdpi.com/2076-3417/14/14/5994/pdf?version=1721282785"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "Maritime University of Szczecin"
+      ],
+      "coordinator": "Maritime University of Szczecin",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:30:04.654Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391090797",
+      "title": "A roadmap to alternative fuels for decarbonising shipping: The case of green ammonia",
+      "sourceUrls": [
+        "https://doi.org/10.1016/j.rtbm.2024.101100"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "University of Bradford"
+      ],
+      "coordinator": "University of Bradford",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:30:04.654Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3204034991",
+      "title": "Hydrogen supply chain scenarios for the decarbonisation of a German multi-modal energy system",
+      "sourceUrls": [
+        "https://doi.org/10.1016/j.ijhydene.2021.09.041",
+        "https://ars.els-cdn.com/content/image/1-s2.0-S0360319921035217-ga1_lrg.jpg"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "Siemens (Germany)"
+      ],
+      "coordinator": "Siemens (Germany)",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:30:04.654Z"
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4200075150",
+      "title": "A Comparison of Alternative Fuels for Shipping in Terms of Lifecycle Energy and Cost",
+      "sourceUrls": [
+        "https://doi.org/10.3390/en14248502",
+        "https://www.mdpi.com/1996-1073/14/24/8502/pdf?version=1640066606"
+      ],
+      "recordType": "publication",
+      "countryOrRegion": "",
+      "institutions": [
+        "Universiti Sains Malaysia"
+      ],
+      "coordinator": "Universiti Sains Malaysia",
+      "relevanceScore": 0,
+      "actionabilityScore": 0,
+      "queueReason": "has a real source URL but no image candidate yet",
+      "queuedAt": "2026-07-23T09:30:04.654Z"
+    }
+  ]
+}

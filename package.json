@@ -29,8 +29,9 @@
     "compare:records": "node scripts/ingestion/compareRecords.mjs",
     "verify:incremental-comparison": "node scripts/ingestion/verifyIncrementalComparison.mjs",
     "fetch:global-updates": "node scripts/ingestion/fetchGlobalUpdates.mjs",
-    "queue:enrichment": "node scripts/ingestion/queueEnrichment.mjs",
+    "queue:image-enrichment": "node scripts/ingestion/queueEnrichment.mjs",
     "enrich:images": "node scripts/ingestion/enrichImages.mjs",
+    "verify:image-enrichment": "node scripts/ingestion/verifyImageEnrichment.mjs",
     "enrich:explanations": "node scripts/ingestion/enrichExplanations.mjs",
     "refresh:incremental": "node scripts/ingestion/refreshIncremental.mjs",
     "verify:schema-compatibility": "node scripts/processing/verifySchemaCompatibility.mjs"

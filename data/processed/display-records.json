@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T05:13:07.704Z",
+  "generatedAt": "2026-07-23T09:30:05.508Z",
   "note": "Only source-proven records with related image candidates are displayed. Other real records are kept pending enrichment.",
   "recordCount": 8,
   "records": [
@@ -85,9 +85,9 @@
         "institution": "source"
       },
       "dataQualityFlags": [],
-      "processedAt": "2026-07-23T05:13:07.704Z",
+      "processedAt": "2026-07-23T09:30:05.508Z",
       "lastSeenAt": "2026-07-20T08:49:39.413038+00:00",
-      "lastUpdatedAt": "2026-07-23T05:13:07.704Z",
+      "lastUpdatedAt": "2026-07-23T09:30:05.508Z",
       "displayEligible": true,
       "displayEligibilityReasons": [],
       "processingStatus": "accepted",
@@ -223,9 +223,9 @@
         "institution": "source"
       },
       "dataQualityFlags": [],
-      "processedAt": "2026-07-23T05:13:07.704Z",
+      "processedAt": "2026-07-23T09:30:05.508Z",
       "lastSeenAt": "2026-07-20T08:49:39.413038+00:00",
-      "lastUpdatedAt": "2026-07-23T05:13:07.704Z",
+      "lastUpdatedAt": "2026-07-23T09:30:05.508Z",
       "displayEligible": true,
       "displayEligibilityReasons": [],
       "processingStatus": "accepted",
@@ -377,9 +377,9 @@
       "dataQualityFlags": [
         "missing_country"
       ],
-      "processedAt": "2026-07-23T05:13:07.704Z",
+      "processedAt": "2026-07-23T09:30:05.508Z",
       "lastSeenAt": "2026-07-20T08:49:39.413038+00:00",
-      "lastUpdatedAt": "2026-07-23T05:13:07.704Z",
+      "lastUpdatedAt": "2026-07-23T09:30:05.508Z",
       "displayEligible": true,
       "displayEligibilityReasons": [],
       "processingStatus": "accepted",
@@ -503,9 +503,9 @@
       "dataQualityFlags": [
         "missing_country"
       ],
-      "processedAt": "2026-07-23T05:13:07.704Z",
+      "processedAt": "2026-07-23T09:30:05.508Z",
       "lastSeenAt": "2026-07-20T08:49:39.413038+00:00",
-      "lastUpdatedAt": "2026-07-23T05:13:07.704Z",
+      "lastUpdatedAt": "2026-07-23T09:30:05.508Z",
       "displayEligible": true,
       "displayEligibilityReasons": [],
       "processingStatus": "accepted",
@@ -629,9 +629,9 @@
       "dataQualityFlags": [
         "missing_country"
       ],
-      "processedAt": "2026-07-23T05:13:07.704Z",
+      "processedAt": "2026-07-23T09:30:05.508Z",
       "lastSeenAt": "2026-07-20T08:49:39.413038+00:00",
-      "lastUpdatedAt": "2026-07-23T05:13:07.704Z",
+      "lastUpdatedAt": "2026-07-23T09:30:05.508Z",
       "displayEligible": true,
       "displayEligibilityReasons": [],
       "processingStatus": "accepted",
@@ -741,9 +741,9 @@
       "dataQualityFlags": [
         "missing_country"
       ],
-      "processedAt": "2026-07-23T05:13:07.704Z",
+      "processedAt": "2026-07-23T09:30:05.508Z",
       "lastSeenAt": "2026-07-20T08:49:39.413038+00:00",
-      "lastUpdatedAt": "2026-07-23T05:13:07.704Z",
+      "lastUpdatedAt": "2026-07-23T09:30:05.508Z",
       "displayEligible": true,
       "displayEligibilityReasons": [],
       "processingStatus": "accepted",
@@ -867,9 +867,9 @@
       "dataQualityFlags": [
         "missing_country"
       ],
-      "processedAt": "2026-07-23T05:13:07.704Z",
+      "processedAt": "2026-07-23T09:30:05.508Z",
       "lastSeenAt": "2026-07-20T08:49:39.413038+00:00",
-      "lastUpdatedAt": "2026-07-23T05:13:07.704Z",
+      "lastUpdatedAt": "2026-07-23T09:30:05.508Z",
       "displayEligible": true,
       "displayEligibilityReasons": [],
       "processingStatus": "accepted",
@@ -979,9 +979,9 @@
       "dataQualityFlags": [
         "missing_country"
       ],
-      "processedAt": "2026-07-23T05:13:07.704Z",
+      "processedAt": "2026-07-23T09:30:05.508Z",
       "lastSeenAt": "2026-07-20T08:49:39.413038+00:00",
-      "lastUpdatedAt": "2026-07-23T05:13:07.704Z",
+      "lastUpdatedAt": "2026-07-23T09:30:05.508Z",
       "displayEligible": true,
       "displayEligibilityReasons": [],
       "processingStatus": "accepted",
