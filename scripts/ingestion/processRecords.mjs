@@ -14,6 +14,7 @@ import {
 import { delayMs } from "./http.mjs";
 import { normalizeResearchRecord } from "../processing/normalizeResearchRecord.mjs";
 import { buildTriageOutputFiles } from "./triageRecords.mjs";
+import { compareRecords } from "./compareRecords.mjs";
 
 // Turns every raw data/raw/openalex/*.json run file into
 // data/processed/research-records.json - one entry per real, deduplicated
@@ -296,6 +297,15 @@ export async function processRecords({
         if (previousRecord.lastImageAttemptAt) {
           record.lastImageAttemptAt = previousRecord.lastImageAttemptAt;
         }
+        // A DOI that was already confirmed against Crossref stays confirmed -
+        // re-verifying it on every single run regardless of whether anything
+        // about the record actually changed was exactly the wasted-work
+        // problem incremental comparison exists to remove (see the
+        // doi && !crossrefVerified filter below).
+        if (previousRecord.crossrefVerified) {
+          record.crossrefVerified = true;
+          record.sourceUrls = [...new Set([...record.sourceUrls, ...(previousRecord.sourceUrls ?? [])])];
+        }
       }
 
       // Route through the same shared normalizer the media-seed pipeline
@@ -309,8 +319,25 @@ export async function processRecords({
   const preservedNonOpenAlexRecords = loadNonOpenAlexRecords(previousRecords, nowIso);
   const records = [...preservedNonOpenAlexRecords, ...openAlexRecords];
 
+  // Incremental comparison: classify every record against what was already
+  // there (by DOI/OpenAlex id/CORDIS id/source URL, falling back to
+  // normalized title+institution+year - see compareRecords.mjs) so the rest
+  // of this run only spends real work (Crossref calls below, and eventually
+  // image/explanation enrichment) on records that are actually new or
+  // actually changed. An "unchanged" record's content hash is byte-for-byte
+  // identical to what was already processed last time.
+  const comparisons = compareRecords(records, previousRecords);
+  const comparisonCounts = comparisons.reduce((acc, c) => {
+    acc[c.classification] = (acc[c.classification] ?? 0) + 1;
+    return acc;
+  }, {});
+
   if (verifyDoisWithCrossref) {
-    const withDoi = records.filter((r) => r.doi).slice(0, MAX_CROSSREF_VERIFICATIONS);
+    // Skip records whose DOI was already confirmed against Crossref on a
+    // previous run (carried forward above) - re-verifying an unchanged
+    // record's DOI every single run is exactly the wasted work incremental
+    // comparison exists to remove.
+    const withDoi = records.filter((r) => r.doi && !r.crossrefVerified).slice(0, MAX_CROSSREF_VERIFICATIONS);
     for (const record of withDoi) {
       try {
         const verification = await verifyCrossrefDoi(record.doi, nowIso);
@@ -347,7 +374,12 @@ export async function processRecords({
   // below - triage is not a separate, less-safe write step bolted on
   // afterwards.
   const triageFiles = buildTriageOutputFiles(records, { nowIso });
-  const filesToWrite = { "research-records.json": output, ...triageFiles };
+  const compareReport = {
+    generatedAt: nowIso,
+    counts: comparisonCounts,
+    results: comparisons,
+  };
+  const filesToWrite = { "research-records.json": output, ...triageFiles, "compare-report.json": compareReport };
 
   const runToken = Date.now();
   const tempPaths = Object.fromEntries(
@@ -401,6 +433,9 @@ export async function processRecords({
   console.log(
     `[process:records] Display eligible: ${displayEligibleCount}, pending image enrichment: ${pendingCount}, rejected: ${rejectedCount}.`
   );
+  console.log(
+    `[process:records] Incremental comparison vs previous run - new: ${comparisonCounts.new ?? 0}, updated: ${comparisonCounts.updated ?? 0}, unchanged: ${comparisonCounts.unchanged ?? 0} (skipped re-processing), duplicate: ${comparisonCounts.duplicate ?? 0}, needs_manual_review: ${comparisonCounts.needs_manual_review ?? 0}.`
+  );
 
   return {
     outputPath,
@@ -410,6 +445,7 @@ export async function processRecords({
     displayEligibleCount,
     pendingImageEnrichmentCount: pendingCount,
     rejectedCount,
+    comparisonCounts,
   };
 }
 
