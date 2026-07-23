@@ -17,24 +17,41 @@
  *   GET  /api/search?q=
  *   POST /api/projects/:id/analyse    (501 stub — AI analysis is Phase 3)
  *
+ * AWS server-side data-refresh pipeline endpoints (data/processed/, see
+ * docs/AWS_DATA_REFRESH.md) — a separate data source from the legacy
+ * dataset above, not yet wired into the React frontend:
+ *   GET  /api/data/update-status
+ *   GET  /api/research-records?limit=&offset=
+ *   GET  /api/country-profiles
+ *   POST /api/admin/refresh-data      (disabled unless ADMIN_TOKEN is set)
+ *
  * Configuration via environment variables only (no secrets in code):
- *   API_PORT  (default 8787)
- *   API_HOST  (default 127.0.0.1; set 0.0.0.0 behind nginx on Lightsail)
+ *   API_PORT     (default 8787)
+ *   API_HOST     (default 127.0.0.1; set 0.0.0.0 behind nginx on Lightsail)
+ *   ADMIN_TOKEN  (unset = POST /api/admin/refresh-data is disabled)
  */
 
 import fs from "node:fs";
 import http from "node:http";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { refreshData } from "../scripts/ingestion/refreshData.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_PATH = path.resolve(
   __dirname,
   "../src/data/generated/liveResearchData.json"
 );
+const PROCESSED_DIR = path.resolve(__dirname, "../data/processed");
+const RESEARCH_RECORDS_PATH = path.join(PROCESSED_DIR, "research-records.json");
+const COUNTRY_PROFILES_PATH = path.join(PROCESSED_DIR, "country-profiles.json");
+const UPDATE_STATUS_PATH = path.join(PROCESSED_DIR, "update-status.json");
 
 const PORT = Number(process.env.API_PORT ?? 8787);
 const HOST = process.env.API_HOST ?? "127.0.0.1";
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN ?? null;
+
+let refreshInProgress = false;
 
 // Mirrors src/data/researchProjectData.js topicToProjectCategories.
 // Kept server-side so the API has no build-time coupling to frontend code.
@@ -64,6 +81,39 @@ function loadDataset() {
     );
   }
   return cachedDataset;
+}
+
+// ---------------------------------------------------------------------------
+// Processed-file loading (AWS data-refresh pipeline). Same mtime-cache
+// pattern as loadDataset above, but each file is independently optional -
+// a missing file (e.g. refresh:data has never run) returns null rather
+// than throwing, so /api/health and the legacy endpoints keep working even
+// before the new pipeline has ever produced output.
+// ---------------------------------------------------------------------------
+const processedFileCache = new Map();
+
+function loadProcessedFile(filePath) {
+  let stats;
+  try {
+    stats = fs.statSync(filePath);
+  } catch {
+    processedFileCache.delete(filePath);
+    return null;
+  }
+
+  const cached = processedFileCache.get(filePath);
+  if (cached && cached.mtimeMs === stats.mtimeMs) {
+    return cached.data;
+  }
+
+  try {
+    const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    processedFileCache.set(filePath, { mtimeMs: stats.mtimeMs, data });
+    return data;
+  } catch (error) {
+    console.warn(`[api] failed to parse ${filePath}: ${error.message}`);
+    return null;
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -140,6 +190,94 @@ function handleRequest(req, res) {
     return;
   }
 
+  const [, resource, identifier, action] = segments;
+
+  // ---- AWS data-refresh pipeline endpoints (data/processed/) ----
+  // Independent of the legacy dataset below - these must keep working even
+  // if refresh:data has never run yet or the legacy file is missing.
+  if (resource === "data" && identifier === "update-status" && req.method === "GET") {
+    const status = loadProcessedFile(UPDATE_STATUS_PATH);
+    sendJson(res, 200, status ?? {
+      lastSuccessfulFetchAt: "",
+      lastAttemptedFetchAt: "",
+      lastSource: "",
+      recordsFetched: 0,
+      recordsProcessed: 0,
+      recordsAdded: 0,
+      recordsUpdated: 0,
+      duplicatesSkipped: 0,
+      frontendDataUpdatedAt: "",
+      status: "never_run",
+      errors: [],
+    });
+    return;
+  }
+
+  if (resource === "research-records" && req.method === "GET") {
+    const data = loadProcessedFile(RESEARCH_RECORDS_PATH);
+    if (!data) {
+      sendJson(res, 503, {
+        error: "No processed research records yet. Run `npm run refresh:data` first.",
+      });
+      return;
+    }
+    const limit = Math.min(Number(url.searchParams.get("limit")) || 200, 1000);
+    const offset = Math.max(Number(url.searchParams.get("offset")) || 0, 0);
+    const records = data.records ?? [];
+    sendJson(res, 200, {
+      generatedAt: data.generatedAt,
+      count: records.length,
+      limit,
+      offset,
+      records: records.slice(offset, offset + limit),
+    });
+    return;
+  }
+
+  if (resource === "country-profiles" && req.method === "GET") {
+    const data = loadProcessedFile(COUNTRY_PROFILES_PATH);
+    if (!data) {
+      sendJson(res, 503, {
+        error: "No processed country profiles yet. Run `npm run refresh:data` first.",
+      });
+      return;
+    }
+    sendJson(res, 200, data);
+    return;
+  }
+
+  // POST /api/admin/refresh-data - disabled entirely unless ADMIN_TOKEN is
+  // set in the environment, per the AWS data-fetch plan's explicit rule
+  // that this must never be reachable unprotected in production.
+  if (resource === "admin" && identifier === "refresh-data" && req.method === "POST") {
+    if (!ADMIN_TOKEN) {
+      sendJson(res, 404, { error: "Not found." });
+      return;
+    }
+    const authHeader = req.headers.authorization ?? "";
+    const providedToken = authHeader.startsWith("Bearer ") ? authHeader.slice(7) : "";
+    if (providedToken !== ADMIN_TOKEN) {
+      sendJson(res, 401, { error: "Unauthorized." });
+      return;
+    }
+    if (refreshInProgress) {
+      sendJson(res, 409, { error: "A refresh is already in progress." });
+      return;
+    }
+    refreshInProgress = true;
+    // Fire-and-forget: a full refresh (multiple OpenAlex pages + Crossref
+    // checks) can take minutes, well past typical reverse-proxy timeouts.
+    // Poll GET /api/data/update-status for the result instead of waiting
+    // on this response.
+    refreshData()
+      .catch((error) => console.error("[api] admin-triggered refresh failed:", error.message))
+      .finally(() => {
+        refreshInProgress = false;
+      });
+    sendJson(res, 202, { status: "started", message: "Refresh started. Poll GET /api/data/update-status for progress." });
+    return;
+  }
+
   let dataset;
   try {
     dataset = loadDataset();
@@ -150,8 +288,6 @@ function handleRequest(req, res) {
     });
     return;
   }
-
-  const [, resource, identifier, action] = segments;
 
   // GET /api/health
   if (req.method === "GET" && resource === "health" && !identifier) {

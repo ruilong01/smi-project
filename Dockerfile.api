@@ -6,6 +6,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
 COPY server ./server
+COPY scripts ./scripts
 COPY src/data/generated ./src/data/generated
 
 ENV NODE_ENV=production

@@ -40,6 +40,17 @@ jobs:
           git reset --hard origin/main
           sudo docker compose up -d --build --remove-orphans
 
+          # Self-install the daily data-refresh timer. Idempotent - safe to
+          # run on every deploy. Data refresh is intentionally independent
+          # of this code-deploy pipeline: this only ensures the timer unit
+          # matches what's in git and stays enabled; it never runs
+          # refresh:data itself as part of a deploy. See
+          # docs/AWS_DATA_REFRESH.md for the full explanation.
+          sudo cp deploy/systemd/maritime-data-refresh.service /etc/systemd/system/maritime-data-refresh.service
+          sudo cp deploy/systemd/maritime-data-refresh.timer /etc/systemd/system/maritime-data-refresh.timer
+          sudo systemctl daemon-reload
+          sudo systemctl enable --now maritime-data-refresh.timer
+
           for attempt in $(seq 1 12); do
             if curl -fsS http://127.0.0.1/api/health >/dev/null; then
               echo "Deployment health check passed."

@@ -13,6 +13,7 @@ import {
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
 import { getProjectsForCountry } from "../data/researchProjectData.js";
+import { getGalleryRecordsForCountryCode } from "../data/researchGalleryData.js";
 import InstitutionLink from "./InstitutionLink.jsx";
 import TopicTag from "./TopicTag.jsx";
 import ResearchRecordList from "./ResearchRecordRow.jsx";
@@ -42,6 +43,11 @@ function InstitutionList({ institutions, recordCounts }) {
 }
 
 export default function CountryProfilePanel({ country, onClose }) {
+  const galleryRecordsForCountry = useMemo(
+    () => (country ? getGalleryRecordsForCountryCode(country.code) : []),
+    [country]
+  );
+
   const {
     countryProjects,
     institutionRecordCounts,
@@ -176,6 +182,14 @@ export default function CountryProfilePanel({ country, onClose }) {
             >
               View all {countryProjects.length} research records
             </Link>
+            {galleryRecordsForCountry.length ? (
+              <Link
+                className="profile-view-all-link"
+                to={`/research-gallery/${galleryRecordsForCountry[0].recordId}`}
+              >
+                View in Research Gallery
+              </Link>
+            ) : null}
           </details>
 
           {countryEvidence.length ? (

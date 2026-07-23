@@ -1,7 +1,50 @@
-export const INGESTION_USER_AGENT =
-  "GlobalMaritimeResearchIntelligenceMap/0.2 (local prototype; contact: research-demo@example.invalid)";
+// Never hardcode a real contact address here - this file is committed to
+// git. Set OPENALEX_EMAIL in the server's environment (.env, not
+// committed) to identify real requests; falls back to a placeholder that
+// still works but gets deprioritised by OpenAlex's polite pool.
+export const OPENALEX_EMAIL = process.env.OPENALEX_EMAIL || "research-demo@example.invalid";
+
+export const INGESTION_USER_AGENT = `GlobalMaritimeResearchIntelligenceMap/0.3 (contact: ${OPENALEX_EMAIL})`;
 
 export const TEST_REFRESH_INTERVAL_MS = 5 * 60 * 1000;
+
+// Raw collection window: nothing older than this is fetched at all.
+export const RAW_COLLECTION_FROM_DATE = "2015-01-01";
+// Default display/scoring window (frontend recency scoring, not a fetch filter).
+export const DEFAULT_DISPLAY_FROM_DATE = "2020-01-01";
+// "Latest highlight" window (frontend recency scoring, not a fetch filter).
+export const LATEST_HIGHLIGHT_FROM_DATE = "2024-01-01";
+
+// Dedicated topic list for the server-side refresh pipeline
+// (scripts/ingestion/fetchOpenAlex.mjs) - kept separate from the legacy
+// MARITIME_QUERIES below (used by the older sync:data/openalex.adapter.mjs
+// path) so extending topic coverage here can't regress that pipeline.
+export const OPENALEX_TOPIC_QUERIES = [
+  "green shipping decarbonisation vessel",
+  "smart port digital twin automation",
+  "maritime artificial intelligence",
+  "autonomous vessel unmanned surface ship",
+  "alternative marine fuel ammonia hydrogen methanol",
+  "maritime cybersecurity port infrastructure",
+  "maritime logistics supply chain port",
+  "ship design engineering naval architecture",
+  "port decarbonisation emissions maritime",
+  "marine robotics underwater vehicle",
+  "offshore ocean technology renewable energy",
+];
+
+// Records matching one of these terms are excluded even if they otherwise
+// pass isStrongMaritimeMatch - near-miss false positives observed in
+// earlier OpenAlex searches (e.g. "shipping" as in software/package
+// delivery, not maritime transport).
+export const OPENALEX_EXCLUDE_TERMS = [
+  "postal service",
+  "postal delivery",
+  "parcel delivery",
+  "e-commerce shipping",
+  "software as a service",
+  "drop shipping",
+];
 
 export const MARITIME_QUERIES = [
   "maritime autonomous vessel navigation",

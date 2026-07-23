@@ -1,0 +1,81 @@
+{
+  "recordId": "cordis-101138620",
+  "acronym": "GAMMA",
+  "fetchedUrl": "https://www.rina.org/en/media/projects/gamma-project",
+  "fetchedAt": "2026-07-23T01:18:52.884Z",
+  "sourceUrl": "https://www.rina.org/en/media/projects/gamma-project",
+  "pageTitle": "GAMMA project",
+  "publishedDate": null,
+  "headings": [
+    "GAMMA project",
+    "Pioneering the use of green ammonia and biomethanol in shipping",
+    "Challenge",
+    "Approach",
+    "Conclusion",
+    "Project Consortium"
+  ],
+  "sections": [
+    {
+      "heading": "Challenge",
+      "text": "Ammonia and biomethanol are very promising alternative fuels that can help decarbonize the shipping sector and achieve the International Maritime Organisation's (IMO) goal of net-zero greenhouse gas (GHG) emissions from international shipping by or around 2050."
+    },
+    {
+      "heading": "Challenge",
+      "text": "The GAMMA (Green Ammonia and Biomethanol fuel Maritime Vessels) project aims to demonstrate the safe integration of 1 MW low temperature PEM (Proton Exchange Membrane) fuel cell using biomethanol and green ammonia as alternative fuels on board an existing Ultramax bulk carrier. A reforming and cracking system will be installed for the processing of methanol and of ammonia, respectively."
+    },
+    {
+      "heading": "Challenge",
+      "text": "The outcome of the GAMMA project will provide owners, shipping companies, yards, design companies, makers, and ports with a clear understanding of the potential for using and bunkering biomethanol and ammonia on board. The project will demonstrate the feasibility of converting existing vessels to alternative fuels, starting with the replacement of auxiliary generators with fuel cell power generation systems."
+    },
+    {
+      "heading": "Approach",
+      "text": "RINA will contribute to the project leading the following activities:"
+    },
+    {
+      "heading": "Approach",
+      "text": "- Regulations and Environmental Impact Analysis."
+    },
+    {
+      "heading": "Approach",
+      "text": "The purpose is to deliver a formal safety assessment including a class review of the concept / basic design and detailed engineering."
+    },
+    {
+      "heading": "Approach",
+      "text": "With its expertise, we will support the consortium in the early implementation of all available technical provisions, in compliance with published IMO instruments, such as the methanol and fuel cell interim guidelines, as well as those still under development, such as guidelines for ammonia and hydrogen, and RINA class rules."
+    },
+    {
+      "heading": "Approach",
+      "text": "We will play a crucial role in obtaining authorization from flag authorities and ports for the use and bunkering of alternative fuels. Finally, we will conduct both a risk assessment, including HAZID, FMECA, HAZOP, and a life cycle assessment for the selected fuels to validate the CO2 emissions savings."
+    },
+    {
+      "heading": "Conclusion",
+      "text": "Clients will have the opportunity to explore retrofit projects tailored to replace fossil fuels with biomethanol and green ammonia on board their vessels. By accessing the public deliverables related to the project's studies, the market will gain a clear understanding of the challenges associated with the installation, handling, and bunkering of these alternative fuels."
+    },
+    {
+      "heading": "Conclusion",
+      "text": "The project has received funding from the European Union’s Horizon Europe research and innovation program under grant agreement no. 101138620"
+    }
+  ],
+  "links": [
+    "https://www.rina.org/en/media/projects"
+  ],
+  "images": [
+    {
+      "imageUrl": "https://mc-4cf22472-b2a7-42f7-8f97-1a7c-cdn-endpoint.azureedge.net/en/-/media/Feature/Media/ContentMedia/Case-Studies/gamma-project-600.jpg?rev=f785cb978619461188145f438e571c4f&hash=DFFD9824A27AFD805C22DDAF0379B480",
+      "altText": "GAMMA project",
+      "caption": "",
+      "sourceUrl": "https://www.rina.org/en/media/projects/gamma-project",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    },
+    {
+      "imageUrl": "https://mc-4cf22472-b2a7-42f7-8f97-1a7c-cdn-endpoint.azureedge.net/en/-/media/Feature/Media/ContentMedia/Logos/logo-eu-flag.jpg?h=101&w=150&rev=e9da037360d04fc8b97dbef49549e8a1&hash=CFDF1CAFE461B61726EEA48B5F366909",
+      "altText": "",
+      "caption": "",
+      "sourceUrl": "https://www.rina.org/en/media/projects/gamma-project",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    }
+  ],
+  "contentHash": "76018794362d5194eb94e0149ff675def7ad9c974f3fa2b00b67b32bb8f3ef1b"
+}

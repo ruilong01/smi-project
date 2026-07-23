@@ -1,7 +1,6 @@
 {
-  "generatedAt": "2026-07-20T09:08:13.177Z",
-  "sourceSeedFile": "maritime_rnd_records_with_image_candidates.json",
-  "imageCandidateCount": 16,
+  "generatedAt": "2026-07-23T01:18:52.884Z",
+  "imageCandidateCount": 36,
   "images": [
     {
       "imageId": "cordis-101138620-img-1",
@@ -13,7 +12,15 @@
       "sourceName": "RINA GAMMA project page",
       "imageType": "project_hero",
       "canEmbed": false,
-      "rightsNote": "Use as linked preview with source attribution unless reuse rights are confirmed."
+      "rightsNote": "Use as linked preview with source attribution unless reuse rights are confirmed.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101138478-img-1",
@@ -25,7 +32,15 @@
       "sourceName": "DYNAPORT project website",
       "imageType": "project_hero",
       "canEmbed": false,
-      "rightsNote": "Likely licensed/stock image. Use as linked preview only unless rights are confirmed."
+      "rightsNote": "Likely licensed/stock image. Use as linked preview only unless rights are confirmed.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101138478-img-2",
@@ -37,7 +52,15 @@
       "sourceName": "DYNAPORT project website",
       "imageType": "consortium_map",
       "canEmbed": false,
-      "rightsNote": "Use as linked preview with project source attribution."
+      "rightsNote": "Use as linked preview with project source attribution.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101138478-img-3",
@@ -49,7 +72,15 @@
       "sourceName": "DYNAPORT project website",
       "imageType": "logo",
       "canEmbed": false,
-      "rightsNote": "Logo; use cautiously with attribution."
+      "rightsNote": "Logo; use cautiously with attribution.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101192583-img-1",
@@ -61,7 +92,15 @@
       "sourceName": "TwinShip project website",
       "imageType": "pilot_vessel",
       "canEmbed": false,
-      "rightsNote": "Use as linked preview with project source attribution unless reuse rights are confirmed."
+      "rightsNote": "Use as linked preview with project source attribution unless reuse rights are confirmed.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101192583-img-2",
@@ -73,7 +112,15 @@
       "sourceName": "TwinShip project website",
       "imageType": "pilot_vessel",
       "canEmbed": false,
-      "rightsNote": "Use as linked preview with project source attribution unless reuse rights are confirmed."
+      "rightsNote": "Use as linked preview with project source attribution unless reuse rights are confirmed.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101192583-img-3",
@@ -85,7 +132,15 @@
       "sourceName": "TwinShip project website",
       "imageType": "pilot_vessel",
       "canEmbed": false,
-      "rightsNote": "Use as linked preview with project source attribution unless reuse rights are confirmed."
+      "rightsNote": "Use as linked preview with project source attribution unless reuse rights are confirmed.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101192583-img-4",
@@ -97,7 +152,15 @@
       "sourceName": "SINTEF TwinShip project page",
       "imageType": "logo",
       "canEmbed": false,
-      "rightsNote": "Logo; use cautiously with attribution."
+      "rightsNote": "Logo; use cautiously with attribution.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101189796-img-1",
@@ -109,7 +172,15 @@
       "sourceName": "UCLM MERLIN project page",
       "imageType": "logo",
       "canEmbed": false,
-      "rightsNote": "Logo; use cautiously with attribution."
+      "rightsNote": "Logo; use cautiously with attribution.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101189796-img-2",
@@ -121,7 +192,15 @@
       "sourceName": "MERLIN project website",
       "imageType": "source_preview",
       "canEmbed": false,
-      "rightsNote": "Theme/stock image. Use as linked preview only unless rights are confirmed."
+      "rightsNote": "Theme/stock image. Use as linked preview only unless rights are confirmed.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101136257-img-1",
@@ -133,7 +212,15 @@
       "sourceName": "Fraunhofer CML AUTOFLEX project page",
       "imageType": "technical_visual",
       "canEmbed": false,
-      "rightsNote": "Use as linked preview with source attribution unless reuse rights are confirmed."
+      "rightsNote": "Use as linked preview with source attribution unless reuse rights are confirmed.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101136257-img-2",
@@ -145,7 +232,15 @@
       "sourceName": "Fraunhofer CML AUTOFLEX project page",
       "imageType": "infographic",
       "canEmbed": false,
-      "rightsNote": "Use as linked preview with source attribution unless reuse rights are confirmed."
+      "rightsNote": "Use as linked preview with source attribution unless reuse rights are confirmed.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101056799-img-1",
@@ -157,7 +252,15 @@
       "sourceName": "DT4GS project website",
       "imageType": "icon_visual",
       "canEmbed": false,
-      "rightsNote": "Small visual; use as linked preview only."
+      "rightsNote": "Small visual; use as linked preview only.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101096923-img-1",
@@ -169,7 +272,15 @@
       "sourceName": "ISL SEAMLESS project page",
       "imageType": "logo",
       "canEmbed": false,
-      "rightsNote": "Logo; use cautiously with attribution."
+      "rightsNote": "Logo; use cautiously with attribution.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101096923-img-2",
@@ -181,7 +292,15 @@
       "sourceName": "SEAMLESS project website",
       "imageType": "project_hero_candidate",
       "canEmbed": false,
-      "rightsNote": "Candidate URL from project site; script should verify HTTP status before display."
+      "rightsNote": "Candidate URL from project site; script should verify HTTP status before display.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     },
     {
       "imageId": "cordis-101138583-img-1",
@@ -193,7 +312,455 @@
       "sourceName": "MISSION project website",
       "imageType": "logo",
       "canEmbed": false,
-      "rightsNote": "SVG logo; use cautiously with attribution and verify display compatibility."
+      "rightsNote": "SVG logo; use cautiously with attribution and verify display compatibility.",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101138620-live-1",
+      "recordId": "cordis-101138620",
+      "imageUrl": "https://mc-4cf22472-b2a7-42f7-8f97-1a7c-cdn-endpoint.azureedge.net/en/-/media/Feature/Media/ContentMedia/Case-Studies/gamma-project-600.jpg?rev=f785cb978619461188145f438e571c4f&hash=DFFD9824A27AFD805C22DDAF0379B480",
+      "caption": "",
+      "altText": "GAMMA project",
+      "sourceUrl": "https://www.rina.org/en/media/projects/gamma-project",
+      "sourceName": "GAMMA project",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101138620-live-2",
+      "recordId": "cordis-101138620",
+      "imageUrl": "https://mc-4cf22472-b2a7-42f7-8f97-1a7c-cdn-endpoint.azureedge.net/en/-/media/Feature/Media/ContentMedia/Logos/logo-eu-flag.jpg?h=101&w=150&rev=e9da037360d04fc8b97dbef49549e8a1&hash=CFDF1CAFE461B61726EEA48B5F366909",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://www.rina.org/en/media/projects/gamma-project",
+      "sourceName": "GAMMA project",
+      "imageType": "logo",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101192583-live-4",
+      "recordId": "cordis-101192583",
+      "imageUrl": "https://twin-ship.eu/images/Picture1e2.png",
+      "caption": "",
+      "altText": "fv2",
+      "sourceUrl": "https://twin-ship.eu/",
+      "sourceName": "Homepage : TwinShip Project",
+      "imageType": "pilot_vessel",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101192583-live-5",
+      "recordId": "cordis-101192583",
+      "imageUrl": "https://twin-ship.eu/images/EUlogo.png",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://twin-ship.eu/",
+      "sourceName": "Homepage : TwinShip Project",
+      "imageType": "logo",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101189796-live-1",
+      "recordId": "cordis-101189796",
+      "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqgAAAIvAQAAAACQdhSRAAAAAnRSTlMAAHaTzTgAAABFSURBVHja7cExAQAAAMKg9U9tCj+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOBhu8oAAZXWStkAAAAASUVORK5CYII=",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+      "sourceName": "Merlin",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101189796-live-2",
+      "recordId": "cordis-101189796",
+      "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAGVAQAAAAD/UftzAAAAAnRSTlMAAHaTzTgAAAA6SURBVHja7cEBDQAAAMKg909tDwcUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcGo/3AAHiIfPyAAAAAElFTkSuQmCC",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+      "sourceName": "Merlin",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101189796-live-3",
+      "recordId": "cordis-101189796",
+      "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAA4AQAAAABvNvjhAAAAAnRSTlMAAHaTzTgAAAAZSURBVEjHY2AYBaNgFIyCUTAKRsEoGBgAAAiIAAEI7xoiAAAAAElFTkSuQmCC",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+      "sourceName": "Merlin",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101189796-live-4",
+      "recordId": "cordis-101189796",
+      "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnYAAAEOAQAAAAAstmdlAAAAAnRSTlMAAHaTzTgAAAAsSURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAACAVwNUYAABi5gLYgAAAABJRU5ErkJggg==",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+      "sourceName": "Merlin",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101189796-live-5",
+      "recordId": "cordis-101189796",
+      "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQAAAAAUekxPAAAAAnRSTlMAAHaTzTgAAAAaSURBVEjH7cExAQAAAMKg9U9tDQ+gAACAdwMLuAABXZHjmQAAAABJRU5ErkJggg==",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+      "sourceName": "Merlin",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101136257-live-1",
+      "recordId": "cordis-101136257",
+      "imageUrl": "https://www.cml.fraunhofer.de/en/research-projects/AUTOFLEX/jcr:content/contentPar/sectioncomponent_200/sectionParsys/wideimage/imageComponent/image.img.jpg/1729250635817/Overview-AUTOFLEX.jpg",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://www.cml.fraunhofer.de/en/research-projects/AUTOFLEX.html",
+      "sourceName": "AUTOFLEX -  Fraunhofer CML",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101056799-live-1",
+      "recordId": "cordis-101056799",
+      "imageUrl": "https://www.dt4gs.eu/wp-content/plugins/revslider/public/assets/assets/dummy.png",
+      "caption": "",
+      "altText": "Slide",
+      "sourceUrl": "https://www.dt4gs.eu/",
+      "sourceName": "Homepage - DT4GS",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101056799-live-2",
+      "recordId": "cordis-101056799",
+      "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20458%20643'%3E%3C/svg%3E",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://www.dt4gs.eu/",
+      "sourceName": "Homepage - DT4GS",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101056799-live-3",
+      "recordId": "cordis-101056799",
+      "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20348%2044'%3E%3C/svg%3E",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://www.dt4gs.eu/",
+      "sourceName": "Homepage - DT4GS",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101056799-live-4",
+      "recordId": "cordis-101056799",
+      "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20504'%3E%3C/svg%3E",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://www.dt4gs.eu/",
+      "sourceName": "Homepage - DT4GS",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101056799-live-5",
+      "recordId": "cordis-101056799",
+      "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20147'%3E%3C/svg%3E",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://www.dt4gs.eu/",
+      "sourceName": "Homepage - DT4GS",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101138583-live-1",
+      "recordId": "cordis-101138583",
+      "imageUrl": "https://missionproject.eu/wp-content/uploads/2024/06/MISSIONs-solution-will-allow-vessels.png",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://missionproject.eu/",
+      "sourceName": "MISSION | Just in time",
+      "imageType": "pilot_vessel",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101138583-live-2",
+      "recordId": "cordis-101138583",
+      "imageUrl": "https://missionproject.eu/wp-content/uploads/2024/06/MISSION-will-enable-shipping-.png",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://missionproject.eu/",
+      "sourceName": "MISSION | Just in time",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101138583-live-3",
+      "recordId": "cordis-101138583",
+      "imageUrl": "https://missionproject.eu/wp-content/uploads/2024/06/MISSION-will-enable-shipping-1-1.png",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://missionproject.eu/",
+      "sourceName": "MISSION | Just in time",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101138583-live-4",
+      "recordId": "cordis-101138583",
+      "imageUrl": "https://missionproject.eu/wp-content/uploads/2024/06/MISSION-will-increase-navigational-.png",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://missionproject.eu/",
+      "sourceName": "MISSION | Just in time",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
+    },
+    {
+      "imageId": "cordis-101138583-live-5",
+      "recordId": "cordis-101138583",
+      "imageUrl": "https://missionproject.eu/wp-content/uploads/2024/06/By-decreasing-the-waiting-time.png",
+      "caption": "",
+      "altText": "",
+      "sourceUrl": "https://missionproject.eu/",
+      "sourceName": "MISSION | Just in time",
+      "imageType": "source_preview",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; use as linked preview only, do not claim as cleared for reuse.",
+      "fetchedAt": "2026-07-23T01:18:52.884Z",
+      "origin": "enrich-test-media",
+      "aiCuration": {
+        "status": "pending",
+        "verdict": null,
+        "score": null,
+        "reason": "AI curation API not configured yet (set AI_CURATION_API_URL / AI_CURATION_API_KEY).",
+        "assessedAt": null,
+        "model": null
+      }
     }
   ]
 }

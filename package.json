@@ -14,7 +14,14 @@
     "enrich:sample": "node scripts/ingestion/enrichSample.mjs",
     "verify:enrichment": "node scripts/ingestion/verifyEnrichment.mjs",
     "ingest:media-seed": "node scripts/ingestion/ingestMediaSeed.mjs",
-    "queue:process": "node scripts/ingestion/processAutomationQueue.mjs"
+    "queue:process": "node scripts/ingestion/processAutomationQueue.mjs",
+    "fetch:openalex": "node scripts/ingestion/fetchOpenAlex.mjs",
+    "process:records": "node scripts/ingestion/processRecords.mjs",
+    "build:country-profiles": "node scripts/ingestion/buildCountryProfiles.mjs",
+    "verify:data-provenance": "node scripts/ingestion/verifyDataProvenance.mjs",
+    "refresh:data": "node scripts/ingestion/refreshData.mjs",
+    "curate:images": "node scripts/ingestion/curateImages.mjs",
+    "enrich:test-media": "node scripts/ingestion/enrichTestMedia.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

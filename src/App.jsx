@@ -12,6 +12,8 @@ const ProjectDetail = lazy(() => import("./pages/ProjectDetail.jsx"));
 const SourceStatus = lazy(() => import("./pages/SourceStatus.jsx"));
 const TopicDetail = lazy(() => import("./pages/TopicDetail.jsx"));
 const InstitutionDetail = lazy(() => import("./pages/InstitutionDetail.jsx"));
+const ResearchGallery = lazy(() => import("./pages/ResearchGallery.jsx"));
+const ResearchGalleryDetail = lazy(() => import("./pages/ResearchGalleryDetail.jsx"));
 import { filters } from "./data/maritimeResearchData.js";
 import {
   countryMatchesTopicFilter,
@@ -220,6 +222,8 @@ export default function App() {
         <Route element={<SourceStatus />} path="/sources/status" />
         <Route element={<TopicDetail />} path="/topic/:slug" />
         <Route element={<InstitutionDetail />} path="/institution/:slug" />
+        <Route element={<ResearchGallery />} path="/research-gallery" />
+        <Route element={<ResearchGalleryDetail />} path="/research-gallery/:recordId" />
         <Route element={<MapDashboard />} path="*" />
       </Routes>
     </Suspense>

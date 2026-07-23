@@ -1,0 +1,94 @@
+{
+  "recordId": "cordis-101192583",
+  "acronym": "TwinShip",
+  "fetchedUrl": "https://twin-ship.eu/",
+  "fetchedAt": "2026-07-23T01:18:52.884Z",
+  "sourceUrl": "https://twin-ship.eu/",
+  "pageTitle": "Homepage : TwinShip Project",
+  "publishedDate": null,
+  "headings": [],
+  "sections": [
+    {
+      "heading": "",
+      "text": "Welcome to TwinShip Horizon Europe Project"
+    },
+    {
+      "heading": "",
+      "text": "Integrated Digital TWIN Framework to enable Green SHIP Operations towards Zero Emission Vessels (TwinShip)"
+    },
+    {
+      "heading": "",
+      "text": "The TwinShip Horizon Europe project is spearheading an initiative to transform the maritime sector by creating an alliance of premier maritime technology, solution & service providers, ship design and shipping firms, classification societies, ports, software developers, and research and academic bodies. This collaboration is centered around a unique, open-source digital platform enriched with data and powered by domain knowledge-based advanced machine learning and artificial intelligence capabilities. By introducing a Digital Twin (DT) enabled Decision Support System (DSS) in the same digital platform, TwinShip is setting a course for the maritime industry's rapid digital and environmental transformation. The project sets ambitious benchmarks for reducing Greenhouse Gas emissions in international shipping, aiming for a 30- 40% reduction by 2030, 80-90% by 2040, and achieving net-zero emissions by 2045, all relative to 2008 levels by utilizing its Pilot Vessels and Futuristic Unmanned Vessel Concept. This initiative focuses on leveraging both existing and emergent clean fuels and technologies, prioritizing renewable energy sources, and the implementation of unmanned vessels. The TwinShip DT-enabled DSS is crafted to navigate the industry toward achieving these significant environmental targets, demonstrating the consortium's dedication to fostering sustainability and pushing the boundaries of innovation."
+    },
+    {
+      "heading": "",
+      "text": "If you are interested in TwinShip project updates, please follow us on LinkedIn: https://www.linkedin.com/company/twinship/"
+    },
+    {
+      "heading": "",
+      "text": "TwinShip Project More Information: CORDIS - EU research results & EU Funding & Tenders Portal"
+    },
+    {
+      "heading": "",
+      "text": "The opinions expressed in this website reflect only the author’s view and in no way reflect the European Commission’s opinions. The European Commission is not responsible for any use that may be made of the information it contains."
+    }
+  ],
+  "links": [
+    "https://twin-ship.eu/",
+    "https://twin-ship.eu/objectives",
+    "https://twin-ship.eu/consortium",
+    "https://twin-ship.eu/wps",
+    "https://twin-ship.eu/contact",
+    "https://twin-ship.eu/latest-news",
+    "https://twin-ship.eu/publications",
+    "https://platform.vessel-ai.eu/",
+    "https://twin-ship.eu/assets",
+    "mailto:info@twin-ship.eu",
+    "https://www.linkedin.com/company/twinship/",
+    "https://cordis.europa.eu/project/id/101192583",
+    "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/org-details/999999999/project/101192583/program/43108390/details"
+  ],
+  "images": [
+    {
+      "imageUrl": "https://twin-ship.eu/images/The%20ro-ro%20vessel%20Eurocargo%20Alexandria.jpg",
+      "altText": "gm2",
+      "caption": "",
+      "sourceUrl": "https://twin-ship.eu/",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    },
+    {
+      "imageUrl": "https://twin-ship.eu/images/20220701_Stena_Germanica_29-9e.png",
+      "altText": "vessel2",
+      "caption": "",
+      "sourceUrl": "https://twin-ship.eu/",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    },
+    {
+      "imageUrl": "https://twin-ship.eu/images/Stena-chem_tanker-780x450.jpg",
+      "altText": "ship2",
+      "caption": "",
+      "sourceUrl": "https://twin-ship.eu/",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    },
+    {
+      "imageUrl": "https://twin-ship.eu/images/Picture1e2.png",
+      "altText": "fv2",
+      "caption": "",
+      "sourceUrl": "https://twin-ship.eu/",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    },
+    {
+      "imageUrl": "https://twin-ship.eu/images/EUlogo.png",
+      "altText": "",
+      "caption": "",
+      "sourceUrl": "https://twin-ship.eu/",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    }
+  ],
+  "contentHash": "9ba1fe9483fe7315c4b5358c84a88aa3aae767c1b97484f17388129bee63a5ed"
+}

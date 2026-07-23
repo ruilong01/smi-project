@@ -11,6 +11,7 @@ import {
 } from "./normalization.mjs";
 import { emptyAiFields } from "./enrichment/schemaDefaults.mjs";
 import { buildDataset } from "./buildDataset.mjs";
+import { shouldHideImage } from "./aiCuration/verdict.mjs";
 
 // Ingests the static, human-curated media-enabled seed dataset (CORDIS
 // project records with image candidates) into:
@@ -113,14 +114,19 @@ function buildAdapterOutput(record, images, nowIso) {
   // sourcePages[].images[] is what CountryProfilePanel, ProjectDetail and
   // ResearchRecordRow already render as linked preview cards with a "rights
   // not verified" note - this is the one place image candidates flow into.
-  const sourcePageImages = images.map((image) => ({
-    imageUrl: image.imageUrl,
-    altText: image.altText,
-    caption: image.caption,
-    sourceUrl: image.sourceUrl,
-    canEmbed: false,
-    rightsNote: image.rightsNote,
-  }));
+  // Excludes anything a prior curate:images run already marked unsuitable
+  // (see aiCuration/verdict.mjs) - otherwise re-running this script would
+  // silently resurrect images that were deliberately hidden.
+  const sourcePageImages = images
+    .filter((image) => !shouldHideImage(image.aiCuration))
+    .map((image) => ({
+      imageUrl: image.imageUrl,
+      altText: image.altText,
+      caption: image.caption,
+      sourceUrl: image.sourceUrl,
+      canEmbed: false,
+      rightsNote: image.rightsNote,
+    }));
 
   return {
     project: {
@@ -311,6 +317,11 @@ async function main() {
         canEmbed: false,
         rightsNote:
           image.rightsNote ?? "Rights not verified; do not claim as cleared for reuse.",
+        // Tags provenance so this script can tell its own seed-derived
+        // entries apart from ones another script (e.g. enrichTestMedia.mjs)
+        // added directly to image-candidates.json - see the merge logic
+        // below, which must not delete those on a re-run.
+        origin: "media-seed",
       });
       return imageId;
     });
@@ -358,11 +369,46 @@ async function main() {
     `${JSON.stringify(recordsOutput, null, 2)}\n`
   );
 
+  // Preserve any AI curation verdicts (see curateImages.mjs) already
+  // recorded against these same imageIds - this script rebuilds the whole
+  // file from the seed every run, and must not silently wipe out curation
+  // work just because the seed was re-ingested. imageId is deterministic
+  // from the seed data, so it matches stably across runs.
+  //
+  // Also preserves any image candidates a DIFFERENT script (e.g.
+  // enrichTestMedia.mjs, tagged origin !== "media-seed") already added to
+  // this same file - otherwise re-running the seed import would silently
+  // delete real, live-fetched images that this script knows nothing about.
+  let previousAiCurationByImageId = new Map();
+  let preservedNonSeedImages = [];
+  try {
+    const previous = JSON.parse(
+      await fs.readFile(path.join(processedDir, "image-candidates.json"), "utf8")
+    );
+    previousAiCurationByImageId = new Map(
+      (previous.images ?? [])
+        .filter((image) => image.aiCuration)
+        .map((image) => [image.imageId, image.aiCuration])
+    );
+    preservedNonSeedImages = (previous.images ?? []).filter(
+      (image) => image.origin && image.origin !== "media-seed"
+    );
+  } catch {
+    // No previous file yet - nothing to preserve.
+  }
+  imageCandidates.forEach((image) => {
+    const previousCuration = previousAiCurationByImageId.get(image.imageId);
+    if (previousCuration) {
+      image.aiCuration = previousCuration;
+    }
+  });
+
+  const allImages = [...imageCandidates, ...preservedNonSeedImages];
   const imagesOutput = {
     generatedAt: nowIso,
     sourceSeedFile: RECORDS_SEED_FILE,
-    imageCandidateCount: imageCandidates.length,
-    images: imageCandidates,
+    imageCandidateCount: allImages.length,
+    images: allImages,
   };
   await fs.writeFile(
     path.join(processedDir, "image-candidates.json"),
@@ -370,8 +416,11 @@ async function main() {
   );
 
   // ---- Feed the country-attributable subset into the live app dataset ----
+  // Uses allImages (seed-derived + preserved non-seed) so re-running this
+  // script after enrichTestMedia.mjs doesn't drop live-fetched images from
+  // the embedded sourcePages either.
   const imagesByRecordId = new Map();
-  imageCandidates.forEach((image) => {
+  allImages.forEach((image) => {
     if (!imagesByRecordId.has(image.recordId)) imagesByRecordId.set(image.recordId, []);
     imagesByRecordId.get(image.recordId).push(image);
   });

@@ -1,4 +1,5 @@
-import { Anchor, Radar, Satellite } from "lucide-react";
+import { Anchor, Images, Radar, Satellite } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Header({ selectedCountryCount, activeFilter }) {
   return (
@@ -12,6 +13,13 @@ export default function Header({ selectedCountryCount, activeFilter }) {
           <h1>Global Maritime Research Intelligence Map</h1>
         </div>
       </div>
+
+      <nav className="top-bar-nav" aria-label="Primary navigation">
+        <Link className="gallery-nav-link" to="/research-gallery">
+          <Images size={16} aria-hidden="true" />
+          Research Gallery
+        </Link>
+      </nav>
 
       <div className="header-metrics" aria-label="Dashboard summary">
         <div className="metric">

@@ -7,3 +7,11 @@ work/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Server-side data-refresh output: lives in the persistent bind-mounted
+# data/ dir on the deployed box (see compose.yaml, docs/AWS_DATA_REFRESH.md),
+# not in git history. data/processed/*.json stays committed (small,
+# meaningful summaries, same convention as src/data/generated/).
+data/raw/openalex/
+data/logs/
+data/processed/.tmp-*/

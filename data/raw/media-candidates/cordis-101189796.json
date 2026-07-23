@@ -1,0 +1,165 @@
+{
+  "recordId": "cordis-101189796",
+  "acronym": "MERLIN",
+  "fetchedUrl": "https://ingenium.uclm.es/index.php/merlin/",
+  "fetchedAt": "2026-07-23T01:18:52.884Z",
+  "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+  "pageTitle": "Merlin",
+  "publishedDate": null,
+  "headings": [
+    "MERLIN",
+    "GRANT AGREEMENT ID: 824348",
+    "GRANTED: € 8.000.000",
+    "FUNDED:",
+    "Development and demonstration of a long-endurance sea surveying autonomous unmanned vehicle with gliding capability powered by hydrogen fuel cell",
+    "2020",
+    "2019",
+    "PARTNERS",
+    "Premio Wendy Hall",
+    "Premios ‘Wendy Hall’ (2ª edición) a la mejor web de la UCLM en mejor web de investigación",
+    "Custom menu section"
+  ],
+  "sections": [
+    {
+      "heading": "MERLIN",
+      "text": "\"Demonstration of long-endurance intelligent multi-purpose autonomous vehicles for marine applications. The MERLIN project is a four-year project with a total budget of 8 million Euros funded under the European Union's Horizon Europe Grant Agreement: 101189796 and it is coordinated by the University of Birmingham. . \""
+    },
+    {
+      "heading": "Development and demonstration of a long-endurance sea surveying autonomous unmanned vehicle with gliding capability powered by hydrogen fuel cell",
+      "text": "The importance of our seas and oceans to the economy and societal well-being is broadly acknowledged. In addition, offshore infrastructure in the form of ports, wind farms, aquaculture facilities, natural gas pipes, etc. has continuously expanded and has become more commonplace in recent years. Activities associated with seabed mapping, monitoring of the health and status of marine habitats, offshore infrastructure inspection, seabed mining and underwater sensing have traditionally been based on the use of crewed support vessels which are expensive to run and have limited endurance. The MERLIN project seeks to exploit long-endurance operational capabilities offered through the use of hydrogen fuel cells and renewable energy installed onboard Unmanned Surface Vessels (USV) and Autonomous Underwater Vessels (AUVs) which are capable of navigating and operating autonomously based on AI algorithms without the need for human intervention. A Mission Remote Control Centre (MRCC) will permit data from the autonomous vessels to be transmitted to base. Conversely, the MRCC will allow the transmission of commands from the supervisor to the robotic vehicles. The vehicles will incorporate advanced surface and underwater grasping capability for the collection of samples, handling, installation and recovery of sensors using custom-built robotic arms. The USV will provide geotagging reference data to the AUVs when they operate underwater and be able to track them during the mission. The USV will be able to navigate from its base to the location of the mission where the AUVs will be released. At the end of the mission the AUVs will dock again with the USV so they can be safely returned to base. The vehicles will be capable of operating independently as well as in combination with support vessels . The demonstration activities include three different high value use cases, including marine habitat monitoring, underwater volcano seabed mapping, and port infrastructure inspection."
+    },
+    {
+      "heading": "Development and demonstration of a long-endurance sea surveying autonomous unmanned vehicle with gliding capability powered by hydrogen fuel cell",
+      "text": "Within the 8 million Euro MERLIN Horizon Europe coordinated by Professor Mayorkinos Papaelias, University of Birmingham, one of the three missions is to deploy our autonomous marine robotic systems at the underwater volcano hashtagKolumbo in the southern Aegean Sea. Recently, the area just northeast of hashtagKolumbo has shown intensive tectonic activity. The resulting earthquake swarm has unique characteristics but there is no evidence of changes occurring at the nearby volcanoes of hashtagSantorini or hashtagKolumbo. This seismic activity, regardless of how it progresses in the coming weeks and months, seems to warrant a widening of the original mission scope, going beyond the vicinity of the hashtagKolumbo crater. It is important to acquire as much information as possible of what is happening at the seabed and below it, and if the volcanoes can interact with the ongoing tectonic process. The MERLIN consortium will collaborate closely with SANTORY observatory led by Professor Paraskevi Nomikou in an effort to contribute further to our current knowledge and understanding. The ENDURUNS autonomous platforms shown in the photographs from past missions will be key to achieving the objectives set for the MERLIN Kolumbo mission.The MERLIN project is a four-year project funded under the European Union’s Horizon Europe Grant Agreement: 101189796 and it is coordinated by the University of Birmingham. The project is a collaboration between the University of Birmingham, Space Applications Services NV/SA, Graal Tech Srl, ALTUS LSA S.A., Universidad de Castilla-La Mancha, On AIR srl, Hysytech s.r.l., National Center for Scientific Research «Demokritos»​, AiDEAS OU, Centre for Research & Technology Hellas (CERTH), ESI Ltd. Engitec Systems International Ltd., Agencia Estatal Consejo Superior de Investigaciones Cientificas, Klaipėdos uostas/Port of Klaipėda, Tuco Marine ApS – ProZero Workboats, Universitat Politècnica de Catalunya, Hellenic Centre for Marine Research, Acrux Cyber Services, and BALTICS MC."
+    },
+    {
+      "heading": "2020",
+      "text": "Pedro Bernalte Sanchez, Isaac Segovia Ramirez, Mayorkinos Papaelias, Simone Marini, Fausto Pedro Garcia Marquez (2020) PROYECTO EUROPEO ENDURUNS: INSPECCIÓN DE MARES Y OCÉANOS A TRAVÉS DE VEHÍCULOS AUTÓNOMOS. DESARROLLO DE ENSAYOS NO DESTRUCTIVOS, Asociación española de ensayos no destructivos 92, p. 22-33, url"
+    },
+    {
+      "heading": "2020",
+      "text": "Pedro Bernalte Sanchez, Fausto Pedro Garcia Marquez, S Marini, F Bonofoglio, L Barbieri, Nikolla Gjeci, E Ottaviani, S Govindaraj, S Coene, M Papaelias, A But (2020) New Approaches for Renewable Energy Management in Autonomous Marine Vehicles, p. 739-745, CRC Press, url"
+    },
+    {
+      "heading": "2020",
+      "text": "Simone Marini, Nikolla Gjeci, Shashank Govindaraj, Alexandru But, Benjamin Sportich, Ennio Ottaviani, Fausto Pedro Garcia Marquez, Pedro Jose Bernalte Sanchez, Jonas Pedersen, Casper Vetke Clausen, Fantina Madricardo, Fedeirca Foglini, Federico Bonofiglio, Laura Barbieri, Massimiliano Antonini, Yeidy Sorani Montenegro Camacho, Peter Weiss, Kathrin Nowak, Makthoum Peer, Thibaud Gobert, Alessio Turetta, Elias Chatzidouros, Dongik Lee, Dimitris Zarras, Theodore Steriotis, Georgia Charalambopoulou, Thanos Yamas, Mayorkinos Papaelias (2020) ENDURUNS: An Integrated and Flexible Approach for Seabed Survey Through Autonomous Mobile Vehicles, Journal of Marine Science and Engineering 8(9), p. 633, url, doi:10.3390/jmse8090633"
+    },
+    {
+      "heading": "2020",
+      "text": "Pedro Bernalte Sanchez, Mayorkinos Papaelias, Fausto Pedro Garcia Marquez (2020) Autonomous underwater vehicles: Instrumentation and measurements, Instrumentation and measurements. IEEE Instrumentation & Measurement Magazine 23(2), p. 105-114., url, doi:10.1109 / MIM.2020.9062680"
+    },
+    {
+      "heading": "2019",
+      "text": "Pedro Bernalte Sanchez, Isaac Segovia Ramirez, Fausto Pedro Garcia Marquez (2019) Proyecto Europeo ENDURUNS, TBN nº 12, p. pp 2-8, url"
+    },
+    {
+      "heading": "2019",
+      "text": "Isaac Segovia Ramirez, Pedro Jose Bernalte Sanchez, Mayorkinos Papaelias, Fausto Pedro Garcia Marquez (2019) Autonomous underwater vehicles inspection management: optimization of field of view and measurement process, International Conference on Industrial Engineering and Industrial Management (13th. 2019. Gijón), p. p. 17-18, Oviedo: Servicio de Publicaciones de la Universidad de Oviedo, url"
+    },
+    {
+      "heading": "2019",
+      "text": "Isaac Segovia Ramirez, Alberto Pliego Marugan, Mayorkinos Papaelias, Fausto Pedro Garcia Marquez (2019) Optimal Management of Marine Inspection with Autonomous Underwater Vehicles, International Conference on Management Science and Engineering Management, Cham Springer (ed.), p. 760-771, Toronto: Springer, url, doi:https://doi.org/10.1007/978-3-030-21248-3_57"
+    },
+    {
+      "heading": "Premios ‘Wendy Hall’ (2ª edición) a la mejor web de la UCLM en mejor web de investigación",
+      "text": "Copyright © 2020 INGENIUM GROUP.All rights reserved."
+    },
+    {
+      "heading": "Custom menu section",
+      "text": "This is off canvas menu widget area. To enable it add some widgets into Appearance – Widgets – Menu Section, and go to Customizer – Main menu to set the icon position."
+    }
+  ],
+  "links": [
+    "https://ingenium.uclm.es/index.php/merlin/#site-content",
+    "https://enduruns.eu/",
+    "https://www.linkedin.com/in/mayorkinos-papaelias-26ab4943/",
+    "https://www.linkedin.com/company/university-of-birmingham/",
+    "https://www.linkedin.com/search/results/all/?keywords=%23kolumbo&origin=HASH_TAG_FROM_FEED",
+    "https://www.linkedin.com/search/results/all/?keywords=%23santorini&origin=HASH_TAG_FROM_FEED",
+    "https://www.linkedin.com/in/paraskevi-nomikou-325393203/",
+    "https://www.linkedin.com/company/enduruns/",
+    "https://www.linkedin.com/company/space-applications-services/",
+    "https://www.linkedin.com/company/graal-tech-srl/",
+    "https://www.linkedin.com/company/altus-lsa/",
+    "https://www.linkedin.com/company/uclm/",
+    "https://www.linkedin.com/company/on-air-srl_2/",
+    "https://www.linkedin.com/company/hysytech/",
+    "https://www.linkedin.com/company/national-center-for-scientific-research-demokritos-/",
+    "https://www.linkedin.com/company/aideas-ou/",
+    "https://www.linkedin.com/company/certh/",
+    "https://www.linkedin.com/in/esi-ltd-engitec-systems-international-ltd-03786b1ab/",
+    "https://www.linkedin.com/company/klaipeda-state-sea-port-authority/",
+    "https://www.linkedin.com/company/tuco-marine-aps/",
+    "https://www.linkedin.com/company/universitat-politecnica-de-catalunya/",
+    "https://www.linkedin.com/company/hellenic-centre-for-marine-research/",
+    "https://www.linkedin.com/company/acruxcs/",
+    "https://www.linkedin.com/company/baltics-mc/",
+    "http://hdl.handle.net/10578/26561",
+    "http://hdl.handle.net/10578/26581",
+    "https://www.mdpi.com/2077-1312/8/9/633",
+    "https://doi.org/10.3390/jmse8090633",
+    "https://ruidera.uclm.es/xmlui/handle/10578/24678",
+    "https://doi.org/10.1109%20/%20MIM.2020.9062680",
+    "http://hdl.handle.net/10578/23299",
+    "http://hdl.handle.net/10651/51464",
+    "https://ruidera.uclm.es/xmlui/handle/10578/21498",
+    "https://doi.org/https://doi.org/10.1007/978-3-030-21248-3_57",
+    "https://ingenium.uclm.es/index.php/2022/03/15/pedro-bernalte-has-presented-innovative-technologies-developed-for-autonomous-marine-vehicles-by-enduruns-project-in-icuis-2022/",
+    "https://ingenium.uclm.es/index.php/2022/02/22/prof-fausto-pedro-garcia-is-interviewed-by-the-asociacion-espanola-de-ensayos-no-destructivos/",
+    "https://ingenium.uclm.es/index.php/2021/09/23/ingenium-participates-in-the-second-virtual-international-conference-on-robotics-intelligent-and-control-technologies/",
+    "https://ingenium.uclm.es/index.php/2021/07/09/ingenium-has-presented-different-works-in-cio-2021/",
+    "https://www.uclm.es/global/promotores/organos-de-gobierno/secretaria-general/premios/web-wendy_2",
+    "https://www.uclm.es/"
+  ],
+  "images": [
+    {
+      "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqgAAAIvAQAAAACQdhSRAAAAAnRSTlMAAHaTzTgAAABFSURBVHja7cExAQAAAMKg9U9tCj+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOBhu8oAAZXWStkAAAAASUVORK5CYII=",
+      "altText": "",
+      "caption": "",
+      "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    },
+    {
+      "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAGVAQAAAAD/UftzAAAAAnRSTlMAAHaTzTgAAAA6SURBVHja7cEBDQAAAMKg909tDwcUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcGo/3AAHiIfPyAAAAAElFTkSuQmCC",
+      "altText": "",
+      "caption": "",
+      "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    },
+    {
+      "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAA4AQAAAABvNvjhAAAAAnRSTlMAAHaTzTgAAAAZSURBVEjHY2AYBaNgFIyCUTAKRsEoGBgAAAiIAAEI7xoiAAAAAElFTkSuQmCC",
+      "altText": "",
+      "caption": "",
+      "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    },
+    {
+      "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnYAAAEOAQAAAAAstmdlAAAAAnRSTlMAAHaTzTgAAAAsSURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAACAVwNUYAABi5gLYgAAAABJRU5ErkJggg==",
+      "altText": "",
+      "caption": "",
+      "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    },
+    {
+      "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQAAAAAUekxPAAAAAnRSTlMAAHaTzTgAAAAaSURBVEjH7cExAQAAAMKg9U9tDQ+gAACAdwMLuAABXZHjmQAAAABJRU5ErkJggg==",
+      "altText": "",
+      "caption": "",
+      "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    },
+    {
+      "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARwAAABqAQAAAABGg9MlAAAAAnRSTlMAAHaTzTgAAAAbSURBVEjH7cExAQAAAMKg9U9tBn+gAAAAgN8AD1IAAflAijsAAAAASUVORK5CYII=",
+      "altText": "",
+      "caption": "",
+      "sourceUrl": "https://ingenium.uclm.es/index.php/merlin/",
+      "canEmbed": false,
+      "rightsNote": "Rights not verified; not embedded automatically."
+    }
+  ],
+  "contentHash": "4ae5e43c779a7a36fda2b4683d35de67faa9c016c29b7eb5a12de6cc22510e30"
+}

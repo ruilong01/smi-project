@@ -1,0 +1,192 @@
+{
+  "generatedAt": "2026-07-23T01:18:52.884Z",
+  "selectedRecords": [
+    "GAMMA",
+    "DYNAPORT",
+    "TwinShip",
+    "SAFeCRAFT",
+    "MERLIN",
+    "AUTOFLEX",
+    "DT4GS",
+    "MISSION"
+  ],
+  "recordCount": 8,
+  "totalNewImagesFetchedThisRun": 23,
+  "recordsWithNoImages": [
+    "SAFeCRAFT"
+  ],
+  "recordsWithMissingExplanations": [],
+  "entries": [
+    {
+      "recordId": "cordis-101138620",
+      "acronym": "GAMMA",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101138620",
+        "https://www.rina.org/en/media/projects/gamma-project"
+      ],
+      "imageCandidateCount": 3,
+      "newImagesFetchedThisRun": 2,
+      "explanationStatus": "heuristic_generated",
+      "rawFetchFiles": [
+        "data\\raw\\media-candidates\\cordis-101138620.json"
+      ],
+      "processedFiles": [
+        "data/processed/image-candidates.json",
+        "data/processed/research-evaluations.json",
+        "src/data/generated/liveResearchData.json"
+      ],
+      "fetchError": null,
+      "updatedAt": "2026-07-23T01:18:52.884Z"
+    },
+    {
+      "recordId": "cordis-101138478",
+      "acronym": "DYNAPORT",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101138478",
+        "https://dynaport.eu/"
+      ],
+      "imageCandidateCount": 3,
+      "newImagesFetchedThisRun": 0,
+      "explanationStatus": "heuristic_generated",
+      "rawFetchFiles": [],
+      "processedFiles": [
+        "data/processed/image-candidates.json",
+        "data/processed/research-evaluations.json",
+        "src/data/generated/liveResearchData.json"
+      ],
+      "fetchError": "403 Forbidden for https://dynaport.eu/",
+      "updatedAt": "2026-07-23T01:18:52.884Z"
+    },
+    {
+      "recordId": "cordis-101192583",
+      "acronym": "TwinShip",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101192583",
+        "https://twin-ship.eu/"
+      ],
+      "imageCandidateCount": 6,
+      "newImagesFetchedThisRun": 5,
+      "explanationStatus": "heuristic_generated",
+      "rawFetchFiles": [
+        "data\\raw\\media-candidates\\cordis-101192583.json"
+      ],
+      "processedFiles": [
+        "data/processed/image-candidates.json",
+        "data/processed/research-evaluations.json",
+        "src/data/generated/liveResearchData.json"
+      ],
+      "fetchError": null,
+      "updatedAt": "2026-07-23T01:18:52.884Z"
+    },
+    {
+      "recordId": "cordis-101138411",
+      "acronym": "SAFeCRAFT",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101138411"
+      ],
+      "imageCandidateCount": 0,
+      "newImagesFetchedThisRun": 0,
+      "explanationStatus": "heuristic_generated",
+      "rawFetchFiles": [
+        "data\\raw\\media-candidates\\cordis-101138411.json"
+      ],
+      "processedFiles": [
+        "data/processed/image-candidates.json",
+        "data/processed/research-evaluations.json",
+        "src/data/generated/liveResearchData.json"
+      ],
+      "fetchError": null,
+      "updatedAt": "2026-07-23T01:18:52.884Z"
+    },
+    {
+      "recordId": "cordis-101189796",
+      "acronym": "MERLIN",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101189796",
+        "https://ingenium.uclm.es/index.php/merlin/"
+      ],
+      "imageCandidateCount": 7,
+      "newImagesFetchedThisRun": 5,
+      "explanationStatus": "heuristic_generated",
+      "rawFetchFiles": [
+        "data\\raw\\media-candidates\\cordis-101189796.json"
+      ],
+      "processedFiles": [
+        "data/processed/image-candidates.json",
+        "data/processed/research-evaluations.json",
+        "src/data/generated/liveResearchData.json"
+      ],
+      "fetchError": null,
+      "updatedAt": "2026-07-23T01:18:52.884Z"
+    },
+    {
+      "recordId": "cordis-101136257",
+      "acronym": "AUTOFLEX",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101136257",
+        "https://www.cml.fraunhofer.de/en/research-projects/AUTOFLEX.html"
+      ],
+      "imageCandidateCount": 3,
+      "newImagesFetchedThisRun": 1,
+      "explanationStatus": "heuristic_generated",
+      "rawFetchFiles": [
+        "data\\raw\\media-candidates\\cordis-101136257.json"
+      ],
+      "processedFiles": [
+        "data/processed/image-candidates.json",
+        "data/processed/research-evaluations.json",
+        "src/data/generated/liveResearchData.json"
+      ],
+      "fetchError": null,
+      "updatedAt": "2026-07-23T01:18:52.884Z"
+    },
+    {
+      "recordId": "cordis-101056799",
+      "acronym": "DT4GS",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101056799",
+        "https://www.dt4gs.eu/"
+      ],
+      "imageCandidateCount": 6,
+      "newImagesFetchedThisRun": 5,
+      "explanationStatus": "heuristic_generated",
+      "rawFetchFiles": [
+        "data\\raw\\media-candidates\\cordis-101056799.json"
+      ],
+      "processedFiles": [
+        "data/processed/image-candidates.json",
+        "data/processed/research-evaluations.json",
+        "src/data/generated/liveResearchData.json"
+      ],
+      "fetchError": null,
+      "updatedAt": "2026-07-23T01:18:52.884Z"
+    },
+    {
+      "recordId": "cordis-101138583",
+      "acronym": "MISSION",
+      "sourceUrls": [
+        "https://cordis.europa.eu/project/id/101138583",
+        "https://missionproject.eu/"
+      ],
+      "imageCandidateCount": 6,
+      "newImagesFetchedThisRun": 5,
+      "explanationStatus": "heuristic_generated",
+      "rawFetchFiles": [
+        "data\\raw\\media-candidates\\cordis-101138583.json"
+      ],
+      "processedFiles": [
+        "data/processed/image-candidates.json",
+        "data/processed/research-evaluations.json",
+        "src/data/generated/liveResearchData.json"
+      ],
+      "fetchError": null,
+      "updatedAt": "2026-07-23T01:18:52.884Z"
+    }
+  ],
+  "dataFilesUpdated": [
+    "data/processed/image-candidates.json",
+    "data/processed/research-evaluations.json",
+    "src/data/generated/liveResearchData.json",
+    "data/processed/enrichment-test-report.json"
+  ]
+}

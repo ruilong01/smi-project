@@ -1,0 +1,14 @@
+[Unit]
+Description=Run maritime-data-refresh.service once daily
+
+[Timer]
+# 03:17 UTC - off-peak, deliberately not on the hour to avoid every
+# scheduled job on the box waking up at once.
+OnCalendar=*-*-* 03:17:00
+# If the box was off/rebooting at the scheduled time, run once on next boot
+# instead of silently skipping a whole day.
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target
