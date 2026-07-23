@@ -129,6 +129,27 @@ async function runExtractionOnce() {
         return true;
       });
 
+      // normalizeOpenAlexRecord always starts a project with images: [] and
+      // no sourcePages — fetch:publication-images (scripts/ingestion/
+      // fetchPublicationImages.mjs) fills those in afterwards, as a
+      // separate deliberate step. Since buildDataset dedupes projects by id
+      // with "later entry wins" and this fresh batch is appended after the
+      // carried-forward previous dataset, re-running sync:data would
+      // otherwise silently wipe out every image fetch:publication-images
+      // found. Carry the previous project's images/sourcePages forward
+      // whenever this run's own re-fetch came back with none.
+      const previousProjectsById = new Map((previous?.projects ?? []).map((p) => [p.id, p]));
+      deduped.forEach((record) => {
+        const previousProject = previousProjectsById.get(record.project.id);
+        if (!previousProject) return;
+        if (!record.project.images?.length && previousProject.images?.length) {
+          record.project.images = previousProject.images;
+        }
+        if (!record.project.sourcePages?.length && previousProject.sourcePages?.length) {
+          record.project.sourcePages = previousProject.sourcePages;
+        }
+      });
+
       // Safety cap, not a target — real yield is bounded by how many
       // results pass isStrongMaritimeMatch + require a resolvable country.
       return deduped.slice(0, 200);

@@ -22,6 +22,8 @@
     "refresh:data": "node scripts/ingestion/refreshData.mjs",
     "curate:images": "node scripts/ingestion/curateImages.mjs",
     "enrich:test-media": "node scripts/ingestion/enrichTestMedia.mjs",
+    "fetch:publication-images": "node scripts/ingestion/fetchPublicationImages.mjs",
+    "extract:cordis-details": "node scripts/ingestion/extractCordisProjectDetails.mjs",
     "verify:schema-compatibility": "node scripts/processing/verifySchemaCompatibility.mjs"
   },
   "dependencies": {
