@@ -1,0 +1,2578 @@
+{
+  "generatedAt": "2026-07-23T03:21:53.875Z",
+  "totalPending": 321,
+  "queuedCount": 321,
+  "skippedCooldown": 0,
+  "skippedNoSourceUrl": 0,
+  "highPriorityCount": 17,
+  "queue": [
+    {
+      "recordId": "cordis-101138411",
+      "title": "Safe and Efficient Use of Sustainable Fuels in Maritime Transport Applications",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101138411",
+      "priority": "high",
+      "actionabilityScore": 95,
+      "relevanceScore": 98
+    },
+    {
+      "recordId": "cordis-101328431",
+      "title": "Physical AI-powered hybrid maritime agent for coastal monitoring and infrastructure inspection",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101328431",
+      "priority": "high",
+      "actionabilityScore": 92,
+      "relevanceScore": 96
+    },
+    {
+      "recordId": "cordis-101250260",
+      "title": "Million Nautical Mile Fuel Cell System",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101250260",
+      "priority": "high",
+      "actionabilityScore": 91,
+      "relevanceScore": 95
+    },
+    {
+      "recordId": "cordis-101270016",
+      "title": "Flexible Tool Environment for Holistic Retrofits and Decarbonization of Ships",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101270016",
+      "priority": "high",
+      "actionabilityScore": 90,
+      "relevanceScore": 94
+    },
+    {
+      "recordId": "cordis-101296556",
+      "title": "FAcilitate the development of unmanned Vehicles in the maritime sectOR",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101296556",
+      "priority": "high",
+      "actionabilityScore": 87,
+      "relevanceScore": 92
+    },
+    {
+      "recordId": "cordis-101069828",
+      "title": "Multifuel SOFC system with Maritime Energy vectors",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101069828",
+      "priority": "high",
+      "actionabilityScore": 86,
+      "relevanceScore": 92
+    },
+    {
+      "recordId": "cordis-955413",
+      "title": "Sustainable technologies for future long distance shipping towards complete decarbonisation",
+      "sourceUrl": "https://cordis.europa.eu/project/id/955413",
+      "priority": "high",
+      "actionabilityScore": 84,
+      "relevanceScore": 94
+    },
+    {
+      "recordId": "cordis-101121129",
+      "title": "Smart Maritime and Underwater Guardian",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101121129",
+      "priority": "high",
+      "actionabilityScore": 83,
+      "relevanceScore": 90
+    },
+    {
+      "recordId": "cordis-101173002",
+      "title": "Sustainable Energy and Alternative Fuels from Advanced Intermediate Renewable Energy carrieR technology",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101173002",
+      "priority": "high",
+      "actionabilityScore": 82,
+      "relevanceScore": 90
+    },
+    {
+      "recordId": "cordis-101136349",
+      "title": "Centre of Excellence in Maritime Robotics and Technologies for Sustainable Blue Economy",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101136349",
+      "priority": "high",
+      "actionabilityScore": 82,
+      "relevanceScore": 91
+    },
+    {
+      "recordId": "cordis-101096224",
+      "title": "SMART EUROPEAN SHIPBUILDING",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101096224",
+      "priority": "high",
+      "actionabilityScore": 82,
+      "relevanceScore": 88
+    },
+    {
+      "recordId": "cordis-101271064",
+      "title": "SUPPORTING MARITIME ALTERNATIVE FUEL PROJECTS",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101271064",
+      "priority": "high",
+      "actionabilityScore": 80,
+      "relevanceScore": 88
+    },
+    {
+      "recordId": "cordis-101236476",
+      "title": "Adaptive strategies for enhancing threat-agnostic resilience of port ecosystems",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101236476",
+      "priority": "high",
+      "actionabilityScore": 79,
+      "relevanceScore": 88
+    },
+    {
+      "recordId": "cordis-101225772",
+      "title": "Securing Europe’s MARitime domain against threats through vessel-CONNECTed services",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101225772",
+      "priority": "high",
+      "actionabilityScore": 78,
+      "relevanceScore": 86
+    },
+    {
+      "recordId": "cordis-101096487",
+      "title": "AUTONOMOUS FLYING SHIPS FOR INTER-ISLAND AND INLAND WATERS TRANSPORT",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101096487",
+      "priority": "high",
+      "actionabilityScore": 77,
+      "relevanceScore": 85
+    },
+    {
+      "recordId": "cordis-101272708",
+      "title": "Sustainable Energy Transition in Shipping through Agreements, Industrial Leadership and Subsidies",
+      "sourceUrl": "https://cordis.europa.eu/project/id/101272708",
+      "priority": "high",
+      "actionabilityScore": 72,
+      "relevanceScore": 84
+    },
+    {
+      "recordId": "cordis-887927",
+      "title": "A Novel Smart System for the safe Management of Nautical operations",
+      "sourceUrl": "https://cordis.europa.eu/project/id/887927",
+      "priority": "high",
+      "actionabilityScore": 68,
+      "relevanceScore": 84
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4388551166",
+      "title": "Decarbonising international shipping – A life cycle perspective on alternative fuel options",
+      "sourceUrl": "https://doi.org/10.1016/j.enconman.2023.117848",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3155205771",
+      "title": "Decarbonization in Shipping Industry: A Review of Research, Technology Development, and Innovation Proposals",
+      "sourceUrl": "https://doi.org/10.3390/jmse9040415",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4376597726",
+      "title": "Review of current regulations, available technologies, and future trends in the green shipping industry",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2023.114670",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3117037508",
+      "title": "The Role of Green and Blue Hydrogen in the Energy Transition—A Technological and Geopolitical Perspective",
+      "sourceUrl": "https://doi.org/10.3390/su13010298",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3093547115",
+      "title": "Decarbonising the critical sectors of aviation, shipping, road freight and industry to limit warming to 1.5–2°C",
+      "sourceUrl": "https://doi.org/10.1080/14693062.2020.1831430",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3016994415",
+      "title": "Towards the IMO’s GHG Goals: A Critical Overview of the Perspectives and Challenges of the Main Options for Decarbonizing International Shipping",
+      "sourceUrl": "https://doi.org/10.3390/su12083220",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3038723752",
+      "title": "Potential for, and drivers of, private voluntary initiatives for the decarbonisation of short sea shipping: evidence from a Swedish ferry line",
+      "sourceUrl": "https://doi.org/10.1057/s41278-020-00160-9",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3161725877",
+      "title": "Green ammonia as a spatial energy vector: a review",
+      "sourceUrl": "https://doi.org/10.1039/d1se00345c",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4401582571",
+      "title": "An assessment of decarbonisation pathways for intercontinental deep-sea shipping using power-to-X fuels",
+      "sourceUrl": "https://doi.org/10.1016/j.apenergy.2024.124163",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4400493457",
+      "title": "Harnessing AI for Sustainable Shipping and Green Ports: Challenges and Opportunities",
+      "sourceUrl": "https://doi.org/10.3390/app14145994",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391090797",
+      "title": "A roadmap to alternative fuels for decarbonising shipping: The case of green ammonia",
+      "sourceUrl": "https://doi.org/10.1016/j.rtbm.2024.101100",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3204034991",
+      "title": "Hydrogen supply chain scenarios for the decarbonisation of a German multi-modal energy system",
+      "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2021.09.041",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4200075150",
+      "title": "A Comparison of Alternative Fuels for Shipping in Terms of Lifecycle Energy and Cost",
+      "sourceUrl": "https://doi.org/10.3390/en14248502",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4381855955",
+      "title": "Public response to decarbonisation through alternative shipping fuels",
+      "sourceUrl": "https://doi.org/10.1007/s10668-023-03499-0",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4210821094",
+      "title": "Regional supply chains for decarbonising steel: Energy efficiency and green premium mitigation",
+      "sourceUrl": "https://doi.org/10.1016/j.enconman.2022.115268",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4382358215",
+      "title": "Accelerating shipping decarbonisation: A case study on UK shore power",
+      "sourceUrl": "https://doi.org/10.1016/j.heliyon.2023.e17475",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4293010200",
+      "title": "Maritime Shipping Decarbonization: Roadmap to Meet Zero-Emission Target in Shipping as a Link in the Global Supply Chains",
+      "sourceUrl": "https://doi.org/10.3390/en15176150",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4304585218",
+      "title": "Estimates of the Decarbonization Potential of Alternative Fuels for Shipping as a Function of Vessel Type, Cargo, and Voyage",
+      "sourceUrl": "https://doi.org/10.3390/en15207468",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4362614467",
+      "title": "The prospects for, and implications of, emissions trading in shipping",
+      "sourceUrl": "https://doi.org/10.1057/s41278-023-00261-1",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4381885538",
+      "title": "Renewable marine fuel production for decarbonised maritime shipping: Pathways, policy measures and transition dynamics",
+      "sourceUrl": "https://doi.org/10.1016/j.jclepro.2023.137906",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4309542870",
+      "title": "A review of law and policy on decarbonization of shipping",
+      "sourceUrl": "https://doi.org/10.3389/fmars.2022.1076352",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4220821975",
+      "title": "Study on Applicability of Energy-Saving Devices to Hydrogen Fuel Cell-Powered Ships",
+      "sourceUrl": "https://doi.org/10.3390/jmse10030388",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4390861587",
+      "title": "Environmental-economic sustainability of hydrogen and ammonia fuels for short sea shipping operations",
+      "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2024.01.058",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3124518435",
+      "title": "Prospects and Challenges of Green Hydrogen Economy via Multi-Sector Global Symbiosis in Qatar",
+      "sourceUrl": "https://doi.org/10.3389/frsus.2020.612762",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4400227989",
+      "title": "Shore power for reduction of shipping emission in port: A bibliometric analysis",
+      "sourceUrl": "https://doi.org/10.1016/j.tre.2024.103639",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3122164608",
+      "title": "Decarbonising ships, planes and trucks: An analysis of suitable low-carbon fuels for the maritime, aviation and haulage sectors",
+      "sourceUrl": "https://doi.org/10.1016/j.adapen.2021.100008",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3136464795",
+      "title": "Taking the slow route to decarbonisation? Developing climate governance for international transport",
+      "sourceUrl": "https://doi.org/10.1016/j.esg.2021.100100",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4225300209",
+      "title": "Impacts of a bunker levy on decarbonizing shipping: A tanker case study",
+      "sourceUrl": "https://doi.org/10.1016/j.trd.2022.103257",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4386891308",
+      "title": "\"THE GREEN SHIPPING. STUDY ON REGULATIONS AND SUSTAINABLE OPTIONS FOR DECARBONISATION \"",
+      "sourceUrl": "https://doi.org/10.53464/jmte.02.2023.02",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391839668",
+      "title": "A Literature Review of Seaport Decarbonisation: Solution Measures and Roadmap to Net Zero",
+      "sourceUrl": "https://doi.org/10.3390/su16041620",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3206792527",
+      "title": "A Comparative Review of Alternative Fuels for the Maritime Sector: Economic, Technology, and Policy Challenges for Clean Energy Implementation",
+      "sourceUrl": "https://doi.org/10.3390/world2040029",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4390517607",
+      "title": "The decarbonisation of the maritime sector: Horizon 2050",
+      "sourceUrl": "https://doi.org/10.21278/brod75202",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3156539977",
+      "title": "Can Market-based Measures Stimulate Investments in Green Technologies for the Abatement of GHG Emissions from Shipping? A Review of Proposed Market-based Measures",
+      "sourceUrl": "https://doi.org/10.7225/toms.v10.n01.017",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2964013661",
+      "title": "Decarbonisation of transport: options and challenges",
+      "sourceUrl": "https://ir.cwi.nl/pub/32894",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3177468118",
+      "title": "Inclusion of Shipping in the EU-ETS: Assessing the Direct Costs for the Maritime Sector Using the MRV Data",
+      "sourceUrl": "https://doi.org/10.3390/en14133915",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4318473692",
+      "title": "Roadmap to Achieving Sustainable Development via Green Hydrogen",
+      "sourceUrl": "https://doi.org/10.3390/en16031368",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4394807657",
+      "title": "A Review of Port Decarbonisation Options: Identified Opportunities for Deploying Hydrogen Technologies",
+      "sourceUrl": "https://doi.org/10.3390/su16083299",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4403215665",
+      "title": "A Bibliometric Analysis of Green Shipping: Research Progress and Challenges for Sustainable Maritime Transport",
+      "sourceUrl": "https://doi.org/10.3390/jmse12101787",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4384284153",
+      "title": "Digital Twins for Ports: Derived From Smart City and Supply Chain Twinning Experience",
+      "sourceUrl": "https://doi.org/10.1109/access.2023.3295495",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4385380676",
+      "title": "TwinPort: 5G drone-assisted data collection with digital twin for smart seaports",
+      "sourceUrl": "https://doi.org/10.1038/s41598-023-39366-1",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4311719747",
+      "title": "Innovation in Smart Ports: Future Directions of Digitalization in Container Ports",
+      "sourceUrl": "https://doi.org/10.3390/jmse10121925",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4206739815",
+      "title": "Microgrid Digital Twins: Concepts, Applications, and Future Trends",
+      "sourceUrl": "https://doi.org/10.1109/access.2021.3138990",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3010975660",
+      "title": "Integrating Virtual Reality and Digital Twin in Circular Economy Practices: A Laboratory Application Case",
+      "sourceUrl": "https://doi.org/10.3390/su12062286",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4285171351",
+      "title": "Architecting Digital Twins",
+      "sourceUrl": "https://doi.org/10.1109/access.2022.3172964",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3196974186",
+      "title": "Universal Digital Twin - A Dynamic Knowledge Graph",
+      "sourceUrl": "https://doi.org/10.1017/dce.2021.10",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4396676992",
+      "title": "Digital Twins in Agriculture: Orchestration and Applications",
+      "sourceUrl": "https://doi.org/10.1021/acs.jafc.4c01934",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3205789855",
+      "title": "Digital Twins Supporting Efficient Digital Industrial Transformation",
+      "sourceUrl": "https://doi.org/10.3390/s21206829",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4388160838",
+      "title": "Data Fusion for Smart Civil Infrastructure Management: A Conceptual Digital Twin Framework",
+      "sourceUrl": "https://doi.org/10.3390/buildings13112725",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4317936671",
+      "title": "Predictive digital twin for offshore wind farms",
+      "sourceUrl": "https://doi.org/10.1186/s42162-023-00257-4",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3032769960",
+      "title": "Digital readiness index assessment towards smart port development",
+      "sourceUrl": "https://doi.org/10.1007/s00550-020-00501-5",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4382236847",
+      "title": "Digital Twin in the Maritime Domain: A Review and Emerging Trends",
+      "sourceUrl": "https://doi.org/10.3390/jmse11051021",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4390906089",
+      "title": "Digital Twin-Enabled Smart Maritime Logistics Management in the Context of Industry 5.0",
+      "sourceUrl": "https://doi.org/10.1109/access.2024.3354838",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3175230485",
+      "title": "Digital Twins, Internet of Things and Mobile Medicine: A Review of Current Platforms to Support Smart Healthcare",
+      "sourceUrl": "https://doi.org/10.1134/s0361768821080284",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4224324254",
+      "title": "A Digital Twin-Based Operation Status Monitoring System for Port Cranes",
+      "sourceUrl": "https://doi.org/10.3390/s22093216",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3138924974",
+      "title": "Enabling Technologies for Urban Smart Mobility: Recent Trends, Opportunities and Challenges",
+      "sourceUrl": "https://doi.org/10.3390/s21062143",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4240839386",
+      "title": "Developing a Dynamic Digital Twin at a Building Level: using Cambridge Campus as Case Study",
+      "sourceUrl": "https://doi.org/10.1680/icsic.64669.067",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3041382323",
+      "title": "Big data and artificial intelligence in the maritime industry: a bibliometric review and future research directions",
+      "sourceUrl": "https://doi.org/10.1080/03088839.2020.1788731",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4402646181",
+      "title": "Artificial Intelligence in Maritime Transportation: A Comprehensive Review of Safety and Risk Management Applications",
+      "sourceUrl": "https://doi.org/10.3390/app14188420",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4392358104",
+      "title": "Application of Artificial Intelligence in Maritime Transportation",
+      "sourceUrl": "https://doi.org/10.3390/jmse12030439",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4411134447",
+      "title": "Artificial Intelligence and Machine Learning in Maritime Shipping",
+      "sourceUrl": "https://doi.org/10.21275/sr25605122605",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3199820141",
+      "title": "Space-Based Global Maritime Surveillance. Part II: Artificial Intelligence and Data Fusion Techniques",
+      "sourceUrl": "http://hdl.handle.net/11568/1143968",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4394623675",
+      "title": "Application of Artificial Intelligence in Maritime Transportation",
+      "sourceUrl": "https://doi.org/10.3390/books978-3-7258-0656-0",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4220741294",
+      "title": "The Impacts of the Applications of Artificial Intelligence in Maritime Logistics",
+      "sourceUrl": "https://doi.org/10.31590/ejosat.1079206",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4393232293",
+      "title": "Exploring the integration of artificial intelligence (AI) and augmented reality (AR) in maritime medicine",
+      "sourceUrl": "https://doi.org/10.1007/s10462-024-10735-0",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2917580293",
+      "title": "Toward Digitalization of Maritime Transport?",
+      "sourceUrl": "https://doi.org/10.3390/s19040926",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4410004931",
+      "title": "Artificial Intelligence in Maritime Cybersecurity: A Systematic Review of AI-Driven Threat Detection and Risk Mitigation Strategies",
+      "sourceUrl": "https://doi.org/10.3390/electronics14091844",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4402417144",
+      "title": "A Fault Diagnosis Approach Utilizing Artificial Intelligence for Maritime Power Systems within an Integrated Digital Twin Framework",
+      "sourceUrl": "https://doi.org/10.3390/app14188107",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2944924828",
+      "title": "Traffic Pattern Mining and Forecasting Technologies in Maritime Traffic Service Networks: A Comprehensive Survey",
+      "sourceUrl": "https://doi.org/10.1109/tits.2019.2908191",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3174398482",
+      "title": "Collision-avoidance navigation systems for Maritime Autonomous Surface Ships: A state of the art survey",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2021.109380",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3147456683",
+      "title": "Artificial intelligence and operations research in maritime logistics",
+      "sourceUrl": "http://hdl.handle.net/11420/8045",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4288064704",
+      "title": "Vessel Trajectory Prediction in Maritime Transportation: Current Approaches and Beyond",
+      "sourceUrl": "https://doi.org/10.1109/tits.2022.3192574",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3181175604",
+      "title": "An enhanced CNN-enabled learning method for promoting ship detection in maritime surveillance system",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2021.109435",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4392438470",
+      "title": "Artificial Intelligence and Machine Learning for Green Shipping: Navigating towards Sustainable Maritime Practices",
+      "sourceUrl": "https://doi.org/10.62527/joiv.8.1.2581",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4404797734",
+      "title": "The possibilities of applying artificial intelligence in maritime navigation",
+      "sourceUrl": "https://doi.org/10.1016/j.procs.2024.09.701",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4412076062",
+      "title": "Advancing artificial intelligence in ocean and maritime engineering: Trends, progress, and future directions",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2025.122077",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3171579550",
+      "title": "Research of the Relations Among Cloud Computing, Internet of Things, Big Data, Artificial Intelligence, Block Chain and Their Application in Maritime Field",
+      "sourceUrl": "https://doi.org/10.1088/1742-6596/1927/1/012026",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3010898450",
+      "title": "Use of Artificial Intelligence as a Problem Solution for Maritime Transport",
+      "sourceUrl": "https://doi.org/10.3390/jmse8030201",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3040469417",
+      "title": "Artificial Intelligence in Maritime Navigation: A Human Factors Perspective",
+      "sourceUrl": "https://doi.org/10.1007/978-3-030-50943-9_54",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2889393096",
+      "title": "Perspectives on the Impact of Machine Learning, Deep Learning, and Artificial Intelligence on Materials, Processes, and Structures Engineering",
+      "sourceUrl": "https://doi.org/10.1007/s40192-018-0117-8",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2985141487",
+      "title": "Recent Developments of Artificial Intelligence in Business Logistics: A Maritime Industry Case",
+      "sourceUrl": "https://doi.org/10.1007/978-3-030-29739-8_16",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4283275376",
+      "title": "Artificial intelligence and blockchain implementation in supply chains: a pathway to sustainability and data monetisation?",
+      "sourceUrl": "https://doi.org/10.1007/s10479-022-04785-2",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4386496448",
+      "title": "A Review of Artificial Intelligence-Based Optimization Applications in Traditional Active Maritime Collision Avoidance",
+      "sourceUrl": "https://doi.org/10.3390/su151813384",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4387397415",
+      "title": "Artificial intelligence ‐ driven sustainable development: Examining organizational, technical, and processing approaches to achieving global goals",
+      "sourceUrl": "https://doi.org/10.1002/sd.2773",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4317933195",
+      "title": "Application of Artificial Intelligence in Marine Corrosion Prediction and Detection",
+      "sourceUrl": "https://doi.org/10.3390/jmse11020256",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3093929720",
+      "title": "6G Wireless Channel Measurements and Models: Trends and Challenges",
+      "sourceUrl": "https://doi.org/10.1109/mvt.2020.3018436",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4282570835",
+      "title": "Supervised learning for maritime search operations: An artificial intelligence approach to search efficiency evaluation",
+      "sourceUrl": "https://doi.org/10.1016/j.eswa.2022.117857",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4392893849",
+      "title": "The transformative potential of artificial intelligence in the maritime transport and its impact on port industry",
+      "sourceUrl": "https://doi.org/10.21622/mrt.2024.03.1.752",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4406814899",
+      "title": "Artificial Intelligence in Maritime Anomaly Detection: A Decadal Bibliometric Analysis (2014–2024)",
+      "sourceUrl": "https://doi.org/10.1007/s40032-025-01169-w",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4376139506",
+      "title": "Survey on the Developments of Unmanned Marine Vehicles: Intelligence and Cooperation",
+      "sourceUrl": "https://doi.org/10.3390/s23104643",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3198040634",
+      "title": "Setting B2B digital marketing in artificial intelligence-based CRMs: A review and directions for future research",
+      "sourceUrl": "https://doi.org/10.1016/j.indmarman.2021.08.006",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4321101119",
+      "title": "A review of artificial intelligence in marine science",
+      "sourceUrl": "https://doi.org/10.3389/feart.2023.1090185",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3048327660",
+      "title": "Artificial intelligence technologies for Maritime Surveillance applications",
+      "sourceUrl": "https://doi.org/10.1109/mdm48529.2020.00067",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4409563974",
+      "title": "Artificial Intelligence as Enabler for Adoption of Sustainable Nuclear-Powered Maritime Ships: Challenges and Opportunities",
+      "sourceUrl": "https://doi.org/10.3390/su17083654",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3211661740",
+      "title": "DLTIF: Deep Learning-Driven Cyber Threat Intelligence Modeling and Identification Framework in IoT-Enabled Maritime Transportation Systems",
+      "sourceUrl": "https://doi.org/10.1109/tits.2021.3122368",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4389922283",
+      "title": "Small Unmanned Surface Vessels—A Review and Critical Analysis of Relations to Safety and Safety Assurance of Larger Autonomous Ships",
+      "sourceUrl": "https://doi.org/10.3390/jmse11122387",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2330188877",
+      "title": "Intelligent rudder control of an unmanned surface vessel",
+      "sourceUrl": "https://doi.org/10.1016/j.eswa.2016.01.057",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2598925596",
+      "title": "Towards the assessment of potential impact of unmanned vessels on maritime transportation safety",
+      "sourceUrl": "https://doi.org/10.1016/j.ress.2017.03.029",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2907106190",
+      "title": "Generalized velocity obstacle algorithm for preventing ship collisions at sea",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2018.12.053",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3089916726",
+      "title": "Sensors and AI Techniques for Situational Awareness in Autonomous Ships: A Review",
+      "sourceUrl": "https://doi.org/10.1109/tits.2020.3023957",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2999926820",
+      "title": "The Ocean-Going Autonomous Ship—Challenges and Threats",
+      "sourceUrl": "https://doi.org/10.3390/jmse8010041",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2990216432",
+      "title": "State-of-the-Art Research on Motion Control of Maritime Autonomous Surface Ships",
+      "sourceUrl": "https://doi.org/10.3390/jmse7120438",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4315474734",
+      "title": "Autonomous Collision Avoidance of Unmanned Surface Vehicles Based on Improved A-Star and Dynamic Window Approach Algorithms",
+      "sourceUrl": "https://doi.org/10.1109/mits.2022.3229109",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4385800465",
+      "title": "An overview of developments and challenges for unmanned surface vehicle autonomous berthing",
+      "sourceUrl": "https://doi.org/10.1007/s40747-023-01196-z",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2984080257",
+      "title": "Maritime autonomous surface ships (MASS): implementation and legal issues",
+      "sourceUrl": "https://doi.org/10.1108/mabr-01-2019-0006",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3128019105",
+      "title": "Path planning and collision avoidance for autonomous surface vehicles I: a review",
+      "sourceUrl": "https://doi.org/10.1007/s00773-020-00787-6",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2938580280",
+      "title": "Universal Autonomous Control and Management System for Multipurpose Unmanned Surface Vessel",
+      "sourceUrl": "https://doi.org/10.2478/pomr-2019-0004",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3130435805",
+      "title": "The Impact of Autonomous Ships on Safety at Sea – A Statistical Analysis",
+      "sourceUrl": "https://doi.org/10.1016/j.ress.2021.107558",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3087460198",
+      "title": "A ship collision avoidance system for human-machine cooperation during collision avoidance",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2020.107913",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2948162897",
+      "title": "Cybersecurity Attacks and Defences for Unmanned Smart Ships",
+      "sourceUrl": "https://doi.org/10.1109/cybermatics_2018.2018.00037",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3081871549",
+      "title": "A framework to model the STPA hierarchical control structure of an autonomous ship",
+      "sourceUrl": "https://doi.org/10.1016/j.ssci.2020.104939",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2974556546",
+      "title": "Decision-Making for the Autonomous Navigation of Maritime Autonomous Surface Ships Based on Scene Division and Deep Reinforcement Learning",
+      "sourceUrl": "https://doi.org/10.3390/s19184055",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4291476219",
+      "title": "The autonomous navigation system of a sea-going vessel",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2022.112104",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2940919353",
+      "title": "Regulating Autonomous Ships—Concepts, Challenges and Precedents",
+      "sourceUrl": "https://doi.org/10.1080/00908320.2019.1582593",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3095974075",
+      "title": "COLREGs-Compliant Unmanned Surface Vehicles Collision Avoidance Based on Multi-Objective Genetic Algorithm",
+      "sourceUrl": "https://doi.org/10.1109/access.2020.3030262",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3006408222",
+      "title": "Adaptive modeling of maritime autonomous surface ships with uncertainty using a weighted LS-SVR robust to outliers",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2020.107053",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4396977266",
+      "title": "A Review of Path Planning Methods for Marine Autonomous Surface Vehicles",
+      "sourceUrl": "https://doi.org/10.3390/jmse12050833",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2462876168",
+      "title": "Control of an Unmanned Surface Vehicle With Uncertain Displacement and Drag",
+      "sourceUrl": "https://doi.org/10.1109/joe.2016.2571158",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4225272915",
+      "title": "Advances in maritime autonomous surface ships (MASS) in merchant shipping",
+      "sourceUrl": "https://doi.org/10.1057/s41278-022-00232-y",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2557621405",
+      "title": "A multi-layered fast marching method for unmanned surface vehicle path planning in a time-variant maritime environment",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2016.11.009",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2610334615",
+      "title": "Hostile Control of Ships via False GPS Signals: Demonstration and Detection",
+      "sourceUrl": "https://doi.org/10.1002/navi.183",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2336502929",
+      "title": "The Use of Ship-Launched Fixed-Wing UAVs for Measuring the Marine Atmospheric Boundary Layer and Ocean Surface Processes",
+      "sourceUrl": "https://doi.org/10.1175/jtech-d-15-0019.1",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3181805889",
+      "title": "Prediction of human–machine interface (HMI) operational errors for maritime autonomous surface ships (MASS)",
+      "sourceUrl": "https://doi.org/10.1007/s00773-021-00834-w",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3119343336",
+      "title": "Collision Risk Inference System for Maritime Autonomous Surface Ships Using COLREGs Rules Compliant Collision Avoidance",
+      "sourceUrl": "https://doi.org/10.1109/access.2021.3049238",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2961832654",
+      "title": "A systemic hazard analysis and management process for the concept design phase of an autonomous vessel",
+      "sourceUrl": "https://doi.org/10.1016/j.ress.2019.106584",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3111446176",
+      "title": "A Survey of Technologies for Unmanned Merchant Ships",
+      "sourceUrl": "https://doi.org/10.1109/access.2020.3044040",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3083914918",
+      "title": "COLREG-Compliant Collision Avoidance for Unmanned Surface Vehicle Using Deep Reinforcement Learning",
+      "sourceUrl": "https://doi.org/10.1109/access.2020.3022600",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4280566538",
+      "title": "[Retracted] Deep Reinforcement Learning‐Based Path Control and Optimization for Unmanned Ships",
+      "sourceUrl": "https://doi.org/10.1155/2022/7135043",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2213095886",
+      "title": "Autonomous robotic refueling of an unmanned surface vehicle in varying sea states",
+      "sourceUrl": "https://doi.org/10.1109/iros.2015.7353591",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2991232381",
+      "title": "Learn to Navigate: Cooperative Path Planning for Unmanned Surface Vehicles Using Deep Reinforcement Learning",
+      "sourceUrl": "https://doi.org/10.1109/access.2019.2953326",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3127267938",
+      "title": "A multinomial process tree for reliability assessment of machinery in autonomous ships",
+      "sourceUrl": "https://doi.org/10.1016/j.ress.2021.107484",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3009841136",
+      "title": "An unmanned inland cargo vessel: Design, build, and experiments",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2020.107056",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4406334305",
+      "title": "Maritime Autonomous Surface Ships: Architecture for Autonomous Navigation Systems",
+      "sourceUrl": "https://doi.org/10.3390/jmse13010122",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3115594038",
+      "title": "Simulation of Maneuvering Trials of an Unmanned or Autonomous Surface Ship on a Navigation Simulator",
+      "sourceUrl": "https://doi.org/10.1007/978-981-33-6208-6_15",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3134146379",
+      "title": "Alternative fuel options for low carbon maritime transportation: Pathways to 2050",
+      "sourceUrl": "https://doi.org/10.1016/j.jclepro.2021.126651",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3134967399",
+      "title": "Review on Ammonia as a Potential Fuel: From Synthesis to Economics",
+      "sourceUrl": "https://doi.org/10.1021/acs.energyfuels.0c03685",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3197569697",
+      "title": "Reviewing two decades of cleaner alternative marine fuels: Towards IMO's decarbonization of the maritime transport sector",
+      "sourceUrl": "https://doi.org/10.1016/j.jclepro.2021.128871",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4406341213",
+      "title": "Hydrogen as an alternative fuel: A comprehensive review of challenges and opportunities in production, storage, and transportation",
+      "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2025.01.033",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4301596210",
+      "title": "A review of low and zero carbon fuel technologies: Achieving ship carbon reduction targets",
+      "sourceUrl": "https://doi.org/10.1016/j.seta.2022.102762",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3016531454",
+      "title": "The Potential Role of Ammonia as Marine Fuel—Based on Energy Systems Modeling and Multi-Criteria Decision Analysis",
+      "sourceUrl": "https://doi.org/10.3390/su12083265",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4389819157",
+      "title": "Sustainable E-Fuels: Green Hydrogen, Methanol and Ammonia for Carbon-Neutral Transportation",
+      "sourceUrl": "https://doi.org/10.3390/wevj14120349",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3035188391",
+      "title": "A study on the necessity of integrated evaluation of alternative marine fuels",
+      "sourceUrl": "https://doi.org/10.1080/25725084.2020.1779426",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4313584439",
+      "title": "The use of alternative fuels for maritime decarbonization: Special marine environmental risks and solutions from an international law perspective",
+      "sourceUrl": "https://doi.org/10.3389/fmars.2022.1082453",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3009208041",
+      "title": "A Preliminary Study on an Alternative Ship Propulsion System Fueled by Ammonia: Environmental and Economic Assessments",
+      "sourceUrl": "https://doi.org/10.3390/jmse8030183",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2914130738",
+      "title": "Reversible ammonia-based and liquid organic hydrogen carriers for high-density hydrogen storage: Recent progress",
+      "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2019.01.144",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2914300732",
+      "title": "Application of hydrides in hydrogen storage and compression: Achievements, outlook and perspectives",
+      "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2019.01.104",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3118694283",
+      "title": "Challenges in the use of hydrogen for maritime applications",
+      "sourceUrl": "https://doi.org/10.1039/d0ee01545h",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4310248763",
+      "title": "Recent advances in sustainable and safe marine engine operation with alternative fuels",
+      "sourceUrl": "https://doi.org/10.3389/fmech.2022.994942",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2626025588",
+      "title": "Clean energy and the hydrogen economy",
+      "sourceUrl": "https://doi.org/10.1098/rsta.2016.0400",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4392543952",
+      "title": "Ammonia marine engine design for enhanced efficiency and reduced greenhouse gas emissions",
+      "sourceUrl": "https://doi.org/10.1038/s41467-024-46452-z",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2948425123",
+      "title": "Safe and effective application of ammonia as a marine fuel",
+      "sourceUrl": "http://resolver.tudelft.nl/uuid:be8cbe0a-28ec-4bd9-8ad0-648de04649b8",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4312223627",
+      "title": "A Perspective on the Overarching Role of Hydrogen, Ammonia, and Methanol Carbon-Neutral Fuels towards Net Zero Emission in the Next Three Decades",
+      "sourceUrl": "https://doi.org/10.3390/en16010280",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4284673149",
+      "title": "Hydrogen Fuel for Future Mobility: Challenges and Future Aspects",
+      "sourceUrl": "https://doi.org/10.3390/su14148285",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4321010063",
+      "title": "Hydrogen liquefaction and storage: Recent progress and perspectives",
+      "sourceUrl": "https://doi.org/10.1016/j.rser.2023.113204",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391252433",
+      "title": "Methanol, a Plugin Marine Fuel for Green House Gas Reduction—A Review",
+      "sourceUrl": "https://doi.org/10.3390/en17030605",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3165168336",
+      "title": "Review on the Safe Use of Ammonia Fuel Cells in the Maritime Industry",
+      "sourceUrl": "https://doi.org/10.3390/en14113023",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4386220176",
+      "title": "The Potential Role of Ammonia for Hydrogen Storage and Transport: A Critical Review of Challenges and Opportunities",
+      "sourceUrl": "https://doi.org/10.3390/en16176192",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4406697492",
+      "title": "A Review of LCA Studies on Marine Alternative Fuels: Fuels, Methodology, Case Studies, and Recommendations",
+      "sourceUrl": "https://doi.org/10.3390/jmse13020196",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391344408",
+      "title": "A review on the research progress and application of compressed hydrogen in the marine hydrogen fuel cell power system",
+      "sourceUrl": "https://doi.org/10.1016/j.heliyon.2024.e25304",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3012250252",
+      "title": "Critical infrastructures cybersecurity and the maritime sector",
+      "sourceUrl": "https://doi.org/10.1016/j.trpro.2020.03.058",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4220904600",
+      "title": "Cybersecurity Challenges in the Maritime Sector",
+      "sourceUrl": "https://doi.org/10.3390/network2010009",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3092640103",
+      "title": "Cybersecurity in ports and maritime industry: Reasons for raising awareness on this issue",
+      "sourceUrl": "https://doi.org/10.1016/j.tranpol.2020.10.001",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2584794099",
+      "title": "Maritime Critical Infrastructure Protection: DHS Needs to Enhance Efforts to Address Port Cybersecurity",
+      "sourceUrl": "https://trid.trb.org/view/1371372",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4394566964",
+      "title": "A survey on blockchain technology in the maritime industry: Challenges and future perspectives",
+      "sourceUrl": "https://doi.org/10.1016/j.future.2024.03.046",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3021475808",
+      "title": "Towards Smart Port Infrastructures: Enhancing Port Activities Using Information and Communications Technology",
+      "sourceUrl": "https://doi.org/10.1109/access.2020.2990961",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4320339933",
+      "title": "A BN driven FMEA approach to assess maritime cybersecurity risks",
+      "sourceUrl": "https://doi.org/10.1016/j.ocecoaman.2023.106480",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2773874939",
+      "title": "A framework for cybersecurity assessments of critical port infrastructure",
+      "sourceUrl": "https://doi.org/10.1109/cyconus.2017.8167506",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3109725889",
+      "title": "A Holistic Review of Cybersecurity and Reliability Perspectives in Smart Airports",
+      "sourceUrl": "https://doi.org/10.1109/access.2020.3036728",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2769455556",
+      "title": "Cybersecurity in ports : a conceptual approach",
+      "sourceUrl": "http://hdl.handle.net/10419/209316",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2899568779",
+      "title": "A Taxonomy Framework for Maritime Cybersecurity: A Demonstration Using the Automatic Identification System",
+      "sourceUrl": "https://doi.org/10.12716/1001.12.03.01",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2770338946",
+      "title": "Digitization in maritime logistics—What is there and what is missing?",
+      "sourceUrl": "https://doi.org/10.1080/23311975.2017.1411066",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3089842096",
+      "title": "Assessing Cyber Challenges of Maritime Navigation",
+      "sourceUrl": "https://doi.org/10.3390/jmse8100776",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4380768819",
+      "title": "MaCySTe: A virtual testbed for maritime cybersecurity",
+      "sourceUrl": "https://doi.org/10.1016/j.softx.2023.101426",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4384436077",
+      "title": "Critical maritime infrastructure protection: What’s the trouble?",
+      "sourceUrl": "https://doi.org/10.1016/j.marpol.2023.105772",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391097217",
+      "title": "Maritime Autonomous Surface Ships: A Review of Cybersecurity Challenges, Countermeasures, and Future Perspectives",
+      "sourceUrl": "https://doi.org/10.1109/access.2024.3357082",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4205557186",
+      "title": "Cyber Security in the Maritime Industry: A Systematic Survey of Recent Advances and Future Trends",
+      "sourceUrl": "https://doi.org/10.3390/info13010022",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2891787788",
+      "title": "Effective maritime cybersecurity regulation – the case for a cyber code",
+      "sourceUrl": "https://doi.org/10.1080/19480881.2018.1519056",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4410515905",
+      "title": "Intelligent Maritime Shipping: A Bibliometric Analysis of Internet Technologies and Automated Port Infrastructure Applications",
+      "sourceUrl": "https://doi.org/10.3390/jmse13050979",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4393003256",
+      "title": "Future of maritime autonomy: cybersecurity, trust and mariner's situational awareness",
+      "sourceUrl": "https://doi.org/10.1080/20464177.2024.2330176",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4390503774",
+      "title": "Maritime cybersecurity: protecting digital seas",
+      "sourceUrl": "https://doi.org/10.1007/s10207-023-00800-0",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4309577990",
+      "title": "Digital transformation of maritime logistics: Exploring trends in the liner shipping segment",
+      "sourceUrl": "https://doi.org/10.1016/j.compind.2022.103811",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4405936754",
+      "title": "Enhancing Port and Maritime Cybersecurity Through AI - Enabled Threat Detection and Response",
+      "sourceUrl": "https://doi.org/10.1109/icsgsc62639.2024.10813774",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3197830394",
+      "title": "Towards a Maritime Cyber Range training environment",
+      "sourceUrl": "https://doi.org/10.1109/csr51186.2021.9527904",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4200009490",
+      "title": "Cyber Physical Systems Security for Maritime Assets",
+      "sourceUrl": "https://doi.org/10.3390/jmse9121384",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4399283331",
+      "title": "Comprehensive Analysis of Maritime Cybersecurity Landscape Based on the NIST CSF v2.0",
+      "sourceUrl": "https://doi.org/10.3390/jmse12060919",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2994681232",
+      "title": "Evaluating cybersecurity risks in the maritime industry: a literature review",
+      "sourceUrl": "https://researchonline.ljmu.ac.uk/id/eprint/11929/1/IAMU%202019%20Park%20et%20al.pdf",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4301401032",
+      "title": "Evaluating SLIM-based human error probability for ECDIS cybersecurity in maritime",
+      "sourceUrl": "https://doi.org/10.1017/s0373463322000534",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4321512825",
+      "title": "Cyber-physical security for ports infrastructure",
+      "sourceUrl": "https://doi.org/10.21622/marlog.2022.11.105",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4399206781",
+      "title": "Advancing coordination in critical maritime infrastructure protection: Lessons from maritime piracy and cybersecurity",
+      "sourceUrl": "https://doi.org/10.1016/j.ijcip.2024.100683",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3018983062",
+      "title": "Cybersecurity at Sea",
+      "sourceUrl": "https://doi.org/10.1007/978-3-030-34630-0_8",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4393003458",
+      "title": "Preventing Catastrophic Cyber–Physical Attacks on the Global Maritime Transportation System: A Case Study of Hybrid Maritime Security in the Straits of Malacca and Singapore",
+      "sourceUrl": "https://doi.org/10.3390/jmse12030510",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2997233153",
+      "title": "Antecedents and Consequences of Cybersecurity Awareness: A Case Study for Turkish Maritime Sector",
+      "sourceUrl": "https://doi.org/10.5505/jems.2019.85057",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2787053267",
+      "title": "Enhancing the Cybersecurity of Port Community Systems",
+      "sourceUrl": "https://doi.org/10.1007/978-3-319-74225-0_43",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4386245296",
+      "title": "Navigating the Sea of Data: A Comprehensive Review on Data Analysis in Maritime IoT Applications",
+      "sourceUrl": "https://doi.org/10.3390/app13179742",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4399053898",
+      "title": "Enhancing Maritime Cybersecurity through Operational Technology Sensor Data Fusion: A Comprehensive Survey and Analysis",
+      "sourceUrl": "https://doi.org/10.3390/s24113458",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4388827803",
+      "title": "Digital information in maritime supply chains with blockchain and cloud platforms: Supply chain capabilities, barriers, and research opportunities",
+      "sourceUrl": "https://doi.org/10.1016/j.techfore.2023.122978",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3004774144",
+      "title": "Maritime Cybersecurity: Meeting Threats to Globalization’s Great Conveyor",
+      "sourceUrl": "https://doi.org/10.24251/hicss.2020.240",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3155516278",
+      "title": "CR CyberMar as a Solution Path towards Cybersecurity Soundness in Maritime Logistics Domain",
+      "sourceUrl": "https://doi.org/10.7225/toms.v10.n01.011",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3168393667",
+      "title": "Cybersecurity in the European Union port sector in light of the digital transformation and the COVID-19 pandemic",
+      "sourceUrl": "https://doi.org/10.1007/s13437-021-00240-4",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4413268536",
+      "title": "Port resilience: a systematic literature review",
+      "sourceUrl": "https://doi.org/10.1057/s41278-025-00326-3",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4225993858",
+      "title": "Digitalization in Maritime Transport and Seaports: Bibliometric, Content and Thematic Analysis",
+      "sourceUrl": "https://doi.org/10.3390/jmse10040486",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3013499512",
+      "title": "A Tale of Sea and Sky On the Security of Maritime VSAT Communications",
+      "sourceUrl": "https://doi.org/10.1109/sp40000.2020.00056",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2341806142",
+      "title": "The influence of supply chain collaboration on collaborative advantage and port performance in maritime logistics",
+      "sourceUrl": "https://doi.org/10.1080/13675567.2015.1135237",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3031031267",
+      "title": "Port disruptions due to natural disasters: Insights into port and logistics resilience",
+      "sourceUrl": "https://doi.org/10.1016/j.trd.2020.102393",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2920398186",
+      "title": "Sustainability Challenges in Maritime Transport and Logistics Industry and Its Way Ahead",
+      "sourceUrl": "https://doi.org/10.3390/su11051331",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4288051329",
+      "title": "Ports’ criticality in international trade and global supply-chains",
+      "sourceUrl": "https://doi.org/10.1038/s41467-022-32070-0",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2478189671",
+      "title": "Scenario analysis and disaster preparedness for port and maritime logistics risk management",
+      "sourceUrl": "https://doi.org/10.1016/j.aap.2016.07.013",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2924370719",
+      "title": "An advanced fuzzy Bayesian-based FMEA approach for assessing maritime supply chain risks",
+      "sourceUrl": "https://doi.org/10.1016/j.tre.2019.03.011",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3168469624",
+      "title": "Blockchain technology for port logistics capability: Exclusive or sharing",
+      "sourceUrl": "https://doi.org/10.1016/j.trb.2021.05.010",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2797535019",
+      "title": "Digitalization in maritime and sustainable logistics: city logistics, port logistics and sustainable supply chain management in the digital age",
+      "sourceUrl": "http://hdl.handle.net/10419/209193",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2594174180",
+      "title": "An Analysis of Digital Transformation in the History and Future of Modern Ports",
+      "sourceUrl": "https://doi.org/10.24251/hicss.2017.160",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w1851981756",
+      "title": "Maritime Logistics : A Guide to Contemporary Shipping and Port Management",
+      "sourceUrl": "http://ci.nii.ac.jp/ncid/BB19538931",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4387821672",
+      "title": "Maritime Ports, Supply Chains and Logistics Corridors",
+      "sourceUrl": "https://doi.org/10.4324/9781003365013",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2784614186",
+      "title": "The impacts of port infrastructure and logistics performance on economic growth: the mediating role of seaborne trade",
+      "sourceUrl": "https://doi.org/10.1186/s41072-018-0027-0",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4312184485",
+      "title": "Improving the resilience of maritime supply chains: The integration of ports and inland transporters in duopoly markets",
+      "sourceUrl": "https://doi.org/10.1007/s42524-022-0231-3",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2788227973",
+      "title": "Environmental upgrading in global value chains: The potential and limitations of ports in the greening of maritime transport",
+      "sourceUrl": "https://doi.org/10.1016/j.geoforum.2018.01.011",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3048846564",
+      "title": "An Exploratory Study on the Logistics Supply Chain of Maritime Port",
+      "sourceUrl": "https://doi.org/10.2112/jcr-si107-002.1",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4387184932",
+      "title": "Review of Maritime Transport 2023",
+      "sourceUrl": "https://doi.org/10.18356/9789213584569",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4403651930",
+      "title": "Maritime Supply Chain Optimisation: A Case Study of Blockchain Integration in Port Logistics Management",
+      "sourceUrl": "https://doi.org/10.62012/mp.v3i3.41148",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3213918042",
+      "title": "Blockchain adoption in the maritime supply chain: Examining barriers and salient stakeholders in containerized international trade",
+      "sourceUrl": "https://doi.org/10.1016/j.tre.2021.102539",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2903816995",
+      "title": "Logistics 4.0 and sustainable supply chain management : innovative solutions for logistics and sustainable supply chain management in the context of industry 4.0",
+      "sourceUrl": "http://hdl.handle.net/10419/209195",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2990055250",
+      "title": "Blockchain and Smart Contracts for Entrepreneurial Collaboration in Maritime Supply Chains",
+      "sourceUrl": "https://doi.org/10.2478/ttj-2019-0030",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3137740479",
+      "title": "Container Logistics and Maritime Transport",
+      "sourceUrl": "https://doi.org/10.4324/9780429320996",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3023684259",
+      "title": "Seaports as Nodal Points of Circular Supply Chains: Opportunities and Challenges for Secondary Ports",
+      "sourceUrl": "https://doi.org/10.3390/su12093926",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391959017",
+      "title": "The Red Sea Crisis: ramifications for vessel operations, shipping networks, and maritime supply chains",
+      "sourceUrl": "https://doi.org/10.1057/s41278-024-00287-z",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4213053588",
+      "title": "Developing a smart port architecture and essential elements in the era of Industry 4.0",
+      "sourceUrl": "https://doi.org/10.1057/s41278-022-00211-3",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2910458317",
+      "title": "Gigantism in container shipping, ports and global logistics: a time-lapse into the future",
+      "sourceUrl": "https://doi.org/10.1057/s41278-018-00116-0",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4205413854",
+      "title": "A comprehensive literature review on spare parts logistics management in the maritime industry",
+      "sourceUrl": "https://doi.org/10.1016/j.ajsl.2021.12.003",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2530749968",
+      "title": "A game-theoretical approach for modeling competitions in a maritime supply chain",
+      "sourceUrl": "https://doi.org/10.1080/03088839.2016.1231427",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2964482263",
+      "title": "How big data enriches maritime research – a critical review of Automatic Identification System (AIS) data applications",
+      "sourceUrl": "https://doi.org/10.1080/01441647.2019.1649315",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3011713008",
+      "title": "Innovation in the maritime sector: aligning strategy with outcomes",
+      "sourceUrl": "https://doi.org/10.1080/03088839.2020.1737335",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2464205760",
+      "title": "Examining sustainability performance at ports: port managers’ perspectives on developing sustainable supply chains",
+      "sourceUrl": "https://doi.org/10.1080/03088839.2016.1199918",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3120887917",
+      "title": "Disruptions and resilience in global container shipping and ports: the COVID-19 pandemic versus the 2008–2009 financial crisis",
+      "sourceUrl": "https://doi.org/10.1057/s41278-020-00180-5",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2488775031",
+      "title": "All-Electric Ship Design: From Electrical Propulsion to Integrated Electrical and Electronic Power Systems",
+      "sourceUrl": "https://doi.org/10.1109/tte.2016.2598078",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2806332726",
+      "title": "AC Ship Microgrids: Control and Power Management Optimization",
+      "sourceUrl": "https://doi.org/10.3390/en11061458",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2754483672",
+      "title": "Dimension reduction in heterogeneous parametric spaces with application to naval engineering shape design problems",
+      "sourceUrl": "https://doi.org/10.1186/s40323-018-0118-3",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2588109978",
+      "title": "Review of Ship Microgrids: System Architectures, Storage Technologies and Power Quality Aspects",
+      "sourceUrl": "https://doi.org/10.3390/inventions2010004",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2033892743",
+      "title": "Full-scale unsteady RANS CFD simulations of ship behaviour and performance in head seas due to slow steaming",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2015.01.011",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2952392130",
+      "title": "Data-driven ship digital twin for estimating the speed loss caused by the marine fouling",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2019.05.045",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2946050739",
+      "title": "A Comprehensive Review of Maritime Microgrids: System Architectures, Energy Efficiency, Power Quality, and Regulations",
+      "sourceUrl": "https://doi.org/10.1109/access.2019.2917082",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3093310142",
+      "title": "Review of Underwater Ship Hull Cleaning Technologies",
+      "sourceUrl": "https://doi.org/10.1007/s11804-020-00157-z",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391169722",
+      "title": "Systems Engineering for Naval Ship Design Evolution",
+      "sourceUrl": "https://doi.org/10.3390/jmse12020210",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2970948886",
+      "title": "Machine learning models for predicting ship main engine Fuel Oil Consumption: A comparative study",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2019.106282",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2731434693",
+      "title": "Estimation of added resistance and ship speed loss in a seaway",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2017.06.051",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3044806866",
+      "title": "A novel cyber-risk assessment method for ship systems",
+      "sourceUrl": "https://doi.org/10.1016/j.ssci.2020.104908",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2508141790",
+      "title": "Evaluating a digital ship design tool prototype: Designers’ perceptions of novel ergonomics software",
+      "sourceUrl": "https://doi.org/10.1016/j.apergo.2016.08.026",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4211117779",
+      "title": "Artificial Intelligence Design for Ship Structures: A Variant Multiple-Input Neural Network-Based Ship Resistance Prediction",
+      "sourceUrl": "https://doi.org/10.1115/1.4053816",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2993859739",
+      "title": "A Model for Intact and Damage Stability Evaluation of CNG Ships during the Concept Design Stage",
+      "sourceUrl": "https://doi.org/10.3390/jmse7120450",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3211813355",
+      "title": "A Review of DC Shipboard Microgrids—Part II: Control Architectures, Stability Analysis, and Protection Schemes",
+      "sourceUrl": "https://doi.org/10.1109/tpel.2021.3128409",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2283345470",
+      "title": "Exploration of System Vulnerability in Naval Ship Concept Design",
+      "sourceUrl": "https://doi.org/10.5957/jspd.160006",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2770757993",
+      "title": "Predicting ship machinery system condition through analytical reliability tools and artificial neural networks",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2017.11.017",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3159858237",
+      "title": "A Triggering Mechanism for Cyber-Attacks in Naval Sensors and Systems",
+      "sourceUrl": "https://doi.org/10.3390/s21093195",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2915513980",
+      "title": "Two-phase optimal solutions for ship speed and trim optimization over a voyage using voyage report data",
+      "sourceUrl": "https://doi.org/10.1016/j.trb.2019.02.004",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2811107749",
+      "title": "Multifunction RF Systems for Naval Platforms",
+      "sourceUrl": "https://doi.org/10.3390/s18072076",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4367292510",
+      "title": "ShipHullGAN: A generic parametric modeller for ship hull design using deep convolutional generative model",
+      "sourceUrl": "https://doi.org/10.1016/j.cma.2023.116051",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4317433355",
+      "title": "Battery Energy Storage Systems in Ships’ Hybrid/Electric Propulsion Systems",
+      "sourceUrl": "https://doi.org/10.3390/en16031122",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w1914140920",
+      "title": "Integrating Human Factors &amp; Ergonomics in large-scale engineering projects: Investigating a practical approach for ship design",
+      "sourceUrl": "https://doi.org/10.1016/j.ergon.2015.09.007",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w1585434156",
+      "title": "Modeling and data exchange in a concurrent and collaborative design environment for electric ships",
+      "sourceUrl": "https://doi.org/10.1109/ests.2015.7157924",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2183134231",
+      "title": "Technical cross-fertilization between terrestrial microgrids and ship power systems",
+      "sourceUrl": "https://doi.org/10.1007/s40565-015-0108-0",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w227127889",
+      "title": "Project Based Coursework In A Naval Architecture Curriculum",
+      "sourceUrl": "https://doi.org/10.18260/1-2--11672",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3118335127",
+      "title": "Prediction of the aerodynamic behaviour of a full-scale naval ship in head waves using Detached Eddy Simulation",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2021.108583",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2502868461",
+      "title": "Full-scale unsteady RANS simulations of vertical ship motions in shallow water",
+      "sourceUrl": "https://doi.org/10.1016/j.oceaneng.2016.06.047",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3127746231",
+      "title": "Development of a Fuel Consumption Prediction Model Based on Machine Learning Using Ship In-Service Data",
+      "sourceUrl": "https://doi.org/10.3390/jmse9020137",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4200123276",
+      "title": "Ports’ role in shipping decarbonisation: A common port incentive scheme for shipping greenhouse gas emissions reduction",
+      "sourceUrl": "https://doi.org/10.1016/j.clscn.2021.100021",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3217727701",
+      "title": "Using digitalisation to achieve decarbonisation in the shipping industry",
+      "sourceUrl": "https://doi.org/10.1080/25725084.2021.2009420",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4323927796",
+      "title": "Electrification of onshore power systems in maritime transportation towards decarbonization of ports: A review of the cold ironing technology",
+      "sourceUrl": "https://doi.org/10.1016/j.rser.2023.113243",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2767044256",
+      "title": "Assessment of full life-cycle air emissions of alternative shipping fuels",
+      "sourceUrl": "https://doi.org/10.1016/j.jclepro.2017.10.165",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2811211442",
+      "title": "Decarbonization Pathways for International Maritime Transport: A Model-Based Policy Impact Assessment",
+      "sourceUrl": "https://doi.org/10.3390/su10072243",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4311729195",
+      "title": "Liquefied Natural Gas (LNG) as a Transitional Choice Replacing Marine Conventional Fuels (Heavy Fuel Oil/Marine Diesel Oil), towards the Era of Decarbonisation",
+      "sourceUrl": "https://doi.org/10.3390/su142416364",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4307552289",
+      "title": "Ship Energy Efficiency and Maritime Sector Initiatives to Reduce Carbon Emissions",
+      "sourceUrl": "https://doi.org/10.3390/en15217910",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4313362278",
+      "title": "Fuel Cell Systems for Maritime: A Review of Research Development, Commercial Products, Applications, and Perspectives",
+      "sourceUrl": "https://doi.org/10.3390/pr11010097",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4403949792",
+      "title": "Integrating ports into green shipping corridors: Drivers, challenges, and pathways to implementation",
+      "sourceUrl": "https://doi.org/10.1016/j.marpolbul.2024.117201",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4307752077",
+      "title": "Cost competitiveness of alternative maritime fuels in the new regulatory framework",
+      "sourceUrl": "https://doi.org/10.1016/j.trd.2022.103500",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4312126210",
+      "title": "Life Cycle Greenhouse Gas Emission Assessment for Using Alternative Marine Fuels: A Very Large Crude Carrier (VLCC) Case Study",
+      "sourceUrl": "https://doi.org/10.3390/jmse10121969",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4409471041",
+      "title": "Strategies For Decarbonisation in The Port and Maritime Sector: Key Challenges and Leading Ports",
+      "sourceUrl": "https://doi.org/10.24857/rgsa.v19n4-071",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4403952905",
+      "title": "A comprehensive analysis of strategies for reducing GHG emissions in maritime ports",
+      "sourceUrl": "https://doi.org/10.1016/j.marpol.2024.106455",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4411027350",
+      "title": "Assessing the role of short-sea shipping and ports in maritime well-to-wake emissions",
+      "sourceUrl": "https://doi.org/10.1016/j.marpolbul.2025.118253",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4404939180",
+      "title": "Energy systems integration and sector coupling in future ports: A qualitative study of Norwegian ports",
+      "sourceUrl": "https://doi.org/10.1016/j.apenergy.2024.125003",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4407393077",
+      "title": "Maritime emissions trading in the EU: Systematic literature review and policy assessment",
+      "sourceUrl": "https://doi.org/10.1016/j.tranpol.2025.02.014",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4407189872",
+      "title": "Decarbonising Maritime Transport: The Role of Green Shipping Corridors in Making Sustainable Port‐City Ecosystems",
+      "sourceUrl": "https://doi.org/10.17645/oas.9411",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4416025063",
+      "title": "A systematic review of technologies, measures, and CO2 emission reduction potential for maritime transport decarbonisation",
+      "sourceUrl": "https://doi.org/10.1016/j.adapen.2025.100255",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4391160375",
+      "title": "Decarbonising road freight transport: The role of zero-emission trucks and intangible costs",
+      "sourceUrl": "https://doi.org/10.1038/s41598-024-52682-4",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3177047809",
+      "title": "Preliminary design of a fuel cell/battery hybrid powertrain for a heavy-duty yard truck for port logistics",
+      "sourceUrl": "https://doi.org/10.1016/j.enconman.2021.114423",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4319724843",
+      "title": "A review on ports’ readiness to facilitate international hydrogen trade",
+      "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2023.01.220",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2945214992",
+      "title": "Underwater Robots: From Remotely Operated Vehicles to Intervention-Autonomous Underwater Vehicles",
+      "sourceUrl": "https://doi.org/10.1109/mra.2019.2908063",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2332283998",
+      "title": "Integral Line-of-Sight Guidance and Control of Underactuated Marine Vehicles: Theory, Simulations, and Experiments",
+      "sourceUrl": "https://doi.org/10.1109/tcst.2015.2504838",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2581111877",
+      "title": "Advanced Control in Marine Mechatronic Systems: A Survey",
+      "sourceUrl": "https://doi.org/10.1109/tmech.2017.2660528",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3082243195",
+      "title": "Marine Robots for Underwater Surveillance",
+      "sourceUrl": "https://doi.org/10.1007/s43154-020-00028-z",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2913393332",
+      "title": "A Survey on Unmanned Surface Vehicles for Disaster Robotics: Main Challenges and Directions",
+      "sourceUrl": "https://doi.org/10.3390/s19030702",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3121887140",
+      "title": "Internet of underwater things and big marine data analytics – a comprehensive survey",
+      "sourceUrl": "https://eprints.soton.ac.uk/446331/1/clean_for_RG.pdf",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4285818829",
+      "title": "Intelligent Path Planning of Underwater Robot Based on Reinforcement Learning",
+      "sourceUrl": "https://doi.org/10.1109/tase.2022.3190901",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2956110096",
+      "title": "Fuel cell systems for long-endurance autonomous underwater vehicles – challenges and benefits",
+      "sourceUrl": "https://doi.org/10.1016/j.ijhydene.2019.05.035",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3096656822",
+      "title": "Collaborative Multi-Robot Search and Rescue: Planning, Coordination, Perception, and Active Vision",
+      "sourceUrl": "https://doi.org/10.1109/access.2020.3030190",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4287854497",
+      "title": "On the History and Future of 100% Renewable Energy Systems Research",
+      "sourceUrl": "https://doi.org/10.1109/access.2022.3193402",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2910756055",
+      "title": "Capture and simulation of the ocean environment for offshore renewable energy",
+      "sourceUrl": "https://doi.org/10.1016/j.rser.2019.01.011",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3031747086",
+      "title": "Renewable energy for sustainable development in India: current status, future prospects, challenges, employment, and investment opportunities",
+      "sourceUrl": "https://doi.org/10.1186/s13705-019-0232-1",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2728589724",
+      "title": "Ocean beliefs and support for an offshore wind energy project",
+      "sourceUrl": "https://doi.org/10.1016/j.ocecoaman.2017.06.012",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4200337841",
+      "title": "Renewable Energy in the Sustainable Development of Electrical Power Sector: A Review",
+      "sourceUrl": "https://doi.org/10.3390/en14248240",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3019075159",
+      "title": "A Comprehensive Review on Renewable Energy Development, Challenges, and Policies of Leading Indian States With an International Perspective",
+      "sourceUrl": "https://doi.org/10.1109/access.2020.2988011",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2572191223",
+      "title": "Energy Saving in Public Transport Using Renewable Energy",
+      "sourceUrl": "https://doi.org/10.3390/su9010106",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2013138470",
+      "title": "Solar Energy: Review of Potential Green &amp; Clean Energy for Coastal and Offshore Applications",
+      "sourceUrl": "https://doi.org/10.1016/j.aqpro.2015.02.062",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w4288079564",
+      "title": "Developments in Renewable Energies Offshore",
+      "sourceUrl": "https://doi.org/10.1201/9781003134572",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w3136247427",
+      "title": "Fostering a blue economy: Offshore renewable energy",
+      "sourceUrl": "https://doi.org/10.13140/rg.2.2.16215.19362",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2918836041",
+      "title": "Benthic effects of offshore renewables: identification of knowledge gaps and urgently needed research",
+      "sourceUrl": "https://doi.org/10.1093/icesjms/fsz018",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    },
+    {
+      "recordId": "openalex-https-openalex-org-w2953103152",
+      "title": "The Potential and Status of Renewable Energy Development in Malaysia",
+      "sourceUrl": "https://doi.org/10.3390/en12122437",
+      "priority": "normal",
+      "actionabilityScore": null,
+      "relevanceScore": null
+    }
+  ]
+}

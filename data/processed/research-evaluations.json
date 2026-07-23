@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-23T01:18:52.884Z",
-  "recordCount": 8,
+  "generatedAt": "2026-07-23T03:21:54.529Z",
+  "recordCount": 9,
   "evaluations": [
     {
       "recordId": "cordis-101138620",
@@ -200,6 +200,31 @@
         "model": null,
         "promptVersion": "heuristic-template-v1",
         "generatedAt": "2026-07-23T01:18:52.884Z"
+      }
+    },
+    {
+      "recordId": "cordis-101096923",
+      "plainLanguageExplanation": "SEAMLESS focuses on safe, efficient and autonomous solutions for European short sea and inland waterway transport.",
+      "problemBeingAddressed": "SEAMLESS develops automated, cost-effective and resilient waterborne freight feeder services.",
+      "technologyApproach": "Relevant to autonomous waterborne transport and multimodal logistics.",
+      "maritimeRelevance": "Directly relevant to Autonomous Vessels and Maritime Logistics within maritime R&D.",
+      "possibleApplication": "Potentially applicable to maritime operators and researchers working on Autonomous Vessels and Maritime Logistics, pending review of full project outcomes.",
+      "whyItMatters": "Relevant to autonomous waterborne transport and multimodal logistics.",
+      "followUpOrActionSignal": "Follow-up status: active or recent.",
+      "limitations": "Based on project metadata, summary and coordinator-page evidence gathered so far; full technical publications and outcome reports have not been reviewed.",
+      "explanationProvenance": {
+        "basedOnFields": [
+          "summary",
+          "evidenceSnippet",
+          "whyUseful",
+          "topicPrimary",
+          "topicSecondary",
+          "followUpStatus"
+        ],
+        "aiGenerated": false,
+        "model": null,
+        "promptVersion": "heuristic-template-v1",
+        "generatedAt": "2026-07-23T03:20:40.466Z"
       }
     }
   ]

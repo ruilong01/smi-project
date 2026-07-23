@@ -1,15 +1,18 @@
-import researchRecordsData from "../../data/processed/research-records.json";
+import displayRecordsData from "../../data/processed/display-records.json";
 import imageCandidatesData from "../../data/processed/image-candidates.json";
 import researchEvaluationsData from "../../data/processed/research-evaluations.json";
 
 /**
  * Research Intelligence Gallery data seam.
  *
- * Reads data/processed/research-records.json directly (all real,
- * source-backed maritime R&D records - not gated on whether a record
- * could be attributed to a single country, unlike the legacy per-country
- * project pipeline in researchProjectData.js). Joins in image candidates
- * and heuristic/AI explanations by recordId.
+ * Reads data/processed/display-records.json - NOT the full processed
+ * records file (which holds every record, including pending/rejected
+ * ones, and is admin/debug data only) - so this file, and everything built
+ * on top of it (ResearchGallery, ResearchGalleryDetail, CountryProfile
+ * Panel's gallery links), can only ever show records that already passed
+ * the app's real-data display-eligibility rule (verified/source-linked
+ * status, a real source URL, and at least one image candidate - see
+ * scripts/processing/normalizeResearchRecord.mjs's isDisplayEligible()).
  *
  * Same build-time-import seam as researchProjectData.js's
  * loadResearchData() - a future runtime-fetch swap only touches this file.
@@ -48,7 +51,7 @@ const evaluationsByRecordId = new Map(
 // `evaluation` (null if this record hasn't been enriched yet). A record
 // with no evaluation is real, sourced metadata that just hasn't had
 // explanation fields generated for it - shown plainly, not hidden.
-export const galleryRecords = (researchRecordsData.records ?? []).map((record) => ({
+export const galleryRecords = (displayRecordsData.records ?? []).map((record) => ({
   ...record,
   images: imagesByRecordId.get(record.recordId) ?? [],
   evaluation: evaluationsByRecordId.get(record.recordId) ?? null,

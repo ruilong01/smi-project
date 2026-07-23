@@ -24,6 +24,14 @@
     "enrich:test-media": "node scripts/ingestion/enrichTestMedia.mjs",
     "fetch:publication-images": "node scripts/ingestion/fetchPublicationImages.mjs",
     "extract:cordis-details": "node scripts/ingestion/extractCordisProjectDetails.mjs",
+    "triage:records": "node scripts/ingestion/triageRecords.mjs",
+    "verify:display-eligibility": "node scripts/ingestion/verifyDisplayEligibility.mjs",
+    "compare:records": "node scripts/ingestion/compareRecords.mjs",
+    "fetch:global-updates": "node scripts/ingestion/fetchGlobalUpdates.mjs",
+    "queue:enrichment": "node scripts/ingestion/queueEnrichment.mjs",
+    "enrich:images": "node scripts/ingestion/enrichImages.mjs",
+    "enrich:explanations": "node scripts/ingestion/enrichExplanations.mjs",
+    "refresh:incremental": "node scripts/ingestion/refreshIncremental.mjs",
     "verify:schema-compatibility": "node scripts/processing/verifySchemaCompatibility.mjs"
   },
   "dependencies": {
