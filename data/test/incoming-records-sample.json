@@ -1,0 +1,82 @@
+{
+  "description": "Fixture for npm run verify:incremental-comparison. existingRecords stands in for a prior data/processed/research-records.json snapshot; incomingRecords stands in for a fresh fetch/normalize pass. recordHash values are hand-set (not computed) so each scenario's outcome is deterministic and doesn't depend on normalizeResearchRecord's actual hashing logic.",
+  "existingRecords": [
+    {
+      "recordId": "test-existing-updated-target",
+      "title": "Fixture Project: Updated Record Target",
+      "doi": "10.9999/fixture-updated",
+      "sourceUrls": ["https://example.test/fixture/updated"],
+      "recordHash": "hash-updated-OLD-a1b2c3"
+    },
+    {
+      "recordId": "test-existing-unchanged-target",
+      "title": "Fixture Project: Unchanged Record Target",
+      "doi": "10.9999/fixture-unchanged",
+      "sourceUrls": ["https://example.test/fixture/unchanged"],
+      "recordHash": "hash-unchanged-STABLE-d4e5f6"
+    },
+    {
+      "recordId": "test-existing-review-target",
+      "title": "Autonomous Ship Navigation Systems: A Fixture Review",
+      "institution": "Fixture Maritime University",
+      "publicationDate": "2021-06-01",
+      "doi": "10.9999/fixture-review-existing",
+      "sourceUrls": ["https://example.test/fixture/review-existing"],
+      "recordHash": "hash-review-existing-g7h8i9"
+    }
+  ],
+  "incomingRecords": [
+    {
+      "recordId": "test-incoming-new",
+      "title": "Fixture Project: Brand New Record",
+      "doi": "10.9999/fixture-new",
+      "sourceUrls": ["https://example.test/fixture/new"],
+      "recordHash": "hash-new-j1k2l3"
+    },
+    {
+      "recordId": "test-incoming-updated",
+      "title": "Fixture Project: Updated Record Target",
+      "doi": "10.9999/fixture-updated",
+      "sourceUrls": ["https://example.test/fixture/updated"],
+      "recordHash": "hash-updated-NEW-m4n5o6"
+    },
+    {
+      "recordId": "test-incoming-unchanged",
+      "title": "Fixture Project: Unchanged Record Target",
+      "doi": "10.9999/fixture-unchanged",
+      "sourceUrls": ["https://example.test/fixture/unchanged"],
+      "recordHash": "hash-unchanged-STABLE-d4e5f6"
+    },
+    {
+      "recordId": "test-incoming-duplicate-a",
+      "title": "Fixture Project: Duplicate Pair (first)",
+      "doi": "10.9999/fixture-duplicate",
+      "sourceUrls": ["https://example.test/fixture/duplicate"],
+      "recordHash": "hash-duplicate-p7q8r9"
+    },
+    {
+      "recordId": "test-incoming-duplicate-b",
+      "title": "Fixture Project: Duplicate Pair (second)",
+      "doi": "10.9999/fixture-duplicate",
+      "sourceUrls": ["https://example.test/fixture/duplicate"],
+      "recordHash": "hash-duplicate-p7q8r9"
+    },
+    {
+      "recordId": "test-incoming-review",
+      "title": "Autonomous Ship Navigation Systems: A Fixture Review",
+      "institution": "Fixture Maritime University",
+      "publicationDate": "2021-06-01",
+      "doi": "10.9999/fixture-review-incoming",
+      "sourceUrls": ["https://example.test/fixture/review-incoming"],
+      "recordHash": "hash-review-incoming-s1t2u3"
+    }
+  ],
+  "expectedClassifications": {
+    "test-incoming-new": "new",
+    "test-incoming-updated": "updated",
+    "test-incoming-unchanged": "unchanged",
+    "test-incoming-duplicate-a": "new",
+    "test-incoming-duplicate-b": "duplicate",
+    "test-incoming-review": "needs_manual_review"
+  }
+}

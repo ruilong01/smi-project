@@ -1,14 +1,6 @@
 {
-  "generatedAt": "2026-07-23T05:13:07.704Z",
-  "rawRunFilesProcessed": 3,
-  "totalRawWorksSeen": 1521,
-  "openAlexRecordCount": 304,
-  "preservedNonOpenAlexRecordCount": 25,
+  "generatedAt": "2026-07-23T08:28:23.749Z",
   "recordCount": 329,
-  "droppedCount": 1217,
-  "dropReasons": {
-    "not_strong_maritime_match": 609
-  },
   "records": [
     {
       "recordId": "cordis-101138620",

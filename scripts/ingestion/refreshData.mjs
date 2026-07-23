@@ -73,6 +73,7 @@ async function moveTempIntoPlace(tempDir) {
     "pending-image-enrichment.json",
     "rejected-records.json",
     "display-eligibility-report.json",
+    "compare-report.json",
   ];
   for (const fileName of fileNames) {
     const tempPath = path.join(tempDir, fileName);

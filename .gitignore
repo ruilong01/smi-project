@@ -17,3 +17,8 @@ data/logs/
 data/processed/.tmp-*/
 data/processed/*.tmp-*.json
 data/processed/*.bak
+
+# verify:incremental-comparison's fixture-test output - regenerated on
+# every run from data/test/incoming-records-sample.json, never the real
+# comparison state, must never be confused with data/processed/*.json.
+data/processed/test/
