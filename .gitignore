@@ -15,3 +15,5 @@ yarn-error.log*
 data/raw/openalex/
 data/logs/
 data/processed/.tmp-*/
+data/processed/*.tmp-*.json
+data/processed/*.bak

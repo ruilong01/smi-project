@@ -21,7 +21,8 @@
     "verify:data-provenance": "node scripts/ingestion/verifyDataProvenance.mjs",
     "refresh:data": "node scripts/ingestion/refreshData.mjs",
     "curate:images": "node scripts/ingestion/curateImages.mjs",
-    "enrich:test-media": "node scripts/ingestion/enrichTestMedia.mjs"
+    "enrich:test-media": "node scripts/ingestion/enrichTestMedia.mjs",
+    "verify:schema-compatibility": "node scripts/processing/verifySchemaCompatibility.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

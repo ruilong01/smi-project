@@ -1,5 +1,6 @@
 {
-  "generatedAt": "2026-07-23T01:18:52.884Z",
+  "generatedAt": "2026-07-23T02:03:42.930Z",
+  "sourceSeedFile": "maritime_rnd_records_with_image_candidates.json",
   "imageCandidateCount": 36,
   "images": [
     {
@@ -13,6 +14,7 @@
       "imageType": "project_hero",
       "canEmbed": false,
       "rightsNote": "Use as linked preview with source attribution unless reuse rights are confirmed.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -33,6 +35,7 @@
       "imageType": "project_hero",
       "canEmbed": false,
       "rightsNote": "Likely licensed/stock image. Use as linked preview only unless rights are confirmed.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -53,6 +56,7 @@
       "imageType": "consortium_map",
       "canEmbed": false,
       "rightsNote": "Use as linked preview with project source attribution.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -73,6 +77,7 @@
       "imageType": "logo",
       "canEmbed": false,
       "rightsNote": "Logo; use cautiously with attribution.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -93,6 +98,7 @@
       "imageType": "pilot_vessel",
       "canEmbed": false,
       "rightsNote": "Use as linked preview with project source attribution unless reuse rights are confirmed.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -113,6 +119,7 @@
       "imageType": "pilot_vessel",
       "canEmbed": false,
       "rightsNote": "Use as linked preview with project source attribution unless reuse rights are confirmed.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -133,6 +140,7 @@
       "imageType": "pilot_vessel",
       "canEmbed": false,
       "rightsNote": "Use as linked preview with project source attribution unless reuse rights are confirmed.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -153,6 +161,7 @@
       "imageType": "logo",
       "canEmbed": false,
       "rightsNote": "Logo; use cautiously with attribution.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -173,6 +182,7 @@
       "imageType": "logo",
       "canEmbed": false,
       "rightsNote": "Logo; use cautiously with attribution.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -193,6 +203,7 @@
       "imageType": "source_preview",
       "canEmbed": false,
       "rightsNote": "Theme/stock image. Use as linked preview only unless rights are confirmed.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -213,6 +224,7 @@
       "imageType": "technical_visual",
       "canEmbed": false,
       "rightsNote": "Use as linked preview with source attribution unless reuse rights are confirmed.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -233,6 +245,7 @@
       "imageType": "infographic",
       "canEmbed": false,
       "rightsNote": "Use as linked preview with source attribution unless reuse rights are confirmed.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -253,6 +266,7 @@
       "imageType": "icon_visual",
       "canEmbed": false,
       "rightsNote": "Small visual; use as linked preview only.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -273,6 +287,7 @@
       "imageType": "logo",
       "canEmbed": false,
       "rightsNote": "Logo; use cautiously with attribution.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -293,6 +308,7 @@
       "imageType": "project_hero_candidate",
       "canEmbed": false,
       "rightsNote": "Candidate URL from project site; script should verify HTTP status before display.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,
@@ -313,6 +329,7 @@
       "imageType": "logo",
       "canEmbed": false,
       "rightsNote": "SVG logo; use cautiously with attribution and verify display compatibility.",
+      "origin": "media-seed",
       "aiCuration": {
         "status": "pending",
         "verdict": null,

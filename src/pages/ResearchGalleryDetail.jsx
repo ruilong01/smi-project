@@ -1,6 +1,6 @@
 import { ArrowLeft, ExternalLink, ImageOff } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
-import { getGalleryRecordById } from "../data/researchGalleryData.js";
+import { getGalleryRecordById, getVerificationStatusLabel } from "../data/researchGalleryData.js";
 
 function DetailImage({ record }) {
   const image = record.images?.[0];
@@ -121,7 +121,7 @@ export default function ResearchGalleryDetail() {
             ) : null}
             <div className="project-info-item">
               <dt>Data quality</dt>
-              <dd>{record.dataStatus === "media_enriched_seed_record" ? "Human-curated seed record" : "Metadata-only"}</dd>
+              <dd>{getVerificationStatusLabel(record.verificationStatus)}</dd>
             </div>
             <div className="project-info-item">
               <dt>Recency</dt>

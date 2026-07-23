@@ -69,3 +69,21 @@ export function getGalleryRecordsForCountryCode(countryCode) {
   if (!countryCode) return [];
   return galleryRecords.filter((record) => record.countryCode === countryCode);
 }
+
+// Mirrors the five-way taxonomy scripts/processing/normalizeResearchRecord.mjs
+// computes for every record. A source-linked seed record (real sourceUrl,
+// no raw fetch file yet) must never be shown as fully verified automated
+// data, and an unverified record must never be shown as a normal
+// high-confidence one - these labels are the only place verificationStatus
+// is turned into UI text, so there is one place to keep that rule correct.
+const VERIFICATION_STATUS_LABELS = {
+  verified_api_extracted: "Verified API-extracted record",
+  source_linked_seed: "Source-linked seed record",
+  metadata_only: "Metadata-only record",
+  unverified: "Unverified record",
+  mock_demo: "Mock/demo record",
+};
+
+export function getVerificationStatusLabel(verificationStatus) {
+  return VERIFICATION_STATUS_LABELS[verificationStatus] ?? "Unverified record";
+}

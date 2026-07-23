@@ -28,7 +28,10 @@
 // (no file I/O, no dataset-wide joins) so it is trivial to unit-test - see
 // scripts/processing/verifySchemaCompatibility.mjs.
 
-const MOCK_PATTERN = /\bmock\b|\bdemo\b|\bsample\b/i;
+// No \b word-boundary here deliberately: dataStatus/recordType values are
+// our own snake_case tokens (e.g. "mock_demo_sample"), and \b never matches
+// between two underscore-joined words since "_" counts as \w.
+const MOCK_PATTERN = /mock|demo|sample/i;
 
 export const VERIFICATION_STATUSES = [
   "verified_api_extracted",
