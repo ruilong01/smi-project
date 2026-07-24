@@ -24,7 +24,7 @@ const ALWAYS_BLOCKED_PATTERNS = [
   { test: (f) => /^dist\//.test(f), label: "dist/**" },
   { test: (f) => /^build\//.test(f), label: "build/**" },
   { test: (f) => /\.zip$/i.test(f), label: "*.zip" },
-  { test: (f) => f === ".env" || f === ".env.local" || /^\.env\./.test(f), label: ".env / .env.local" },
+  { test: (f) => f !== ".env.example" && (f === ".env" || f === ".env.local" || /^\.env\./.test(f)), label: ".env / .env.local" },
   { test: (f) => /^node_modules\//.test(f), label: "node_modules/**" },
 ];
 
@@ -39,6 +39,7 @@ const ALLOWED_PATTERNS = [
   { test: (f) => f === "package.json", label: "package.json" },
   { test: (f) => f === "package-lock.json", label: "package-lock.json" },
   { test: (f) => f === ".gitignore", label: ".gitignore" },
+  { test: (f) => f === ".env.example", label: ".env.example" },
   { test: (f) => /^\.github\//.test(f), label: ".github/**" },
   { test: (f) => /^deploy\//.test(f), label: "deploy/**" },
 ];
