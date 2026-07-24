@@ -109,6 +109,27 @@ export async function fetchJson(url, options = {}) {
   return response.json();
 }
 
+// Returns the raw Response (not parsed as JSON/text) - for callers that
+// need to inspect headers (e.g. content-type before trusting a body is
+// really a PDF) or read a binary body (arrayBuffer), which fetchJson/
+// fetchText can't provide.
+export async function fetchRaw(url, options = {}) {
+  const { email = null, retries = DEFAULT_RETRIES, timeout = DEFAULT_TIMEOUT_MS, requestDelay = DEFAULT_REQUEST_DELAY_MS } =
+    options.fetchOptions ?? {};
+
+  return fetchWithRetry(
+    url,
+    {
+      ...options,
+      headers: {
+        "User-Agent": buildUserAgent(email),
+        ...(options.headers ?? {}),
+      },
+    },
+    { retries, timeout, requestDelay }
+  );
+}
+
 export async function fetchText(url, options = {}) {
   const { email = null, retries = DEFAULT_RETRIES, timeout = DEFAULT_TIMEOUT_MS, requestDelay = DEFAULT_REQUEST_DELAY_MS } =
     options.fetchOptions ?? {};

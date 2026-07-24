@@ -1,36 +1,43 @@
 /**
  * Committed registry of institution images the UI is allowed to show.
  *
- * This is hand-promoted from a reviewed run of
- * scripts/ingestion/discoverInstitutionImagesSample.mjs's output
- * (data/processed/test/institution-image-sample.json - test/runtime data,
- * never read by the UI directly - see docs/IMAGE_FETCHING_AND_AI_EVALUATION.md's
- * "Promoting accepted images into UI" section). Only entries the mock
- * evaluator marked "accept" are here; nothing rejected or "review" ever
- * reaches this file, and every field below is copied verbatim from that
- * run's real output - never invented or filled in with a guess.
+ * Hand-promoted from reviewed runs of
+ * scripts/ingestion/discoverInstitutionImages.mjs's output
+ * (data/processed/test/institution-image-discovery.json - test/runtime
+ * data, never read by the UI directly - see
+ * docs/IMAGE_FETCHING_AND_AI_EVALUATION.md's "Promoting accepted images
+ * into UI" section). Only entries the mock evaluator marked "accept" are
+ * here; nothing rejected or "review" ever reaches this file, and every
+ * field below is copied verbatim from that run's real output - never
+ * invented or filled in with a guess.
  *
- * Promoted from run at 2026-07-24T06:34 (all three re-verified with
- * --force to recover full mockAiScore/fetchMethod provenance after an
- * earlier "preserve existing" run had lost it).
+ * imageType priority (landmark-building > campus > hero > wikimedia >
+ * logo > fallback, see docs/IMAGE_FETCHING_AND_AI_EVALUATION.md) - NTU's
+ * entry was upgraded from a plain logo to a real landmark building photo
+ * ("The Hive", NTU's own about-us page og:image) once
+ * discoverInstitutionImages.mjs's multi-page search found it; VERKIS and
+ * Delft are still logo/hero fallbacks because no better candidate was
+ * found on their homepages in this run - not because logos were preferred.
  */
 export const institutionImageRegistry = [
   {
     institutionName: "Nanyang Technological University",
     institutionSlug: "nanyang-technological-university",
     country: "Singapore",
-    assetPath: "/assets/institutions/nanyang-technological-university/image.png",
-    imageSourceUrl: "https://www.ntu.edu.sg/",
-    imageSourceName: "Home",
+    assetPath: "/assets/institutions/nanyang-technological-university/image.jpg",
+    imageSourceUrl: "https://www.ntu.edu.sg/about-us",
+    imageSourceName: "About Us | Vision and Mission",
     rightsNote: "Source-proven official website image; verify usage rights before commercial redistribution.",
+    imageType: "hero",
     confidence: "high",
-    reason: "Inline <img> on the official ntu.edu.sg homepage whose path/alt text identifies it as the NTU logo.",
-    fetchMethod: "page:img",
-    mockAiScore: 0.85,
+    reason:
+      "og:image on NTU's own official about-us page - a real photo of The Hive, one of NTU's iconic landmark buildings, found by discoverInstitutionImages.mjs's multi-page search. Upgraded from an earlier plain-logo entry (see git history).",
+    fetchMethod: "og:image",
+    mockAiScore: 0.89,
     mockAiDecision: "accept",
     mockAiReason:
-      "Baseline: real http(s) source page, not on any blocked-domain list.; Source domain (ntu.edu.sg) textually matches the target name.; Image is a plain inline <img> on the source page.; Candidate image path contains an official-asset keyword (logo/campus/about/media/brand/press/news).; Image alt/title text mentions \"Nanyang Technological University\" (or its acronym).",
-    fetchedAt: "2026-07-24T06:34:31.622Z",
+      "Baseline: real http(s) source page, not on any blocked-domain list.; Source domain (ntu.edu.sg) textually matches the target name.; Image is the page's own og:image meta tag - the page owner's chosen representative image.; Image type classified as \"hero\" (+0.14) - landmark/campus images are prioritized well above a plain logo.",
+    fetchedAt: "2026-07-24T07:36:49.933Z",
   },
   {
     institutionName: "VERKIS HF",
@@ -40,13 +47,15 @@ export const institutionImageRegistry = [
     imageSourceUrl: "https://www.verkis.is/",
     imageSourceName: "Verkís verkfræðistofa | www.verkis.is",
     rightsNote: "Source-proven official website image; verify usage rights before commercial redistribution.",
+    imageType: "logo",
     confidence: "high",
-    reason: "og:image meta tag on the official verkis.is homepage.",
+    reason:
+      "og:image meta tag on the official verkis.is homepage - a logo. No landmark/campus image was found on the homepage or the guessed about/campus/media sub-pages (all 404'd); kept as a fallback per the landmark-over-logo policy, not a preferred choice.",
     fetchMethod: "og:image",
     mockAiScore: 0.85,
     mockAiDecision: "accept",
     mockAiReason:
-      "Baseline: real http(s) source page, not on any blocked-domain list.; Source domain (verkis.is) textually matches the target name.; Image is the page's own og:image meta tag - the page owner's chosen representative image.",
+      "Baseline: real http(s) source page, not on any blocked-domain list.; Source domain (verkis.is) textually matches the target name.; Image is the page's own og:image meta tag - the page owner's chosen representative image.; Image type classified as \"logo\" (+0.04) - landmark/campus images are prioritized well above a plain logo.",
     fetchedAt: "2026-07-24T06:34:33.988Z",
   },
   {
@@ -57,8 +66,10 @@ export const institutionImageRegistry = [
     imageSourceUrl: "https://www.tudelft.nl/en/",
     imageSourceName: "Delft University of Technology",
     rightsNote: "Source-proven official website image; verify usage rights before commercial redistribution.",
+    imageType: "hero",
     confidence: "high",
-    reason: "og:image meta tag on the official tudelft.nl homepage; page title matches the target name.",
+    reason:
+      "og:image meta tag on the official tudelft.nl homepage (an event graphic, not a logo or a landmark photo). No landmark/campus image was found on the guessed about/campus/media sub-pages (all 404'd).",
     fetchMethod: "og:image",
     mockAiScore: 0.85,
     mockAiDecision: "accept",

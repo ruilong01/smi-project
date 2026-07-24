@@ -46,7 +46,19 @@
     "verify:country-flags": "node scripts/ingestion/verifyCountryFlags.mjs",
     "discover:institution-images:sample": "node scripts/ingestion/discoverInstitutionImagesSample.mjs",
     "verify:institution-image-sample": "node scripts/ingestion/verifyInstitutionImageSample.mjs",
-    "verify:institution-images-in-ui": "node scripts/ingestion/verifyInstitutionImagesInUi.mjs"
+    "verify:institution-images-in-ui": "node scripts/ingestion/verifyInstitutionImagesInUi.mjs",
+    "build:country-registry": "node scripts/ingestion/buildCountryRegistry.mjs",
+    "build:institution-registry": "node scripts/ingestion/buildInstitutionRegistry.mjs",
+    "verify:institution-registry": "node scripts/ingestion/verifyInstitutionRegistry.mjs",
+    "discover:institution-images": "node scripts/ingestion/discoverInstitutionImages.mjs",
+    "discover:research:global": "node scripts/ingestion/discoverResearchGlobal.mjs",
+    "verify:research-discovery": "node scripts/ingestion/verifyResearchDiscovery.mjs",
+    "verify:source-registry": "node scripts/ingestion/verifySourceRegistry.mjs",
+    "verify:source-credibility": "node scripts/ingestion/verifySourceCredibility.mjs",
+    "scan:daily-research": "node scripts/ingestion/scanDailyResearch.mjs",
+    "verify:daily-scan-safety": "node scripts/ingestion/verifyDailyScanSafety.mjs",
+    "deep-search:sample": "node scripts/ingestion/deepSearchSample.mjs",
+    "verify:deep-search-sample": "node scripts/ingestion/verifyDeepSearchSample.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

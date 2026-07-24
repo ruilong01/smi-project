@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import liveResearchData from "../../src/data/generated/liveResearchData.json" with { type: "json" };
+import countryRegistryData from "../../src/data/generated/countryRegistry.json" with { type: "json" };
 
 // Gate for fetch:country-flags. Checks every country currently in the app
 // has a flag asset (or an explicit, reasoned "missing" status - never a
@@ -32,27 +32,27 @@ export async function verifyCountryFlags() {
     return { ok: false, failures, warnings, counts: {} };
   }
 
-  const appCountries = liveResearchData.countries ?? [];
+  const appCountries = (countryRegistryData.countries ?? []).filter((c) => c.enabled);
   const entryByCountryName = new Map((registry.entries ?? []).map((entry) => [entry.countryName, entry]));
 
   const counts = { totalAppCountries: appCountries.length, withFlag: 0, missingReasoned: 0, brokenPath: 0 };
 
   for (const country of appCountries) {
-    const entry = entryByCountryName.get(country.name);
+    const entry = entryByCountryName.get(country.countryName);
     if (!entry) {
-      failures.push(`Country "${country.name}" (current app data) has no entry in the flag registry at all.`);
+      failures.push(`Country "${country.countryName}" (enabled in registry) has no entry in the flag registry at all.`);
       continue;
     }
 
     if (!entry.sourceName || !entry.sourceUrl) {
       if (entry.status !== "missing_iso2") {
-        failures.push(`Entry for "${country.name}" is missing source metadata (sourceName/sourceUrl).`);
+        failures.push(`Entry for "${country.countryName}" is missing source metadata (sourceName/sourceUrl).`);
       }
     }
 
     if (entry.status === "missing_iso2") {
       if (!entry.error) {
-        failures.push(`Entry for "${country.name}" has status missing_iso2 but no explicit reason recorded.`);
+        failures.push(`Entry for "${country.countryName}" has status missing_iso2 but no explicit reason recorded.`);
       }
       counts.missingReasoned++;
       continue;
@@ -60,7 +60,7 @@ export async function verifyCountryFlags() {
 
     if (entry.status === "error") {
       if (!entry.error) {
-        failures.push(`Entry for "${country.name}" has status error but no reason recorded.`);
+        failures.push(`Entry for "${country.countryName}" has status error but no reason recorded.`);
       }
       counts.missingReasoned++;
       continue;
@@ -68,19 +68,19 @@ export async function verifyCountryFlags() {
 
     if (entry.status === "ok" || entry.status === "skipped_existing") {
       if (!entry.flagPath) {
-        failures.push(`Entry for "${country.name}" has status "${entry.status}" but no flagPath.`);
+        failures.push(`Entry for "${country.countryName}" has status "${entry.status}" but no flagPath.`);
         continue;
       }
       const filePath = path.join(rootDir, "public", entry.flagPath.replace(/^\//, ""));
       const exists = await fs.access(filePath).then(() => true).catch(() => false);
       if (!exists) {
         counts.brokenPath++;
-        failures.push(`Flag file for "${country.name}" does not exist on disk at ${entry.flagPath}.`);
+        failures.push(`Flag file for "${country.countryName}" does not exist on disk at ${entry.flagPath}.`);
         continue;
       }
       const content = await fs.readFile(filePath, "utf8");
       if (!content.includes("<svg")) {
-        failures.push(`Flag file for "${country.name}" at ${entry.flagPath} does not look like an SVG.`);
+        failures.push(`Flag file for "${country.countryName}" at ${entry.flagPath} does not look like an SVG.`);
         continue;
       }
       counts.withFlag++;

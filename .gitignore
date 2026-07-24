@@ -28,3 +28,16 @@ data/processed/*.bak
 # every run from data/test/incoming-records-sample.json, never the real
 # comparison state, must never be confused with data/processed/*.json.
 data/processed/test/
+
+# discover:institution-images:sample's generated sample output - same
+# convention as data/processed/test/ above (regenerated test/demo output,
+# never a real asset).
+public/assets/test/
+
+# Open-access PDF ingestion server-style storage (see
+# docs/OPEN_ACCESS_PDF_INGESTION.md): downloaded PDFs, raw API response
+# caches, staging candidate lists, runtime manifests/status, and logs all
+# live on the deployed box's disk, never in git history. Directories are
+# created at runtime by discoverOpenAccessPdfs.mjs (fs.mkdir recursive),
+# same convention as data/processed/test/ - nothing to commit here ever.
+data/server/

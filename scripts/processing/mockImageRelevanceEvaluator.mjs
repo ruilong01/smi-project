@@ -24,11 +24,53 @@ const STOCK_SITE_HOSTNAME_PATTERN =
 
 const SOCIAL_HOSTNAME_PATTERN = /facebook\.com|instagram\.com|(^|\.)x\.com$|twitter\.com|tiktok\.com|pinterest\./i;
 
-const OFFICIAL_PATH_KEYWORD_PATTERN = /\/(logo|campus|about|media|brand|press|news)\b|logo[-_.]|\bbrand\b/i;
-
 const GENERIC_ICON_PATTERN = /\/icons?\/|\bsprite\b|placeholder|default[-_]image|generic[-_]?icon/i;
 
 const WIKIMEDIA_HOSTNAME_PATTERN = /upload\.wikimedia\.org|commons\.wikimedia\.org/i;
+
+// Image-type keyword groups, in priority order (see docs/
+// IMAGE_FETCHING_AND_AI_EVALUATION.md's landmark-over-logo policy) - an
+// official landmark/campus building image is worth far more than a plain
+// logo, even from the exact same official domain, because a logo alone
+// doesn't tell a user anything about the institution beyond its brand
+// mark, while a real landmark/campus photo shows what the place actually
+// is.
+const LANDMARK_KEYWORD_PATTERN = /\blandmark\b|main[-_ ]?building|iconic[-_ ]?building/i;
+const CAMPUS_KEYWORD_PATTERN = /\bcampus\b|\bbuilding\b/i;
+const HERO_KEYWORD_PATTERN = /\bhero\b|\bbanner\b|\bcover\b/i;
+const LOGO_KEYWORD_PATTERN = /\blogo\b|logo[-_.]/i;
+const OFFICIAL_ASSET_KEYWORD_PATTERN = /\/(about|media|brand|press|news)\b/i;
+
+/**
+ * Classifies what KIND of image this candidate looks like, from its URL
+ * path / alt / title text and how it was found - independent of whether
+ * it's ultimately accepted. Checked in priority order: a landmark/campus
+ * signal always wins over a logo signal even if both happen to match.
+ */
+export function classifyImageType({ candidateImageUrl = "", imageAlt = "", imageTitle = "", fetchMethod = "" } = {}) {
+  const haystack = `${candidateImageUrl} ${imageAlt} ${imageTitle}`.toLowerCase();
+  if (fetchMethod === "wikimedia" || WIKIMEDIA_HOSTNAME_PATTERN.test(hostnameOf(candidateImageUrl) ?? "")) {
+    return "wikimedia";
+  }
+  if (LANDMARK_KEYWORD_PATTERN.test(haystack)) return "landmark-building";
+  if (CAMPUS_KEYWORD_PATTERN.test(haystack)) return "campus";
+  // Content-based keyword signals (what the image actually IS, per its own
+  // filename/alt/title) always outrank a method-based default - an
+  // og:image whose filename says "logo" is a logo, not a "hero" image,
+  // regardless of which meta tag pointed at it.
+  if (LOGO_KEYWORD_PATTERN.test(haystack) || fetchMethod === "schema:logo") return "logo";
+  if (HERO_KEYWORD_PATTERN.test(haystack) || fetchMethod === "og:image" || fetchMethod === "twitter:image") return "hero";
+  return "fallback";
+}
+
+const IMAGE_TYPE_SCORE_BONUS = {
+  "landmark-building": 0.32,
+  campus: 0.26,
+  hero: 0.14,
+  logo: 0.04,
+  wikimedia: 0,
+  fallback: 0,
+};
 
 function hostnameOf(url) {
   try {
@@ -121,7 +163,7 @@ function textMentionsTarget(text, targetName) {
  * @param {string} [input.pageTitle]
  * @param {string} [input.sourceDomain]
  * @param {string} [input.fetchMethod] - "og:image" | "twitter:image" | "schema:logo" | "schema:image" | "link:icon" | "page:img" | "wikimedia"
- * @returns {{ decision: "accept"|"reject"|"review", score: number, reasons: string[], risks: string[], futureAiPromptCompatible: true }}
+ * @returns {{ decision: "accept"|"reject"|"review", score: number, imageType: "landmark-building"|"campus"|"hero"|"logo"|"wikimedia"|"fallback", reasons: string[], risks: string[], futureAiPromptCompatible: true }}
  */
 export function evaluateImageRelevance(input) {
   const {
@@ -208,9 +250,24 @@ export function evaluateImageRelevance(input) {
     reasons.push("Image is a plain inline <img> on the source page.");
   }
 
-  if (OFFICIAL_PATH_KEYWORD_PATTERN.test(candidateImageUrl)) {
-    score += 0.1;
-    reasons.push("Candidate image path contains an official-asset keyword (logo/campus/about/media/brand/press/news).");
+  // Landmark/campus > hero > logo, regardless of how the candidate was
+  // found - a real campus/building photo is worth more to a user than a
+  // brand mark even when both come from the exact same official domain.
+  const imageType = classifyImageType({ candidateImageUrl, imageAlt, imageTitle, fetchMethod });
+  const typeBonus = IMAGE_TYPE_SCORE_BONUS[imageType] ?? 0;
+  score += typeBonus;
+  if (typeBonus > 0) {
+    reasons.push(`Image type classified as "${imageType}" (+${typeBonus.toFixed(2)}) - landmark/campus images are prioritized well above a plain logo.`);
+  } else {
+    risks.push(`Image type classified as "${imageType}" - no landmark/campus/hero/logo signal found in its path or alt/title text.`);
+  }
+  if (imageType === "logo" || imageType === "fallback") {
+    risks.push("Logo-only or unclassified image - acceptable only as a fallback when no landmark/campus/hero image was found for this institution.");
+  }
+
+  if (OFFICIAL_ASSET_KEYWORD_PATTERN.test(candidateImageUrl)) {
+    score += 0.06;
+    reasons.push("Candidate image path also contains an official-asset keyword (about/media/brand/press/news).");
   }
 
   const altOrTitle = `${imageAlt} ${imageTitle}`.trim();
@@ -246,6 +303,7 @@ export function evaluateImageRelevance(input) {
   return {
     decision,
     score,
+    imageType,
     reasons,
     risks,
     futureAiPromptCompatible: true,
@@ -253,10 +311,11 @@ export function evaluateImageRelevance(input) {
   };
 }
 
-function reject(reasons) {
+function reject(reasons, imageType = "fallback") {
   return {
     decision: "reject",
     score: 0,
+    imageType,
     reasons,
     risks: [],
     futureAiPromptCompatible: true,

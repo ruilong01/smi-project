@@ -22,12 +22,26 @@ access - nothing in either script is local-machine-specific.
 
 ```bash
 cd /opt/maritime-research
-npm run fetch:country-flags
-npm run discover:institution-images:sample
+npm run build:country-registry
+npm run fetch:country-flags -- --all --missing-only
+npm run build:institution-registry
+npm run discover:institution-images -- --missing-only --limit 20
+npm run discover:research:global -- --dry-run --limit 20
 npm run verify:country-flags
+npm run verify:institution-registry
+npm run verify:institution-images-in-ui
+npm run verify:research-discovery
 npm run verify:image-propagation
 npm run build
 ```
+
+The first four commands (registry builds, flag fetch, institution image
+discovery) are safe to run for real - each writes to its own bounded
+output and never touches production research data. `discover:research:
+global` is shown with `--dry-run` here deliberately - drop it only after
+reviewing a dry-run's candidate list, since promoting a candidate into
+the real pipeline is a separate, manual step (see
+docs/GLOBAL_DATA_AND_IMAGE_EXPANSION_PLAN.md).
 
 Add `-- --dry-run` to `discover:institution-images:sample` to check
 candidates and mock-evaluator verdicts without downloading anything first:
