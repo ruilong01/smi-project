@@ -1,6 +1,6 @@
-import displayRecordsData from "../../data/processed/display-records.json";
-import imageCandidatesData from "../../data/processed/image-candidates.json";
-import researchEvaluationsData from "../../data/processed/research-evaluations.json";
+import displayRecordsData from "../../data/processed/display-records.json" with { type: "json" };
+import imageCandidatesData from "../../data/processed/image-candidates.json" with { type: "json" };
+import researchEvaluationsData from "../../data/processed/research-evaluations.json" with { type: "json" };
 
 /**
  * Research Intelligence Gallery data seam.

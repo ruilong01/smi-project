@@ -40,7 +40,13 @@
     "verify:schema-compatibility": "node scripts/processing/verifySchemaCompatibility.mjs",
     "verify:git-clean-for-pr": "node scripts/ingestion/verifyGitCleanForPr.mjs",
     "verify:frontend-display-flow": "node scripts/ingestion/verifyFrontendDisplayFlow.mjs",
-    "verify:no-blue-flash": "node scripts/ingestion/verifyNoBlueFlash.mjs"
+    "verify:no-blue-flash": "node scripts/ingestion/verifyNoBlueFlash.mjs",
+    "verify:image-propagation": "node scripts/ingestion/verifyImagePropagation.mjs",
+    "fetch:country-flags": "node scripts/ingestion/fetchCountryFlags.mjs",
+    "verify:country-flags": "node scripts/ingestion/verifyCountryFlags.mjs",
+    "discover:institution-images:sample": "node scripts/ingestion/discoverInstitutionImagesSample.mjs",
+    "verify:institution-image-sample": "node scripts/ingestion/verifyInstitutionImageSample.mjs",
+    "verify:institution-images-in-ui": "node scripts/ingestion/verifyInstitutionImagesInUi.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

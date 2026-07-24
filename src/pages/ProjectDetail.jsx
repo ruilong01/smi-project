@@ -16,6 +16,7 @@ import Timeline from "../components/Timeline.jsx";
 import {
   getResearchProjectBySlug,
   getInstitutionSlugForName,
+  getProjectPrimaryImage,
   getRelationshipEntityLabel,
   getRelationshipEvidenceSources,
   getRelationshipsForProject,
@@ -78,15 +79,23 @@ function RelationshipCard({ relationship }) {
   );
 }
 
+// Prefers this project's OWN fetched image (sourcePages[].images[], from
+// the og:image fetcher run against RESEARCH_PAPER records); falls back to
+// a real, already-verified image from the Research Gallery pipeline for
+// the SAME record when one exists (see getProjectPrimaryImage /
+// researchImageMatcher.js) - this is the fix for images that are visible
+// in Research Gallery but weren't propagating onto this page. Never shows
+// project.images[0], which is always an unfilled placeholder entry
+// ({ url: "", imageType: "placeholder" }) every project gets by default,
+// not a real field to check.
 function ProjectImage({ project }) {
-  const image = project.images?.[0];
-  const hasVerifiedImage =
-    image && image.url && isValidExternalUrl(image.url) && image.licence;
+  const image = getProjectPrimaryImage(project);
+  const hasVerifiedImage = image?.imageUrl && isValidExternalUrl(image.imageUrl);
 
   return (
     <figure className={`project-hero-image ${hasVerifiedImage ? "" : "placeholder"}`}>
       {hasVerifiedImage ? (
-        <img alt={image.caption} src={image.url} />
+        <img alt={image.altText || image.caption || project.title} src={image.imageUrl} />
       ) : (
         <div className="project-image-placeholder">
           <ImageOff size={34} />
@@ -94,13 +103,9 @@ function ProjectImage({ project }) {
         </div>
       )}
       <figcaption>
-        {image?.caption ??
-          "No verified image is available; placeholder shown for this MVP."}
-        {image?.attributionRequired ? (
-          <span>
-            Image: {image.creator}. Licence: {image.licence}.
-          </span>
-        ) : null}
+        {image?.caption || image?.altText || (hasVerifiedImage ? "Untitled figure" : "No verified image is available for this project yet.")}
+        {hasVerifiedImage ? <span> {image.rightsNote || "Rights not verified; use as linked preview only."}</span> : null}
+        {image?.propagated ? <span> Image reused from a matching Research Gallery record ({image.imageMatchMethod} match).</span> : null}
       </figcaption>
     </figure>
   );

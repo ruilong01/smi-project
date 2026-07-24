@@ -159,7 +159,7 @@ export default function CountryDetail() {
         </Link>
         <p className="eyebrow">Country research profile</p>
         <h1>
-          <CountryFlagBadge countryCode={country.code} size="lg" /> {country.name}
+          <CountryFlagBadge countryCode={country.code} countryName={country.name} size="lg" /> {country.name}
         </h1>
         <p className="detail-region">{country.region || "Extracted maritime R&D cluster"}</p>
         <p>{country.summary}</p>

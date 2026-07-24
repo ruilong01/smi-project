@@ -1,4 +1,5 @@
-import liveResearchData from "./generated/liveResearchData.json";
+import liveResearchData from "./generated/liveResearchData.json" with { type: "json" };
+import { findPropagatedImage } from "./researchImageMatcher.js";
 
 /**
  * DATA SOURCE SEAM (Goal 6).
@@ -212,26 +213,73 @@ export function getProjectsForCountry(countryName) {
   return publicResearchProjects.filter((project) => project.country === countryName);
 }
 
+// Builds the query researchImageMatcher.js needs from a legacy project
+// record's own fields - every identifier the matcher's priority chain can
+// use (sourceUrl/DOI first, title/country/institution as fallbacks).
+function buildImageMatchQuery(project) {
+  const sourceUrls = [project.openAlex?.url, project.openAlex?.primaryLocationUrl, project.doi ? `https://doi.org/${project.doi}` : null].filter(
+    Boolean
+  );
+  return {
+    sourceUrls,
+    doi: project.doi,
+    title: project.title,
+    country: project.countryCode || project.country,
+    institution: project.leadOrganisation,
+  };
+}
+
+// A real, verified image already sitting in the Research Gallery pipeline
+// for the SAME record (see researchImageMatcher.js) counts exactly the
+// same as one this project already carries in its own sourcePages - both
+// are real, sourced images, just tracked in different places because the
+// two datasets were built by different phases of this project.
+export function getPropagatedGalleryImage(project) {
+  return findPropagatedImage(buildImageMatchQuery(project));
+}
+
 // A project only ever counts as "image-ready" when it carries a real,
 // fetched image (see the og:image fetcher run against RESEARCH_PAPER
 // records) - never the placeholder entry every project gets by default
-// ({ url: "", imageType: "placeholder", isOfficialProjectImage: false }).
-// Used to keep normal research cards on country/institution pages showing
-// only image-backed records, per the app's display-eligibility rule.
+// ({ url: "", imageType: "placeholder", isOfficialProjectImage: false }) -
+// OR when a matching Research Gallery record has already been verified to
+// have one. Used to keep normal research cards on country/institution
+// pages showing only image-backed records, per the app's
+// display-eligibility rule.
 export function projectHasRealImage(project) {
   if ((project.dataQuality?.imageCandidateCount ?? 0) > 0) {
     return true;
   }
-  return (project.sourcePages ?? []).some((page) => (page.images ?? []).some((image) => image.imageUrl));
+  if ((project.sourcePages ?? []).some((page) => (page.images ?? []).some((image) => image.imageUrl))) {
+    return true;
+  }
+  return Boolean(getPropagatedGalleryImage(project));
 }
 
 export function getProjectPrimaryImage(project) {
   for (const page of project.sourcePages ?? []) {
     const image = (page.images ?? []).find((candidate) => candidate.imageUrl);
     if (image) {
-      return { ...image, sourceUrl: image.sourceUrl || page.sourceUrl };
+      return { ...image, sourceUrl: image.sourceUrl || page.sourceUrl, propagated: false };
     }
   }
+
+  const propagated = getPropagatedGalleryImage(project);
+  if (propagated) {
+    return {
+      imageUrl: propagated.imageUrl,
+      altText: "",
+      caption: "",
+      sourceUrl: propagated.imageSourceUrl,
+      propagated: true,
+      imageSourceName: propagated.imageSourceName,
+      rightsNote: propagated.rightsNote,
+      imageMatchMethod: propagated.imageMatchMethod,
+      imageMatchConfidence: propagated.imageMatchConfidence,
+      imageProvenanceReason: propagated.imageProvenanceReason,
+    };
+  }
+
   return null;
 }
 
@@ -253,7 +301,7 @@ export function toResearchRecordCardProps(project) {
     imageCaption: image?.caption,
     topicName: getTopicNameForCategory(project.researchCategories?.[0]),
     institutionLabel: project.leadOrganisation,
-    provenanceLabel: project.extractionMethod,
+    provenanceLabel: image?.propagated ? `${image.imageSourceName} (via Research Gallery)` : project.extractionMethod,
     actionabilityScore: project.displayScore,
   };
 }

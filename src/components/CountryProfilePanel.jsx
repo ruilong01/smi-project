@@ -109,7 +109,7 @@ export default function CountryProfilePanel({ country, onClose }) {
             <div>
               <p className="eyebrow">Full country profile</p>
               <h2>
-                <CountryFlagBadge countryCode={country.code} /> {country.name}
+                <CountryFlagBadge countryCode={country.code} countryName={country.name} /> {country.name}
               </h2>
               <span className="profile-region">
                 <MapPin size={15} />

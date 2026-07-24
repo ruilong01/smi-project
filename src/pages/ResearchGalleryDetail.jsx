@@ -97,7 +97,7 @@ export default function ResearchGalleryDetail() {
               {record.acronym ? <span>{record.acronym}</span> : null}
               {record.countryOrRegion ? (
                 <span>
-                  <CountryFlagBadge countryCode={record.countryCode} /> {record.countryOrRegion}
+                  <CountryFlagBadge countryCode={record.countryCode} countryName={record.countryOrRegion} /> {record.countryOrRegion}
                 </span>
               ) : null}
               {record.coordinator ? <span>Coordinator: {record.coordinator}</span> : null}
