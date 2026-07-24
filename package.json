@@ -60,7 +60,9 @@
     "deep-search:sample": "node scripts/ingestion/deepSearchSample.mjs",
     "verify:deep-search-sample": "node scripts/ingestion/verifyDeepSearchSample.mjs",
     "discover:oa-pdfs": "node scripts/ingestion/discoverOpenAccessPdfs.mjs",
-    "verify:oa-pdf-ingestion": "node scripts/ingestion/verifyOpenAccessPdfIngestion.mjs"
+    "verify:oa-pdf-ingestion": "node scripts/ingestion/verifyOpenAccessPdfIngestion.mjs",
+    "extract:pdf-text": "node scripts/ingestion/extractPdfText.mjs",
+    "verify:pdf-viewer-pipeline": "node scripts/ingestion/verifyPdfViewerPipeline.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
@@ -68,6 +70,7 @@
     "d3-geo": "^3.1.1",
     "framer-motion": "^12.0.6",
     "lucide-react": "^0.468.0",
+    "pdf-parse": "^2.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.30.4",

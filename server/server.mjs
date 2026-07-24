@@ -22,6 +22,8 @@
  * dataset above, not yet wired into the React frontend:
  *   GET  /api/data/update-status
  *   GET  /api/research-records?limit=&offset=
+ *   GET  /api/research-records/:recordId/pdf-meta  (in-app PDF reader, see docs/IN_APP_PDF_READER.md)
+ *   GET  /api/research-records/:recordId/pdf       (streams the PDF bytes; 404 unless serveInApp)
  *   GET  /api/country-profiles
  *   POST /api/admin/refresh-data      (disabled unless ADMIN_TOKEN is set)
  *
@@ -36,16 +38,25 @@ import http from "node:http";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { refreshData } from "../scripts/ingestion/refreshData.mjs";
+import { findLinkedPdfCandidate } from "../scripts/processing/pdfRecordLinker.mjs";
+import { resolveOrDerivePolicy } from "../scripts/processing/pdfAccessPolicy.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT_DIR = path.resolve(__dirname, "..");
 const DATA_PATH = path.resolve(
   __dirname,
   "../src/data/generated/liveResearchData.json"
 );
 const PROCESSED_DIR = path.resolve(__dirname, "../data/processed");
 const RESEARCH_RECORDS_PATH = path.join(PROCESSED_DIR, "research-records.json");
+const DISPLAY_RECORDS_PATH = path.join(PROCESSED_DIR, "display-records.json");
 const COUNTRY_PROFILES_PATH = path.join(PROCESSED_DIR, "country-profiles.json");
 const UPDATE_STATUS_PATH = path.join(PROCESSED_DIR, "update-status.json");
+
+// In-app PDF reader (see docs/IN_APP_PDF_READER.md) - lives entirely under
+// data/server/ (gitignored, created at runtime by discoverOpenAccessPdfs.mjs).
+const PDF_MANIFEST_PATH = path.join(ROOT_DIR, "data/server/runtime/pdf-download-manifest.json");
+const PDF_STORAGE_ROOT = path.join(ROOT_DIR, "data/server/pdfs");
 
 const PORT = Number(process.env.API_PORT ?? 8787);
 const HOST = process.env.API_HOST ?? "127.0.0.1";
@@ -138,6 +149,66 @@ function notFound(res, message = "Not found") {
   sendJson(res, 404, { error: message });
 }
 
+// ---------------------------------------------------------------------------
+// In-app PDF reader (see docs/IN_APP_PDF_READER.md). recordId is the ONLY
+// client-controlled input here - it is used purely as a lookup key into
+// display-records.json and the PDF manifest, never concatenated into a
+// filesystem path. The manifest's own downloadedPath is resolved and then
+// re-checked to still live under PDF_STORAGE_ROOT before the filesystem is
+// ever touched, so a corrupted/tampered manifest entry can't be used to
+// read an arbitrary file off the server.
+// ---------------------------------------------------------------------------
+function resolvePdfForRecord(recordId) {
+  if (!recordId) {
+    return { available: false, reason: "No recordId provided." };
+  }
+
+  const displayData = loadProcessedFile(DISPLAY_RECORDS_PATH);
+  const record = (displayData?.records ?? []).find((r) => r.recordId === recordId);
+  if (!record) {
+    return { available: false, reason: `No display record with recordId "${recordId}".` };
+  }
+
+  const manifest = loadProcessedFile(PDF_MANIFEST_PATH);
+  const downloads = manifest?.downloads ?? [];
+  const entry = findLinkedPdfCandidate(record, downloads);
+  if (!entry) {
+    return { available: false, reason: "No downloaded open-access PDF is linked to this record yet." };
+  }
+
+  const policy = resolveOrDerivePolicy(entry);
+  if (!policy.serveInApp) {
+    return { available: false, reason: `PDF exists but access policy withholds in-app serving (${policy.policyReason})` };
+  }
+
+  if (!entry.downloadedPath) {
+    return { available: false, reason: "Manifest entry has no downloadedPath." };
+  }
+
+  const absolutePath = path.resolve(ROOT_DIR, entry.downloadedPath);
+  if (!absolutePath.startsWith(PDF_STORAGE_ROOT + path.sep)) {
+    return { available: false, reason: "Resolved PDF path is outside the expected storage root - refusing to serve." };
+  }
+  if (!fs.existsSync(absolutePath)) {
+    return { available: false, reason: "Downloaded PDF file is missing from disk." };
+  }
+
+  return { available: true, entry, policy, absolutePath };
+}
+
+function streamPdf(res, absolutePath, title) {
+  const stat = fs.statSync(absolutePath);
+  const safeFilename = (title || "paper").replace(/[^a-z0-9 _-]+/gi, "").trim().slice(0, 100) || "paper";
+  res.writeHead(200, {
+    "Content-Type": "application/pdf",
+    "Content-Length": stat.size,
+    "Content-Disposition": `inline; filename="${safeFilename}.pdf"`,
+    "Cache-Control": "private, max-age=3600",
+    "Access-Control-Allow-Origin": "*",
+  });
+  fs.createReadStream(absolutePath).pipe(res);
+}
+
 function findProject(dataset, idOrSlug) {
   const needle = decodeURIComponent(idOrSlug);
   return (
@@ -210,6 +281,36 @@ function handleRequest(req, res) {
       status: "never_run",
       errors: [],
     });
+    return;
+  }
+
+  // GET /api/research-records/:recordId/pdf-meta and /pdf - must be checked
+  // before the plain-list route below, since both share the "research-records"
+  // resource name but this one has an identifier + action segment.
+  if (resource === "research-records" && identifier && action === "pdf-meta" && req.method === "GET") {
+    const result = resolvePdfForRecord(decodeURIComponent(identifier));
+    if (!result.available) {
+      sendJson(res, 404, { available: false, reason: result.reason });
+      return;
+    }
+    sendJson(res, 200, {
+      available: true,
+      title: result.entry.title,
+      sourceName: result.entry.sourceName,
+      license: result.entry.license ?? null,
+      allowUserDownload: result.policy.allowUserDownload,
+      policyReason: result.policy.policyReason,
+    });
+    return;
+  }
+
+  if (resource === "research-records" && identifier && action === "pdf" && req.method === "GET") {
+    const result = resolvePdfForRecord(decodeURIComponent(identifier));
+    if (!result.available) {
+      notFound(res, result.reason || "No approved PDF for this record.");
+      return;
+    }
+    streamPdf(res, result.absolutePath, result.entry.title);
     return;
   }
 
