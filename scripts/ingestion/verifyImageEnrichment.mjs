@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { verifyDisplayEligibility } from "./verifyDisplayEligibility.mjs";
+import { classifyImageSourceUrl } from "../processing/imageSourceClassifier.mjs";
 
 // Gate for the "images are found systematically and safely, never faked"
 // rule. Checks the queue, the candidate store, the run report, every
@@ -115,6 +116,61 @@ export async function verifyImageEnrichment({ processedDir = defaultProcessedDir
   if (!eligibilityResult.ok) {
     failures.push(...eligibilityResult.failures.map((f) => `[verify:display-eligibility] ${f}`));
   }
+
+  // Points 1-3 (queue-content half): no queued record may be DOI-only,
+  // PDF-only, or publisher-only - every queued record must have had at
+  // least one fetch-allowed source URL at queue time.
+  (queueData?.queue ?? []).forEach((item) => {
+    const fetchAllowed = item.fetchAllowedSourceUrls ?? (item.sourceUrlClassifications ?? []).filter((c) => c.fetchAllowed).map((c) => c.url);
+    if (fetchAllowed.length === 0) {
+      const categories = (item.sourceUrlClassifications ?? []).map((c) => c.category).join(", ") || "unknown";
+      failures.push(
+        `Queued record ${item.recordId} has no fetch-allowed source URL (categories: ${categories}) - DOI/PDF/publisher-only records must never be queued.`
+      );
+    }
+  });
+
+  // Points 4-5: no actual fetch attempt (sourcePagesChecked - the real
+  // network calls) may target a URL that classifies as FETCH_BLOCKED. This
+  // is the direct, structural proof that no retry-on-403 against a
+  // doi.org/publisher/PDF URL happened - a blocked URL is never fetched at
+  // all under the current code, so none can appear here.
+  (reportData?.entries ?? []).forEach((entry) => {
+    (entry.sourcePagesChecked ?? []).forEach((url) => {
+      const classification = classifyImageSourceUrl(url);
+      if (!classification.fetchAllowed) {
+        failures.push(
+          `Record ${entry.recordId}: sourcePagesChecked includes a fetch-BLOCKED URL (${classification.category}): ${url} - this URL should have been skipped, never fetched.`
+        );
+      }
+    });
+
+    // Point 6: every skipped URL must be recorded with a reason.
+    (entry.sourcePagesSkipped ?? []).forEach((skipped) => {
+      if (!skipped.url || !skipped.reason) {
+        failures.push(`Record ${entry.recordId}: a skipped source URL is missing url/reason: ${JSON.stringify(skipped)}`);
+      }
+    });
+  });
+
+  // Cross-check point 6 the other way too: every record's raw sourceUrls
+  // classified as blocked (from the queue, where full sourceUrls is known)
+  // must show up in that record's own sourcePagesSkipped list in the
+  // report - a blocked URL that's simply absent from both checked AND
+  // skipped would mean it was silently dropped, not accounted for.
+  const reportEntryByRecordId = new Map((reportData?.entries ?? []).map((e) => [e.recordId, e]));
+  (queueData?.queue ?? []).forEach((item) => {
+    const blocked = item.blockedSourceUrls ?? [];
+    if (blocked.length === 0) return;
+    const entry = reportEntryByRecordId.get(item.recordId);
+    if (!entry) return; // not part of this specific enrich:images run - nothing to cross-check yet
+    const skippedUrls = new Set((entry.sourcePagesSkipped ?? []).map((s) => s.url));
+    blocked.forEach((url) => {
+      if (!skippedUrls.has(url)) {
+        failures.push(`Record ${item.recordId}: blocked source URL ${url} is not recorded in sourcePagesSkipped with a reason.`);
+      }
+    });
+  });
 
   return {
     ok: failures.length === 0,

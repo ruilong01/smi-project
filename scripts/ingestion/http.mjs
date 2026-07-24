@@ -18,6 +18,12 @@ export function buildUserAgent(email = null) {
   return ua;
 }
 
+// Only these are worth retrying - a transient server/rate-limit condition
+// that might succeed a moment later. A 401/403/404/etc is a definitive
+// answer that will NEVER change on retry - hammering it 3-4 times just
+// wastes time and looks like abusive traffic to the remote server.
+const RETRYABLE_STATUSES = [429, 500, 502, 503, 504];
+
 // Retry logic with exponential backoff
 async function fetchWithRetry(
   url,
@@ -43,20 +49,26 @@ async function fetchWithRetry(
         return response;
       }
 
-      // Retry-able errors (429, 503, 504, 502)
-      if ([429, 502, 503, 504].includes(response.status)) {
-        lastError = new Error(`${response.status} ${response.statusText} (retry-able) for ${url}`);
-        if (attempt < retries) {
-          const backoffMs = requestDelay * Math.pow(2, attempt - 1);
-          console.warn(`Attempt ${attempt}/${retries} failed. Retrying in ${backoffMs}ms...`);
-          await delayMs(backoffMs);
-          continue;
-        }
+      if (!RETRYABLE_STATUSES.includes(response.status)) {
+        // A definitive error response - fail immediately, never retry.
+        throw Object.assign(new Error(`${response.status} ${response.statusText} for ${url}`), {
+          nonRetryable: true,
+          status: response.status,
+        });
       }
 
-      // Non-retryable errors
-      throw new Error(`${response.status} ${response.statusText} for ${url}`);
+      lastError = new Error(`${response.status} ${response.statusText} (retry-able) for ${url}`);
+      if (attempt === retries) {
+        throw lastError;
+      }
+      const backoffMs = requestDelay * Math.pow(2, attempt - 1);
+      console.warn(`Attempt ${attempt}/${retries} failed (${response.status}, retryable). Retrying in ${backoffMs}ms...`);
+      await delayMs(backoffMs);
     } catch (error) {
+      if (error.nonRetryable) {
+        throw error;
+      }
+
       lastError = error;
 
       if (error.name === "AbortError") {
@@ -68,11 +80,9 @@ async function fetchWithRetry(
         throw error;
       }
 
-      if (attempt < retries) {
-        const backoffMs = requestDelay * Math.pow(2, attempt - 1);
-        console.warn(`Attempt ${attempt}/${retries} failed (${error.message}). Retrying in ${backoffMs}ms...`);
-        await delayMs(backoffMs);
-      }
+      const backoffMs = requestDelay * Math.pow(2, attempt - 1);
+      console.warn(`Attempt ${attempt}/${retries} failed (${error.message}). Retrying in ${backoffMs}ms...`);
+      await delayMs(backoffMs);
     }
   }
 

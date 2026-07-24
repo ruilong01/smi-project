@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { classifySourceUrls } from "../processing/imageSourceClassifier.mjs";
 
 // Builds data/processed/image-enrichment-queue.json: a small, prioritized
 // batch of records worth spending a real HTTP fetch on to look for an
@@ -37,8 +38,8 @@ async function readJsonIfExists(filePath, fallback = null) {
   }
 }
 
-function hasSourceUrl(record) {
-  return (record.sourceUrls?.length ?? 0) > 0 || Boolean(record.sourceUrl);
+function recordSourceUrls(record) {
+  return record.sourceUrls?.length ? record.sourceUrls : record.sourceUrl ? [record.sourceUrl] : [];
 }
 
 function alreadyHasImages(record) {
@@ -46,12 +47,20 @@ function alreadyHasImages(record) {
 }
 
 // Never queue a record that isn't real, source-linked evidence to begin
-// with - mirrors the same rule display eligibility itself enforces.
+// with (mirrors the same rule display eligibility itself enforces), AND -
+// the fix this function exists for - never queue a record whose ONLY
+// source URLs are a DOI redirect, a PDF, or a publisher article page.
+// Those can never yield a real project image and fetching them wastes a
+// request (and, per the retry bug this pass also fixed, used to waste
+// several) on something that will predictably 403/404/redirect-away every
+// single time. A record only enters the queue if at least one of its
+// source URLs is fetch-allowed - see classifyImageSourceUrl.
 function isEligibleForQueue(record) {
   if (!record) return false;
   if (record.verificationStatus === "mock_demo" || record.verificationStatus === "unverified") return false;
   if (record.processingStatus === "rejected") return false;
-  return hasSourceUrl(record);
+  const classifications = classifySourceUrls(recordSourceUrls(record));
+  return classifications.some((c) => c.fetchAllowed);
 }
 
 function isInCooldown(record, nowIso) {
@@ -69,13 +78,14 @@ function priorityScore(record) {
   return typeBonus + cordisBonus + scoreSum;
 }
 
-function queueReasonFor(record) {
+function queueReasonFor(record, fetchAllowedSourceUrls) {
   const reasons = [];
   if (record.recordType === "funded_project") reasons.push("funded project record (preferred over generic publications)");
   if (/cordis-/.test(record.recordId ?? "")) reasons.push("CORDIS project record (preferred over publisher-only records)");
   if ((record.relevanceScore ?? 0) >= HIGH_PRIORITY_THRESHOLD) reasons.push(`high relevance score (${record.relevanceScore})`);
   if ((record.actionabilityScore ?? 0) >= HIGH_PRIORITY_THRESHOLD) reasons.push(`high actionability score (${record.actionabilityScore})`);
   if (reasons.length === 0) reasons.push("has a real source URL but no image candidate yet");
+  reasons.push(`${fetchAllowedSourceUrls.length} fetch-allowed source URL(s)`);
   return reasons.join("; ");
 }
 
@@ -104,19 +114,29 @@ export async function queueImageEnrichment({
   const eligibleNow = allCandidates.filter((r) => !isInCooldown(r, nowIso));
   const sorted = eligibleNow.sort((a, b) => priorityScore(b) - priorityScore(a));
 
-  const queue = sorted.slice(0, limit).map((record) => ({
-    recordId: record.recordId,
-    title: record.title ?? "",
-    sourceUrls: record.sourceUrls?.length ? record.sourceUrls : record.sourceUrl ? [record.sourceUrl] : [],
-    recordType: record.recordType ?? "",
-    countryOrRegion: record.countryOrRegion ?? "",
-    institutions: record.institutions ?? [],
-    coordinator: record.coordinator ?? "",
-    relevanceScore: record.relevanceScore ?? 0,
-    actionabilityScore: record.actionabilityScore ?? 0,
-    queueReason: queueReasonFor(record),
-    queuedAt: nowIso,
-  }));
+  const queue = sorted.slice(0, limit).map((record) => {
+    const sourceUrls = recordSourceUrls(record);
+    const sourceUrlClassifications = classifySourceUrls(sourceUrls);
+    const fetchAllowedSourceUrls = sourceUrlClassifications.filter((c) => c.fetchAllowed).map((c) => c.url);
+    const blockedSourceUrls = sourceUrlClassifications.filter((c) => !c.fetchAllowed).map((c) => c.url);
+
+    return {
+      recordId: record.recordId,
+      title: record.title ?? "",
+      sourceUrls,
+      recordType: record.recordType ?? "",
+      countryOrRegion: record.countryOrRegion ?? "",
+      institutions: record.institutions ?? [],
+      coordinator: record.coordinator ?? "",
+      relevanceScore: record.relevanceScore ?? 0,
+      actionabilityScore: record.actionabilityScore ?? 0,
+      sourceUrlClassifications,
+      fetchAllowedSourceUrls,
+      blockedSourceUrls,
+      queueReason: queueReasonFor(record, fetchAllowedSourceUrls),
+      queuedAt: nowIso,
+    };
+  });
 
   const output = {
     generatedAt: nowIso,
