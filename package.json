@@ -32,6 +32,9 @@
     "queue:image-enrichment": "node scripts/ingestion/queueEnrichment.mjs",
     "enrich:images": "node scripts/ingestion/enrichImages.mjs",
     "verify:image-enrichment": "node scripts/ingestion/verifyImageEnrichment.mjs",
+    "queue:source-discovery": "node scripts/ingestion/queueSourceDiscovery.mjs",
+    "discover:official-sources": "node scripts/ingestion/discoverOfficialSources.mjs",
+    "verify:source-discovery": "node scripts/ingestion/verifySourceDiscovery.mjs",
     "enrich:explanations": "node scripts/ingestion/enrichExplanations.mjs",
     "refresh:incremental": "node scripts/ingestion/refreshIncremental.mjs",
     "verify:schema-compatibility": "node scripts/processing/verifySchemaCompatibility.mjs"
