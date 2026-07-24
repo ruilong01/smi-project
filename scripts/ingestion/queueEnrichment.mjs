@@ -1,7 +1,13 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { classifySourceUrls } from "../processing/imageSourceClassifier.mjs";
+import { classifySourceUrls, CLASSIFIER_VERSION } from "../processing/imageSourceClassifier.mjs";
+
+// Bump whenever this file's queueing logic (eligibility rules, cooldown,
+// priority) meaningfully changes. Stamped onto the queue output so
+// verify:image-enrichment can label a snapshot as current/stale instead of
+// trusting an old queue file as if it reflects this code's current rules.
+export const QUEUE_METHOD_VERSION = 2;
 
 // Builds data/processed/image-enrichment-queue.json: a small, prioritized
 // batch of records worth spending a real HTTP fetch on to look for an
@@ -140,6 +146,10 @@ export async function queueImageEnrichment({
 
   const output = {
     generatedAt: nowIso,
+    command: "queue:image-enrichment",
+    classifierVersion: CLASSIFIER_VERSION,
+    methodVersion: QUEUE_METHOD_VERSION,
+    isTestOutput: false,
     limit,
     totalCandidatesConsidered: allCandidates.length,
     skippedCooldown,

@@ -4,7 +4,14 @@ import { fileURLToPath } from "node:url";
 import { extractWebpage } from "./enrichment/extractWebpage.mjs";
 import { buildTriageOutputFiles } from "./triageRecords.mjs";
 import { delayMs } from "./http.mjs";
-import { classifyImageSourceUrl } from "../processing/imageSourceClassifier.mjs";
+import { classifyImageSourceUrl, CLASSIFIER_VERSION } from "../processing/imageSourceClassifier.mjs";
+
+// Bump whenever this file's fetch/decide logic (retry policy, classify-
+// before-fetch gating, shared-URL/generic-image rejection) meaningfully
+// changes. Stamped onto the report so verify:image-enrichment can label a
+// snapshot as current/stale instead of trusting an old report file as if it
+// reflects this code's current rules.
+export const ENRICH_METHOD_VERSION = 2;
 
 // Processes data/processed/image-enrichment-queue.json: for each queued
 // record, fetches ITS OWN sourceUrl(s) - never a generic image search -
@@ -444,6 +451,10 @@ export async function enrichImages({
 
   const report = {
     generatedAt: nowIso,
+    command: "enrich:images",
+    classifierVersion: CLASSIFIER_VERSION,
+    methodVersion: ENRICH_METHOD_VERSION,
+    isTestOutput: false,
     limit,
     attempted,
     recordsGivenImages,
