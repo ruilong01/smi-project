@@ -86,11 +86,12 @@ export default function ResearchGallery() {
           <ArrowLeft size={18} />
           Back to Map
         </Link>
-        <p className="eyebrow">Research Intelligence Gallery</p>
+        <p className="eyebrow">Research Intelligence Gallery — optional browse index</p>
         <h1>Enriched Maritime R&amp;D Records</h1>
         <p className="gallery-hero-note">
-          Map reflects extracted maritime R&amp;D records from configured open sources. It is not a
-          complete official ranking. Records below have real image candidates and/or explanations
+          This is a secondary, flat index of every extracted record. The main way to explore the
+          dataset is the map: click a country, then an institution, to see the same image-ready
+          records in context. Records below have real image candidates and/or explanations
           generated from their own source data — nothing here is invented.
         </p>
       </section>

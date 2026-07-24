@@ -1,6 +1,7 @@
 import { ArrowLeft, ExternalLink, ImageOff } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { getGalleryRecordById, getVerificationStatusLabel } from "../data/researchGalleryData.js";
+import CountryFlagBadge from "../components/CountryFlagBadge.jsx";
 
 function DetailImage({ record }) {
   const image = record.images?.[0];
@@ -30,7 +31,8 @@ function DetailImage({ record }) {
       <img alt={image.altText || image.caption || record.title} src={image.imageUrl} />
       <figcaption>
         {image.caption || image.altText || "Untitled figure"}
-        <span> Rights not verified — source preview only.</span>
+        {image.sourceName ? <span> Source: {image.sourceName}.</span> : null}
+        <span> {image.rightsNote || "Rights not verified — source preview only."}</span>
       </figcaption>
     </figure>
   );
@@ -93,7 +95,12 @@ export default function ResearchGalleryDetail() {
             <h1>{record.title}</h1>
             <div className="project-meta-row">
               {record.acronym ? <span>{record.acronym}</span> : null}
-              {record.countryName ? <span>{record.countryName}</span> : null}
+              {record.countryOrRegion ? (
+                <span>
+                  <CountryFlagBadge countryCode={record.countryCode} /> {record.countryOrRegion}
+                </span>
+              ) : null}
+              {record.coordinator ? <span>Coordinator: {record.coordinator}</span> : null}
               <span>{(record.followUpStatus || "").replace(/_/g, " ") || "Status not recorded"}</span>
             </div>
             <div className="project-category-list">
@@ -103,7 +110,7 @@ export default function ResearchGalleryDetail() {
                 </span>
               ))}
             </div>
-            <p>{evaluation?.plainLanguageExplanation || record.summary || "No summary available yet."}</p>
+            <p>{record.summary || "No summary available yet."}</p>
             {record.sourceUrl ? (
               <a className="gallery-open-source" href={record.sourceUrl} rel="noreferrer" target="_blank">
                 View source — {record.sourceDatabase || "project page"}
@@ -180,6 +187,7 @@ export default function ResearchGalleryDetail() {
         {evaluation ? (
           <article className="detail-card wide">
             <h2>Research Explanation</h2>
+            <ExplanationSection title="Plain-language explanation" text={evaluation.plainLanguageExplanation} />
             <ExplanationSection title="Problem being addressed" text={evaluation.problemBeingAddressed} />
             <ExplanationSection title="Technology approach" text={evaluation.technologyApproach} />
             <ExplanationSection title="Maritime relevance" text={evaluation.maritimeRelevance} />

@@ -12,15 +12,18 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
-import { getProjectsForCountry } from "../data/researchProjectData.js";
-import { getGalleryRecordsForCountryCode } from "../data/researchGalleryData.js";
+import { filterImageReadyProjects, getProjectsForCountry, toResearchRecordCardProps } from "../data/researchProjectData.js";
+import { getGalleryRecordsForCountryCode, toGalleryCardProps } from "../data/researchGalleryData.js";
 import InstitutionLink from "./InstitutionLink.jsx";
 import TopicTag from "./TopicTag.jsx";
-import ResearchRecordList from "./ResearchRecordRow.jsx";
+import CountryFlagBadge from "./CountryFlagBadge.jsx";
+import EnrichmentPendingNotice from "./EnrichmentPendingNotice.jsx";
+import { ResearchRecordCardList } from "./ResearchRecordCard.jsx";
 import {
   getIntensityColor,
   getIntensityLabel,
 } from "../utils/intensity.js";
+import { dedupeRecordCardsByTitle } from "../utils/dedupeRecordCards.js";
 
 const RESEARCH_RECORDS_PREVIEW_COUNT = 6;
 
@@ -54,6 +57,7 @@ export default function CountryProfilePanel({ country, onClose }) {
     countryEvidence,
     countryImages,
     enrichedCount,
+    imageReadyCards,
   } = useMemo(() => {
     const projects = country ? getProjectsForCountry(country.name) : [];
     const counts = new Map();
@@ -75,14 +79,21 @@ export default function CountryProfilePanel({ country, onClose }) {
         images.push(...(page.images ?? []));
       });
     });
+    const cards = country
+      ? dedupeRecordCardsByTitle([
+          ...galleryRecordsForCountry.map(toGalleryCardProps),
+          ...filterImageReadyProjects(projects).map(toResearchRecordCardProps),
+        ])
+      : [];
     return {
       countryProjects: projects,
       institutionRecordCounts: counts,
       countryEvidence: evidence,
       countryImages: images,
       enrichedCount: enriched,
+      imageReadyCards: cards,
     };
-  }, [country]);
+  }, [country, galleryRecordsForCountry]);
 
   return (
     <AnimatePresence>
@@ -97,7 +108,9 @@ export default function CountryProfilePanel({ country, onClose }) {
           <div className="profile-panel-header">
             <div>
               <p className="eyebrow">Full country profile</p>
-              <h2>{country.name}</h2>
+              <h2>
+                <CountryFlagBadge countryCode={country.code} /> {country.name}
+              </h2>
               <span className="profile-region">
                 <MapPin size={15} />
                 {country.region}
@@ -173,23 +186,23 @@ export default function CountryProfilePanel({ country, onClose }) {
           <details className="profile-section" open>
             <summary>
               <FlaskConical size={17} />
-              Research Records ({countryProjects.length})
+              Research Records ({imageReadyCards.length} image-ready
+              {countryProjects.length > imageReadyCards.length
+                ? `, ${countryProjects.length - imageReadyCards.length} pending`
+                : ""}
+              )
             </summary>
-            <ResearchRecordList projects={countryProjects.slice(0, RESEARCH_RECORDS_PREVIEW_COUNT)} />
+            {imageReadyCards.length ? (
+              <ResearchRecordCardList records={imageReadyCards.slice(0, RESEARCH_RECORDS_PREVIEW_COUNT)} />
+            ) : (
+              <EnrichmentPendingNotice pendingCount={countryProjects.length} />
+            )}
             <Link
               className="profile-view-all-link"
               to={`/country/${country.slug}#research-records`}
             >
               View all {countryProjects.length} research records
             </Link>
-            {galleryRecordsForCountry.length ? (
-              <Link
-                className="profile-view-all-link"
-                to={`/research-gallery/${galleryRecordsForCountry[0].recordId}`}
-              >
-                View in Research Gallery
-              </Link>
-            ) : null}
           </details>
 
           {countryEvidence.length ? (

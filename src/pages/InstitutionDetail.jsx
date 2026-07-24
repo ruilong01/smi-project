@@ -1,19 +1,42 @@
-import {
-  ArrowLeft,
-  Building2,
-  ExternalLink,
-  FlaskConical,
-  MapPin,
-} from "lucide-react";
+import { ArrowLeft, ExternalLink, FlaskConical } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import {
+  filterImageReadyProjects,
   getCountryByCode,
   getInstitutionBySlug,
   getLiveDataStatusLabel,
   getProjectsForInstitution,
+  toResearchRecordCardProps,
 } from "../data/researchProjectData.js";
+import {
+  getGalleryRecordsForInstitutionName,
+  isGalleryRecordCoordinatedBy,
+  toGalleryCardProps,
+} from "../data/researchGalleryData.js";
 import { isValidExternalUrl } from "../utils/url.js";
-import ResearchRecordList from "../components/ResearchRecordRow.jsx";
+import { dedupeRecordCardsByTitle } from "../utils/dedupeRecordCards.js";
+import InstitutionHeader from "../components/InstitutionHeader.jsx";
+import DataStatusBadge from "../components/DataStatusBadge.jsx";
+import EnrichmentPendingNotice from "../components/EnrichmentPendingNotice.jsx";
+import { ResearchRecordCardList } from "../components/ResearchRecordCard.jsx";
+
+function ResearchRecordSection({ title, totalCount, cards }) {
+  return (
+    <article className="detail-card wide">
+      <h2>
+        <FlaskConical size={20} />
+        {title} ({totalCount})
+      </h2>
+      {cards.length ? (
+        <ResearchRecordCardList records={cards} />
+      ) : totalCount > 0 ? (
+        <EnrichmentPendingNotice pendingCount={totalCount} />
+      ) : (
+        <p className="source-empty">No extracted research records in this role yet.</p>
+      )}
+    </article>
+  );
+}
 
 export default function InstitutionDetail() {
   const { slug } = useParams();
@@ -39,6 +62,21 @@ export default function InstitutionDetail() {
   const { led, partnered } = getProjectsForInstitution(institution);
   const totalRecords = led.length + partnered.length;
 
+  const galleryMatches = getGalleryRecordsForInstitutionName(institution.canonicalName);
+  const galleryLead = galleryMatches.filter((record) => isGalleryRecordCoordinatedBy(record, institution.canonicalName));
+  const galleryPartner = galleryMatches.filter((record) => !isGalleryRecordCoordinatedBy(record, institution.canonicalName));
+
+  const ledCards = dedupeRecordCardsByTitle([
+    ...galleryLead.map(toGalleryCardProps),
+    ...filterImageReadyProjects(led).map(toResearchRecordCardProps),
+  ]);
+  const partnerCards = dedupeRecordCardsByTitle([
+    ...galleryPartner.map(toGalleryCardProps),
+    ...filterImageReadyProjects(partnered).map(toResearchRecordCardProps),
+  ]);
+  const totalLedCount = led.length + galleryLead.length;
+  const totalPartnerCount = partnered.length + galleryPartner.length;
+
   return (
     <main className="detail-shell">
       <div className="ocean-grid" aria-hidden="true" />
@@ -49,27 +87,13 @@ export default function InstitutionDetail() {
           Back to map
         </Link>
         <p className="eyebrow">Institution research profile</p>
-        <h1>{institution.canonicalName}</h1>
-        <p className="detail-region">
-          <MapPin size={15} style={{ display: "inline", verticalAlign: "-2px" }} />{" "}
-          {country ? (
-            <Link to={`/country/${country.slug}`}>{country.name}</Link>
-          ) : (
-            institution.countryCode
-          )}
-          {institution.city ? ` · ${institution.city}` : ""}
-        </p>
-        <div className="detail-status-pill data-freshness-pill">
-          {getLiveDataStatusLabel()}
-        </div>
+        <InstitutionHeader country={country} institution={institution} />
+        <DataStatusBadge label={getLiveDataStatusLabel()} />
       </section>
 
       <section className="detail-grid">
         <article className="detail-card">
-          <h2>
-            <Building2 size={20} />
-            Institution
-          </h2>
+          <h2>Institution</h2>
           <dl className="project-at-glance">
             <div className="project-info-item">
               <dt>Type</dt>
@@ -77,57 +101,31 @@ export default function InstitutionDetail() {
             </div>
             <div className="project-info-item">
               <dt>Records (lead)</dt>
-              <dd>{led.length}</dd>
+              <dd>
+                {totalLedCount} <span className="profile-list-count">({ledCards.length} image-ready)</span>
+              </dd>
             </div>
             <div className="project-info-item">
               <dt>Records (partner)</dt>
-              <dd>{partnered.length}</dd>
+              <dd>
+                {totalPartnerCount} <span className="profile-list-count">({partnerCards.length} image-ready)</span>
+              </dd>
             </div>
           </dl>
           {institution.website && isValidExternalUrl(institution.website) ? (
-            <a
-              className="source-link"
-              href={institution.website}
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a className="source-link" href={institution.website} rel="noreferrer" target="_blank">
               Visit institution website
               <ExternalLink size={15} />
             </a>
           ) : null}
         </article>
 
-        <article className="detail-card wide">
-          <h2>
-            <FlaskConical size={20} />
-            Research Records as Lead Institution ({led.length})
-          </h2>
-          <ResearchRecordList
-            projects={led}
-            showInstitution={false}
-            extraLabel="Lead"
-            emptyText="No records where this institution leads yet."
-          />
-        </article>
+        <ResearchRecordSection cards={ledCards} title="Research Records as Lead Institution" totalCount={totalLedCount} />
+        <ResearchRecordSection cards={partnerCards} title="Research Records as Partner" totalCount={totalPartnerCount} />
 
-        <article className="detail-card wide">
-          <h2>
-            <FlaskConical size={20} />
-            Research Records as Partner ({partnered.length})
-          </h2>
-          <ResearchRecordList
-            projects={partnered}
-            showInstitution={false}
-            extraLabel="Partner"
-            emptyText="No records where this institution is a partner yet."
-          />
-        </article>
-
-        {totalRecords === 0 ? (
+        {totalRecords === 0 && galleryMatches.length === 0 ? (
           <article className="detail-card wide">
-            <p className="source-empty">
-              No extracted research records reference this institution yet.
-            </p>
+            <p className="source-empty">No extracted research records reference this institution yet.</p>
           </article>
         ) : null}
       </section>

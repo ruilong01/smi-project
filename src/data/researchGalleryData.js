@@ -73,6 +73,48 @@ export function getGalleryRecordsForCountryCode(countryCode) {
   return galleryRecords.filter((record) => record.countryCode === countryCode);
 }
 
+function namesMatch(a, b) {
+  return Boolean(a) && Boolean(b) && a.trim().toLowerCase() === b.trim().toLowerCase();
+}
+
+// Records don't carry an institution ID the way the legacy dataset does -
+// only a coordinator name and (sometimes) an institutions[] array - so this
+// matches on name, same as researchProjectData.js's getInstitutionSlugForName
+// fallback for partner organisations.
+export function getGalleryRecordsForInstitutionName(institutionName) {
+  if (!institutionName) return [];
+  return galleryRecords.filter((record) => {
+    if (!record.images.length) return false;
+    if (namesMatch(record.coordinator, institutionName)) return true;
+    return (record.institutions ?? []).some((name) => namesMatch(name, institutionName));
+  });
+}
+
+export function isGalleryRecordCoordinatedBy(record, institutionName) {
+  return namesMatch(record.coordinator, institutionName);
+}
+
+// Normalizes a gallery (real-pipeline) record into the shape
+// ResearchRecordCard expects - the same normalized card shape
+// researchProjectData.js's toResearchRecordCardProps produces for legacy
+// records, so country/institution pages can render both through one
+// component without caring which dataset a given record came from.
+export function toGalleryCardProps(record) {
+  const image = record.images[0];
+  return {
+    id: record.recordId,
+    href: `/research-gallery/${record.recordId}`,
+    title: record.title,
+    imageUrl: image?.imageUrl,
+    imageAlt: image?.altText || image?.caption,
+    imageCaption: image?.caption,
+    topicName: record.topicPrimary,
+    institutionLabel: record.coordinator || (record.institutions ?? [])[0] || "",
+    provenanceLabel: getVerificationStatusLabel(record.verificationStatus),
+    actionabilityScore: record.actionabilityScore,
+  };
+}
+
 // Mirrors the five-way taxonomy scripts/processing/normalizeResearchRecord.mjs
 // computes for every record. A source-linked seed record (real sourceUrl,
 // no raw fetch file yet) must never be shown as fully verified automated

@@ -15,9 +15,13 @@ export default function Header({ selectedCountryCount, activeFilter, dataStatusL
       </div>
 
       <nav className="top-bar-nav" aria-label="Primary navigation">
-        <Link className="gallery-nav-link" to="/research-gallery">
+        <Link
+          className="gallery-nav-link"
+          title="Optional browse index of all extracted records - explore the map, then a country or institution page for the main journey"
+          to="/research-gallery"
+        >
           <Images size={16} aria-hidden="true" />
-          Research Gallery
+          Browse All Records
         </Link>
       </nav>
 

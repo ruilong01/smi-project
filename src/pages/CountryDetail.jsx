@@ -14,16 +14,23 @@ import { useMemo } from "react";
 import SourceCard from "../components/SourceCard.jsx";
 import InstitutionLink from "../components/InstitutionLink.jsx";
 import TopicTag from "../components/TopicTag.jsx";
-import ResearchRecordList from "../components/ResearchRecordRow.jsx";
+import CountryFlagBadge from "../components/CountryFlagBadge.jsx";
+import DataStatusBadge from "../components/DataStatusBadge.jsx";
+import EnrichmentPendingNotice from "../components/EnrichmentPendingNotice.jsx";
+import { ResearchRecordCardList } from "../components/ResearchRecordCard.jsx";
 import {
+  filterImageReadyProjects,
   formatRelationType,
   getCountryBySlug,
   getLiveDataStatusLabel,
   getProjectsForCountry,
   getRelationshipEvidenceSources,
   getResearchProjectById,
+  toResearchRecordCardProps,
 } from "../data/researchProjectData.js";
+import { getGalleryRecordsForCountryCode, toGalleryCardProps } from "../data/researchGalleryData.js";
 import { getSourcesByIds } from "../data/sourceRegistry.js";
+import { dedupeRecordCardsByTitle } from "../utils/dedupeRecordCards.js";
 import { isValidExternalUrl } from "../utils/url.js";
 import {
   getIntensityColor,
@@ -78,6 +85,7 @@ export default function CountryDetail() {
     countryEvidence,
     countryImages,
     enrichedCount,
+    imageReadyCards,
   } = useMemo(() => {
     if (!country) {
       return {
@@ -87,6 +95,7 @@ export default function CountryDetail() {
         countryEvidence: [],
         countryImages: [],
         enrichedCount: 0,
+        imageReadyCards: [],
       };
     }
     const projects = getProjectsForCountry(country.name);
@@ -108,6 +117,10 @@ export default function CountryDetail() {
         images.push(...(page.images ?? []));
       });
     });
+    const cards = dedupeRecordCardsByTitle([
+      ...getGalleryRecordsForCountryCode(country.code).map(toGalleryCardProps),
+      ...filterImageReadyProjects(projects).map(toResearchRecordCardProps),
+    ]);
     return {
       countryProjects: projects,
       institutionRecordCounts: counts,
@@ -115,6 +128,7 @@ export default function CountryDetail() {
       countryEvidence: evidence,
       countryImages: images,
       enrichedCount: enriched,
+      imageReadyCards: cards,
     };
   }, [country]);
 
@@ -144,12 +158,12 @@ export default function CountryDetail() {
           Back to map
         </Link>
         <p className="eyebrow">Country research profile</p>
-        <h1>{country.name}</h1>
+        <h1>
+          <CountryFlagBadge countryCode={country.code} size="lg" /> {country.name}
+        </h1>
         <p className="detail-region">{country.region || "Extracted maritime R&D cluster"}</p>
         <p>{country.summary}</p>
-        <div className="detail-status-pill data-freshness-pill">
-          {getLiveDataStatusLabel()}
-        </div>
+        <DataStatusBadge label={getLiveDataStatusLabel()} />
       </section>
 
       <section className="detail-grid">
@@ -235,9 +249,19 @@ export default function CountryDetail() {
         <article className="detail-card wide" id="research-records">
           <h2>
             <FlaskConical size={20} />
-            Research Records ({countryProjects.length})
+            Research Records ({imageReadyCards.length} image-ready
+            {countryProjects.length > imageReadyCards.length
+              ? `, ${countryProjects.length - imageReadyCards.length} pending enrichment`
+              : ""}
+            )
           </h2>
-          <ResearchRecordList projects={countryProjects} />
+          {imageReadyCards.length ? (
+            <ResearchRecordCardList records={imageReadyCards} />
+          ) : countryProjects.length ? (
+            <EnrichmentPendingNotice pendingCount={countryProjects.length} />
+          ) : (
+            <p className="source-empty">No extracted records yet.</p>
+          )}
         </article>
 
         {countryEvidence.length ? (

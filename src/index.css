@@ -3186,3 +3186,138 @@ h1 {
 .gallery-source-list a:hover {
   color: var(--smi-aqua);
 }
+
+/* Shared country/institution/research-detail journey components
+   (Foundation Step 7: image-ready records belong in the main journey, not
+   only in Research Gallery). */
+
+.country-flag-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  line-height: 1;
+  vertical-align: -2px;
+}
+
+.country-flag-badge-lg {
+  font-size: 1.5rem;
+  vertical-align: -4px;
+}
+
+.country-flag-badge svg {
+  color: var(--smi-muted);
+}
+
+.provenance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border: 1px solid rgba(142, 219, 255, 0.2);
+  border-radius: 999px;
+  color: var(--smi-muted);
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+.enrichment-pending-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px dashed rgba(142, 219, 255, 0.28);
+  border-radius: 8px;
+  color: var(--smi-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.enrichment-pending-notice svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.research-record-card-list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.research-record-card {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid rgba(142, 219, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.research-record-card-image {
+  display: block;
+  flex-shrink: 0;
+  overflow: hidden;
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(142, 219, 255, 0.24);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.research-record-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.research-record-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.institution-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 10px 0;
+}
+
+.institution-image-pending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+  padding: 8px;
+  border: 1px dashed rgba(142, 219, 255, 0.28);
+  border-radius: 10px;
+  color: var(--smi-muted);
+  text-align: center;
+}
+
+.institution-image-pending svg:first-child {
+  color: var(--smi-teal);
+}
+
+.institution-image-pending span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.6rem;
+  line-height: 1.2;
+}
+
+.institution-header-copy h1 {
+  margin: 0 0 4px;
+}
