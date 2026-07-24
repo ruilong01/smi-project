@@ -3,10 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tells the browser this page is dark-themed, before any CSS loads.
+         Without this, a browser/OS dark-mode preference can apply its own
+         forced-dark heuristic to the still-unstyled document (parsed HTML,
+         index.css not yet applied) and paint it a blue-grey tone instead of
+         plain white for that brief gap - the most likely cause of the
+         intermittent "blue flash" seen during load/navigation. -->
+    <meta content="dark" name="color-scheme" />
+    <meta content="#020912" name="theme-color" />
     <title>Global Maritime Research Intelligence Map</title>
   </head>
-  <body>
-    <div id="root"></div>
+  <body style="background: #020912">
+    <div id="root" style="background: #020912; min-height: 100%"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
