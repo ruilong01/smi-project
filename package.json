@@ -38,7 +38,8 @@
     "enrich:explanations": "node scripts/ingestion/enrichExplanations.mjs",
     "refresh:incremental": "node scripts/ingestion/refreshIncremental.mjs",
     "verify:schema-compatibility": "node scripts/processing/verifySchemaCompatibility.mjs",
-    "verify:git-clean-for-pr": "node scripts/ingestion/verifyGitCleanForPr.mjs"
+    "verify:git-clean-for-pr": "node scripts/ingestion/verifyGitCleanForPr.mjs",
+    "verify:frontend-display-flow": "node scripts/ingestion/verifyFrontendDisplayFlow.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

@@ -212,6 +212,52 @@ export function getProjectsForCountry(countryName) {
   return publicResearchProjects.filter((project) => project.country === countryName);
 }
 
+// A project only ever counts as "image-ready" when it carries a real,
+// fetched image (see the og:image fetcher run against RESEARCH_PAPER
+// records) - never the placeholder entry every project gets by default
+// ({ url: "", imageType: "placeholder", isOfficialProjectImage: false }).
+// Used to keep normal research cards on country/institution pages showing
+// only image-backed records, per the app's display-eligibility rule.
+export function projectHasRealImage(project) {
+  if ((project.dataQuality?.imageCandidateCount ?? 0) > 0) {
+    return true;
+  }
+  return (project.sourcePages ?? []).some((page) => (page.images ?? []).some((image) => image.imageUrl));
+}
+
+export function getProjectPrimaryImage(project) {
+  for (const page of project.sourcePages ?? []) {
+    const image = (page.images ?? []).find((candidate) => candidate.imageUrl);
+    if (image) {
+      return { ...image, sourceUrl: image.sourceUrl || page.sourceUrl };
+    }
+  }
+  return null;
+}
+
+export function filterImageReadyProjects(projects) {
+  return projects.filter(projectHasRealImage);
+}
+
+// Normalizes a legacy project record into the shape ResearchRecordCard
+// expects. Only meaningful for image-ready projects - callers should
+// filter with filterImageReadyProjects first.
+export function toResearchRecordCardProps(project) {
+  const image = getProjectPrimaryImage(project);
+  return {
+    id: project.id,
+    href: `/projects/${project.slug}`,
+    title: project.title,
+    imageUrl: image?.imageUrl,
+    imageAlt: image?.altText || image?.caption,
+    imageCaption: image?.caption,
+    topicName: getTopicNameForCategory(project.researchCategories?.[0]),
+    institutionLabel: project.leadOrganisation,
+    provenanceLabel: project.extractionMethod,
+    actionabilityScore: project.displayScore,
+  };
+}
+
 export function getRelationshipsForProject(projectId) {
   return relationshipsByProjectId.get(projectId) ?? [];
 }
