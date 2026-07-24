@@ -10,6 +10,13 @@
 // Shared by scripts/ingestion/queueEnrichment.mjs (queue-time filter) and
 // scripts/ingestion/enrichImages.mjs (skip-before-fetch).
 
+// Bump whenever the classification rules change (a new blocked/allowed
+// pattern, a new publisher added, etc). Stamped onto queue/report output so
+// verify:image-enrichment can tell a snapshot written by an older ruleset
+// apart from one written by the current code, instead of trusting stale
+// data as if it reflects current behaviour.
+export const CLASSIFIER_VERSION = 2;
+
 export const FETCH_ALLOWED_CATEGORIES = [
   "project_website",
   "cordis_project",

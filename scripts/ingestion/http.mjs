@@ -22,7 +22,7 @@ export function buildUserAgent(email = null) {
 // that might succeed a moment later. A 401/403/404/etc is a definitive
 // answer that will NEVER change on retry - hammering it 3-4 times just
 // wastes time and looks like abusive traffic to the remote server.
-const RETRYABLE_STATUSES = [429, 500, 502, 503, 504];
+export const RETRYABLE_STATUSES = [429, 500, 502, 503, 504];
 
 // Retry logic with exponential backoff
 async function fetchWithRetry(
