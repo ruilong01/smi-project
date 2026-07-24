@@ -3212,6 +3212,8 @@ h1 {
   font-size: 1.05rem;
   line-height: 1;
   vertical-align: -2px;
+  object-fit: contain;
+  border-radius: 2px;
 }
 
 .country-flag-badge-lg {
@@ -3334,4 +3336,51 @@ h1 {
 
 .institution-header-copy h1 {
   margin: 0 0 4px;
+}
+
+.institution-image-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 88px;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.institution-image {
+  width: 88px;
+  height: 88px;
+  padding: 6px;
+  border: 1px solid rgba(142, 219, 255, 0.24);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  object-fit: contain;
+}
+
+.institution-image-figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  max-width: 100px;
+  text-align: center;
+}
+
+.institution-image-figure figcaption a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--smi-teal);
+  font-size: 0.62rem;
+  text-decoration: none;
+}
+
+.institution-image-rights {
+  overflow: hidden;
+  color: var(--smi-muted);
+  font-size: 0.56rem;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

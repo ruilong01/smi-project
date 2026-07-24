@@ -87,7 +87,7 @@ export default function InstitutionDetail() {
           Back to map
         </Link>
         <p className="eyebrow">Institution research profile</p>
-        <InstitutionHeader country={country} institution={institution} />
+        <InstitutionHeader country={country} institution={institution} slug={slug} />
         <DataStatusBadge label={getLiveDataStatusLabel()} />
       </section>
 
