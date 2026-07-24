@@ -5,12 +5,14 @@ import { fetchGlobalUpdates } from "./fetchGlobalUpdates.mjs";
 import { processRecords } from "./processRecords.mjs";
 import { compareRecords } from "./compareRecords.mjs";
 import { triageRecords } from "./triageRecords.mjs";
-import { queueImageEnrichment } from "./queueImageEnrichment.mjs";
+import { queueImageEnrichment } from "./queueEnrichment.mjs";
 import { enrichImages } from "./enrichImages.mjs";
 import { enrichExplanations } from "./enrichExplanations.mjs";
 import { buildCountryProfiles } from "./buildCountryProfiles.mjs";
 import { verify } from "./verifyDataProvenance.mjs";
 import { verifyDisplayEligibility } from "./verifyDisplayEligibility.mjs";
+import { OPENALEX_EMAIL } from "./config.mjs";
+import { isCurationConfigured } from "./aiCuration/config.mjs";
 
 // The weekday 5am Asia/Singapore scheduled command (see
 // docs/AWS_WEEKDAY_REFRESH.md) - an incremental counterpart to
@@ -95,7 +97,89 @@ async function moveTempIntoPlace(tempDir) {
   }
 }
 
-export async function refreshIncremental() {
+// No real API key is required for this pipeline to run at all - OpenAlex
+// (the only live network source refresh:incremental calls) is a free/open
+// API with no key, just a polite-pool contact identifier. This only
+// reports what's SET vs DEFAULT/UNSET - it never prints an actual env var
+// value, so a real contact email or curation key can't end up in console
+// output or the (gitignored, but still local) log file.
+function describeEnvVar(name, currentValue, defaultValue) {
+  if (currentValue === undefined || currentValue === "" || currentValue === defaultValue) {
+    return `${name}: not set (using default)`;
+  }
+  return `${name}: set (custom value, ${currentValue.length} chars)`;
+}
+
+async function countRawRunFiles(dir) {
+  try {
+    const entries = await fs.readdir(dir);
+    return entries.filter((f) => f.endsWith(".json")).length;
+  } catch {
+    return 0;
+  }
+}
+
+async function runDryRun(log) {
+  log("=".repeat(60));
+  log("refresh:incremental DRY RUN - no network calls, no AI calls, no data/processed writes.");
+  log("=".repeat(60));
+
+  log("");
+  log("Config:");
+  log(`  ${describeEnvVar("OPENALEX_EMAIL", process.env.OPENALEX_EMAIL, undefined)} (used for OpenAlex's polite pool - OpenAlex itself needs no API key)`);
+  log(`  ${describeEnvVar("OPENALEX_INCREMENTAL_PAGES_PER_QUERY", process.env.OPENALEX_INCREMENTAL_PAGES_PER_QUERY, undefined)}`);
+  log(`  AI_CURATION configured: ${isCurationConfigured()} ${isCurationConfigured() ? "" : "(AI_CURATION_API_URL/AI_CURATION_API_KEY not set - not on this pipeline's path anyway; only curate:images reads them)"}`);
+  log(`  Effective OpenAlex contact identifier in use: ${OPENALEX_EMAIL === "research-demo@example.invalid" ? "placeholder default (research-demo@example.invalid)" : "custom (set via OPENALEX_EMAIL)"}`);
+
+  log("");
+  log("Available sources:");
+  const rawOpenAlexDir = path.join(rootDir, "data/raw/openalex");
+  const rawRunFileCount = await countRawRunFiles(rawOpenAlexDir);
+  log(`  data/raw/openalex/: ${rawRunFileCount} existing raw run file(s) on disk`);
+  const researchRecordsData = await readJsonIfExists(path.join(processedDir, "research-records.json"));
+  log(`  data/processed/research-records.json: ${researchRecordsData ? `present, ${researchRecordsData.records?.length ?? 0} record(s)` : "MISSING"}`);
+  const displayRecordsData = await readJsonIfExists(path.join(processedDir, "display-records.json"));
+  log(`  data/processed/display-records.json: ${displayRecordsData ? `present, ${displayRecordsData.records?.length ?? 0} record(s)` : "MISSING"}`);
+
+  log("");
+  log("Last update status:");
+  const previousStatus = await readJsonIfExists(updateStatusPath);
+  if (previousStatus) {
+    log(`  status=${previousStatus.status ?? "unknown"} lastSuccessfulRefreshAt=${previousStatus.lastSuccessfulRefreshAt || "(never)"} lastAttemptedRefreshAt=${previousStatus.lastAttemptedRefreshAt || "(never)"}`);
+  } else {
+    log("  data/processed/update-status.json does not exist yet - no prior run recorded.");
+  }
+
+  log("");
+  log("A live run (no --dry-run) would, inside a temp dir, only promoting on full success:");
+  log("  1/10 fetch:global-updates (real OpenAlex network call, incremental window)");
+  log("  2/10 process:records (into temp dir)");
+  log("  3/10 compare:records (classify new/updated/unchanged/duplicate/needs_manual_review)");
+  log("  4/10 triage:records - pass 1 (into temp dir)");
+  log("  5/10 queue:enrichment (into temp dir)");
+  log("  6/10 enrich:images (real network calls to each queued record's own source URL(s))");
+  log("  7/10 triage:records - pass 2 (into temp dir)");
+  log("  8/10 enrich:explanations (heuristic/template only - no AI call)");
+  log("  9/10 build:country-profiles (into temp dir)");
+  log("  10/10 verify:data-provenance + verify:display-eligibility (against temp dir) - only if both pass, promote into data/processed/");
+  log("");
+  log("Dry run complete - nothing was fetched, generated, or written to data/processed/.");
+
+  return {
+    dryRun: true,
+    rawRunFileCount,
+    researchRecordsPresent: Boolean(researchRecordsData),
+    displayRecordsPresent: Boolean(displayRecordsData),
+    aiCurationConfigured: isCurationConfigured(),
+    lastStatus: previousStatus,
+  };
+}
+
+export async function refreshIncremental({ dryRun = false } = {}) {
+  if (dryRun) {
+    return withLogging((log) => runDryRun(log));
+  }
+
   return withLogging(async (log) => {
     const attemptedAt = nowStamp();
     const previousStatus = await readJsonIfExists(updateStatusPath);
@@ -137,11 +221,11 @@ export async function refreshIncremental() {
 
       log("Step 5/10: queue:enrichment (into temp dir)");
       const queueResult = await queueImageEnrichment({ processedDir: tempDir, nowIso: attemptedAt });
-      log(`  ${queueResult.queuedCount} record(s) queued (${queueResult.highPriorityCount} high priority)`);
+      log(`  ${queueResult.queuedCount} record(s) queued (${queueResult.totalCandidatesConsidered} candidate(s) considered, ${queueResult.skippedCooldown} skipped on cooldown)`);
 
       log("Step 6/10: enrich:images (into temp dir)");
       const imagesResult = await enrichImages({ processedDir: tempDir, nowIso: attemptedAt });
-      log(`  attempted ${imagesResult.attempted}, found images for ${imagesResult.found}, errors ${imagesResult.errors}`);
+      log(`  attempted ${imagesResult.attempted}, given new images ${imagesResult.recordsGivenImages}, still pending ${imagesResult.recordsStillPending}`);
 
       log("Step 7/10: triage:records - pass 2 (re-triage after new images, into temp dir)");
       const triageResult = await triageRecords({ processedDir: tempDir, nowIso: attemptedAt });
@@ -217,7 +301,8 @@ export async function refreshIncremental() {
 }
 
 async function main() {
-  await refreshIncremental();
+  const dryRun = process.argv.slice(2).includes("--dry-run");
+  await refreshIncremental({ dryRun });
 }
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);

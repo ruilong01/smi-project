@@ -1,8 +1,13 @@
 node_modules/
 dist/
 work/
+# Secrets - never committed. .env.example is the only exception (placeholder
+# values only, see docs/API_KEYS_AND_MANUAL_REFRESH.md).
 .env
 .env.local
+*.env
+.env.*
+!.env.example
 .DS_Store
 npm-debug.log*
 yarn-debug.log*
