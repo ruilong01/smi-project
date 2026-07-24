@@ -21,6 +21,7 @@ const rootDir = path.resolve(__dirname, "../..");
 const ALWAYS_BLOCKED_PATTERNS = [
   { test: (f) => /^data\/raw\//.test(f), label: "data/raw/**" },
   { test: (f) => /^data\/logs\//.test(f), label: "data/logs/**" },
+  { test: (f) => /^data\/server\//.test(f), label: "data/server/** (OA PDF ingestion server storage - see docs/OPEN_ACCESS_PDF_INGESTION.md)" },
   { test: (f) => /^dist\//.test(f), label: "dist/**" },
   { test: (f) => /^build\//.test(f), label: "build/**" },
   { test: (f) => /\.zip$/i.test(f), label: "*.zip" },

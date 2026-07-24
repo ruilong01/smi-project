@@ -29,8 +29,10 @@ reject -> write provenance record (no download)
 | `src/data/imageProvenanceRegistry.js` | Indexes every image-backed Research Gallery record by sourceUrl/DOI/normalized title |
 | `src/data/researchImageMatcher.js` | Strict priority-order matcher: finds a safe, unambiguous image match for a main-journey record, or returns `null` |
 | `scripts/processing/mockImageRelevanceEvaluator.mjs` | **MOCK ONLY** - deterministic accept/reject/review scoring, described in detail below |
-| `scripts/ingestion/fetchCountryFlags.mjs` | Fetches real flag SVGs from flagcdn.com for countries in current app data |
-| `scripts/ingestion/discoverInstitutionImagesSample.mjs` | Sample institution-image discovery + download, using the mock evaluator |
+| `scripts/ingestion/fetchCountryFlags.mjs` | Fetches real flag SVGs from flagcdn.com; reads `countryRegistry.json`, supports `--all`/`--missing-only` |
+| `scripts/ingestion/discoverInstitutionImagesSample.mjs` | Original 10-institution sample script (kept, still valid) |
+| `scripts/ingestion/discoverInstitutionImages.mjs` | General, registry-driven successor - landmark/campus-first, multi-page search (see docs/GLOBAL_DATA_AND_IMAGE_EXPANSION_PLAN.md) |
+| `scripts/ingestion/discoverResearchGlobal.mjs` | Real OpenAlex-based research candidate discovery, staging output only |
 
 ## 3. The mock evaluator (today)
 
@@ -77,9 +79,27 @@ social-media domain with no official link, a search-thumbnail/tracking-
 pixel/favicon path pattern, or a generic-icon path pattern.
 
 Everything else is scored additively (domain-name/acronym match to the
-target, `fetchMethod` quality, official-asset path keywords, alt/title/
-page-title mentioning the target) and classified: **≥0.75 accept, 0.40-
-0.74 review, <0.40 reject**.
+target, `fetchMethod` quality, an **image-type classification** described
+below, alt/title/page-title mentioning the target) and classified: **≥0.75
+accept, 0.40-0.74 review, <0.40 reject**.
+
+**Landmark-over-logo priority.** Every candidate is classified via
+`classifyImageType()` into `landmark-building` / `campus` / `hero` /
+`wikimedia` / `logo` / `fallback`, checked in that priority order so a
+content-based signal (the image's own path/alt/title says "campus" or
+"logo") always wins over a method-based default (arriving via an
+`og:image` tag alone does not make something a "hero" image if its
+filename says "logo"). Each type carries its own score bonus - landmark
++0.32, campus +0.26, hero +0.14, logo +0.04, wikimedia/fallback +0 (scored
+elsewhere) - so a real landmark/campus photo scores meaningfully higher
+than a logo even from the exact same official domain with the exact same
+other signals. A logo can still `accept` on its own merits (as the
+"Low/fallback" tier the spec calls for), but every accepted logo carries
+an explicit risk note: "acceptable only as a fallback when no landmark/
+campus/hero image was found." `discoverInstitutionImages.mjs` collects
+candidates from every page it fetches for an institution before picking a
+winner, specifically so a landmark/campus photo found on a deeper page
+beats a logo found on the homepage.
 
 Known limitation: there is no real image-dimension check (no image-
 decoding library is installed) - `discoverInstitutionImagesSample.mjs`
@@ -131,10 +151,11 @@ Decide:
 ```json
 {
   "type": "object",
-  "required": ["decision", "score", "reasons", "risks", "futureAiPromptCompatible"],
+  "required": ["decision", "score", "imageType", "reasons", "risks", "futureAiPromptCompatible"],
   "properties": {
     "decision": { "type": "string", "enum": ["accept", "reject", "review"] },
     "score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "imageType": { "type": "string", "enum": ["landmark-building", "campus", "hero", "wikimedia", "logo", "fallback"] },
     "reasons": { "type": "array", "items": { "type": "string" } },
     "risks": { "type": "array", "items": { "type": "string" } },
     "futureAiPromptCompatible": { "type": "boolean", "const": true }

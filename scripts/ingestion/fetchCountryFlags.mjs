@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import liveResearchData from "../../src/data/generated/liveResearchData.json" with { type: "json" };
+import countryRegistryData from "../../src/data/generated/countryRegistry.json" with { type: "json" };
 import { delayMs } from "./http.mjs";
 
 // Fetches a real national flag SVG per country ISO2 code from a documented
@@ -9,11 +9,14 @@ import { delayMs } from "./http.mjs";
 // per code. Only ever touches public/assets/flags/ and its own registry
 // file; never reads or writes any research-record data.
 //
-// Scoped to the countries already present in the current app data (24
-// today, via src/data/generated/liveResearchData.json) - NOT a hardcoded
-// list - so raising the country count later (the 117-country expansion,
-// explicitly out of scope for this task) only means re-running this same
-// script against the larger generated dataset, no code change needed here.
+// Reads from src/data/generated/countryRegistry.json (built by
+// build:country-registry - run that first if it's stale) instead of the
+// app's live research data directly, so this now naturally scales with
+// the country registry rather than needing a code change every time the
+// registry grows (the whole point of Step 1). By default only fetches for
+// "enabled" countries (the ones the app currently has data for, 24 today)
+// - pass --all to sweep the full registry (~170 countries, still a small/
+// safe batch since flags are tiny SVGs).
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "../..");
@@ -40,6 +43,14 @@ async function fileExists(filePath) {
   );
 }
 
+async function readJsonIfExists(filePath) {
+  try {
+    return JSON.parse(await fs.readFile(filePath, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
 async function downloadFlag(iso2) {
   const url = flagUrlFor(iso2);
   const controller = new AbortController();
@@ -47,7 +58,7 @@ async function downloadFlag(iso2) {
   try {
     const response = await fetch(url, {
       signal: controller.signal,
-      headers: { "User-Agent": "GlobalMaritimeResearchIntelligenceMap/0.3 (flag-fetch-feasibility-test)" },
+      headers: { "User-Agent": "GlobalMaritimeResearchIntelligenceMap/0.3 (flag-fetch)" },
     });
     clearTimeout(timeoutId);
 
@@ -69,30 +80,45 @@ async function downloadFlag(iso2) {
   }
 }
 
-export async function fetchCountryFlags({ force = false, log = console.log } = {}) {
+export async function fetchCountryFlags({ force = false, all = false, missingOnly = false, log = console.log } = {}) {
   await fs.mkdir(flagsDir, { recursive: true });
   await fs.mkdir(path.dirname(registryPath), { recursive: true });
 
-  const countries = liveResearchData.countries ?? [];
+  const registryCountries = countryRegistryData.countries ?? [];
+  let candidates = all ? registryCountries : registryCountries.filter((c) => c.enabled);
+
+  if (missingOnly) {
+    const stillMissing = [];
+    for (const country of candidates) {
+      if (!country.iso2) {
+        stillMissing.push(country);
+        continue;
+      }
+      const exists = await fileExists(path.join(flagsDir, `${country.iso2.toLowerCase()}.svg`));
+      if (!exists) stillMissing.push(country);
+    }
+    candidates = stillMissing;
+  }
+
   const entries = [];
   let fetchedCount = 0;
   let skippedExistingCount = 0;
   let errorCount = 0;
   let missingIso2Count = 0;
 
-  for (const [index, country] of countries.entries()) {
-    const iso2 = country.code;
+  for (const [index, country] of candidates.entries()) {
+    const iso2 = country.iso2;
     if (!iso2 || !/^[A-Za-z]{2}$/.test(iso2)) {
       missingIso2Count++;
       entries.push({
-        countryName: country.name,
+        countryName: country.countryName,
         iso2: iso2 ?? null,
         flagPath: null,
         sourceName: FLAG_SOURCE_NAME,
         sourceUrl: null,
         fetchedAt: nowIso(),
         status: "missing_iso2",
-        error: "No valid ISO2 code on this country record - cannot fetch a flag without one.",
+        error: "No valid ISO2 code on this country registry entry - cannot fetch a flag without one.",
       });
       continue;
     }
@@ -104,7 +130,7 @@ export async function fetchCountryFlags({ force = false, log = console.log } = {
     if ((await fileExists(filePath)) && !force) {
       skippedExistingCount++;
       entries.push({
-        countryName: country.name,
+        countryName: country.countryName,
         iso2,
         flagPath,
         sourceName: FLAG_SOURCE_NAME,
@@ -116,13 +142,13 @@ export async function fetchCountryFlags({ force = false, log = console.log } = {
       continue;
     }
 
-    log(`  [${index + 1}/${countries.length}] fetching flag for ${country.name} (${iso2})`);
+    log(`  [${index + 1}/${candidates.length}] fetching flag for ${country.countryName} (${iso2})`);
     const result = await downloadFlag(iso2);
     if (result.status === "ok") {
       await fs.writeFile(filePath, result.svgText);
       fetchedCount++;
       entries.push({
-        countryName: country.name,
+        countryName: country.countryName,
         iso2,
         flagPath,
         sourceName: FLAG_SOURCE_NAME,
@@ -134,7 +160,7 @@ export async function fetchCountryFlags({ force = false, log = console.log } = {
     } else {
       errorCount++;
       entries.push({
-        countryName: country.name,
+        countryName: country.countryName,
         iso2,
         flagPath: null,
         sourceName: FLAG_SOURCE_NAME,
@@ -146,21 +172,34 @@ export async function fetchCountryFlags({ force = false, log = console.log } = {
       log(`    FAILED: ${result.error}`);
     }
 
-    if (index < countries.length - 1) {
+    if (index < candidates.length - 1) {
       await delayMs(REQUEST_DELAY_MS);
     }
   }
+
+  // Merge into whatever the registry already recorded, rather than
+  // overwriting wholesale - a --missing-only or narrower run must never
+  // erase a previous run's entries for countries it didn't touch this
+  // time (e.g. an --all --missing-only sweep of the long tail must not
+  // wipe out the 24 "enabled" countries' entries from an earlier run).
+  const previousRegistry = await readJsonIfExists(registryPath);
+  const mergedByName = new Map((previousRegistry?.entries ?? []).map((entry) => [entry.countryName, entry]));
+  entries.forEach((entry) => mergedByName.set(entry.countryName, entry));
+  const mergedEntries = [...mergedByName.values()];
 
   const registry = {
     generatedAt: nowIso(),
     command: "fetch:country-flags",
     isTestOutput: true,
-    totalCountries: countries.length,
+    lastRunMode: all ? "all" : "enabled-only",
+    lastRunMissingOnly: missingOnly,
+    lastRunCandidates: candidates.length,
     fetchedCount,
     skippedExistingCount,
     errorCount,
     missingIso2Count,
-    entries,
+    totalEntries: mergedEntries.length,
+    entries: mergedEntries,
   };
   await fs.writeFile(registryPath, `${JSON.stringify(registry, null, 2)}\n`);
 
@@ -168,21 +207,27 @@ export async function fetchCountryFlags({ force = false, log = console.log } = {
 }
 
 function parseArgs(argv) {
-  return { force: argv.includes("--force") };
+  return {
+    force: argv.includes("--force"),
+    all: argv.includes("--all"),
+    missingOnly: argv.includes("--missing-only"),
+  };
 }
 
 async function main() {
-  const { force } = parseArgs(process.argv.slice(2));
-  const result = await fetchCountryFlags({ force });
+  const { force, all, missingOnly } = parseArgs(process.argv.slice(2));
+  const result = await fetchCountryFlags({ force, all, missingOnly });
 
   console.log("\n" + "=".repeat(60));
   console.log("Country Flag Fetch Summary");
   console.log("=".repeat(60));
-  console.log(`Total countries:      ${result.totalCountries}`);
+  console.log(`Mode:                 ${result.lastRunMode}${result.lastRunMissingOnly ? " (missing-only)" : ""}`);
+  console.log(`This run's candidates: ${result.lastRunCandidates}`);
   console.log(`Fetched (new):        ${result.fetchedCount}`);
   console.log(`Skipped (existing):   ${result.skippedExistingCount}`);
   console.log(`Missing ISO2:         ${result.missingIso2Count}`);
   console.log(`Errors:               ${result.errorCount}`);
+  console.log(`Total entries in registry: ${result.totalEntries}`);
   console.log(`Registry written to:  ${path.relative(rootDir, registryPath)}`);
   console.log("=".repeat(60) + "\n");
 }
