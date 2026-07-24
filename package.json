@@ -58,7 +58,9 @@
     "scan:daily-research": "node scripts/ingestion/scanDailyResearch.mjs",
     "verify:daily-scan-safety": "node scripts/ingestion/verifyDailyScanSafety.mjs",
     "deep-search:sample": "node scripts/ingestion/deepSearchSample.mjs",
-    "verify:deep-search-sample": "node scripts/ingestion/verifyDeepSearchSample.mjs"
+    "verify:deep-search-sample": "node scripts/ingestion/verifyDeepSearchSample.mjs",
+    "discover:oa-pdfs": "node scripts/ingestion/discoverOpenAccessPdfs.mjs",
+    "verify:oa-pdf-ingestion": "node scripts/ingestion/verifyOpenAccessPdfIngestion.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
