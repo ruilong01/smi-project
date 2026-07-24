@@ -202,11 +202,11 @@ export function parseHtml(html, url) {
  * source page never stops the pipeline — the caller is expected to log
  * and continue.
  */
-export async function extractWebpage(url, { requestDelayMs = 2000 } = {}) {
+export async function extractWebpage(url, { requestDelayMs = 2000, maxRetries = 3 } = {}) {
   const html = await fetchText(url, {
     fetchOptions: {
       email: "research-demo@example.invalid",
-      retries: 3,
+      retries: maxRetries,
       timeout: 20000,
       requestDelay: requestDelayMs,
     },

@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { extractWebpage } from "./enrichment/extractWebpage.mjs";
 import { buildTriageOutputFiles } from "./triageRecords.mjs";
 import { delayMs } from "./http.mjs";
+import { classifyImageSourceUrl } from "../processing/imageSourceClassifier.mjs";
 
 // Processes data/processed/image-enrichment-queue.json: for each queued
 // record, fetches ITS OWN sourceUrl(s) - never a generic image search -
@@ -11,6 +12,15 @@ import { delayMs } from "./http.mjs";
 // twitter:image, or an inline <img> with real alt text/caption). Nothing
 // is ever invented; a record whose page has no usable image stays exactly
 // that: pending_image_enrichment, not displayEligible.
+//
+// Every source URL is classified BEFORE any fetch is attempted
+// (classifyImageSourceUrl) - a DOI redirect, a PDF, or a known academic
+// publisher's article page is never fetched at all, let alone retried.
+// This is a real fix, not a defensive nicety: OpenAlex publication records'
+// only source URLs are almost always exactly these three types, and
+// fetching them was previously producing repeated 403 retries against
+// doi.org/MDPI/Taylor & Francis/RSC for zero possible benefit (those pages
+// have no project-specific image to find even when they don't block us).
 //
 // Every touched file (research-records.json, the three triage outputs,
 // image-candidates.json) is written through the same temp-write/validate/
@@ -26,6 +36,10 @@ const REQUEST_DELAY_MS = 1500;
 const MAX_CANDIDATES_PER_RECORD = 5;
 const MAX_SOURCE_URLS_PER_RECORD = 2; // don't chase every listed URL - bounded, polite
 const DEFAULT_LIMIT = 10;
+// Low on purpose - a page that 403s/404s isn't retried at all (see
+// http.mjs's RETRYABLE_STATUSES); this only bounds retries for genuinely
+// transient conditions (429/500/502/503/504).
+const MAX_FETCH_RETRIES = 2;
 const SKIP_URL_PATTERN = /favicon|sprite|pixel\.gif|1x1|spacer\.(png|gif)/i;
 
 // Only images actually accepted (see acceptCandidate below) ever become
@@ -105,6 +119,7 @@ function newProvenanceSkeleton() {
     sourcePagesChecked: [],
     sourcePagesAccepted: [],
     sourcePagesRejected: [],
+    sourcePagesSkipped: [],
     imageCandidatesFound: [],
     selectedImageCandidates: [],
     selectionCriteria: [
@@ -128,12 +143,34 @@ function newProvenanceSkeleton() {
 // CORDIS auto-generates it from the page's own <title> - the image itself
 // is still not project-specific. Recognising that requires seeing the
 // whole batch first (see rejectSharedGenericImages below).
+//
+// Every URL is classified BEFORE any network call - a blocked one
+// (doi_redirect/pdf/publisher_article/unknown) is recorded in
+// sourcePagesSkipped and never fetched, let alone retried. queue:image-
+// enrichment already only queues records with at least one fetch-allowed
+// URL, but a record can still list OTHER, blocked URLs alongside it (e.g.
+// a CORDIS page plus its DOI) - those must be skipped here too.
 async function fetchRawImagesForRecord(queueItem, log) {
-  const sourceUrls = (queueItem.sourceUrls ?? []).slice(0, MAX_SOURCE_URLS_PER_RECORD);
+  const allUrls = queueItem.sourceUrls ?? [];
   const provenance = newProvenanceSkeleton();
 
-  if (sourceUrls.length === 0) {
+  if (allUrls.length === 0) {
     provenance.finalDecisionReason = "Record has no sourceUrl to check.";
+    return { rawImages: [], provenance, rawResult: null, fetchedUrl: null };
+  }
+
+  const classified = allUrls.map((url) => ({ url, ...classifyImageSourceUrl(url) }));
+  classified
+    .filter((c) => !c.fetchAllowed)
+    .forEach((c) => {
+      provenance.sourcePagesSkipped.push({ url: c.url, category: c.category, reason: c.reason });
+      log(`    skipping ${c.url} (${c.category}, not fetched) - ${c.reason}`);
+    });
+
+  const allowedUrls = classified.filter((c) => c.fetchAllowed).map((c) => c.url).slice(0, MAX_SOURCE_URLS_PER_RECORD);
+
+  if (allowedUrls.length === 0) {
+    provenance.finalDecisionReason = "No fetch-allowed source URL for this record (all classified as doi_redirect/pdf/publisher_article/unknown).";
     return { rawImages: [], provenance, rawResult: null, fetchedUrl: null };
   }
 
@@ -141,10 +178,10 @@ async function fetchRawImagesForRecord(queueItem, log) {
   let fetchedUrl = null;
   let fetchError = null;
 
-  for (const url of sourceUrls) {
+  for (const url of allowedUrls) {
     provenance.sourcePagesChecked.push(url);
     try {
-      rawResult = await extractWebpage(url, { requestDelayMs: REQUEST_DELAY_MS });
+      rawResult = await extractWebpage(url, { requestDelayMs: REQUEST_DELAY_MS, maxRetries: MAX_FETCH_RETRIES });
       fetchedUrl = url;
       provenance.sourcePagesAccepted.push(url);
       break;
@@ -156,7 +193,7 @@ async function fetchRawImagesForRecord(queueItem, log) {
   }
 
   if (!rawResult) {
-    provenance.finalDecisionReason = `All ${sourceUrls.length} source page(s) failed to fetch (last error: ${fetchError?.message ?? "unknown"}).`;
+    provenance.finalDecisionReason = `All ${allowedUrls.length} fetch-allowed source page(s) failed to fetch (last error: ${fetchError?.message ?? "unknown"}).`;
     return { rawImages: [], provenance, rawResult: null, fetchedUrl: null };
   }
 
@@ -258,6 +295,7 @@ export async function enrichImages({
 
   let attempted = 0;
   let sourcePagesCheckedTotal = 0;
+  let sourcePagesSkippedTotal = 0;
   let imageCandidatesFoundTotal = 0;
 
   // Phase 1: fetch every queued record's page(s) and collect raw
@@ -274,6 +312,7 @@ export async function enrichImages({
     log(`  [${index + 1}/${batch.length}] fetching ${queueItem.recordId} - ${queueItem.title?.slice(0, 60)}`);
     const { rawImages, provenance, rawResult, fetchedUrl } = await fetchRawImagesForRecord(queueItem, log);
     sourcePagesCheckedTotal += provenance.sourcePagesChecked.length;
+    sourcePagesSkippedTotal += provenance.sourcePagesSkipped.length;
     imageCandidatesFoundTotal += provenance.imageCandidatesFound.length;
 
     await fs.writeFile(
@@ -339,6 +378,7 @@ export async function enrichImages({
       recordId: queueItem.recordId,
       title: queueItem.title,
       sourcePagesChecked: provenance.sourcePagesChecked,
+      sourcePagesSkipped: provenance.sourcePagesSkipped,
       imageCandidatesFound: provenance.imageCandidatesFound.length,
       imageCandidatesAccepted: acceptedNewCandidates.length,
       finalDecisionReason,
@@ -409,6 +449,7 @@ export async function enrichImages({
     recordsGivenImages,
     recordsStillPending: triageFiles["pending-image-enrichment.json"].recordCount,
     sourcePagesCheckedTotal,
+    sourcePagesSkippedTotal,
     imageCandidatesFoundTotal,
     newImageCandidatesWritten: newImages.length,
     promoted,
@@ -451,6 +492,7 @@ async function main() {
   console.log(`Records given new images:  ${result.recordsGivenImages}`);
   console.log(`Records still pending:     ${result.recordsStillPending}`);
   console.log(`Source pages checked:      ${result.sourcePagesCheckedTotal}`);
+  console.log(`Source pages skipped (blocked, never fetched): ${result.sourcePagesSkippedTotal}`);
   console.log(`Image candidates found:    ${result.imageCandidatesFoundTotal}`);
   console.log(`New image candidates kept: ${result.newImageCandidatesWritten}`);
   console.log(`Display eligible: ${result.displayEligibleBefore} -> ${result.displayEligibleAfter}`);
