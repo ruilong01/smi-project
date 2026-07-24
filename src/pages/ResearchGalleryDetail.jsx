@@ -2,6 +2,7 @@ import { ArrowLeft, ExternalLink, ImageOff } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { getGalleryRecordById, getVerificationStatusLabel } from "../data/researchGalleryData.js";
 import CountryFlagBadge from "../components/CountryFlagBadge.jsx";
+import PdfViewer from "../components/PdfViewer.jsx";
 
 function DetailImage({ record }) {
   const image = record.images?.[0];
@@ -183,6 +184,8 @@ export default function ResearchGalleryDetail() {
             ) : null}
           </dl>
         </article>
+
+        <PdfViewer recordId={record.recordId} />
 
         {evaluation ? (
           <article className="detail-card wide">

@@ -7,6 +7,7 @@ import { fetchJson, fetchText, fetchRaw, delayMs } from "./http.mjs";
 import { classifySourceCredibility } from "../processing/sourceCredibilityClassifier.mjs";
 import { getSourceById } from "./globalSourceRegistry.mjs";
 import { evaluateResearchRelevance } from "../processing/mockResearchRelevanceEvaluator.mjs";
+import { evaluatePdfAccessPolicy } from "../processing/pdfAccessPolicy.mjs";
 import countryRegistryData from "../../src/data/generated/countryRegistry.json" with { type: "json" };
 
 // Free, legal, open-access PDF discovery + download pipeline (see
@@ -699,17 +700,38 @@ export async function discoverOpenAccessPdfs({
         ...existingManifest,
         ...evaluated
           .filter((c) => c.status === "downloaded")
-          .map((c) => ({
-            paperId: c.paperId,
-            title: c.title,
-            sourceName: c.sourceName,
-            sourceUrl: c.sourceUrl,
-            pdfUrl: c.pdfUrl,
-            downloadedPath: c.downloadedPath,
-            downloadedAt: c.downloadedAt,
-            sha256: c.sha256,
-            fileSizeBytes: c.fileSizeBytes,
-          })),
+          .map((c) => {
+            // Persisted at download time (see docs/IN_APP_PDF_READER.md) so
+            // the in-app PDF reader never has to re-derive access policy
+            // from a staging file that gets overwritten on every run - the
+            // manifest is the durable, append-only record.
+            const policy = evaluatePdfAccessPolicy({
+              license: c.license,
+              isOpenAccess: c.isOpenAccess,
+              oaEvidence: c.oaEvidence,
+            });
+            return {
+              paperId: c.paperId,
+              title: c.title,
+              doi: c.doi,
+              sourceName: c.sourceName,
+              sourceUrl: c.sourceUrl,
+              pdfUrl: c.pdfUrl,
+              license: c.license,
+              isOpenAccess: c.isOpenAccess,
+              oaEvidence: c.oaEvidence,
+              downloadedPath: c.downloadedPath,
+              downloadedAt: c.downloadedAt,
+              sha256: c.sha256,
+              fileSizeBytes: c.fileSizeBytes,
+              serveInApp: policy.serveInApp,
+              allowUserDownload: policy.allowUserDownload,
+              policyReason: policy.policyReason,
+              policyVersion: policy.policyVersion,
+              textExtractionStatus: "not_started",
+              pdfTextPath: null,
+            };
+          }),
       ],
     };
     await fs.mkdir(path.dirname(manifestPath), { recursive: true });

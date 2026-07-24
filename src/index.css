@@ -3131,6 +3131,23 @@ h1 {
   color: var(--smi-aqua);
 }
 
+/* In-app PDF reader (see docs/IN_APP_PDF_READER.md) - a plain iframe using
+   the browser's own native PDF viewer, no added rendering dependency. */
+.pdf-viewer-frame-wrap {
+  margin: 10px 0;
+  border: 1px solid rgba(142, 219, 255, 0.16);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pdf-viewer-frame {
+  display: block;
+  width: 100%;
+  height: 70vh;
+  border: 0;
+  background: #fff;
+}
+
 .gallery-plain-list {
   display: grid;
   gap: 8px;
