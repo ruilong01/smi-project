@@ -69,15 +69,20 @@ async function fetchWithRetry(
         throw error;
       }
 
-      lastError = error;
-
+      // Node's AbortError/DOMException has a read-only `message` getter in
+      // some runtimes - assigning to it directly throws ("Cannot set
+      // property message of  which has only a getter"), masking the real
+      // timeout as a confusing secondary error. Wrap in a plain Error
+      // instead of mutating the original.
       if (error.name === "AbortError") {
-        error.message = `Timeout after ${timeout}ms for ${url}`;
+        lastError = Object.assign(new Error(`Timeout after ${timeout}ms for ${url}`), { name: "AbortError" });
+      } else {
+        lastError = error;
       }
 
       // If this was the last attempt or a non-retryable error, throw
       if (attempt === retries || error.name === "TypeError") {
-        throw error;
+        throw lastError;
       }
 
       const backoffMs = requestDelay * Math.pow(2, attempt - 1);
